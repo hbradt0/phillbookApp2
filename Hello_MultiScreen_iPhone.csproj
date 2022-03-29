@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <InterfaceDefinition Include="Screens\HomeScreen2.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -92,6 +93,10 @@
     <Compile Include="Screens\HomeScreen.cs" />
     <Compile Include="Screens\HelloWorldScreen.cs" />
     <Compile Include="Screens\HelloUniverseScreen.cs" />
+    <Compile Include="Screens\HomeScreen2.cs" />
+    <Compile Include="Screens\HomeScreen2.designer.cs">
+      <DependentUpon>HomeScreen2.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -12,6 +12,7 @@ namespace Hello_MultiScreen_iPhone
 	{
 		HelloWorldScreen helloWorldScreen;
 		HelloUniverseScreen helloUniverseScreen;
+        HomeScreen2 TodoScreen;
         public UITextView textView;
         public UITextView booktextView;
         public UITextView textView2;
@@ -105,7 +106,6 @@ namespace Hello_MultiScreen_iPhone
             Buttonyourstoryscreen.AddTarget(ButtonyourstoryscreenClick, UIControlEvent.TouchUpInside);
 
             //View.LargeContentImage = imageView;
-
             var ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
                 Frame = UIScreen.MainScreen.Bounds,
@@ -121,6 +121,16 @@ namespace Hello_MultiScreen_iPhone
                 var activityController = new UIActivityViewController(activityItems, applicationActivities);
 
                 PresentViewController(activityController, true, null);
+            };
+
+            var ButtonTodoList = new UIButton(UIButtonType.RoundedRect)
+            {
+                Frame = UIScreen.MainScreen.Bounds,
+                BackgroundColor = UIColor.Red
+            };
+            ButtonTodoList.TouchUpInside += (sender, e) => {
+                    if (this.TodoScreen == null) { this.TodoScreen = new HomeScreen2(); }
+                    this.NavigationController.PushViewController(this.TodoScreen, true);
             };
 
             Add(ButtonShare);
