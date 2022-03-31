@@ -39,13 +39,13 @@ namespace EmailReader //rename
             }
         }
 
-        public static String ReadFileFromDate(String fileName = "")
+ 	public static String ReadFileFromDate(String fileName = "", int day = 0)
         {
             if (fileName == "")
                 fileName = fileName1;
 
             String myString = File.ReadAllText(fileName);
-            string toBeSearched = DateTime.Now.ToString("MM/dd/yyyy") + ":\n";
+            string toBeSearched = DateTime.Now.AddDays(-1*day).ToString("MM/dd/yyyy")+":\n";
             int ix = myString.IndexOf(toBeSearched);
 
             if (ix != -1)
@@ -53,23 +53,39 @@ namespace EmailReader //rename
                 string code = myString.Substring(ix + toBeSearched.Length);
                 return code;
             }
-            else
+            else 
             {
-                return "";
-            }
+ 		        toBeSearched = DateTime.Now.ToString("MM/dd/yyyy")+":\n";
+            	ix = myString.IndexOf(toBeSearched);
+
+            	if(ix != -1)
+            	{
+                	String code = myString.Substring(ix + toBeSearched.Length);
+                	return code;
+            	}
+		        else
+		        {
+                	return "";
+            	}
+	        }
         }
 
-        public static void WriteText(String text, String fileName = "",bool list = false)
+        public static void WriteText(String text, String fileName = "", bool list = false)
         {
             if (fileName == "")
                 fileName = fileName1;
             string format = "MM/dd/yyyy";
             String date = "\n" + DateTime.Now.ToString(format) + ":\n";
-            if (list)
-                date = "\n•" + DateTime.Now.ToString(format) + ":\n";
+            if(list)
+                date = "\n" + DateTime.Now.ToString(format) + ":\n•";
             if (File.ReadAllText(fileName).Contains(DateTime.Now.ToString(format)))
-                date = "";//"\n";
-            File.AppendAllText(fileName,date+text);
+            {
+                if (list)
+                    date = "•";
+                else
+                    date = "";
+            }
+            File.AppendAllText(fileName,date+text+"\n");
         }
 
         public static void DeleteText(String fileName = "")

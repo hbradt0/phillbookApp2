@@ -97,6 +97,9 @@ namespace Hello_MultiScreen_iPhone
             View.AddSubview(ButtonyourstoryscreenUpload);
             View.AddSubview(ButtonDelete1Line);
             View.AddSubview(ButtonDelete);
+	    View.Add(scrollView);
+	    View.Add(editTextWrite);
+
         }
 
         private void ButtonyourstoryscreenUploadClick(object sender, EventArgs eventArgs)

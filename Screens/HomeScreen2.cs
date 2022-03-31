@@ -42,6 +42,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonDelete1Line;
         public UIButton ButtonbackTodo;
         public UIButton ShareTodo;
+     	public UITextField editTextDate;
 		
 		//loads the HomeScreen.xib file and connects it to this object
 		public HomeScreen2 () : base ("HomeScreen2", null)
@@ -92,8 +93,14 @@ namespace Hello_MultiScreen_iPhone
                 BackgroundColor = UIColor.Red
             };
 
+            editTextDate = new UITextField();
+	        editTextDate.Frame = new CGRect(10, 10, 300, 40);
+	        editTextDate.AccessibilityHint = "days prior";
+
             ButtonShare.TouchUpInside += (sender, e) => {
-                String txt2 = EmailReader.EmailFileRead.ReadFileFromDate(EmailFileRead.fileName2);
+            	int i = 0;
+            	Int32.TryParse(editTextTodo.Text, out i);
+                String txt2 = EmailReader.EmailFileRead.ReadFileFromDate(EmailFileRead.fileName2,i);
                 var item = NSObject.FromObject(txt2);
                 var activityItems = new NSObject[] { item };
                 UIActivity[] applicationActivities = null;
@@ -120,8 +127,13 @@ namespace Hello_MultiScreen_iPhone
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
-
-
+	    View.Add(scrollView);
+	    View.Add(editTextWrite);
+	    View.Add(editTextDate);  
+	    View.Add(Buttonbackyourstory);
+	    View.Add(ButtonyourstoryscreenUpload);
+	    View.Add(ButtonDelete);
+	    View.Add(ButtonDelete1Line);
         }
 
         private void ButtonyourstoryscreenUploadClick(object sender, EventArgs eventArgs)
