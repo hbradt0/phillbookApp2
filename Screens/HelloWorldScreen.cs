@@ -30,6 +30,9 @@ namespace Hello_MultiScreen_iPhone
         public UIView View2;
         public UIView View3;
         int togglePicture;
+		
+		public UITextField hiddenbuttoncode;
+        public UIButton hiddenbutton;
 
         public UITextView readInfo;
         UILabel label1;
@@ -70,20 +73,71 @@ namespace Hello_MultiScreen_iPhone
             Button3 = new UIButton(UIButtonType.System);
             Button3.Frame = new CGRect(25, 25, 300, 150);
             Button3.SetTitle("Back", UIControlState.Normal);
+			
+			hiddenbutton = new UIButton(UIButtonType.System);
+            hiddenbutton.Frame = new CGRect(25, 80, 300, 150);
+            hiddenbutton.SetTitle("code", UIControlState.Normal);
+			hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
+			hiddenbuttoncode = new UITextField();
+            hiddenbuttoncode.Frame = new CGRect(25, 100, 300, 150);
 
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
-
-            View.AddSubview(Button3);
-            View.AddSubview(booktextView);
-            var text1 = EmailFileRead.ReadText("Resources/drawable/Halbook.txt");
+            var text1 = EmailFileRead.ReadText();
             booktextView.Text = text1;
             HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+			View.AddSubview(hiddenbutton);
+			View.AddSubview(hiddenbuttoncode);
+            View.AddSubview(Button3);
+            View.AddSubview(booktextView);
         }
 
         void Button3Click(object sender, EventArgs eventArgs)
         {
            // ViewController view1 = new ViewController();
            // NavigationController.PushViewController(view1, false);
+        }
+		
+        public void HiddenClick(object sender, EventArgs eventArgs)
+        {
+            String str = hiddenbuttoncode.Text;
+			if(str == "secret_code")
+			{
+                var frame = new CGRect(10, 10, 300, 40);
+                UIScrollView scrollView = new UIScrollView();
+                scrollView.Frame = frame;
+                booktextView = new UITextView();
+            booktextView.Frame = frame;
+            booktextView.Text = "Enter your email to begin your story!";
+            booktextView.KeyboardType = UIKeyboardType.EmailAddress;
+            booktextView.ReturnKeyType = UIReturnKeyType.Send;
+			var text1 = EmailFileRead.ReadText("Resources/drawable/Halbook.txt");
+            booktextView.Text = text1;
+			
+            scrollView.Add(booktextView);
+                View.Add(scrollView);
+           HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+			}
+		else if(str == "hint")
+		{ 
+                var frame = new CGRect(10, 10, 300, 40);
+                UIScrollView scrollView = new UIScrollView();
+                scrollView.Frame = frame;
+                booktextView = new UITextView();
+            booktextView.Frame = frame;
+            booktextView.Text = "Enter your email to begin your story!";
+            booktextView.KeyboardType = UIKeyboardType.EmailAddress;
+            booktextView.ReturnKeyType = UIReturnKeyType.Send;
+			var text1 = EmailFileRead.ReadText("Resources/drawable/Halbook.txt");
+            booktextView.Text = text1;
+			
+            scrollView.Add(booktextView);
+                View.Add(scrollView);
+           HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+		}
+		else 
+		{
+			hiddenbuttoncode.Text = "Please type 'hint' here";
+		}
         }
 
         /*

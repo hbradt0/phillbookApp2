@@ -59,12 +59,14 @@ namespace EmailReader //rename
             }
         }
 
-        public static void WriteText(String text, String fileName = "")
+        public static void WriteText(String text, String fileName = "",bool list = false)
         {
             if (fileName == "")
                 fileName = fileName1;
             string format = "MM/dd/yyyy";
             String date = "\n" + DateTime.Now.ToString(format) + ":\n";
+            if (list)
+                date = "\n•" + DateTime.Now.ToString(format) + ":\n";
             if (File.ReadAllText(fileName).Contains(DateTime.Now.ToString(format)))
                 date = "";//"\n";
             File.AppendAllText(fileName,date+text);
