@@ -39,7 +39,7 @@ namespace EmailReader //rename
             }
         }
 
- 	public static String ReadFileFromDate(String fileName = "", int day = 0)
+   	public static String ReadFileFromDate(String fileName = "", int day = 0)
         {
             if (fileName == "")
                 fileName = fileName1;
@@ -50,7 +50,7 @@ namespace EmailReader //rename
 
             if (ix != -1)
             {
-                string code = myString.Substring(ix + toBeSearched.Length);
+                string code = myString.Substring(ix);
                 return code;
             }
             else 
@@ -60,7 +60,7 @@ namespace EmailReader //rename
 
             	if(ix != -1)
             	{
-                	String code = myString.Substring(ix + toBeSearched.Length);
+                	String code = myString.Substring(ix);
                 	return code;
             	}
 		        else
