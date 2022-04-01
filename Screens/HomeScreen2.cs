@@ -95,7 +95,7 @@ namespace Hello_MultiScreen_iPhone
 
             editTextDate = new UITextField();
 	        editTextDate.Frame = new CGRect(10, 10, 300, 40);
-	        editTextDate.AccessibilityHint = "days prior";
+	        editTextDate.AccessibilityHint = "0 days";
 
             ButtonShare.TouchUpInside += (sender, e) => {
             	int i = 0;

@@ -97,13 +97,14 @@ namespace EmailReader //rename
 
         public static void DeleteLastLine(String fileName = "")
         {
-			if (fileName == "")
+            if (fileName == "")
                 fileName = fileName1;
             var v = File.ReadAllLines(fileName).ToList<String>();
             if (v.Count > 0)
             {
                 v.Remove(v.Last());
-                v.RemoveAll(x=>x==String.Empty);
+                if(v.Last()==String.Empty)
+                    v.RemoveAt(v.Count-1);
             }
             File.WriteAllLines(fileName, v);
         }
