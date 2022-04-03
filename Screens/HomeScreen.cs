@@ -53,6 +53,8 @@ namespace Hello_MultiScreen_iPhone
 			//---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create your story", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Click to Read", UIControlState.Normal);
+            this.btnHelloUniverse.BackgroundColor = UIColor.Blue;
+            this.btnHelloWorld.BackgroundColor = UIColor.Blue;
 
             this.btnHelloWorld.TouchUpInside += (sender, e) => {
 				//---- instantiate a new hello world screen, if it's null (it may not be null if they've navigated
@@ -68,15 +70,6 @@ namespace Hello_MultiScreen_iPhone
 				this.NavigationController.PushViewController(this.helloUniverseScreen, true);
 			};
 
-            //PLEASE COMMENT OUT BELOW IF THIS doesn't work
-            UIButton ButtonTodoList = new UIButton(UIButtonType.System);
-            ButtonTodoList.Frame = new CGRect(10, 300, 300, 40);
-            ButtonTodoList.SetTitle("To Do List", UIControlState.Normal);
-
-            ButtonTodoList.TouchUpInside += (sender, e) => {
-                if (this.TodoScreen == null) { this.TodoScreen = new HomeScreen2(); }
-                this.NavigationController.PushViewController(this.TodoScreen, true);
-            };
         }
 		
         public void ViewDidLoad1()
@@ -104,17 +97,16 @@ namespace Hello_MultiScreen_iPhone
             textView = new UITextView();
             var ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
-                Frame = UIScreen.MainScreen.Bounds,
-                BackgroundColor = UIColor.Red
+
+                //Frame = UIScreen.MainScreen.Bounds,
+                BackgroundColor = UIColor.Blue
             };
 
+            ButtonShare.Frame = new CGRect(25, 400, 150, 150);
+            ButtonShare.SetTitle("Share",UIControlState.Normal);
             //Button1.Frame = new CGRect(25, 200, 300, 150);
             //Button1.SetTitle("Click to Read", UIControlState.Normal);
-
-            textView.Frame = new CGRect(10, 300, 300, 40);
-            textView.Text = "Begin your journey here! Share now!";
-            textView.KeyboardType = UIKeyboardType.EmailAddress;
-            textView.ReturnKeyType = UIReturnKeyType.Send;
+          
 
             //Buttonyourstoryscreen.Frame = new CGRect(25, 400, 300, 150);
             //Buttonyourstoryscreen.SetTitle("Create your journal", UIControlState.Normal);
@@ -124,10 +116,22 @@ namespace Hello_MultiScreen_iPhone
             //Buttonyourstoryscreen.AddTarget(ButtonyourstoryscreenClick, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
 
+
+            //PLEASE COMMENT OUT BELOW IF THIS doesn't work
+            UIButton ButtonTodoList = new UIButton(UIButtonType.System);
+            ButtonTodoList.Frame = new CGRect(100, 200, 300, 40);
+            ButtonTodoList.BackgroundColor = UIColor.Blue;
+            ButtonTodoList.SetTitle("To Do List", UIControlState.Normal);
+
+            ButtonTodoList.TouchUpInside += (sender, e) => {
+                if (this.TodoScreen == null) { this.TodoScreen = new HomeScreen2(); }
+                this.NavigationController.PushViewController(this.TodoScreen, true);
+            };
+
+            View.Add(ButtonTodoList);
             //Add to view
             Add(ButtonShare);
             View.Add(ButtonShare);
-            View.AddSubview(textView);
             View.AddSubview(imageView);
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           

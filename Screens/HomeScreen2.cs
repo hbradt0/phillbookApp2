@@ -55,9 +55,10 @@ namespace Hello_MultiScreen_iPhone
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			ViewDidLoad1();
+            this.Title = "123";
+			//ViewDidLoad1();
 		}
-
+        /*
         //Todo list 
         public void ViewDidLoad1()
         {
@@ -222,7 +223,7 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
         }
 
-        /*
+        
         /// <summary>
         /// Is called when the view is about to appear on the screen. We use this method to hide the
         /// navigation bar.

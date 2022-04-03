@@ -49,8 +49,7 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             //View Issue
-            View.BackgroundColor = UIColor.White;
-            Title = "My Custom View Controller";
+            View.BackgroundColor = UIColor.Purple;
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.Purple;
 
@@ -62,6 +61,7 @@ namespace Hello_MultiScreen_iPhone
             hiddenbuttoncode = new UITextField();
 
             scrollView.Frame = new CGRect(25, 25, 300, 150); ;
+            scrollView.BackgroundColor = UIColor.SystemPink;
 
             var plist = NSUserDefaults.StandardUserDefaults;
             var p = plist.IntForKey("viewScroll1Y");
@@ -70,23 +70,27 @@ namespace Hello_MultiScreen_iPhone
             //if (null != p)
             //    booktextView.y.Y = p;  
 
-            booktextView.Frame = new CGRect(25, 25, 300, 150); ;
+            //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
-            booktextView.KeyboardType = UIKeyboardType.EmailAddress;
-            booktextView.ReturnKeyType = UIReturnKeyType.Send;
+            booktextView.BackgroundColor = UIColor.White;
+            //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
+            //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(25, 25, 300, 150);
+            Button3.Frame = new CGRect(25, 400, 150, 150);
             Button3.SetTitle("Back", UIControlState.Normal);
-			
-            hiddenbutton.Frame = new CGRect(25, 80, 300, 150);
-            hiddenbutton.SetTitle("Code", UIControlState.Normal);
 
-            hiddenbuttoncode.Frame = new CGRect(25, 100, 300, 150);
+            hiddenbutton.Frame = new CGRect(25, 300, 100, 100);
+            hiddenbutton.SetTitle("Code", UIControlState.Normal);
+            hiddenbuttoncode.BackgroundColor = UIColor.Blue;
+
+            hiddenbuttoncode.Frame = new CGRect(100, 300, 100, 100);
             hiddenbuttoncode.AccessibilityHint = "type 'hint'";
+            hiddenbuttoncode.BackgroundColor = UIColor.White;
+
 
             var text1 = EmailFileRead.ReadText();
-            booktextView.Text = text1;
-            HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+            booktextView.Text = "5"+text1;
+            //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
 
             //Add targets
             hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
@@ -94,10 +98,10 @@ namespace Hello_MultiScreen_iPhone
 
             //Add to view
             scrollView.Add(booktextView);
-            View.Add(scrollView);
-            View.AddSubview(hiddenbutton);
-			View.AddSubview(hiddenbuttoncode);
-            View.AddSubview(Button3);
+            View.AddSubview(scrollView);
+            View.Add(hiddenbutton);
+			View.Add(hiddenbuttoncode);
+            View.Add(Button3);
             //View.AddSubview(booktextView);
         }
 

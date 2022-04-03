@@ -42,13 +42,11 @@ namespace Hello_MultiScreen_iPhone
 			this.Title = "Universe!";
 			ViewDidLoad1();
 		}
-
+        
         //Create your journal page
         public void ViewDidLoad1()
         {
             //View issue
-            View.BackgroundColor = UIColor.White;
-            Title = "My Custom View Controller";
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.Purple;
 
@@ -61,25 +59,25 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             UIScrollView scrollView = new UIScrollView();
             dateTimeText = new UIDatePicker(new CGRect(
-                UIScreen.MainScreen.Bounds.X - UIScreen.MainScreen.Bounds.Width,
+               UIScreen.MainScreen.Bounds.X - UIScreen.MainScreen.Bounds.Width,
                 UIScreen.MainScreen.Bounds.Height - 230,
-                UIScreen.MainScreen.Bounds.Width,
-                180
+              UIScreen.MainScreen.Bounds.Width,
+               180
              ));
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
 
             //Buttons and edit properties
-            Buttonbackyourstory.Frame = new CGRect(25, 25, 300, 150);
+            Buttonbackyourstory.Frame = new CGRect(25, 177, 300, 150);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(25, 25, 300, 150);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(50, 25, 300, 150);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(25, 25, 300, 150);
+            ButtonDelete.Frame = new CGRect(25, 150, 300, 150);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(25, 25, 300, 150);
+            ButtonDelete1Line.Frame = new CGRect(25, 125, 300, 150);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.Text = "Write Here";
@@ -97,18 +95,18 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.MinimumDate = minDate;
             dateTimeText.MaximumDate = currentDate;
 
-            ButtonDateClick.Frame = new CGRect(25, 25, 300, 150);
+            ButtonDateClick.Frame = new CGRect(25, 50, 300, 150);
             ButtonDateClick.SetTitle("SendDate", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(25, 25, 300, 150);
+            textViewWrite.Frame = new CGRect(25, 75, 300, 150);
             textViewWrite.Text = "";
             textViewWrite.Text = EmailFileRead.ReadText();
 
             scrollView.Frame = new CGRect(25, 25, 300, 150);
-            scrollView2.Frame = new CGRect(25, 25, 300, 150);
+            scrollView2.Frame = new CGRect(25, 100, 300, 150);
 
             scrollView2.Add(textViewWrite);
-            scrollView.Add(booktextView);
+            scrollView.Add(editTextWrite);
 
             //On click Events
             ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
@@ -119,18 +117,16 @@ namespace Hello_MultiScreen_iPhone
 
             //Add to view
             View.Add(ButtonDateClick);
-            View.Add(dateTimeText);
-            View.Add(scrollView);
             View.Add(scrollView2);
-            View.AddSubview(Buttonbackyourstory);
-            View.AddSubview(ButtonyourstoryscreenUpload);
-            View.AddSubview(ButtonDelete1Line);
-            View.AddSubview(ButtonDelete);
+            View.Add(Buttonbackyourstory);
+            View.Add(ButtonyourstoryscreenUpload);
+            View.Add(ButtonDelete1Line);
+            View.Add(ButtonDelete);
             View.Add(dateTimeText);
 	        View.Add(scrollView);
-	        View.Add(editTextWrite);
+	     
         }
-
+        
         //Share at click upon date
         private void ButtonDateClickEvent(object sender, EventArgs eventArgs)
         {
@@ -228,7 +224,7 @@ namespace Hello_MultiScreen_iPhone
                 textViewWrite.Text = EmailFileRead.ReadText();
             };
         }
-
+        
         //Back button
         private void ButtonbackyourstoryscreenClick(object sender, EventArgs eventArgs)
         {
