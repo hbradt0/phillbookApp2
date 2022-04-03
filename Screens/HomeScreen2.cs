@@ -55,80 +55,109 @@ namespace Hello_MultiScreen_iPhone
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-            this.Title = "123";
+            this.Title = "Todo List";
 			//ViewDidLoad1();
 		}
-        /*
+
         //Todo list 
+
+        //Create your journal page
         public void ViewDidLoad1()
         {
             //View issue
-            View.BackgroundColor = UIColor.White;
-            Title = "Todo page";
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.Purple;
 
-            //Create Elements
+            //Initialize Fields
             textViewWrite = new UITextView();
             editTextWrite = new UITextField();
             Buttonbackyourstory = new UIButton(UIButtonType.System);
             ButtonyourstoryscreenUpload = new UIButton(UIButtonType.System);
             ButtonDelete = new UIButton(UIButtonType.System);
-            var ButtonShare = new UIButton(UIButtonType.RoundedRect)
-            {
-                Frame = UIScreen.MainScreen.Bounds,
-                BackgroundColor = UIColor.Red
-            };
-            editTextDate = new UITextField();
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             UIScrollView scrollView = new UIScrollView();
+  
+            //ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
 
-            //Edit items
-            Buttonbackyourstory.Frame = new CGRect(25, 25, 300, 150);
+            //Buttons and edit properties
+            textViewWrite.TextColor = UIColor.Purple;
+            textViewWrite.Editable = false;
+            editTextWrite.TextColor = UIColor.Black;
+            //ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonyourstoryscreenUpload.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonyourstoryscreenUpload.BackgroundColor = UIColor.Blue;
+            ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonDelete.BackgroundColor = UIColor.Red;
+            ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonDelete1Line.BackgroundColor = UIColor.Red;
+            //ButtonDateClick.BackgroundColor = UIColor.Blue;
+
+            Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(25, 25, 300, 150);
-            ButtonyourstoryscreenUpload.SetTitle("Submit Todo", UIControlState.Normal);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 420, 100, 50);
+            ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(25, 25, 300, 150);
+            ButtonDelete.Frame = new CGRect(20, 475, 100, 50);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(25, 25, 300, 150);
+            ButtonDelete1Line.Frame = new CGRect(160, 475, 150, 50);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
-	        editTextDate.Frame = new CGRect(10, 10, 300, 40);
-	        editTextDate.AccessibilityHint = "0 days";
-
-            scrollView.Frame = new CGRect(10, 10, 300, 40);
-            scrollView2.Frame = new CGRect(50, 10, 300, 40);
-            textViewWrite.Frame = new CGRect(25, 25, 300, 150);
-            textViewWrite.Text = "";
-            textViewWrite.Text = EmailFileRead.ReadText();
-            editTextWrite.Text = "Enter your email to begin your story!";
+            editTextWrite.Text = "Write Here";
+            editTextWrite.BackgroundColor = UIColor.White;
             editTextWrite.KeyboardType = UIKeyboardType.EmailAddress;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Send;
 
-            //Button clicks
-            ButtonShare.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
-            Buttonbackyourstory.AddTarget(ButtonBackTodoListMainPage, UIControlEvent.TouchUpInside);
+            editTextWrite.Frame = new CGRect(20, 370, 300, 50);
+
+            //dateTimeText.AccessibilityHint = "Today's date";
+            var calendar = new NSCalendar(NSCalendarType.Gregorian);
+            var currentDate = NSDate.Now;
+            var components = new NSDateComponents();
+            components.Year = -60;
+            NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
+            //dateTimeText.MinimumDate = minDate;
+            //dateTimeText.MaximumDate = currentDate;
+
+            //ButtonDateClick.Frame = new CGRect(25, 50, 100, 50);
+            //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
+
+            textViewWrite.Frame = new CGRect(20, 100, 300, 150);
+            textViewWrite.Text = EmailFileRead.ReadText();
+            textViewWrite.UserInteractionEnabled = true;
+            textViewWrite.ScrollEnabled = true;
+            if (this.textViewWrite.Text.Length > 0)
+            {
+                NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                this.textViewWrite.ScrollRangeToVisible(range);
+            }
+            //textViewWrite.ScrollRangeToVisible()
+
+            //scrollView.Frame = new CGRect(25, 370, 300, 150);
+            //scrollView2.Frame = new CGRect(25, 100, 300, 150);
+
+            //scrollView2.Add(textViewWrite);
+            //scrollView.Add(editTextWrite);
+
+            //On click Events
+            //ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
+            
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
 
-            //Add to scrollview
-            scrollView.Add(textViewWrite);
-            scrollView2.Add(editTextWrite);
+            //Add to view
+            //View.Add(ButtonDateClick);
+            View.AddSubview(textViewWrite);
+            View.Add(ButtonyourstoryscreenUpload);
+            View.Add(ButtonDelete1Line);
+            View.Add(ButtonDelete);
+            //View.Add(dateTimeText);
+            View.AddSubview(editTextWrite);
+            //View.Add(textViewWrite);
 
-            //View adds
-            View.Add(scrollView);
-            View.Add(scrollView2);
-	        //View.Add(editTextWrite); //May not need
-	        //View.Add(editTextDate);  //May not need
-	        View.Add(Buttonbackyourstory);
-	        View.Add(ButtonyourstoryscreenUpload);
-	        View.Add(ButtonDelete);
-	        View.Add(ButtonDelete1Line);
         }
 
         //Share past # of days
@@ -223,27 +252,7 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
         }
 
-        
-        /// <summary>
-        /// Is called when the view is about to appear on the screen. We use this method to hide the
-        /// navigation bar.
-        /// </summary>
-        public override void ViewWillAppear (bool animated)
-		{
-			base.ViewWillAppear (animated);
-			this.NavigationController.SetNavigationBarHidden (true, animated);
-		}
 
-		/// <summary>
-		/// Is called when the another view will appear and this one will be hidden. We use this method
-		/// to show the navigation bar again.
-		/// </summary>
-		public override void ViewWillDisappear (bool animated)
-		{
-			base.ViewWillDisappear (animated);
-			this.NavigationController.SetNavigationBarHidden (false, animated);
-		}
-        */
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();

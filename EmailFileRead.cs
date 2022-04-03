@@ -23,8 +23,8 @@ namespace EmailReader //rename
 
         }
 
-        public static string fileName1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "notes.txt");
-        public static string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "todo.txt");
+        public static string fileName1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "notes.txt");
+        public static string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo.txt");
 
         public static String ReadText(String fileName = "")
         {
@@ -122,11 +122,11 @@ namespace EmailReader //rename
             string format = "MM/dd/yyyy";
             String date = "\n" + DateTime.Now.ToString(format) + ":\n";
             if(list)
-                date = "\n" + DateTime.Now.ToString(format) + ":\n•";
+                date = "\n" + DateTime.Now.ToString(format) + ":\n?";
             if (File.ReadAllText(fileName).Contains(DateTime.Now.ToString(format)))
             {
                 if (list)
-                    date = "•";
+                    date = "?";
                 else
                     date = "";
             }

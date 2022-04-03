@@ -55,6 +55,7 @@ namespace Hello_MultiScreen_iPhone
             this.btnHelloWorld.SetTitle("Click to Read", UIControlState.Normal);
             this.btnHelloUniverse.BackgroundColor = UIColor.Blue;
             this.btnHelloWorld.BackgroundColor = UIColor.Blue;
+            this.Title = "Create Your Story";
 
             this.btnHelloWorld.TouchUpInside += (sender, e) => {
 				//---- instantiate a new hello world screen, if it's null (it may not be null if they've navigated

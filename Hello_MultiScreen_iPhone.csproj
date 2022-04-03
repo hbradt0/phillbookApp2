@@ -132,6 +132,15 @@
     <BundleResource Include="Resources\icon-144.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Reflections2.txt" />
+    <BundleResource Include="Resources\Reflections.docx" />
+    <BundleResource Include="Resources\pic5.jpg" />
+    <BundleResource Include="Resources\pic8.jpg" />
+    <BundleResource Include="Resources\Halbook.txt" />
+    <BundleResource Include="Resources\ic_launcher.png" />
+    <BundleResource Include="Resources\ic_launcher_foreground.png" />
+    <BundleResource Include="Resources\ic_launcher_round.png" />
+    <BundleResource Include="Resources\alert.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\iTunesArtwork.png" />
