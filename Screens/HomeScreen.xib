@@ -38,13 +38,18 @@
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pic5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-7e-BCx">
+                    <rect key="frame" x="85" y="226" width="133" height="178"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemPurpleColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="139" y="152"/>
+            <point key="canvasLocation" x="137.59999999999999" y="151.12443778110946"/>
         </view>
     </objects>
     <resources>
+        <image name="pic5.jpg" width="720" height="960"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

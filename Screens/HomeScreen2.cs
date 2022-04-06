@@ -55,8 +55,8 @@ namespace Hello_MultiScreen_iPhone
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-            this.Title = "Todo List";
-			//ViewDidLoad1();
+            this.Title = "";
+			ViewDidLoad1();
 		}
 
         //Todo list 

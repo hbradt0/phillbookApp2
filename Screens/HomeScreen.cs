@@ -30,6 +30,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
         public UIButton ButtonShare;
+        public UITextView textTitle;
 
         public UIImageView imageView;
         public UIView View1;
@@ -71,6 +72,8 @@ namespace Hello_MultiScreen_iPhone
 				this.NavigationController.PushViewController(this.helloUniverseScreen, true);
 			};
 
+
+
         }
 		
         public void ViewDidLoad1()
@@ -86,7 +89,16 @@ namespace Hello_MultiScreen_iPhone
             user.View.BackgroundColor = UIColor.Purple;
             //View.LargeContentImage = imageView;
             imageView = new UIImageView();
-            imageView.Image = UIImage.FromBundle("Resources/pic5.png");
+            UIImage img = new UIImage();
+            img = UIImage.FromFile("pic5.png");
+            imageView.Image = img;
+           imageView.Frame = new CGRect(25, 300, 150, 150);
+
+            textTitle = new UITextView();
+            textTitle.Editable = false;
+            textTitle.BackgroundColor = UIColor.Magenta;
+            textTitle.Text = "Create Your Story!";
+            textTitle.Frame = new CGRect(25, 25, 250, 50);
 
             //imageView.AccessibilityFrame = new CGRect(25, 500, 300, 150);
             //can't use picture via .frame or .AcessibilityFrame
@@ -103,11 +115,13 @@ namespace Hello_MultiScreen_iPhone
                 BackgroundColor = UIColor.Blue
             };
 
-            ButtonShare.Frame = new CGRect(25, 400, 150, 150);
+            ButtonShare.Frame = new CGRect(25, 400, 150, 50);
             ButtonShare.SetTitle("Share",UIControlState.Normal);
+            ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
+
             //Button1.Frame = new CGRect(25, 200, 300, 150);
             //Button1.SetTitle("Click to Read", UIControlState.Normal);
-          
+
 
             //Buttonyourstoryscreen.Frame = new CGRect(25, 400, 300, 150);
             //Buttonyourstoryscreen.SetTitle("Create your journal", UIControlState.Normal);
@@ -120,9 +134,10 @@ namespace Hello_MultiScreen_iPhone
 
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
-            ButtonTodoList.Frame = new CGRect(100, 200, 300, 40);
+            ButtonTodoList.Frame = new CGRect(25, 200, 250, 50);
             ButtonTodoList.BackgroundColor = UIColor.Blue;
             ButtonTodoList.SetTitle("To Do List", UIControlState.Normal);
+            ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
 
             ButtonTodoList.TouchUpInside += (sender, e) => {
                 if (this.TodoScreen == null) { this.TodoScreen = new HomeScreen2(); }
@@ -133,7 +148,8 @@ namespace Hello_MultiScreen_iPhone
             //Add to view
             Add(ButtonShare);
             View.Add(ButtonShare);
-            View.AddSubview(imageView);
+            View.Add(imageView);
+            View.Add(textTitle);
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           
         }

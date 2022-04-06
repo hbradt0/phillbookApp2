@@ -10,12 +10,6 @@
 
 
 @interface HomeScreen2 : UIViewController {
-	UIButton *_btnHelloWorld1;
-	UIButton *_btnHelloUniverse1;
 }
-
-@property (nonatomic, retain) IBOutlet UIButton *btnHelloWorld1;
-
-@property (nonatomic, retain) IBOutlet UIButton *btnHelloUniverse1;
 
 @end

@@ -11,10 +11,6 @@ namespace Hello_MultiScreen_iPhone
 	[Register ("HomeScreen2")]
 	partial class HomeScreen2
 	{
-		[Outlet]
-		UIKit.UIButton btnHelloWorld1 { get; set; }
-
-		[Outlet]
-		UIKit.UIButton btnHelloUniverse1 { get; set; }
+	
 	}
 }

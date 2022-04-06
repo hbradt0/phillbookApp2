@@ -9,7 +9,4 @@
 
 @implementation HomeScreen2
 
-@synthesize btnHelloWorld1 = _btnHelloWorld1;
-@synthesize btnHelloUniverse1 = _btnHelloUniverse1;
-
 @end
