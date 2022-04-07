@@ -133,6 +133,13 @@ namespace EmailReader //rename
             File.AppendAllText(fileName,date+text+"\n");
         }
 
+        public static void WriteAllText(String text, String fileName = "")
+        {
+            if (fileName == "")
+                fileName = fileName1;
+            File.WriteAllText(fileName, text);
+        }
+
         public static void DeleteText(String fileName = "")
         {
             if (fileName == "")

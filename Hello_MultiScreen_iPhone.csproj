@@ -76,11 +76,16 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <InterfaceDefinition Include="Screens\HomeScreen2.xib" />
+    <InterfaceDefinition Include="Screens\EditJournalScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Screens\EditJournalScreen.cs" />
+    <Compile Include="Screens\EditJournalScreen.designer.cs">
+      <DependentUpon>EditJournalScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\HomeScreen.designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
