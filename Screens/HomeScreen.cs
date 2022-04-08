@@ -54,8 +54,8 @@ namespace Hello_MultiScreen_iPhone
 			//---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create your story", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Click to Read", UIControlState.Normal);
-            this.btnHelloUniverse.BackgroundColor = UIColor.Blue;
-            this.btnHelloWorld.BackgroundColor = UIColor.Blue;
+            this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             this.Title = "Create Your Story";
 
             this.btnHelloWorld.TouchUpInside += (sender, e) => {
@@ -86,7 +86,7 @@ namespace Hello_MultiScreen_iPhone
             //View Issue
             Title = "My Custom View Controller";
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.Purple;
+            user.View.BackgroundColor = UIColor.FromRGB(255,153,255);
             //View.LargeContentImage = imageView;
             imageView = new UIImageView();
             UIImage img = new UIImage();
@@ -112,8 +112,8 @@ namespace Hello_MultiScreen_iPhone
             {
 
                 //Frame = UIScreen.MainScreen.Bounds,
-                BackgroundColor = UIColor.Blue
-            };
+                BackgroundColor = UIColor.FromRGB(100, 149, 237)
+        };
 
             ButtonShare.Frame = new CGRect(25, 400, 150, 50);
             ButtonShare.SetTitle("Share",UIControlState.Normal);
@@ -135,7 +135,7 @@ namespace Hello_MultiScreen_iPhone
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
             ButtonTodoList.Frame = new CGRect(25, 200, 250, 50);
-            ButtonTodoList.BackgroundColor = UIColor.Blue;
+            ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ButtonTodoList.SetTitle("To Do List", UIControlState.Normal);
             ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
 

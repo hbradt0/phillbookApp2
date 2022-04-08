@@ -41,7 +41,7 @@ namespace Hello_MultiScreen_iPhone
         //loads the HelloUniverseScreen.xib file and connects it to this object
         public HelloUniverseScreen () : base ("HelloUniverseScreen", null)
 		{
-			this.Title = "Universe!";
+			//this.Title = "Universe!";
 			ViewDidLoad1();
 		}
         
@@ -50,7 +50,7 @@ namespace Hello_MultiScreen_iPhone
         {
             //View issue
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.Purple;
+            user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
 
             //Initialize Fields
             textViewWrite = new UITextView();
@@ -71,27 +71,28 @@ namespace Hello_MultiScreen_iPhone
             EditJournalButton = new UIButton(UIButtonType.System);
 
             EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            EditJournalButton.BackgroundColor = UIColor.Blue;
+            EditJournalButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            EditJournalButton.Frame = new CGRect(175, 25, 100, 50);
+            EditJournalButton.Frame = new CGRect(175, 420, 100, 50);
+           EditJournalButton.SetTitle("Edit Journal", UIControlState.Normal);
 
             //Buttons and edit properties
             textViewWrite.TextColor = UIColor.Purple;
             textViewWrite.Editable = false;
             editTextWrite.TextColor = UIColor.Black;
-            Buttonbackyourstory.BackgroundColor = UIColor.Blue;
+            Buttonbackyourstory.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             Buttonbackyourstory.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonyourstoryscreenUpload.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ButtonyourstoryscreenUpload.BackgroundColor = UIColor.Blue;
+            ButtonyourstoryscreenUpload.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete.BackgroundColor = UIColor.Red;
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.Red;
-            ButtonDateClick.BackgroundColor = UIColor.Blue;
+            ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
-            Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
+            //Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
+            //Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
             ButtonyourstoryscreenUpload.Frame = new CGRect(20, 420, 100, 50);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
@@ -107,7 +108,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.KeyboardType = UIKeyboardType.EmailAddress;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Send;
 
-            editTextWrite.Frame = new CGRect(20, 370, 300, 50);
+            editTextWrite.Frame = new CGRect(20, 370, 280, 50);
 
             dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -118,10 +119,10 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.MinimumDate = minDate;
             dateTimeText.MaximumDate = currentDate;
 
-            ButtonDateClick.Frame = new CGRect(25, 50, 100, 50);
+            ButtonDateClick.Frame = new CGRect(200, 25, 100, 50);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 100, 300, 150);
+            textViewWrite.Frame = new CGRect(20, 100, 280, 150);
             textViewWrite.Text = EmailFileRead.ReadText();
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -282,5 +283,12 @@ namespace Hello_MultiScreen_iPhone
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
-	}
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            textViewWrite.Text = EmailFileRead.ReadText();
+
+        }
+    }
 }

@@ -49,9 +49,9 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             //View Issue
-            View.BackgroundColor = UIColor.Purple;
+            View.BackgroundColor = UIColor.FromRGB(178,178,227);
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.Purple;
+            user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -71,6 +71,7 @@ namespace Hello_MultiScreen_iPhone
             Button3.Frame = new CGRect(25, 400, 150, 150);
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
+            Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             //Add to view
             View.Add(Button3);

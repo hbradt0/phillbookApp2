@@ -86,12 +86,12 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.TextColor = UIColor.Black;
             //ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonyourstoryscreenUpload.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ButtonyourstoryscreenUpload.BackgroundColor = UIColor.Blue;
+            ButtonyourstoryscreenUpload.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete.BackgroundColor = UIColor.Red;
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.Red;
-            //ButtonDateClick.BackgroundColor = UIColor.Blue;
+            //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);

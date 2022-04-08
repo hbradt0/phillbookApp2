@@ -41,17 +41,23 @@ namespace Hello_MultiScreen_iPhone
         //loads the HelloWorldScreen.xib file and connects it to this object
         public HelloWorldScreen () : base ("HelloWorldScreen", null)
 		{
-			this.Title = "";
-			ViewDidLoad1();
+	
 		}
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            this.Title = "";
+            ViewDidLoad1();
+        }
 
         //Read your journal page
         public void ViewDidLoad1()
         {
             //View Issue
-            View.BackgroundColor = UIColor.Purple;
+            View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.Purple;
+            user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -86,12 +92,12 @@ namespace Hello_MultiScreen_iPhone
 
             hiddenbutton.Frame = new CGRect(25, 300, 100, 100);
             hiddenbutton.SetTitle("Code", UIControlState.Normal);
-            hiddenbuttoncode.BackgroundColor = UIColor.Blue;
+            hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             hiddenbuttoncode.Frame = new CGRect(100, 300, 100, 100);
             hiddenbuttoncode.AccessibilityHint = "type 'hint'";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
-
+            
 
             var text1 = EmailFileRead.ReadText();
             booktextView.Text = "5"+text1;
