@@ -60,7 +60,7 @@ namespace Hello_MultiScreen_iPhone
                 Editable = true
             };
 
-            booktextView.Frame = new CGRect(25, 150, 300, 150); 
+            booktextView.Frame = new CGRect(20, 60, 280, 440); 
             booktextView.Text = EmailFileRead.ReadText();
             booktextView.BackgroundColor = UIColor.White;
             booktextView.UserInteractionEnabled = true;
@@ -68,7 +68,7 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(25, 400, 150, 150);
+            Button3.Frame = new CGRect(20, 520, 100, 30);
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);

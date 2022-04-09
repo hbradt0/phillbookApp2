@@ -102,21 +102,21 @@ namespace Hello_MultiScreen_iPhone
             editTextDate.Text = "0";
             //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
 
-            editTextDate.Frame = new CGRect(140, 420, 30, 50);
+            editTextDate.Frame = new CGRect(180, 520, 100, 30);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            ShareTodo.Frame = new CGRect(160, 420, 100, 50);
+            ShareTodo.Frame = new CGRect(200, 520, 100, 30);
 
             Buttonbackyourstory.Frame = new CGRect(150, 25, 70, 50);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 420, 100, 50);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 365, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(20, 475, 100, 50);
+            ButtonDelete.Frame = new CGRect(20, 520, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(160, 475, 150, 50);
+            ButtonDelete1Line.Frame = new CGRect(150, 365, 150, 30);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -124,7 +124,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.KeyboardType = UIKeyboardType.EmailAddress;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Send;
 
-            editTextWrite.Frame = new CGRect(20, 360, 280, 50);
+            editTextWrite.Frame = new CGRect(20, 405, 280, 60);
 
             //dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -138,7 +138,7 @@ namespace Hello_MultiScreen_iPhone
             //ButtonDateClick.Frame = new CGRect(25, 50, 100, 50);
             //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 100, 280, 230);
+            textViewWrite.Frame = new CGRect(20, 60, 280, 290);
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;

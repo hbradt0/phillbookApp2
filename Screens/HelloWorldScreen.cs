@@ -69,7 +69,7 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton = new UIButton(UIButtonType.System);
             hiddenbuttoncode = new UITextField();
 
-            booktextView.Frame = new CGRect(20, 100, 280, 230); ;
+            booktextView.Frame = new CGRect(20, 60, 280, 360); ;
             //scrollView.BackgroundColor = UIColor.SystemPink;
 
             var plist = NSUserDefaults.StandardUserDefaults;
@@ -90,11 +90,11 @@ namespace Hello_MultiScreen_iPhone
             //Button3.Frame = new CGRect(175, 25, 150, 150);
             //Button3.SetTitle("Back", UIControlState.Normal);
 
-            hiddenbutton.Frame = new CGRect(25, 400, 100, 100);
+            hiddenbutton.Frame = new CGRect(20, 450, 100, 30);
             hiddenbutton.SetTitle("Code", UIControlState.Normal);
             hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            hiddenbuttoncode.Frame = new CGRect(20, 475, 280, 50);
+            hiddenbuttoncode.Frame = new CGRect(20, 500, 280, 50);
             hiddenbuttoncode.AccessibilityHint = "type 'hint'";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
 

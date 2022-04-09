@@ -120,9 +120,7 @@
   </ProjectExtensions>
   <ItemGroup>
     <BundleResource Include="Resources\icon-72.png" />
-    <BundleResource Include="Resources\icon-29.png" />
     <BundleResource Include="Resources\icon-50.png" />
-    <BundleResource Include="Resources\icon-58.png" />
     <BundleResource Include="Resources\icon-100.png" />
     <BundleResource Include="Resources\iTunesArtwork%402x.png" />
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -132,11 +130,7 @@
     <BundleResource Include="Resources\Default-Portrait~ipad.png" />
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default%402x.png" />
-    <BundleResource Include="Resources\icon-57.png" />
-    <BundleResource Include="Resources\icon-114.png" />
     <BundleResource Include="Resources\icon-144.png" />
-    <BundleResource Include="Resources\Icon-60%402x.png" />
-    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Reflections2.txt" />
     <BundleResource Include="Resources\Reflections.docx" />
     <BundleResource Include="Resources\pic5.jpg" />
@@ -150,6 +144,15 @@
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\iTunesArtwork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-57.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-114.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
