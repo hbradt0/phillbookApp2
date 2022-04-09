@@ -146,6 +146,7 @@
     <BundleResource Include="Resources\ic_launcher_foreground.png" />
     <BundleResource Include="Resources\ic_launcher_round.png" />
     <BundleResource Include="Resources\alert.jpg" />
+    <BundleResource Include="Resources\MainTitlePic.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\iTunesArtwork.png" />

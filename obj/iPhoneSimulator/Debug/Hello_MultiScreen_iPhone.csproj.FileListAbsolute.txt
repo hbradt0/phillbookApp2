@@ -1,9 +1,5 @@
 /Users/psargent/phillbookApp2/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.exe
 /Users/psargent/phillbookApp2/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.pdb
-/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
-/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
-/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.exe
-/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.pdb
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/_PartialAppManifest.items
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/_BundleResourceWithLogicalName.items
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/_ProcessedImageAssetsPath.items
@@ -35,4 +31,8 @@
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/ic_launcher.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/ic_launcher_foreground.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/ic_launcher_round.png
+/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/MainTitlePic.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/
+/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
+/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.pdb

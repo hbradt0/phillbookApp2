@@ -126,7 +126,7 @@ namespace EmailReader //rename
             if (File.ReadAllText(fileName).Contains(DateTime.Now.ToString(format)))
             {
                 if (list)
-                    date = "?";
+                    date = "• ";
                 else
                     date = "";
             }

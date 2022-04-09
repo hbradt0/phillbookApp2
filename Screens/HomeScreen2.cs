@@ -218,7 +218,7 @@ namespace Hello_MultiScreen_iPhone
                 String text = editTextWrite.Text;
                 if (editTextWrite.Text == String.Empty)
                     text = "";
-                EmailFileRead.WriteText(text,EmailFileRead.fileName2);
+                EmailFileRead.WriteText(text,EmailFileRead.fileName2,true);
                 String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
                 //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
                 textViewWrite.Text = totalText;

@@ -60,11 +60,8 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             UIScrollView scrollView = new UIScrollView();
-            dateTimeText = new UIDatePicker(new CGRect(
-               UIScreen.MainScreen.Bounds.X - UIScreen.MainScreen.Bounds.Width,
-                UIScreen.MainScreen.Bounds.Height - 230,
-              UIScreen.MainScreen.Bounds.Width,
-               180
+            dateTimeText = new UIDatePicker(new CGRect(50, 50, 100, 50
+
              ));
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
@@ -119,7 +116,7 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.MinimumDate = minDate;
             dateTimeText.MaximumDate = currentDate;
 
-            ButtonDateClick.Frame = new CGRect(200, 25, 100, 50);
+            ButtonDateClick.Frame = new CGRect(200, 50, 100, 50);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
             textViewWrite.Frame = new CGRect(20, 100, 280, 230);
@@ -171,7 +168,7 @@ namespace Hello_MultiScreen_iPhone
         private void ButtonDateClickEvent(object sender, EventArgs eventArgs)
         {
             DateTime myDate = (DateTime)dateTimeText.Date;    
-            String txt2 = "\n Your story: \n" + EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
+            String txt2 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
             var item = NSObject.FromObject(txt2);
             var activityItems = new NSObject[] { item };
             UIActivity[] applicationActivities = null;

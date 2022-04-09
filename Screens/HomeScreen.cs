@@ -33,6 +33,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textTitle;
 
         public UIImageView imageView;
+        public UIImageView imageViewTitle;
         public UIView View1;
         public UIView View2;
         public UIView View3;
@@ -92,14 +93,20 @@ namespace Hello_MultiScreen_iPhone
             UIImage img = new UIImage();
             img = UIImage.FromFile("pic5.png");
             imageView.Image = img;
-           imageView.Frame = new CGRect(25, 300, 150, 150);
+           imageView.Frame = new CGRect(25, 335, 150, 150);
 
-            textTitle = new UITextView();
-            textTitle.Editable = false;
-            textTitle.BackgroundColor = UIColor.Magenta;
-            textTitle.Text = "Create Your Story!";
-            textTitle.Frame = new CGRect(25, 25, 250, 50);
+            //textTitle = new UITextView();
+            //textTitle.Editable = false;
+            //textTitle.BackgroundColor = UIColor.FromRGB(203, 161, 212);
+            //textTitle.Text = "Create Your Story!";
+            //textTitle.Frame = new CGRect(25, 25, 250, 50);
 
+
+            imageViewTitle = new UIImageView();
+            UIImage img2 = new UIImage();
+            img2 = UIImage.FromFile("MainTitlePic.png");
+            imageViewTitle.Image = img2;
+            imageViewTitle.Frame = new CGRect(25, 25, 250, 50);
             //imageView.AccessibilityFrame = new CGRect(25, 500, 300, 150);
             //can't use picture via .frame or .AcessibilityFrame
             //imageView.TouchUpInside += (sender, e) => { ImageOnClick };
@@ -115,7 +122,7 @@ namespace Hello_MultiScreen_iPhone
                 BackgroundColor = UIColor.FromRGB(100, 149, 240)
         };
 
-            ButtonShare.Frame = new CGRect(25, 400, 150, 50);
+            ButtonShare.Frame = new CGRect(75, 445, 150, 50);
             ButtonShare.SetTitle("Share",UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
 
@@ -134,7 +141,7 @@ namespace Hello_MultiScreen_iPhone
 
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
-            ButtonTodoList.Frame = new CGRect(25, 200, 250, 50);
+            ButtonTodoList.Frame = new CGRect(25, 180, 275, 35);
             ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             ButtonTodoList.SetTitle("To Do List", UIControlState.Normal);
             ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
@@ -149,7 +156,7 @@ namespace Hello_MultiScreen_iPhone
             Add(ButtonShare);
             View.Add(ButtonShare);
             View.Add(imageView);
-            View.Add(textTitle);
+            View.Add(imageViewTitle);
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           
         }
