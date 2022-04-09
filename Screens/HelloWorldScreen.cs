@@ -8,8 +8,8 @@ using EmailReader;
 
 namespace Hello_MultiScreen_iPhone
 {
-	public partial class HelloWorldScreen : UIViewController
-	{
+    public partial class HelloWorldScreen : UIViewController
+    {
         public UITextField editText;
         public UITextView textView;
         public UITextView booktextView;
@@ -29,8 +29,8 @@ namespace Hello_MultiScreen_iPhone
         public UIView View1;
         public UIView View2;
         public UIView View3;
-		
-		public UITextField hiddenbuttoncode;
+
+        public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
 
         public UITextView readInfo;
@@ -39,10 +39,10 @@ namespace Hello_MultiScreen_iPhone
 
 
         //loads the HelloWorldScreen.xib file and connects it to this object
-        public HelloWorldScreen () : base ("HelloWorldScreen", null)
-		{
-	
-		}
+        public HelloWorldScreen() : base("HelloWorldScreen", null)
+        {
+
+        }
 
         public override void ViewDidLoad()
         {
@@ -69,13 +69,13 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton = new UIButton(UIButtonType.System);
             hiddenbuttoncode = new UITextField();
 
-            booktextView.Frame = new CGRect(25, 25, 300, 150); ;
+            booktextView.Frame = new CGRect(20, 100, 280, 230); ;
             //scrollView.BackgroundColor = UIColor.SystemPink;
 
             var plist = NSUserDefaults.StandardUserDefaults;
             var p = plist.IntForKey("viewScroll1Y");
 
-           // ViewController view1 = new ViewController();
+            // ViewController view1 = new ViewController();
             //if (null != p)
             //    booktextView.y.Y = p;  
 
@@ -87,20 +87,20 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(25, 400, 150, 150);
-            Button3.SetTitle("Back", UIControlState.Normal);
+            //Button3.Frame = new CGRect(175, 25, 150, 150);
+            //Button3.SetTitle("Back", UIControlState.Normal);
 
-            hiddenbutton.Frame = new CGRect(25, 300, 100, 100);
+            hiddenbutton.Frame = new CGRect(25, 400, 100, 100);
             hiddenbutton.SetTitle("Code", UIControlState.Normal);
             hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            hiddenbuttoncode.Frame = new CGRect(100, 300, 100, 100);
+            hiddenbuttoncode.Frame = new CGRect(20, 475, 280, 50);
             hiddenbuttoncode.AccessibilityHint = "type 'hint'";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
-            
+
 
             var text1 = EmailFileRead.ReadText();
-            booktextView.Text = "5"+text1;
+            booktextView.Text = text1;
             //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
 
             //Add targets
@@ -111,7 +111,7 @@ namespace Hello_MultiScreen_iPhone
             //scrollView.AddSubview(booktextView);
             View.AddSubview(booktextView);
             View.Add(hiddenbutton);
-			View.Add(hiddenbuttoncode);
+            View.Add(hiddenbuttoncode);
             View.Add(Button3);
             //View.AddSubview(booktextView);
         }
@@ -123,30 +123,30 @@ namespace Hello_MultiScreen_iPhone
             if (this.homeScreen == null) { this.homeScreen = new HomeScreen(); }
             this.NavigationController.PushViewController(this.homeScreen, true);
         }
-		
+
         //Hint
         public void HiddenClick(object sender, EventArgs eventArgs)
         {
 
             String str = hiddenbuttoncode.Text;
-			if(str == "secret_code")
-			{
+            if (str == "secret_code")
+            {
                 booktextView.Text = "Enter your email to begin your story!";
-			    var text1 = EmailFileRead.ReadText("Resources/Halbook.txt");
+                var text1 = EmailFileRead.ReadText("Resources/Halbook.txt");
                 booktextView.Text = text1;
-			    HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
-			}
-		    else if(str.ToLower() == "hint")
-		    {
+                HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+            }
+            else if (str.ToLower() == "hint")
+            {
                 booktextView.Text = "Enter your email to begin your story!";
-                var v = NSBundle.MainBundle.PathForResource("Reflections2","txt");
+                var v = NSBundle.MainBundle.PathForResource("Reflections2", "txt");
                 var text1 = EmailFileRead.ReadText(v);
 
                 booktextView.Text = text1;
-               // HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
-		    }
-		    else 
-		    {
+                // HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+            }
+            else
+            {
                 hiddenbuttoncode.AccessibilityHint = "type 'hint'";
             }
 
@@ -162,11 +162,17 @@ namespace Hello_MultiScreen_iPhone
             }
         }
         */
-		
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
-	}
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            booktextView.Text = EmailFileRead.ReadText();
+        }
+    }
 }

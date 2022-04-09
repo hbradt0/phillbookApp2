@@ -54,8 +54,8 @@ namespace Hello_MultiScreen_iPhone
 			//---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create your story", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Click to Read", UIControlState.Normal);
-            this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 237);
-            this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 240);
+            this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.Title = "Create Your Story";
 
             this.btnHelloWorld.TouchUpInside += (sender, e) => {
@@ -112,7 +112,7 @@ namespace Hello_MultiScreen_iPhone
             {
 
                 //Frame = UIScreen.MainScreen.Bounds,
-                BackgroundColor = UIColor.FromRGB(100, 149, 237)
+                BackgroundColor = UIColor.FromRGB(100, 149, 240)
         };
 
             ButtonShare.Frame = new CGRect(25, 400, 150, 50);
@@ -135,7 +135,7 @@ namespace Hello_MultiScreen_iPhone
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
             ButtonTodoList.Frame = new CGRect(25, 200, 250, 50);
-            ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             ButtonTodoList.SetTitle("To Do List", UIControlState.Normal);
             ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
 
@@ -156,7 +156,7 @@ namespace Hello_MultiScreen_iPhone
 
         void ShareButtonClick(object sender, EventArgs eventArgs)
         {
-            String txt2 = "\n Your story: \n" + EmailReader.EmailFileRead.ReadText();
+            String txt2 = "\n Your story: \n" + EmailFileRead.ReadText();
             var item = NSObject.FromObject(txt2);
             var activityItems = new NSObject[] { item };
             UIActivity[] applicationActivities = null;
@@ -189,14 +189,15 @@ namespace Hello_MultiScreen_iPhone
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
-			this.NavigationController.SetNavigationBarHidden (true, animated);
-		}
+            //this.NavigationController.SetNavigationBarHidden (true, animated);
+            this.NavigationController.SetNavigationBarHidden(true, animated);
+        }
 
-		/// <summary>
-		/// Is called when the another view will appear and this one will be hidden. We use this method
-		/// to show the navigation bar again.
-		/// </summary>
-		public override void ViewWillDisappear (bool animated)
+        /// <summary>
+        /// Is called when the another view will appear and this one will be hidden. We use this method
+        /// to show the navigation bar again.
+        /// </summary>
+        public override void ViewWillDisappear (bool animated)
 		{
 			base.ViewWillDisappear (animated);
 			this.NavigationController.SetNavigationBarHidden (false, animated);

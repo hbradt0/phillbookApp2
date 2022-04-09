@@ -86,9 +86,9 @@ namespace Hello_MultiScreen_iPhone
             ButtonyourstoryscreenUpload.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonyourstoryscreenUpload.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ButtonDelete.BackgroundColor = UIColor.Red;
+            ButtonDelete.BackgroundColor = UIColor.FromRGB(240, 137, 171);
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ButtonDelete1Line.BackgroundColor = UIColor.Red;
+            ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
             ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             //Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
@@ -103,12 +103,12 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.Frame = new CGRect(160, 475, 150, 50);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
-            editTextWrite.Text = "Write Here";
+            editTextWrite.AccessibilityHint = "Write Here";
             editTextWrite.BackgroundColor = UIColor.White;
             editTextWrite.KeyboardType = UIKeyboardType.EmailAddress;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Send;
 
-            editTextWrite.Frame = new CGRect(20, 370, 280, 50);
+            editTextWrite.Frame = new CGRect(20, 360, 280, 50);
 
             dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -122,7 +122,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick.Frame = new CGRect(200, 25, 100, 50);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 100, 280, 150);
+            textViewWrite.Frame = new CGRect(20, 100, 280, 230);
             textViewWrite.Text = EmailFileRead.ReadText();
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -178,7 +178,7 @@ namespace Hello_MultiScreen_iPhone
 
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
 
-            PresentViewController(activityController, true, null);
+            this.PresentViewController(activityController, true, null);
         }
 
         //Submit your journal button
