@@ -1,6 +1,0 @@
-objc[33539]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/BE6AE2BE-A355-48F8-870C-D99FC72AFEC0/data/Containers/Bundle/Application/E0C4B5E6-9ED8-4A8D-B695-1E41233C7791/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x10ed58438). One of the two will be used. Which one is undefined.
-MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2022-04-05 19:50:21.048078-0700 Hello_MultiScreen_iPhone[33539:2250944] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=33539
-2022-04-05 19:50:21.048346-0700 Hello_MultiScreen_iPhone[33539:2250944] SecTaskCopyDebugDescription: Hello_MultiScree[33539]/0#-1 LF=0
-2022-04-05 19:50:21.054931-0700 Hello_MultiScreen_iPhone[33539:2250944] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=33539
-2022-04-05 19:50:21.055177-0700 Hello_MultiScreen_iPhone[33539:2250944] SecTaskCopyDebugDescription: Hello_MultiScree[33539]/0#-1 LF=0
