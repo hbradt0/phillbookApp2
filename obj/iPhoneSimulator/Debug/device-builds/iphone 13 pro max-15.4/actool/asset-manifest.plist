@@ -6,10 +6,10 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.4/actool/bundle/AppIcon60x60@2x.png</string>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.4/actool/bundle/AppIcon76x76@2x~ipad.png</string>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.4/actool/bundle/Assets.car</string>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.4/actool/partial-info.plist</string>
+			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/bundle/AppIcon60x60@2x.png</string>
+			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/bundle/AppIcon76x76@2x~ipad.png</string>
+			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/bundle/Assets.car</string>
+			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/partial-info.plist</string>
 		</array>
 	</dict>
 	<key>com.apple.actool.document.notices</key>
@@ -20,7 +20,7 @@
 				<string>./AppIcon.appiconset/[][iphone][57x57][][][1x][][][]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
 			<string>57x57 app icons only apply to iPhone apps targeting releases of iOS prior to 7.0</string>
 			<key>type</key>
@@ -32,7 +32,7 @@
 				<string>./AppIcon.appiconset/[][iphone][57x57][][][2x][][][]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
 			<string>57x57@2x app icons only apply to iPhone apps targeting releases of iOS prior to 7.0</string>
 			<key>type</key>
@@ -44,6 +44,12 @@
 		<dict>
 			<key>description</key>
 			<string>Failed to read file attributes for "/Users/psargent/phillbookApp2/13"</string>
+			<key>failure-reason</key>
+			<string>No such file or directory</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Failed to read file attributes for "/Users/psargent/phillbookApp2/Max"</string>
 			<key>failure-reason</key>
 			<string>No such file or directory</string>
 		</dict>

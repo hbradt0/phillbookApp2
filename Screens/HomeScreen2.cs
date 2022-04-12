@@ -42,7 +42,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonDelete1Line;
         public UIButton ButtonbackTodo;
         public UIButton ShareTodo;
-     	public UITextView editTextDate;
+     	public UITextField editTextDate;
 
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
 
@@ -76,7 +76,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             UIScrollView scrollView = new UIScrollView();
-            editTextDate = new UITextView();
+            editTextDate = new UITextField();
             ShareTodo = new UIButton(UIButtonType.System);
 
             //ButtonDateClick = new UIButton(UIButtonType.System);
@@ -99,17 +99,17 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo.SetTitle("Share",UIControlState.Normal);
             editTextDate.BackgroundColor = UIColor.White;
             editTextDate.AccessibilityHint = "0 (days)";
-            editTextDate.Editable = true;
             editTextDate.Text = "0";
             //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
-            
+
             //exit keyboard
             //editTextDate. = (textField) => { textField.ResignFirstResponder(); return true; };
+            editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
-            editTextDate.Frame = new CGRect(180, 520, 100, 30);
+            editTextDate.Frame = new CGRect(150, 520, 50, 30);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             ShareTodo.Frame = new CGRect(200, 520, 100, 30);

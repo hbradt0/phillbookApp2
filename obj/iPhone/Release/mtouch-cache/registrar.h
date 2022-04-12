@@ -8,21 +8,28 @@
 #include <objc/message.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 @class UIApplicationDelegate;
 @class AppDelegate;
 @class HomeScreen;
-@class HelloWorldScreen;
 @class EditJournalScreen;
+@class HelloWorldScreen;
 @class HelloUniverseScreen;
 @class HomeScreen2;
 @class Foundation_NSDispatcher;
 @class __MonoMac_NSSynchronizationContextDispatcher;
 @class Foundation_NSAsyncDispatcher;
+@class __MonoMac_NSAsyncActionDispatcher;
 @class __MonoMac_NSAsyncSynchronizationContextDispatcher;
 @class UIKit_UIControlEventProxy;
 @class __NSObject_Disposer;
 @class UIKit_UIAlertView__UIAlertViewDelegate;
+@class __UIGestureRecognizerToken;
+@class __UIGestureRecognizerParameterlessToken;
+@class UIKit_UITextField__UITextFieldDelegate;
+@class UIKit_UIScrollView__UIScrollViewDelegate;
+@class UIKit_UITextView__UITextViewDelegate;
 
 @interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
 }
@@ -63,6 +70,19 @@
 	-(id) init;
 @end
 
+@interface EditJournalScreen : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) didReceiveMemoryWarning;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
 @interface HelloWorldScreen : UIViewController {
 }
 	-(void) release;
@@ -74,19 +94,6 @@
 	-(void) viewDidLoad;
 	-(void) didReceiveMemoryWarning;
 	-(void) viewDidAppear:(BOOL)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-@end
-
-@interface EditJournalScreen : UIViewController {
-}
-	-(void) release;
-	-(id) retain;
-	-(GCHandle) xamarinGetGCHandle;
-	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
-	-(enum XamarinGCHandleFlags) xamarinGetFlags;
-	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
-	-(void) didReceiveMemoryWarning;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 @end
@@ -118,6 +125,23 @@
 	-(void) didReceiveMemoryWarning;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
+@end
+
+@interface __UIGestureRecognizerToken : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface __UIGestureRecognizerParameterlessToken : __UIGestureRecognizerToken {
+}
+	-(void) target;
 @end
 
 

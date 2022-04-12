@@ -38,6 +38,14 @@ namespace Hello_MultiScreen_iPhone
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         EditJournalScreen editJournalScreen;
 
+
+        private NSObject keyBoardWillShow;
+        private NSObject keyBoardWillHide;
+        private nfloat scrollAmout;
+        private double animDuration;
+        private UIViewAnimationCurve animCurve;
+        private bool keyboardShowing;
+
         //loads the HelloUniverseScreen.xib file and connects it to this object
         public HelloUniverseScreen () : base ("HelloUniverseScreen", null)
 		{
@@ -60,9 +68,11 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             UIScrollView scrollView = new UIScrollView();
-            dateTimeText = new UIDatePicker(new CGRect(20, 480, 100, 30
+            dateTimeText = new UIDatePicker(new CGRect(10, 480, 100, 30
 
              ));
+            dateTimeText.Frame = new CGRect(60, 480, 100, 30
+             );
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
             EditJournalButton = new UIButton(UIButtonType.System);
@@ -126,7 +136,9 @@ namespace Hello_MultiScreen_iPhone
             components.Year = -60;
             NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
             dateTimeText.MinimumDate = minDate;
+            dateTimeText.Mode = UIDatePickerMode.Date;
             dateTimeText.MaximumDate = currentDate;
+            
 
             ButtonDateClick.Frame = new CGRect(200, 480, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
@@ -168,8 +180,75 @@ namespace Hello_MultiScreen_iPhone
 	        View.AddSubview(editTextWrite);
             View.Add(EditJournalButton);
             //View.Add(textViewWrite);
-	     
+
+            keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
+
+            keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
+
+
         }
+
+
+        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
+        {
+            //if (!keyboardShowing)
+           // {
+                keyboardShowing = true;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(true);
+                }
+            //}
+        }
+
+        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
+        {
+            if (keyboardShowing)
+            {
+                keyboardShowing = false;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(false);
+                }
+            }
+            
+        }
+
+        private void ScrollTheView(bool scale)
+        {
+            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
+            UIView.SetAnimationDuration(animDuration);
+            UIView.SetAnimationCurve(animCurve);
+
+            var frame = View.Frame;
+
+            if (scale)
+                frame.Y -= scrollAmout;
+            else
+                frame.Y += scrollAmout;
+            View.Frame = frame;
+            UIView.CommitAnimations();
+        }
+
+
         private void ButtonEditJournalClick(object sender, EventArgs eventArgs)
         {
             //back to home screen
