@@ -82,6 +82,7 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
             booktextView.BackgroundColor = UIColor.White;
+            booktextView.TextColor = UIColor.SystemPurple;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
@@ -98,6 +99,10 @@ namespace Hello_MultiScreen_iPhone
             hiddenbuttoncode.AccessibilityHint = "type 'hint'";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
 
+            //exit keyboard 
+            hiddenbuttoncode.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
             var text1 = EmailFileRead.ReadText();
             booktextView.Text = text1;
@@ -132,9 +137,10 @@ namespace Hello_MultiScreen_iPhone
             if (str == "secret_code")
             {
                 booktextView.Text = "Enter your email to begin your story!";
-                var text1 = EmailFileRead.ReadText("Resources/Halbook.txt");
+                var v = NSBundle.MainBundle.PathForResource("Halbook", "txt");
+                var text1 = EmailFileRead.ReadText(v);
                 booktextView.Text = text1;
-                HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+                //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
             }
             else if (str.ToLower() == "hint")
             {

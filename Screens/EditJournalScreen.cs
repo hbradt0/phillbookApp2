@@ -63,8 +63,25 @@ namespace Hello_MultiScreen_iPhone
             booktextView.Frame = new CGRect(20, 60, 280, 440); 
             booktextView.Text = EmailFileRead.ReadText();
             booktextView.BackgroundColor = UIColor.White;
+            booktextView.TextColor = UIColor.Purple;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
+            booktextView.KeyboardType = UIKeyboardType.ASCIICapable;
+            booktextView.ReturnKeyType = UIReturnKeyType.Done;
+
+            var gestureToCloseKeyboard = new UITapGestureRecognizer(() => View.EndEditing(true));
+            booktextView.ShouldChangeText = (text, range, replacementString) =>
+            {
+                if (replacementString.Equals("\n"))
+                {
+                    booktextView.EndEditing(true);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            };
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 

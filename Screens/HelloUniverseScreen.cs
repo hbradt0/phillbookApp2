@@ -81,6 +81,7 @@ namespace Hello_MultiScreen_iPhone
 
             //Buttons and edit properties
             textViewWrite.TextColor = UIColor.Purple;
+            textViewWrite.BackgroundColor = UIColor.White;
             textViewWrite.Editable = false;
             editTextWrite.TextColor = UIColor.Black;
             Buttonbackyourstory.BackgroundColor = UIColor.FromRGB(100, 149, 237);
@@ -93,6 +94,11 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
             ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+
+            //exit keyboard
+            editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
             //Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
             //Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
@@ -108,8 +114,8 @@ namespace Hello_MultiScreen_iPhone
 
             editTextWrite.AccessibilityHint = "Write Here";
             editTextWrite.BackgroundColor = UIColor.White;
-            editTextWrite.KeyboardType = UIKeyboardType.EmailAddress;
-            editTextWrite.ReturnKeyType = UIReturnKeyType.Send;
+            editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
+            editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
 
             editTextWrite.Frame = new CGRect(20, 405, 280, 60);
 

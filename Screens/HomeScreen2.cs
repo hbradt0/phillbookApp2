@@ -84,6 +84,7 @@ namespace Hello_MultiScreen_iPhone
 
             //Buttons and edit properties
             textViewWrite.TextColor = UIColor.Purple;
+            textViewWrite.BackgroundColor = UIColor.White;
             textViewWrite.Editable = false;
             editTextWrite.TextColor = UIColor.Black;
             //ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
@@ -101,6 +102,12 @@ namespace Hello_MultiScreen_iPhone
             editTextDate.Editable = true;
             editTextDate.Text = "0";
             //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
+            
+            //exit keyboard
+            //editTextDate. = (textField) => { textField.ResignFirstResponder(); return true; };
+            editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
             editTextDate.Frame = new CGRect(180, 520, 100, 30);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
@@ -121,9 +128,9 @@ namespace Hello_MultiScreen_iPhone
 
             editTextWrite.AccessibilityHint = "Write Here";
             editTextWrite.BackgroundColor = UIColor.White;
-            editTextWrite.KeyboardType = UIKeyboardType.EmailAddress;
-            editTextWrite.ReturnKeyType = UIReturnKeyType.Send;
-
+            editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
+            editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
+            
             editTextWrite.Frame = new CGRect(20, 405, 280, 60);
 
             //dateTimeText.AccessibilityHint = "Today's date";
@@ -178,8 +185,9 @@ namespace Hello_MultiScreen_iPhone
 
         }
 
-        //Share past # of days
-        private void ButtonShareClick(object sender, EventArgs eventArgs)
+
+    //Share past # of days
+    private void ButtonShareClick(object sender, EventArgs eventArgs)
         {
             int i = 0;
             Int32.TryParse(editTextDate.Text, out i);

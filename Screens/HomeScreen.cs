@@ -55,6 +55,7 @@ namespace Hello_MultiScreen_iPhone
 			//---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create Your Journal", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Click To Read", UIControlState.Normal);
+            this.btnHelloWorld.Frame = new CGRect(20, 445, 280, 35);
             this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.Title = "Home";
@@ -93,7 +94,7 @@ namespace Hello_MultiScreen_iPhone
             UIImage img = new UIImage();
             img = UIImage.FromFile("pic5.png");
             imageView.Image = img;
-           imageView.Frame = new CGRect(20, 335, 280, 280);
+            imageView.Frame = new CGRect(20, 385, 280, 200);
 
             //textTitle = new UITextView();
             //textTitle.Editable = false;
@@ -106,7 +107,7 @@ namespace Hello_MultiScreen_iPhone
             UIImage img2 = new UIImage();
             img2 = UIImage.FromFile("MainTitlePic.png");
             imageViewTitle.Image = img2;
-            imageViewTitle.Frame = new CGRect(25, 25, 280, 50);
+            imageViewTitle.Frame = new CGRect(20, 60, 280, 50);
             //imageView.AccessibilityFrame = new CGRect(25, 500, 300, 150);
             //can't use picture via .frame or .AcessibilityFrame
             //imageView.TouchUpInside += (sender, e) => { ImageOnClick };
@@ -122,7 +123,7 @@ namespace Hello_MultiScreen_iPhone
                 BackgroundColor = UIColor.FromRGB(100, 149, 240)
         };
 
-            ButtonShare.Frame = new CGRect(75, 510, 150, 30);
+            ButtonShare.Frame = new CGRect(20, 500, 280, 35);
             ButtonShare.SetTitle("Share",UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
 
