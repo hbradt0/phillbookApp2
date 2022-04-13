@@ -47,6 +47,15 @@ namespace Hello_MultiScreen_iPhone
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
 
 
+        private NSObject keyBoardWillShow;
+        private NSObject keyBoardWillHide;
+        private nfloat scrollAmout;
+        private double animDuration;
+        private UIViewAnimationCurve animCurve;
+        private bool keyboardShowing;
+        private bool keyboardOpen = false;
+
+
         //loads the HomeScreen.xib file and connects it to this object
         public HomeScreen2 () : base ("HomeScreen2", null)
 		{
@@ -103,7 +112,6 @@ namespace Hello_MultiScreen_iPhone
             //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
 
             //exit keyboard
-            //editTextDate. = (textField) => { textField.ResignFirstResponder(); return true; };
             editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
@@ -117,13 +125,13 @@ namespace Hello_MultiScreen_iPhone
             Buttonbackyourstory.Frame = new CGRect(150, 25, 70, 50);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 365, 100, 30);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 430, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
             ButtonDelete.Frame = new CGRect(20, 520, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(150, 365, 150, 30);
+            ButtonDelete1Line.Frame = new CGRect(150, 430, 150, 30);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -131,7 +139,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
             
-            editTextWrite.Frame = new CGRect(20, 405, 280, 60);
+            editTextWrite.Frame = new CGRect(20, 360, 280, 40);
 
             //dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -183,11 +191,84 @@ namespace Hello_MultiScreen_iPhone
             View.AddSubview(editTextWrite);
             //View.Add(textViewWrite);
 
+            keyboardOpen = false;
+            keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
+
+            keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
+
+
         }
 
+        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
+        {
+            keyboardShowing = editTextWrite.Focused;
+            if (!keyboardOpen)
+            {
+                keyboardShowing = true;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
 
-    //Share past # of days
-    private void ButtonShareClick(object sender, EventArgs eventArgs)
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(true);
+                    keyboardOpen = true;
+                }
+            }
+        }
+
+        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
+        {
+            if (keyboardOpen)
+            {
+                keyboardShowing = false;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(false);
+                    keyboardOpen = false;
+                }
+            }
+
+        }
+
+        private void ScrollTheView(bool scale)
+        {
+            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
+            UIView.SetAnimationDuration(animDuration);
+            UIView.SetAnimationCurve(animCurve);
+
+            var frame = View.Frame;
+
+            if (scale)
+            {
+                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
+                frame.Y -= scrollAmout;
+            }
+            else
+            {
+                frame.Y += scrollAmout;
+            }
+
+            View.Frame = frame;
+            UIView.CommitAnimations();
+        }
+
+        //Share past # of days
+        private void ButtonShareClick(object sender, EventArgs eventArgs)
         {
             int i = 0;
             Int32.TryParse(editTextDate.Text, out i);

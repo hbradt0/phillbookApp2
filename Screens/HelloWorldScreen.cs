@@ -38,6 +38,14 @@ namespace Hello_MultiScreen_iPhone
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
 
 
+        private NSObject keyBoardWillShow;
+        private NSObject keyBoardWillHide;
+        private nfloat scrollAmout;
+        private double animDuration;
+        private UIViewAnimationCurve animCurve;
+        private bool keyboardShowing;
+        private bool keyboardOpen = false;
+
         //loads the HelloWorldScreen.xib file and connects it to this object
         public HelloWorldScreen() : base("HelloWorldScreen", null)
         {
@@ -102,7 +110,7 @@ namespace Hello_MultiScreen_iPhone
             //exit keyboard 
             hiddenbuttoncode.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
-            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
+            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g)
 
             var text1 = EmailFileRead.ReadText();
             booktextView.Text = text1;
@@ -119,6 +127,80 @@ namespace Hello_MultiScreen_iPhone
             View.Add(hiddenbuttoncode);
             View.Add(Button3);
             //View.AddSubview(booktextView);
+            keyboardOpen = false;
+            keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
+
+            keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
+
+
+        }
+
+        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
+        {
+            keyboardShowing = hiddenbuttoncode.Focused;
+            if (!keyboardOpen)
+            {
+                keyboardShowing = true;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(true);
+                    keyboardOpen = true;
+                }
+            }
+        }
+
+        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
+        {
+            if (keyboardOpen)
+            {
+                keyboardShowing = false;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(false);
+                    keyboardOpen = false;
+                }
+            }
+
+        }
+
+        private void ScrollTheView(bool scale)
+        {
+            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
+            UIView.SetAnimationDuration(animDuration);
+            UIView.SetAnimationCurve(animCurve);
+
+            var frame = View.Frame;
+
+            if (scale)
+            {
+                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
+                frame.Y -= scrollAmout;
+            }
+            else
+            {
+                frame.Y += scrollAmout;
+            }
+
+            View.Frame = frame;
+            UIView.CommitAnimations();
         }
 
         //Back to home view

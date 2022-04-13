@@ -3,6 +3,7 @@
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.exe
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.pdb
+/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/_PartialAppManifest.items
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/_BundleResourceWithLogicalName.items
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/iphone 13 pro max-15.4/actool/_ProcessedImageAssetsPath.items

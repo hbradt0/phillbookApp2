@@ -15,7 +15,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textView;
         public UITextView booktextView;
         public UITextView textView2;
-        public UITextField editTextWrite;
+        public UITextView editTextWrite;
         public UITextView textViewWrite;
 
         public UIButton ButtonDateClick;
@@ -44,7 +44,8 @@ namespace Hello_MultiScreen_iPhone
         private nfloat scrollAmout;
         private double animDuration;
         private UIViewAnimationCurve animCurve;
-        private bool keyboardShowing;
+        private bool keyboardShowing = true;
+        private bool keyboardOpen = false; 
 
         //loads the HelloUniverseScreen.xib file and connects it to this object
         public HelloUniverseScreen () : base ("HelloUniverseScreen", null)
@@ -62,7 +63,8 @@ namespace Hello_MultiScreen_iPhone
 
             //Initialize Fields
             textViewWrite = new UITextView();
-            editTextWrite = new UITextField();
+            editTextWrite = new UITextView();
+            editTextWrite.Editable = true;
             Buttonbackyourstory = new UIButton(UIButtonType.System);
             ButtonyourstoryscreenUpload = new UIButton(UIButtonType.System);
             ButtonDelete = new UIButton(UIButtonType.System);
@@ -71,7 +73,7 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText = new UIDatePicker(new CGRect(10, 480, 100, 30
 
              ));
-            dateTimeText.Frame = new CGRect(60, 480, 100, 30
+            dateTimeText.Frame = new CGRect(20, 480, 100, 30
              );
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
@@ -106,20 +108,36 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             //exit keyboard
+            var gestureToCloseKeyboard = new UITapGestureRecognizer(() => View.EndEditing(true));
+            editTextWrite.ShouldChangeText = (text, range, replacementString) =>
+            {
+                if (replacementString.Equals("\n"))
+                {
+                    editTextWrite.EndEditing(true);
+                    keyboardShowing = false;
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            };
+            /*
             editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
+            */
 
             //Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
             //Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 365, 100, 30);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 430, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
             ButtonDelete.Frame = new CGRect(20, 520, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(150, 365, 150, 30);
+            ButtonDelete1Line.Frame = new CGRect(150, 430, 150, 30);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -127,7 +145,8 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
 
-            editTextWrite.Frame = new CGRect(20, 405, 280, 60);
+
+            editTextWrite.Frame = new CGRect(20, 360, 280, 60);
 
             dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -180,7 +199,7 @@ namespace Hello_MultiScreen_iPhone
 	        View.AddSubview(editTextWrite);
             View.Add(EditJournalButton);
             //View.Add(textViewWrite);
-
+            keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
 
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
@@ -188,11 +207,11 @@ namespace Hello_MultiScreen_iPhone
 
         }
 
-
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
         {
-            //if (!keyboardShowing)
-           // {
+            keyboardShowing = editTextWrite.Focused;
+            if (!keyboardOpen)
+           {
                 keyboardShowing = true;
                 animDuration = args.AnimationDuration;
                 animCurve = args.AnimationCurve;
@@ -206,13 +225,14 @@ namespace Hello_MultiScreen_iPhone
                 {
                     scrollAmout = r.Height;
                     ScrollTheView(true);
+                    keyboardOpen = true;
                 }
-            //}
+            }
         }
 
         void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
         {
-            if (keyboardShowing)
+            if (keyboardOpen)
             {
                 keyboardShowing = false;
                 animDuration = args.AnimationDuration;
@@ -227,6 +247,7 @@ namespace Hello_MultiScreen_iPhone
                 {
                     scrollAmout = r.Height;
                     ScrollTheView(false);
+                    keyboardOpen = false;
                 }
             }
             
@@ -241,9 +262,15 @@ namespace Hello_MultiScreen_iPhone
             var frame = View.Frame;
 
             if (scale)
+                {
+                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
                 frame.Y -= scrollAmout;
+            }
             else
+            {
                 frame.Y += scrollAmout;
+            }
+                
             View.Frame = frame;
             UIView.CommitAnimations();
         }
@@ -259,7 +286,8 @@ namespace Hello_MultiScreen_iPhone
         //Share at click upon date
         private void ButtonDateClickEvent(object sender, EventArgs eventArgs)
         {
-            DateTime myDate = (DateTime)dateTimeText.Date;    
+            DateTime myDate = (DateTime)dateTimeText.Date;
+            myDate = myDate.ToLocalTime();
             String txt2 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
             var item = NSObject.FromObject(txt2);
             var activityItems = new NSObject[] { item };
@@ -377,7 +405,6 @@ namespace Hello_MultiScreen_iPhone
         {
             base.ViewDidAppear(animated);
             textViewWrite.Text = EmailFileRead.ReadText();
-
         }
     }
 }

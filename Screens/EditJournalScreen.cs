@@ -38,6 +38,13 @@ namespace Hello_MultiScreen_iPhone
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
 
 
+        private NSObject keyBoardWillShow;
+        private NSObject keyBoardWillHide;
+        private nfloat scrollAmout;
+        private double animDuration;
+        private UIViewAnimationCurve animCurve;
+        private bool keyboardShowing;
+        private bool keyboardOpen = false;
         //loads the HelloWorldScreen.xib file and connects it to this object
         public EditJournalScreen() : base ("EditJournalScreen", null)
 	{
@@ -60,7 +67,7 @@ namespace Hello_MultiScreen_iPhone
                 Editable = true
             };
 
-            booktextView.Frame = new CGRect(20, 60, 280, 440); 
+            booktextView.Frame = new CGRect(20, 90, 280, 440); 
             booktextView.Text = EmailFileRead.ReadText();
             booktextView.BackgroundColor = UIColor.White;
             booktextView.TextColor = UIColor.Purple;
@@ -75,6 +82,7 @@ namespace Hello_MultiScreen_iPhone
                 if (replacementString.Equals("\n"))
                 {
                     booktextView.EndEditing(true);
+                    keyboardShowing = false;
                     return false;
                 }
                 else
@@ -85,7 +93,7 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(20, 520, 100, 30);
+            Button3.Frame = new CGRect(20, 60, 100, 30);
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
@@ -93,10 +101,84 @@ namespace Hello_MultiScreen_iPhone
             //Add to view
             View.Add(Button3);
             View.Add(booktextView);
+            keyboardOpen = false;
+            keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
+
+            keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
+
+
         }
 
-	//Submit total edit
-       private void Button3Click(object sender, EventArgs eventArgs)
+        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
+        {
+            keyboardShowing = booktextView.Focused;
+            if (!keyboardOpen)
+            {
+                keyboardShowing = true;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= booktextView.Frame.Right || r.Top >= booktextView.Frame.Bottom || r.Right <= booktextView.Frame.Left || r.Bottom <= booktextView.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(true);
+                    keyboardOpen = true;
+                }
+            }
+        }
+
+        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
+        {
+            if (keyboardOpen)
+            {
+                keyboardShowing = false;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                if (r.Left >= booktextView.Frame.Right || r.Top >= booktextView.Frame.Bottom || r.Right <= booktextView.Frame.Left || r.Bottom <= booktextView.Frame.Top)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = r.Height;
+                    ScrollTheView(false);
+                    keyboardOpen = false;
+                }
+            }
+
+        }
+
+        private void ScrollTheView(bool scale)
+        {
+            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
+            UIView.SetAnimationDuration(animDuration);
+            UIView.SetAnimationCurve(animCurve);
+
+            var frame = View.Frame;
+
+            if (scale)
+            {
+                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
+                frame.Y -= scrollAmout;
+            }
+            else
+            {
+                frame.Y += scrollAmout;
+            }
+
+            View.Frame = frame;
+            UIView.CommitAnimations();
+        }
+
+        //Submit total edit
+        private void Button3Click(object sender, EventArgs eventArgs)
         {
             //textViewWrite = new UITextView();
             //editTextWrite = new UITextField();
