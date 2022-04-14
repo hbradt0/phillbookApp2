@@ -14,6 +14,7 @@ namespace Hello_MultiScreen_iPhone
 		HelloWorldScreen helloWorldScreen;
 		HelloUniverseScreen helloUniverseScreen;
         HomeScreen2 TodoScreen;
+        ImageScreen imageScreen;
 
         //Variables
         public UITextView textView;
@@ -31,6 +32,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonDelete;
         public UIButton ButtonShare;
         public UITextView textTitle;
+        public UIButton ButtonImageClick;
 
         public UIImageView imageView;
         public UIImageView imageViewTitle;
@@ -124,8 +126,15 @@ namespace Hello_MultiScreen_iPhone
         };
 
             ButtonShare.Frame = new CGRect(20, 500, 280, 35);
-            ButtonShare.SetTitle("Share",UIControlState.Normal);
+            ButtonShare.SetTitle("Share Journal",UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
+
+            UIButton ButtonImageClick = new UIButton(UIButtonType.System);
+            ButtonImageClick.Frame = new CGRect(20, 550, 280, 35);
+            ButtonImageClick.BackgroundColor = UIColor.FromRGB(100, 149, 240);
+            ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonImageClick.SetTitle("Image Calendar", UIControlState.Normal);
+            ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
 
             //Button1.Frame = new CGRect(25, 200, 300, 150);
             //Button1.SetTitle("Click to Read", UIControlState.Normal);
@@ -152,11 +161,17 @@ namespace Hello_MultiScreen_iPhone
                 this.NavigationController.PushViewController(this.TodoScreen, true);
             };
 
+            ButtonImageClick.TouchUpInside += (sender, e) => {
+                if (this.imageScreen == null) { this.imageScreen = new ImageScreen(); }
+                this.NavigationController.PushViewController(this.imageScreen, true);
+            };
+
             View.Add(ButtonTodoList);
             //Add to view
             Add(ButtonShare);
             View.Add(ButtonShare);
             View.Add(imageView);
+            View.Add(ButtonImageClick);
             View.Add(imageViewTitle);
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           

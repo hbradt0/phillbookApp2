@@ -180,6 +180,7 @@ namespace Hello_MultiScreen_iPhone
             //scrollView.Add(editTextWrite);
 
             //On click Events
+        
             ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
             Buttonbackyourstory.AddTarget(ButtonbackyourstoryscreenClick, UIControlEvent.TouchUpInside);
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
@@ -193,7 +194,8 @@ namespace Hello_MultiScreen_iPhone
             //View.Add(textTitle);
             View.Add(Buttonbackyourstory);
             View.Add(ButtonyourstoryscreenUpload);
-            View.Add(ButtonDelete1Line);
+     
+           View.Add(ButtonDelete1Line);
             View.Add(ButtonDelete);
             View.Add(dateTimeText);
 	        View.AddSubview(editTextWrite);
@@ -290,7 +292,11 @@ namespace Hello_MultiScreen_iPhone
             myDate = myDate.ToLocalTime();
             String txt2 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
             var item = NSObject.FromObject(txt2);
-            var activityItems = new NSObject[] { item };
+
+            var img1 = NSData.FromFile(EmailReader.EmailFileRead.GetImageFileName(myDate));
+            var item2 = NSObject.FromObject(img1);
+
+            var activityItems = new NSObject[] { item, item2 };
             UIActivity[] applicationActivities = null;
 
             var activityController = new UIActivityViewController(activityItems, applicationActivities);

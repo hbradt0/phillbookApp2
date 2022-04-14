@@ -80,6 +80,7 @@
     <None Include="Info.plist" />
     <InterfaceDefinition Include="Screens\HomeScreen2.xib" />
     <InterfaceDefinition Include="Screens\EditJournalScreen.xib" />
+    <InterfaceDefinition Include="Screens\ImageScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="Screens\HomeScreen2.designer.cs">
       <DependentUpon>HomeScreen2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ImageScreen.cs" />
+    <Compile Include="Screens\ImageScreen.designer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

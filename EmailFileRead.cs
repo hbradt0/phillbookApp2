@@ -26,6 +26,7 @@ namespace EmailReader //rename
         public static string fileName1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "notes.txt");
         public static string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo.txt");
 
+
         public static String ReadText(String fileName = "")
         {
             if (fileName == "")
@@ -36,6 +37,50 @@ namespace EmailReader //rename
             {
                 File.WriteAllText(fileName, "");
                 return "";
+            }
+        }
+
+        public static String GetImageFileName(DateTime day)
+        {
+            String file = "";
+            DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            foreach (FileInfo v in dir.GetFiles())
+            {
+                if(v.FullName.Contains(day.ToString("MMddyyyy")))
+                {
+                    file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), v.Name);
+                }
+            }
+            return file;
+        }
+
+        public static void DeleteImageFileName(DateTime day)
+        {
+            String file = "";
+            DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            foreach (FileInfo v in dir.GetFiles())
+            {
+                if (v.FullName.Contains(day.ToString("MMddyyyy")))
+                {
+                    file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), v.Name);
+                }
+            }
+            
+            if(file!="")
+                File.Delete(file);
+        }
+
+        public static void DeleteAllImages()
+        {
+            String file = "";
+            DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            foreach (FileInfo v in dir.GetFiles())
+            {
+                if (v.FullName.Contains("image_"))
+                {
+                    file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), v.Name);
+                    File.Delete(file);
+                }
             }
         }
 
