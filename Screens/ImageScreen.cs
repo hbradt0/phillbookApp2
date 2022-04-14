@@ -87,7 +87,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick.Frame = new CGRect(200, 500, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 60, 280, 400);
+                textViewWrite.Frame = new CGRect(20, 60, 280, 400);
             UIImage img2 = new UIImage();
 
             DateTime myDate = (DateTime)dateTimeText.Date;
@@ -252,7 +252,11 @@ namespace Hello_MultiScreen_iPhone
             myDate = myDate.ToLocalTime();
             var txt2 = NSData.FromFile(EmailReader.EmailFileRead.GetImageFileName(myDate));
             var item = NSObject.FromObject(txt2);
-            var activityItems = new NSObject[] { item };
+
+            String txt3 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
+            var item3 = NSObject.FromObject(txt3);
+
+            var activityItems = new NSObject[] { item, item3 };
             UIActivity[] applicationActivities = null;
 
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
