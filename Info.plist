@@ -22,9 +22,15 @@
 	<string>Screens/HomeScreen</string>
 	<key>UIMainNibFile</key>
 	<string>HomeScreen</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow device to access Camera</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Allow device to access Media</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow device to access Photo</string>
 	<key>CFBundleShortVersionString</key>
-	<string>5</string>
+	<string>9</string>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>9</string>
 </dict>
 </plist>

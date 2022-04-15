@@ -75,12 +75,22 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Tesseract.Binding.iOS">
+      <HintPath>packages\Xamarin.Tesseract.0.3.4\lib\Xamarin.iOS10\Tesseract.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Tesseract">
+      <HintPath>packages\Xamarin.Tesseract.0.3.4\lib\Xamarin.iOS10\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="Tesseract.iOS">
+      <HintPath>packages\Xamarin.Tesseract.0.3.4\lib\Xamarin.iOS10\Tesseract.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <InterfaceDefinition Include="Screens\HomeScreen2.xib" />
     <InterfaceDefinition Include="Screens\EditJournalScreen.xib" />
     <InterfaceDefinition Include="Screens\ImageScreen.xib" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />

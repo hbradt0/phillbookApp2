@@ -176,7 +176,7 @@ namespace Hello_MultiScreen_iPhone
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           
         }
-
+        
         void ShareButtonClick(object sender, EventArgs eventArgs)
         {
             String txt2 = "\n Your story: \n" + EmailFileRead.ReadText();
@@ -204,7 +204,7 @@ namespace Hello_MultiScreen_iPhone
            // NavigationController.PushViewController(view3, false);
         }
        */
-
+       
 		/// <summary>
 		/// Is called when the view is about to appear on the screen. We use this method to hide the
 		/// navigation bar.

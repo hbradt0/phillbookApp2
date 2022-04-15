@@ -13,6 +13,7 @@
 @class UIApplicationDelegate;
 @class AppDelegate;
 @class HomeScreen;
+@class ImageScreen;
 @class EditJournalScreen;
 @class HelloWorldScreen;
 @class HelloUniverseScreen;
@@ -22,11 +23,14 @@
 @class Foundation_NSAsyncDispatcher;
 @class __MonoMac_NSAsyncActionDispatcher;
 @class __MonoMac_NSAsyncSynchronizationContextDispatcher;
+@class Foundation_InternalNSNotificationHandler;
 @class UIKit_UIControlEventProxy;
+@class UIImagePickerControllerDelegate;
 @class __NSObject_Disposer;
 @class UIKit_UIAlertView__UIAlertViewDelegate;
 @class __UIGestureRecognizerToken;
 @class __UIGestureRecognizerParameterlessToken;
+@class UIKit_UIImagePickerController__UIImagePickerControllerDelegate;
 @class UIKit_UITextField__UITextFieldDelegate;
 @class UIKit_UIScrollView__UIScrollViewDelegate;
 @class UIKit_UITextView__UITextViewDelegate;
@@ -66,6 +70,20 @@
 	-(void) viewDidLoad;
 	-(void) viewWillAppear:(BOOL)p0;
 	-(void) viewWillDisappear:(BOOL)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface ImageScreen : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) didReceiveMemoryWarning;
+	-(void) viewDidAppear:(BOOL)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 @end
@@ -124,6 +142,11 @@
 	-(void) viewDidAppear:(BOOL)p0;
 	-(void) didReceiveMemoryWarning;
 	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface UIImagePickerControllerDelegate : NSObject<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UINavigationControllerDelegate> {
+}
 	-(id) init;
 @end
 

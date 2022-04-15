@@ -5,6 +5,8 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using EmailReader;
+using Tesseract.iOS;
+using System.Threading.Tasks;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -34,6 +36,7 @@ namespace Hello_MultiScreen_iPhone
         //Create your journal page
         public void ViewDidLoad1()
         {
+            
             //View issue
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
@@ -104,6 +107,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
             dateTimeText.AddTarget(ButtonDateClickEnd,UIControlEvent.EditingDidEnd);
             ImagePickerButton.AddTarget(ButtonPickImageClick, UIControlEvent.TouchUpInside);
+            //disable this doesn't crash
 
             View.Add(ButtonDelete1Line);
             View.Add(ButtonDelete);
@@ -113,7 +117,7 @@ namespace Hello_MultiScreen_iPhone
             View.Add(dateTimeText);
    
         }
-
+        
         public void ButtonDateClickEnd(object sender, EventArgs eventArgs)
         {
 
@@ -125,7 +129,7 @@ namespace Hello_MultiScreen_iPhone
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
         }
-
+        
         void ButtonPickImageClick(object sender, EventArgs eventArgs)
         {
 
@@ -136,14 +140,14 @@ namespace Hello_MultiScreen_iPhone
             };
 
             // Set event handlers
-            imagePicker.FinishedPickingMedia += OnImagePickerFinishedPickingMedia;
+            imagePicker.FinishedPickingMedia +=  OnImagePickerFinishedPickingMediaAsync;
             imagePicker.Canceled += OnImagePickerCancelled;
 
             this.PresentViewController(imagePicker, true, null);
 
         }
-
-        void OnImagePickerFinishedPickingMedia(object sender, UIImagePickerMediaPickedEventArgs args)
+        
+        void OnImagePickerFinishedPickingMediaAsync(object sender, UIImagePickerMediaPickedEventArgs args)
         {
             UIImage image = args.EditedImage ?? args.OriginalImage;
 
@@ -167,35 +171,38 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
                 data.Save(fileName, false, out err);
 
-                /*
-                String str = "";
-                var Ocr = new IronOcr.IronTesseract();
-                var Input = new IronOcr.OcrInput(args.ReferenceUrl.Path);
-       
-       
-                    var Result = Ocr.Read(Input);
-                    Console.WriteLine(Result.Text);
-                    str = Result.Text;
-                EmailFileRead.WriteText(str);
-                */
-
                 textViewWrite.Frame = new CGRect(20, 60, 280, 400);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
+
+               // await  voider(fileName); 
             }
             else
             {
             }
             imagePicker.DismissModalViewController(true);
         }
+        /*
+        void voider(String fileName)
+        {
+
+            TesseractApi tessApi = new TesseractApi();
+            tessApi.Init("eng");
+            //tessApi.Init("eng");
+            System.Threading.Thread.Sleep(1000 * 5);
+             tessApi.SetImage(fileName);
+            if (tessApi.Text != "")
+                EmailFileRead.WriteText(tessApi.Text);
+        }
+        */
 
         void OnImagePickerCancelled(object sender, EventArgs args)
         {
             imagePicker.DismissModalViewController(true);
         }
 
-
+        
         //Delete everything your story
         private void ButtonDeleteClick(object sender, EventArgs eventArgs)
         {
@@ -285,5 +292,6 @@ namespace Hello_MultiScreen_iPhone
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
         }
+
     }
 }

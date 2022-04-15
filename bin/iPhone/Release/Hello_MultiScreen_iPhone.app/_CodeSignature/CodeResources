@@ -62,11 +62,11 @@
 		</data>
 		<key>Hello_MultiScreen_iPhone.aotdata.arm64</key>
 		<data>
-		ZDgDFbxgjKC0BJhwibBNu6h3yTw=
+		H4PiDolfyG6fd820BZwrh9pzdSg=
 		</data>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<data>
-		fk8hLgPuD1QnWGH2F5cx3Tg9xeo=
+		HoT/vbQoLUANVaDxsptl+utEpy0=
 		</data>
 		<key>HomeScreen.nib</key>
 		<data>
@@ -76,9 +76,13 @@
 		<data>
 		VjdRzekTauP7eRFWnUoLJjPWeZs=
 		</data>
+		<key>ImageScreen.nib</key>
+		<data>
+		o1sRjzrzk9ys7n80JJ/0ulCeXx8=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		TLtUBNRrWh+6iAzHwaY8wiJQkHM=
+		rwyJ14HOxqF0JMkKpGOhG8CF5Xs=
 		</data>
 		<key>MainTitlePic.png</key>
 		<data>
@@ -98,35 +102,59 @@
 		</data>
 		<key>System.Core.aotdata.arm64</key>
 		<data>
-		rXUqu0KNuEYrwDAQGbxehh6VFOs=
+		ud/GOlMP65sNxSzPrGffHllAlEU=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		EHbyb5Vx+HmXe9y6UEylUJfHUSQ=
+		yA8gacBzWQpBG2/KC/NnihjEGwQ=
 		</data>
 		<key>System.Drawing.Common.aotdata.arm64</key>
 		<data>
-		XjS/byJYW5aBZHxQ67hiqGTKnn8=
+		NXduRgMNHAgpU3uhVvO8rIlDrjQ=
 		</data>
 		<key>System.Drawing.Common.dll</key>
 		<data>
-		29QLxT3KXEVR+o29q/AsKi+lyzA=
+		0VJSakhe0qj4bnUcInrHb9qDLM4=
 		</data>
 		<key>System.aotdata.arm64</key>
 		<data>
-		q6pEU/rC0dIBNaJoYuV7ZJfFkvg=
+		QaL+IwvO5PdrhH3S5NC09s79mmo=
 		</data>
 		<key>System.dll</key>
 		<data>
-		HUX7q0f/rcjd1+VApUZ9ImQ41gw=
+		0v5/exf/3jPLe9MiTDh0gLuibZ4=
+		</data>
+		<key>Tesseract.Binding.iOS.aotdata.arm64</key>
+		<data>
+		4LbQh1BNwVTSbfrqWcyjltou/S4=
+		</data>
+		<key>Tesseract.Binding.iOS.dll</key>
+		<data>
+		xfiCPcsJ1TnpOgDDWSztu35/2Vg=
+		</data>
+		<key>Tesseract.aotdata.arm64</key>
+		<data>
+		Ma1/it+SvIopTSnuLbdfVy2TKPY=
+		</data>
+		<key>Tesseract.dll</key>
+		<data>
+		GgiM2AnedBCs3ORIg0vYRu+z6Ic=
+		</data>
+		<key>Tesseract.iOS.aotdata.arm64</key>
+		<data>
+		1qMl7Y93hzoELsHVszKLwxmPZnc=
+		</data>
+		<key>Tesseract.iOS.dll</key>
+		<data>
+		agpo/gKaK8LL+r1KSqKbD2F+kIM=
 		</data>
 		<key>Xamarin.iOS.aotdata.arm64</key>
 		<data>
-		ZxK3rmT1xMybHio569brf3nDGgY=
+		u/ogK5BHy7TAGDhPnynJcevfguo=
 		</data>
 		<key>Xamarin.iOS.dll</key>
 		<data>
-		G0ZALT48hygn4rOWComD9BGeSZA=
+		ys0b2AJ1fLj0N/dPsTKs2grkmng=
 		</data>
 		<key>alert.jpg</key>
 		<data>
@@ -174,11 +202,11 @@
 		</data>
 		<key>mscorlib.aotdata.arm64</key>
 		<data>
-		F+o8ChC6rU55f4VRV4NIaxOqAIs=
+		asMb36KrV9plC8ZaPh+EjCvxfSs=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		gyOL959VBExWpu27vjRngF40u2U=
+		xdTU8H52Okyr8of3uJTCUCFCfvk=
 		</data>
 		<key>pic5.jpg</key>
 		<data>
@@ -293,14 +321,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sr0Q9JGqVuqJ0AbuaDhpt/sIzc8xacDMfac4kyYX2bg=
+			SQeRXhq5ttZrJK9AvkO3TC4YKzhefOUiEYY/44Mfy1s=
 			</data>
 		</dict>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V3AWGq9ts6Gh3YyVGAiT3J3CBMs8mMrgHcA2S2HsJXA=
+			KeicfB+yxPQ+ME4zcjAJUZTRYg2kLumGiNrKrd19A/M=
 			</data>
 		</dict>
 		<key>HomeScreen.nib</key>
@@ -315,6 +343,13 @@
 			<key>hash2</key>
 			<data>
 			7bgpI2rro/2I/igiiK6c6DcryEvqfodDaW44PSgh9+g=
+			</data>
+		</dict>
+		<key>ImageScreen.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OryTIAhXY+mysEBrFVv59PHNlG7O942OsWYaiECf7Tw=
 			</data>
 		</dict>
 		<key>MainTitlePic.png</key>
@@ -342,56 +377,98 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NYPjxfSYIwnxWYGdrtRZkrr9dJ0cT7VBvksF4k7LmCA=
+			LHC6/1DcXpt9Yyc8CZjoflJpkFFQx6TOcqc+UEKof7s=
 			</data>
 		</dict>
 		<key>System.Core.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V7I0wc7s/yDNE+sfTsWNrWuxwJ3xNAOw8+L0zNQBNvU=
+			91zMfXVrfuiYdTUSO2iWfdL4F+y53CA17HF1DW7K/+o=
 			</data>
 		</dict>
 		<key>System.Drawing.Common.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kYht/ys5Q791PQgGbD+QHozcIEmH38OnvnuMLTaXqWc=
+			GTOFs2bIClV4CXzeXgxFbK24H4dOrefWAv064oCXxFI=
 			</data>
 		</dict>
 		<key>System.Drawing.Common.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bAL4YlN3Vn3sZNsMlmjjQBInJ427ko35ZKkDlG8jUpY=
+			xASoSI3+sZumPdiY5w208B1wbEJVOmkYeyLpeM3pti8=
 			</data>
 		</dict>
 		<key>System.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+sNHG1eyyng95fn3ocaC5w5vootNFR4x8w03BfLYzRs=
+			oUcXnok3l/CDq1f0aZbvALXcH17N/9aevfEdiczZ7Tc=
 			</data>
 		</dict>
 		<key>System.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zIXBfwsbrFKm4dxTYF7llmnF3OelNGPA5oAMtrM17xU=
+			5MzmcS83E76N0jFyluRPyCVCO/p8paTRpvcoeSIR1Bg=
+			</data>
+		</dict>
+		<key>Tesseract.Binding.iOS.aotdata.arm64</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tgGYuNdZX3uyAxFRJYKeTpOFSYRf9P/LGK50kkmUu9o=
+			</data>
+		</dict>
+		<key>Tesseract.Binding.iOS.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Cyjlyf8sb0YzVWmc1izLZskjLxOKZCAPTFvr9TFVhkg=
+			</data>
+		</dict>
+		<key>Tesseract.aotdata.arm64</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KP3WIzyX6hFmjiz9LEj56qqOjmTgZVmOU3RCi2Psvlc=
+			</data>
+		</dict>
+		<key>Tesseract.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4s0U31RSkcWCVqRtgPWYgr8E1KcCegrmar0i5Vn9ZKM=
+			</data>
+		</dict>
+		<key>Tesseract.iOS.aotdata.arm64</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MQr01WTfrNqD++Pq7bEDDELFvcp6H855FBZLlWgAY6E=
+			</data>
+		</dict>
+		<key>Tesseract.iOS.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ECVkZ5YEoHBqyK1Z7j3sQzs6BtkkQrQACuO5g9a7R9E=
 			</data>
 		</dict>
 		<key>Xamarin.iOS.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MzXbZoX+ijxaTljJVO5dnsNDjfYRs/WPWBtFWlRtKrE=
+			+DG6Fy+FKfbgSLMuV405uxK8FBuTMeNrBpN8/V8hZy4=
 			</data>
 		</dict>
 		<key>Xamarin.iOS.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/FGr9FUEXK7uFR15l+VhC+JlkCPzsA7mnUg/+yNCasA=
+			k2X53nOZa1KwNR7WWDOYL2hP505hSkFwUeppys6zlz0=
 			</data>
 		</dict>
 		<key>alert.jpg</key>
@@ -475,14 +552,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XkaC4ZUkuhvzykjNsYFDaibb/y7i6uKuTm67kz1vag4=
+			kYEROCUTsuVPhkVz/GWmgoUa5nrzLVbQSQS+GpX2HOs=
 			</data>
 		</dict>
 		<key>mscorlib.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oE1EbBdAGvPMRLW5h/UENNn+vg0XDxHOuQAxkoJJriM=
+			ExloLmUKvo2rbj5MQFrmcUqf6oHvOeIj7FPn4rjqCLo=
 			</data>
 		</dict>
 		<key>pic5.jpg</key>

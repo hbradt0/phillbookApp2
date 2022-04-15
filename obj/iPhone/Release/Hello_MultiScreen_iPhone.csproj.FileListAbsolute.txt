@@ -28,3 +28,7 @@
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/
 /Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookApp2/bin/iPhone/Release/Tesseract.Binding.iOS.dll
+/Users/psargent/phillbookApp2/bin/iPhone/Release/Tesseract.dll
+/Users/psargent/phillbookApp2/bin/iPhone/Release/Tesseract.iOS.dll
+/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
