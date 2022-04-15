@@ -21,6 +21,8 @@ namespace Hello_MultiScreen_iPhone
 
         public UIButton ButtonDelete;
         public UIButton ButtonDelete1Line;
+        public UIImagePickerController pickerView;
+        public UIButton CameraButton;
 
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
@@ -36,7 +38,7 @@ namespace Hello_MultiScreen_iPhone
         //Create your journal page
         public void ViewDidLoad1()
         {
-            
+
             //View issue
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
@@ -46,6 +48,8 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             ImagePickerButton = new UIButton(UIButtonType.System);
+            CameraButton = new UIButton(UIButtonType.System);
+
 
             UIScrollView scrollView = new UIScrollView();
             dateTimeText = new UIDatePicker(new CGRect(10, 480, 100, 30
@@ -54,18 +58,18 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.Frame = new CGRect(20, 500, 100, 30
              );
             ButtonDateClick = new UIButton(UIButtonType.System);
-         
+
             //Buttons and edit properties
             textViewWrite.BackgroundColor = UIColor.White;
-            
+
             ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ImagePickerButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             ImagePickerButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             ImagePickerButton.Frame = new CGRect(20, 460, 100, 30);
             ImagePickerButton.SetTitle("Choose image", UIControlState.Normal);
-           
-            
+
+
             dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
             var currentDate = NSDate.Now;
@@ -90,7 +94,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick.Frame = new CGRect(200, 500, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-                textViewWrite.Frame = new CGRect(20, 60, 280, 400);
+            textViewWrite.Frame = new CGRect(20, 60, 280, 400);
             UIImage img2 = new UIImage();
 
             DateTime myDate = (DateTime)dateTimeText.Date;
@@ -102,11 +106,17 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Image = img2;
             textViewWrite.Frame = new CGRect(20, 60, 280, 240);
 
+            CameraButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            CameraButton.BackgroundColor = UIColor.SystemTeal;
+            CameraButton.Frame = new CGRect(20, 600, 100, 30);
+            CameraButton.SetTitle("Camera", UIControlState.Normal);
+
             ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
-            dateTimeText.AddTarget(ButtonDateClickEnd,UIControlEvent.EditingDidEnd);
+            dateTimeText.AddTarget(ButtonDateClickEnd, UIControlEvent.EditingDidEnd);
             ImagePickerButton.AddTarget(ButtonPickImageClick, UIControlEvent.TouchUpInside);
+            CameraButton.AddTarget(openCamera, UIControlEvent.TouchUpInside);
             //disable this doesn't crash
 
             View.Add(ButtonDelete1Line);
@@ -115,9 +125,10 @@ namespace Hello_MultiScreen_iPhone
             View.Add(ButtonDateClick);
             View.AddSubview(textViewWrite);
             View.Add(dateTimeText);
-   
+            View.Add(CameraButton);
+
         }
-        
+
         public void ButtonDateClickEnd(object sender, EventArgs eventArgs)
         {
 
@@ -269,13 +280,93 @@ namespace Hello_MultiScreen_iPhone
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
 
             this.PresentViewController(activityController, true, null);
+
+            }
+
+        private void openCamera(object sender, EventArgs eventArgs)
+        {
+
+            // Set event handlers
+            if (UIImagePickerController.IsSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))
+            {
+                pickerView = new UIImagePickerController();
+                pickerView.SourceType = UIImagePickerControllerSourceType.Camera;
+
+                pickerView.FinishedPickingMedia += Handle_FinishedPickingMedia;
+                pickerView.Canceled += Handle_Canceled;
+
+                this.PresentViewController(pickerView, true, null);
+
+   
+            }
+            else
+            {
+                this.CameraButton.Hidden = true;
+            }
+
+
         }
 
+        protected void Handle_FinishedPickingMedia(object sender, UIImagePickerMediaPickedEventArgs e)
+        {
+            // determine what was selected, video or image
+            bool isImage = false;
+            switch (e.Info[UIImagePickerController.MediaType].ToString())
+            {
+                case "public.image":
+                    Console.WriteLine("Image selected");
+                    isImage = true;
+                    break;
+                case "public.video":
+                    Console.WriteLine("Video selected");
+                    break;
+            }
+
+            // get common info (shared between images and video)
+            NSUrl referenceURL = e.Info[new NSString("UIImagePickerControllerReferenceUrl")] as NSUrl;
+            if (referenceURL != null)
+                Console.WriteLine("Url:" + referenceURL.ToString());
+
+            // if it was an image, get the other image info
+            if (isImage)
+            {
+                // get the original image
+                var image = e.Info[UIImagePickerController.OriginalImage] as NSData;
+
+                DateTime myDate = (DateTime)dateTimeText.Date;
+                myDate = myDate.ToLocalTime();
+                String file = myDate.ToString("MMddyyyy");
+                String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file + ".png");
+                NSError err = null;
+
+                image.Save(fileName, false, out err);
+                textViewWrite.Frame = new CGRect(20, 60, 280, 400);
+                UIImage img2 = new UIImage();
+                img2 = UIImage.FromFile(fileName);
+                textViewWrite.Image = img2;
+            }
+            else
+            { 
+                NSUrl mediaURL = e.Info[UIImagePickerController.MediaURL] as NSUrl;
+                if (mediaURL != null)
+                {
+                    Console.WriteLine(mediaURL.ToString());
+                }
+            }
+            // dismiss the picker
+            pickerView.DismissModalViewController(true);
+        }
+
+        void Handle_Canceled(object sender, EventArgs e)
+        {
+            pickerView.DismissModalViewController(true);
+        }
 
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
+            EmailFileRead.DeleteAllImagesBeforeToday();
         }
 
         public override void ViewDidAppear(bool animated)

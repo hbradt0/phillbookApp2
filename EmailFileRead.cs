@@ -84,6 +84,21 @@ namespace EmailReader //rename
             }
         }
 
+        public static void DeleteAllImagesBeforeToday()
+        {
+            String file = "";
+            DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            foreach (FileInfo v in dir.GetFiles())
+            {
+                if (v.FullName.Contains("image_") && !v.FullName.Contains(DateTime.Now.ToLocalTime().ToString("MMddyyyy")) &&
+                    !v.FullName.Contains(DateTime.Now.AddDays(-1).ToLocalTime().ToString("MMddyyyy")))
+                {
+                    file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), v.Name);
+                    File.Delete(file);
+                }
+            }
+        }
+
         public static String ReadFileFromDate(String fileName = "", int day = 0)
         {
             if (fileName == "")

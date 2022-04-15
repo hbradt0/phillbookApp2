@@ -209,13 +209,14 @@ namespace Hello_MultiScreen_iPhone
                 animCurve = args.AnimationCurve;
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                if (r.Top >= editTextWrite.Frame.Bottom)
                 {
 
                 }
                 else
                 {
-                    scrollAmout = r.Height;
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
                     ScrollTheView(true);
                     keyboardOpen = true;
                 }
@@ -231,13 +232,14 @@ namespace Hello_MultiScreen_iPhone
                 animCurve = args.AnimationCurve;
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                if (r.Top >= editTextWrite.Frame.Bottom)
                 {
 
                 }
                 else
                 {
-                    scrollAmout = r.Height;
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
                     ScrollTheView(false);
                     keyboardOpen = false;
                 }

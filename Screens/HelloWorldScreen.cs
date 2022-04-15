@@ -145,13 +145,14 @@ namespace Hello_MultiScreen_iPhone
                 animCurve = args.AnimationCurve;
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
+                //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
+                if (r.Top >= hiddenbuttoncode.Frame.Bottom)
                 {
 
                 }
                 else
                 {
-                    scrollAmout = r.Height;
+                    scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
                     ScrollTheView(true);
                     keyboardOpen = true;
                 }
@@ -167,13 +168,14 @@ namespace Hello_MultiScreen_iPhone
                 animCurve = args.AnimationCurve;
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
+                //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
+                if(r.Top>=hiddenbuttoncode.Frame.Bottom)
                 {
 
                 }
                 else
                 {
-                    scrollAmout = r.Height;
+                    scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
                     ScrollTheView(false);
                     keyboardOpen = false;
                 }
