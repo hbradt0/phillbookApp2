@@ -29,8 +29,9 @@ namespace Hello_MultiScreen_iPhone
         public UIView View1;
         public UIView View2;
         public UIView View3;
-		
-	    public UITextField hiddenbuttoncode;
+        public UIScrollView scrollView;//ps
+
+        public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
 
         public UITextView readInfo;
@@ -98,9 +99,20 @@ namespace Hello_MultiScreen_iPhone
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
+
+            //ScrollView
+            scrollView = new UIScrollView
+            {
+                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300),
+                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                AutoresizingMask = UIViewAutoresizing.FlexibleHeight
+            };
+
             //Add to view
-            View.Add(Button3);
-            View.Add(booktextView);
+            scrollView.Add(Button3);
+            scrollView.Add(booktextView);
+            View.AddSubview(scrollView);//ps
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
 

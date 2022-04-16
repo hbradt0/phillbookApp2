@@ -29,6 +29,7 @@ namespace Hello_MultiScreen_iPhone
         public UIView View1;
         public UIView View2;
         public UIView View3;
+        public UIScrollView scrollView;//ps
 
         public UITextView readInfo;
         public static float viewScroll1Y = 0;
@@ -117,21 +118,21 @@ namespace Hello_MultiScreen_iPhone
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
-            editTextDate.Frame = new CGRect(150, 520, 50, 30);
+            editTextDate.Frame = new CGRect(150, 560, 50, 30);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            ShareTodo.Frame = new CGRect(200, 520, 100, 30);
+            ShareTodo.Frame = new CGRect(200, 560, 100, 30);
 
             Buttonbackyourstory.Frame = new CGRect(150, 25, 70, 50);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 430, 100, 30);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 470, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(20, 520, 100, 30);
+            ButtonDelete.Frame = new CGRect(20, 560, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(150, 430, 150, 30);
+            ButtonDelete1Line.Frame = new CGRect(150, 470, 150, 30);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -139,7 +140,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
             
-            editTextWrite.Frame = new CGRect(20, 360, 280, 40);
+            editTextWrite.Frame = new CGRect(20, 400, 280, 40);
 
             //dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -153,7 +154,7 @@ namespace Hello_MultiScreen_iPhone
             //ButtonDateClick.Frame = new CGRect(25, 50, 100, 50);
             //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 60, 280, 290);
+            textViewWrite.Frame = new CGRect(20, 60, 280, 330);
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -170,9 +171,18 @@ namespace Hello_MultiScreen_iPhone
             //scrollView2.Add(textViewWrite);
             //scrollView.Add(editTextWrite);
 
+            //ScrollView
+            scrollView = new UIScrollView
+            {
+                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300),
+                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                AutoresizingMask = UIViewAutoresizing.FlexibleHeight
+            };
+
             //On click Events
             //ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
-            
+
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
@@ -181,14 +191,15 @@ namespace Hello_MultiScreen_iPhone
 
             //Add to view
             //View.Add(ButtonDateClick);
-            View.AddSubview(textViewWrite);
-            View.Add(ButtonyourstoryscreenUpload);
-            View.Add(ButtonDelete1Line);
-            View.Add(ButtonDelete);
-            View.Add(editTextDate);
-            View.Add(ShareTodo);
+            scrollView.AddSubview(textViewWrite);
+            scrollView.Add(ButtonyourstoryscreenUpload);
+            scrollView.Add(ButtonDelete1Line);
+            scrollView.Add(ButtonDelete);
+            scrollView.Add(editTextDate);
+            scrollView.Add(ShareTodo);
+            View.AddSubview(scrollView);//ps
             //View.Add(dateTimeText);
-            View.AddSubview(editTextWrite);
+            scrollView.AddSubview(editTextWrite);
             //View.Add(textViewWrite);
 
             keyboardOpen = false;

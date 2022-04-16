@@ -33,6 +33,7 @@ namespace Hello_MultiScreen_iPhone
         public UIView View1;
         public UIView View2;
         public UIView View3;
+        public UIScrollView scrollView;//ps
 
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
@@ -70,10 +71,10 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             UIScrollView scrollView = new UIScrollView();
-            dateTimeText = new UIDatePicker(new CGRect(10, 480, 100, 30
+            dateTimeText = new UIDatePicker(new CGRect(10, 560, 100, 30
 
              ));
-            dateTimeText.Frame = new CGRect(20, 480, 100, 30
+            dateTimeText.Frame = new CGRect(20, 560, 100, 30
              );
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
@@ -82,7 +83,7 @@ namespace Hello_MultiScreen_iPhone
             EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             EditJournalButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            EditJournalButton.Frame = new CGRect(200, 520, 100, 30);
+            EditJournalButton.Frame = new CGRect(200, 600, 100, 30);
            EditJournalButton.SetTitle("Edit Journal", UIControlState.Normal);
 
             //var textTitle = new UITextView();
@@ -131,13 +132,13 @@ namespace Hello_MultiScreen_iPhone
             //Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
             //Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 430, 100, 30);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 510, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(20, 520, 100, 30);
+            ButtonDelete.Frame = new CGRect(20, 600, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(150, 430, 150, 30);
+            ButtonDelete1Line.Frame = new CGRect(150, 510, 150, 30);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -146,7 +147,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
 
 
-            editTextWrite.Frame = new CGRect(20, 360, 280, 60);
+            editTextWrite.Frame = new CGRect(20, 420, 280, 60);
 
             dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -159,10 +160,10 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.MaximumDate = currentDate;
             
 
-            ButtonDateClick.Frame = new CGRect(200, 480, 100, 30);
+            ButtonDateClick.Frame = new CGRect(200, 560, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 60, 280, 290);
+            textViewWrite.Frame = new CGRect(20, 100, 280, 310);
             textViewWrite.Text = EmailFileRead.ReadText();
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -173,14 +174,16 @@ namespace Hello_MultiScreen_iPhone
             }
             //textViewWrite.ScrollRangeToVisible()
 
-            //scrollView.Frame = new CGRect(25, 370, 300, 150);
-            //scrollView2.Frame = new CGRect(25, 100, 300, 150);
-
-            //scrollView2.Add(textViewWrite);
-            //scrollView.Add(editTextWrite);
-
+            //ScrollView
+            scrollView = new UIScrollView
+            {
+                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300),
+                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                AutoresizingMask = UIViewAutoresizing.FlexibleHeight
+            };
             //On click Events
-        
+
             ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
             Buttonbackyourstory.AddTarget(ButtonbackyourstoryscreenClick, UIControlEvent.TouchUpInside);
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
@@ -189,17 +192,18 @@ namespace Hello_MultiScreen_iPhone
             EditJournalButton.AddTarget(ButtonEditJournalClick, UIControlEvent.TouchUpInside);
 
             //Add to view
-            View.Add(ButtonDateClick);
-            View.AddSubview(textViewWrite);
+            scrollView.Add(ButtonDateClick);
+            scrollView.AddSubview(textViewWrite);
             //View.Add(textTitle);
-            View.Add(Buttonbackyourstory);
-            View.Add(ButtonyourstoryscreenUpload);
-     
-           View.Add(ButtonDelete1Line);
-            View.Add(ButtonDelete);
-            View.Add(dateTimeText);
-	        View.AddSubview(editTextWrite);
-            View.Add(EditJournalButton);
+            scrollView.Add(Buttonbackyourstory);
+            scrollView.Add(ButtonyourstoryscreenUpload);
+
+            scrollView.Add(ButtonDelete1Line);
+            scrollView.Add(ButtonDelete);
+            scrollView.Add(dateTimeText);
+            scrollView.AddSubview(editTextWrite);
+            scrollView.Add(EditJournalButton);
+            View.AddSubview(scrollView);//ps
             //View.Add(textViewWrite);
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
@@ -295,10 +299,7 @@ namespace Hello_MultiScreen_iPhone
             String txt2 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
             var item = NSObject.FromObject(txt2);
 
-            var img1 = NSData.FromFile(EmailReader.EmailFileRead.GetImageFileName(myDate));
-            var item2 = NSObject.FromObject(img1);
-
-            var activityItems = new NSObject[] { item, item2 };
+            var activityItems = new NSObject[] { item };
             UIActivity[] applicationActivities = null;
 
             var activityController = new UIActivityViewController(activityItems, applicationActivities);

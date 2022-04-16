@@ -34,11 +34,13 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textTitle;
         public UIButton ButtonImageClick;
 
-        public UIImageView imageView;
+        //public UIImageView imageView3;
+        public UIImageView imageViewPic;
         public UIImageView imageViewTitle;
         public UIView View1;
         public UIView View2;
         public UIView View3;
+        public UIScrollView scrollView;
 
         public UITextView readInfo;
         public static float viewScroll1Y = 0;
@@ -57,7 +59,7 @@ namespace Hello_MultiScreen_iPhone
 			//---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create Your Journal", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Click To Read", UIControlState.Normal);
-            this.btnHelloWorld.Frame = new CGRect(20, 445, 280, 35);
+            this.btnHelloWorld.Frame = new CGRect(20, 525, 280, 35);
             this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.Title = "Home";
@@ -82,72 +84,67 @@ namespace Hello_MultiScreen_iPhone
 		
         public void ViewDidLoad1()
         {
-            //var plist = NSUserDefaults.StandardUserDefaults;
-            //plist.SetFloat(viewScroll1Y, "viewScroll1Y");
-            //plist.SetFloat(viewScroll2Y, "viewScroll2Y");
-            //View.BackgroundColor = UIColor.White;
 
             //View Issue
             Title = "My Custom View Controller";
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(255,153,255);
             //View.LargeContentImage = imageView;
-            imageView = new UIImageView();
+
+
+            imageViewPic = new UIImageView();
+            UIImage img3 = new UIImage();
+            img3 = UIImage.FromFile("TestPic.png");
+            imageViewPic.Image = img3;
+            imageViewPic.Frame = new CGRect(20, 235, 280, 280);
+
+
+            /*
+            imageView3 = new UIImageView();
             UIImage img = new UIImage();
             img = UIImage.FromFile("pic5.png");
-            imageView.Image = img;
-            imageView.Frame = new CGRect(20, 385, 280, 200);
-
-            //textTitle = new UITextView();
-            //textTitle.Editable = false;
-            //textTitle.BackgroundColor = UIColor.FromRGB(203, 161, 212);
-            //textTitle.Text = "Create Your Story!";
-            //textTitle.Frame = new CGRect(25, 25, 250, 50);
-
+            imageView3.Image = img;
+            imageView3.Frame = new CGRect(20, 385, 280, 200);
+            */
 
             imageViewTitle = new UIImageView();
             UIImage img2 = new UIImage();
             img2 = UIImage.FromFile("MainTitlePic.png");
             imageViewTitle.Image = img2;
             imageViewTitle.Frame = new CGRect(20, 60, 280, 50);
-            //imageView.AccessibilityFrame = new CGRect(25, 500, 300, 150);
-            //can't use picture via .frame or .AcessibilityFrame
-            //imageView.TouchUpInside += (sender, e) => { ImageOnClick };
 
-            //Create Buttons
-            //Button1 = new UIButton(UIButtonType.System);
-            //Buttonyourstoryscreen = new UIButton(UIButtonType.System);
             textView = new UITextView();
             var ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
 
                 //Frame = UIScreen.MainScreen.Bounds,
                 BackgroundColor = UIColor.FromRGB(100, 149, 240)
-        };
+            };
 
-            ButtonShare.Frame = new CGRect(20, 500, 280, 35);
+            ButtonShare.Frame = new CGRect(20, 580, 280, 35);
             ButtonShare.SetTitle("Share Journal",UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
 
             UIButton ButtonImageClick = new UIButton(UIButtonType.System);
-            ButtonImageClick.Frame = new CGRect(20, 550, 280, 35);
+            ButtonImageClick.Frame = new CGRect(20, 630, 280, 35);
             ButtonImageClick.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonImageClick.SetTitle("Image Calendar", UIControlState.Normal);
             ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
 
-            //Button1.Frame = new CGRect(25, 200, 300, 150);
-            //Button1.SetTitle("Click to Read", UIControlState.Normal);
+            //Scroll View
+         
 
-
-            //Buttonyourstoryscreen.Frame = new CGRect(25, 400, 300, 150);
-            //Buttonyourstoryscreen.SetTitle("Create your journal", UIControlState.Normal);
+            scrollView = new UIScrollView
+            {
+                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height+300),
+                //BackgroundColor = UIColor.FromRGB(178, 178, 227),
+            AutoresizingMask = UIViewAutoresizing.FlexibleHeight
+            };
 
             //Add button targets
-            //Button1.AddTarget(Button1Click, UIControlEvent.TouchUpInside);
-            //Buttonyourstoryscreen.AddTarget(ButtonyourstoryscreenClick, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
-
 
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
@@ -166,17 +163,20 @@ namespace Hello_MultiScreen_iPhone
                 this.NavigationController.PushViewController(this.imageScreen, true);
             };
 
-            View.Add(ButtonTodoList);
-            //Add to view
-            Add(ButtonShare);
-            View.Add(ButtonShare);
-            View.Add(imageView);
-            View.Add(ButtonImageClick);
-            View.Add(imageViewTitle);
+            scrollView.Add(ButtonTodoList);
+            scrollView.Add(ButtonShare);
+            //scrollView.Add(imageView3);
+            scrollView.Add(imageViewPic);
+            scrollView.Add(ButtonImageClick);
+            scrollView.Add(imageViewTitle);
+            scrollView.Add(btnHelloUniverse);
+            scrollView.Add(btnHelloWorld);
+            View.AddSubview(scrollView);
+
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           
         }
-        
+
         void ShareButtonClick(object sender, EventArgs eventArgs)
         {
             String txt2 = "\n Your story: \n" + EmailFileRead.ReadText();

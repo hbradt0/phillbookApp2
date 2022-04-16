@@ -29,6 +29,7 @@ namespace Hello_MultiScreen_iPhone
         public UIView View1;
         public UIView View2;
         public UIView View3;
+        public UIScrollView scrollView;//ps
 
         public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
@@ -77,7 +78,7 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton = new UIButton(UIButtonType.System);
             hiddenbuttoncode = new UITextField();
 
-            booktextView.Frame = new CGRect(20, 60, 280, 360);
+            booktextView.Frame = new CGRect(20, 100, 280, 410);
             //scrollView.BackgroundColor = UIColor.SystemPink;
 
             var plist = NSUserDefaults.StandardUserDefaults;
@@ -99,13 +100,14 @@ namespace Hello_MultiScreen_iPhone
             //Button3.Frame = new CGRect(175, 25, 150, 150);
             //Button3.SetTitle("Back", UIControlState.Normal);
 
-            hiddenbutton.Frame = new CGRect(20, 450, 100, 30);
+            hiddenbutton.Frame = new CGRect(20, 540, 100, 30);
             hiddenbutton.SetTitle("Code", UIControlState.Normal);
             hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            hiddenbuttoncode.Frame = new CGRect(20, 500, 280, 50);
+            hiddenbuttoncode.Frame = new CGRect(20, 590, 280, 50);
             hiddenbuttoncode.AccessibilityHint = "type 'hint'";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
+            hiddenbuttoncode.TextColor = UIColor.SystemPurple;
 
             //exit keyboard 
             hiddenbuttoncode.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
@@ -116,16 +118,27 @@ namespace Hello_MultiScreen_iPhone
             booktextView.Text = text1;
             //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
 
+
+            //ScrollView
+            scrollView = new UIScrollView
+            {
+                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300),
+                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                AutoresizingMask = UIViewAutoresizing.FlexibleHeight
+            };
+
             //Add targets
             hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
 
             //Add to view
             //scrollView.AddSubview(booktextView);
-            View.AddSubview(booktextView);
-            View.Add(hiddenbutton);
-            View.Add(hiddenbuttoncode);
-            View.Add(Button3);
+            scrollView.AddSubview(booktextView);
+            scrollView.Add(hiddenbutton);
+            scrollView.Add(hiddenbuttoncode);
+            scrollView.Add(Button3);
+            View.AddSubview(scrollView);//ps
             //View.AddSubview(booktextView);
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);

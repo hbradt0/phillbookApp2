@@ -28,6 +28,7 @@
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/ic_launcher_foreground.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/ic_launcher_round.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/MainTitlePic.png
+/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/TestPic.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete

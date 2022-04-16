@@ -62,15 +62,15 @@
 		</data>
 		<key>Hello_MultiScreen_iPhone.aotdata.arm64</key>
 		<data>
-		k0RVIdQqOSAIHA+GXGMANQ7+bnU=
+		KQ/XoB9Bt07+hiEYfO40aZ2NMeA=
 		</data>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<data>
-		XEh7SoG+0uTdGU2UnzNZ0Awsmus=
+		htBSEzlnfr9hwhHtoBtBQOZ7NdA=
 		</data>
 		<key>HomeScreen.nib</key>
 		<data>
-		WFBnGhmEx1NmS6N3StEdI4tKdy4=
+		ku0NpHtfznEOXL0Rh26Luh2OcEY=
 		</data>
 		<key>HomeScreen2.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OpLLroyrZRdAem4Hvx9Pbe4hSDg=
+		z7Id0UaXU30QksH+Q13ft3V8j3Q=
 		</data>
 		<key>MainTitlePic.png</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>System.Core.aotdata.arm64</key>
 		<data>
-		ofxXT3Mox/wWLIwKJYj6FXWcQrI=
+		ud/GOlMP65sNxSzPrGffHllAlEU=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>System.Drawing.Common.aotdata.arm64</key>
 		<data>
-		bde5fGeyXeJUd+LT6oKJimTIJM4=
+		NXduRgMNHAgpU3uhVvO8rIlDrjQ=
 		</data>
 		<key>System.Drawing.Common.dll</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>System.aotdata.arm64</key>
 		<data>
-		1eZZ3Oc9Ox7uYa2NuBPZ1oVXXnA=
+		QaL+IwvO5PdrhH3S5NC09s79mmo=
 		</data>
 		<key>System.dll</key>
 		<data>
@@ -148,13 +148,17 @@
 		<data>
 		agpo/gKaK8LL+r1KSqKbD2F+kIM=
 		</data>
+		<key>TestPic.png</key>
+		<data>
+		ophaSEqsuvhSw4zVkudvPuTIaSc=
+		</data>
 		<key>Xamarin.iOS.aotdata.arm64</key>
 		<data>
-		2C6rYs/cjtQzNLZLX+NlSVgVf78=
+		bXJSXeA5LXGKB1ZxWRhY75f9uyo=
 		</data>
 		<key>Xamarin.iOS.dll</key>
 		<data>
-		qXJQMIefBCPUMFi/WzYIhFiKtu4=
+		ixf/rzpFR46FV6wGIv1oGixSH9M=
 		</data>
 		<key>alert.jpg</key>
 		<data>
@@ -202,11 +206,11 @@
 		</data>
 		<key>mscorlib.aotdata.arm64</key>
 		<data>
-		PYUiM29PGUXNl2HrNoqtWp2ywPY=
+		asMb36KrV9plC8ZaPh+EjCvxfSs=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		1ZduXuPjMm04q/Lo6YRMOAcU1T4=
+		maYSaaXYxnfDHoXXEPGLatAlQzQ=
 		</data>
 		<key>pic5.jpg</key>
 		<data>
@@ -321,21 +325,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0dayaR2PHa6BFfI9KBKtbV3KUVENKK3bW5aRzXGoqiE=
+			q+EF4jqgZ13eIgThUjSVLPMgzxZMQ13Kw/vW1+UNUcU=
 			</data>
 		</dict>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			klWqIRSGfl5Z8vfZgKWSovbB0gZkjOUzrG8F9eEWmHU=
+			nROMe4S6VmD743Fx5KL3wE7xl67wUARaVtTjiiQ1e4c=
 			</data>
 		</dict>
 		<key>HomeScreen.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D8GS+MDRG7heRNjPa4Yv+BvQ8rTwX3FwXLWUhbNRFAI=
+			g4NUXrrMbgMpzFF1bHTvAKm7gUc83ImLxvJg9Ho7eZ8=
 			</data>
 		</dict>
 		<key>HomeScreen2.nib</key>
@@ -377,7 +381,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g4NwvCj7eeiYYTY/cjcwRC0AL8piJQOuDn7xJGjZtkY=
+			LHC6/1DcXpt9Yyc8CZjoflJpkFFQx6TOcqc+UEKof7s=
 			</data>
 		</dict>
 		<key>System.Core.dll</key>
@@ -391,7 +395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LVz0xZC1I3M36G1sWuDorLvYuluwnhkNo4BtnN0CQyE=
+			GTOFs2bIClV4CXzeXgxFbK24H4dOrefWAv064oCXxFI=
 			</data>
 		</dict>
 		<key>System.Drawing.Common.dll</key>
@@ -405,7 +409,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			maA6b0CDqndxmKU/UcazDt6oCx4OneB0m4wzqcUdG0s=
+			oUcXnok3l/CDq1f0aZbvALXcH17N/9aevfEdiczZ7Tc=
 			</data>
 		</dict>
 		<key>System.dll</key>
@@ -457,18 +461,25 @@
 			ECVkZ5YEoHBqyK1Z7j3sQzs6BtkkQrQACuO5g9a7R9E=
 			</data>
 		</dict>
+		<key>TestPic.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XZKf9XdCUukbZ3XfuTHPtjiHLw2AUalZSkWUqW1+Fyc=
+			</data>
+		</dict>
 		<key>Xamarin.iOS.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6j5hxsobyS+3kzXygNkWgFY1DUB0tuLhGgQMryd1a4o=
+			XNhr++iPsHq0qve7JdEAQHz2Xau93/6Y3apJ9DX1VCc=
 			</data>
 		</dict>
 		<key>Xamarin.iOS.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qYkk3K9elkTkz8RFEWL7Kw65SIpaDp8bJbbF0fyYfY0=
+			11c8yoJqIXz6+L+eVQng8JY5YfSaOxmsiLrURIMjgRc=
 			</data>
 		</dict>
 		<key>alert.jpg</key>
@@ -552,14 +563,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IUNyUYzT64naW2o3OcvFneestxedRQNPAUGujt0II2E=
+			kYEROCUTsuVPhkVz/GWmgoUa5nrzLVbQSQS+GpX2HOs=
 			</data>
 		</dict>
 		<key>mscorlib.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IGEyOUwzk4Yt1G4eij36MOjmKxK7w/HJmD6mj9+WtVQ=
+			DZd8g/V0Oa86GtRmlYO1Lz/3d+b97jw0cvXLNwszayI=
 			</data>
 		</dict>
 		<key>pic5.jpg</key>

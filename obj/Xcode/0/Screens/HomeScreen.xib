@@ -38,7 +38,7 @@
                     </state>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pic5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-7e-BCx">
-                    <rect key="frame" x="85" y="226" width="133" height="178"/>
+                    <rect key="frame" x="94" y="200" width="133" height="178"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
