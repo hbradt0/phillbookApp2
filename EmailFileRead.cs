@@ -25,6 +25,8 @@ namespace EmailReader //rename
 
         public static string fileName1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "notes.txt");
         public static string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo.txt");
+        public static string srcFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        public static string fileNameImage = "";
 
 
         public static String ReadText(String fileName = "")
@@ -38,6 +40,45 @@ namespace EmailReader //rename
                 File.WriteAllText(fileName, "");
                 return "";
             }
+        }
+
+
+        public static bool FileExists(String fileName = "")
+        {
+            if (fileName == "")
+                fileName = fileName1;
+            if (File.Exists(fileName))
+                return true;
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool FileCopyToImageFile(String fileName = "", String fileName2 = "")
+        {
+            try
+            {
+                File.Copy(fileName, fileName2, true);
+                return File.Exists(fileName2);
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public static void FileCopyToImageName(String fileName = "")
+        {
+           if(fileName!=null)
+            fileNameImage = fileName;
+        }
+
+        public static void FileCopy (String fileName, String fileName2)
+        {
+            if (fileName == "")
+                fileName = fileName1;
+            File.Copy(fileName, fileName2, true);
         }
 
         public static String GetImageFileName(DateTime day)
@@ -90,8 +131,8 @@ namespace EmailReader //rename
             DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             foreach (FileInfo v in dir.GetFiles())
             {
-                if (v.FullName.Contains("image_") && !v.FullName.Contains(DateTime.Now.ToLocalTime().ToString("MMddyyyy")) &&
-                    !v.FullName.Contains(DateTime.Now.AddDays(-1).ToLocalTime().ToString("MMddyyyy")))
+                bool thismonthyear = v.FullName.Contains(DateTime.Now.ToLocalTime().ToString("MM")) && v.FullName.Contains(DateTime.Now.ToLocalTime().ToString("yyyy"));
+                if (v.FullName.Contains("image_") && !(thismonthyear))
                 {
                     file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), v.Name);
                     File.Delete(file);

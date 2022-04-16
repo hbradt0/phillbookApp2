@@ -177,11 +177,13 @@ namespace Hello_MultiScreen_iPhone
             //ScrollView
             scrollView = new UIScrollView
             {
-                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300),
+                Frame = new CGRect(0, 0, View.Frame.Width+ 200, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width+ 200, View.Frame.Height + 300),
                 BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
+            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
+
             //On click Events
 
             ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);

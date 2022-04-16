@@ -94,10 +94,14 @@ namespace Hello_MultiScreen_iPhone
 
             imageViewPic = new UIImageView();
             UIImage img3 = new UIImage();
-            img3 = UIImage.FromFile("TestPic.png");
+            if (EmailFileRead.FileExists(EmailFileRead.fileNameImage) && EmailFileRead.fileNameImage!="")
+            {
+                img3 = UIImage.FromFile(EmailFileRead.fileNameImage);
+            }
+            else
+                img3 = UIImage.FromFile("TestPic.png");
             imageViewPic.Image = img3;
             imageViewPic.Frame = new CGRect(20, 235, 280, 280);
-
 
             /*
             imageView3 = new UIImageView();
@@ -137,10 +141,10 @@ namespace Hello_MultiScreen_iPhone
 
             scrollView = new UIScrollView
             {
-                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height+300),
+                Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
                 //BackgroundColor = UIColor.FromRGB(178, 178, 227),
-            AutoresizingMask = UIViewAutoresizing.FlexibleHeight
+                AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 
             //Add button targets
@@ -162,6 +166,8 @@ namespace Hello_MultiScreen_iPhone
                 if (this.imageScreen == null) { this.imageScreen = new ImageScreen(); }
                 this.NavigationController.PushViewController(this.imageScreen, true);
             };
+
+            scrollView.ScrollRectToVisible(imageViewTitle.Frame,true);
 
             scrollView.Add(ButtonTodoList);
             scrollView.Add(ButtonShare);

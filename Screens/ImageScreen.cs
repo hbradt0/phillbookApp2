@@ -21,6 +21,7 @@ namespace Hello_MultiScreen_iPhone
         UIImagePickerController imagePicker;
 
         public UIButton ButtonDelete;
+        public UIButton BackgroundImage;
         public UIButton ButtonDelete1Line;
         public UIImagePickerController pickerView;
         public UIButton CameraButton;
@@ -50,6 +51,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             ImagePickerButton = new UIButton(UIButtonType.System);
             CameraButton = new UIButton(UIButtonType.System);
+            BackgroundImage = new UIButton(UIButtonType.System);
 
 
             UIScrollView scrollView = new UIScrollView();
@@ -95,7 +97,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick.Frame = new CGRect(200, 540, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 100, 280, 400);
+            textViewWrite.Frame = new CGRect(20, 100, 300, 300);
             UIImage img2 = new UIImage();
 
             DateTime myDate = (DateTime)dateTimeText.Date;
@@ -112,12 +114,16 @@ namespace Hello_MultiScreen_iPhone
             CameraButton.Frame = new CGRect(20, 660, 100, 30);
             CameraButton.SetTitle("Camera", UIControlState.Normal);
 
+            BackgroundImage.SetTitleColor(UIColor.White, UIControlState.Normal);
+            BackgroundImage.BackgroundColor = UIColor.SystemTeal;
+            BackgroundImage.Frame = new CGRect(150, 660, 100, 30);
+            BackgroundImage.SetTitle("Home Image", UIControlState.Normal);
 
             //ScrollView
             scrollView = new UIScrollView
             {
-                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300),
+                Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
                 BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
@@ -129,6 +135,7 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.AddTarget(ButtonDateClickEnd, UIControlEvent.EditingDidEnd);
             ImagePickerButton.AddTarget(ButtonPickImageClick, UIControlEvent.TouchUpInside);
             CameraButton.AddTarget(openCamera, UIControlEvent.TouchUpInside);
+            BackgroundImage.AddTarget(BackgroundImageShow, UIControlEvent.TouchUpInside);
             //disable this doesn't crash
 
             //Add to View
@@ -139,8 +146,32 @@ namespace Hello_MultiScreen_iPhone
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(dateTimeText);
             scrollView.Add(CameraButton);
+            scrollView.Add(BackgroundImage);
             View.AddSubview(scrollView);//ps
 
+        }
+
+        public void BackgroundImageShow(object sender, EventArgs eventArgs)
+        {
+            DateTime myDate = (DateTime)dateTimeText.Date;
+            myDate = myDate.ToLocalTime();
+            String file = myDate.ToString("MMddyyyy");
+            String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file + ".jpg");
+
+            var Confirm = new UIAlertView("Confirmation", "Add image", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    EmailFileRead.FileCopyToImageName(fileName);
+                }
+            };
+                
         }
 
         public void ButtonDateClickEnd(object sender, EventArgs eventArgs)
@@ -196,7 +227,7 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
                 data.Save(fileName, false, out err);
 
-                textViewWrite.Frame = new CGRect(20, 60, 280, 400);
+                textViewWrite.Frame = new CGRect(20, 60, 300, 300);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
@@ -339,7 +370,7 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
 
                 data.Save(fileName, false, out err);
-                textViewWrite.Frame = new CGRect(20, 60, 280, 400);
+                textViewWrite.Frame = new CGRect(20, 60, 300, 300);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
@@ -356,8 +387,19 @@ namespace Hello_MultiScreen_iPhone
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
-            EmailFileRead.DeleteAllImagesBeforeToday();
+            var Confirm = new UIAlertView("Out of memory", "Will delete pictures if too much except for this month!", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    EmailFileRead.DeleteAllImagesBeforeToday();
+                }
+            };
         }
 
         public override void ViewDidAppear(bool animated)

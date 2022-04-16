@@ -1377,78 +1377,6 @@ exception_handling:
 	}
 @end
 
-@implementation ImageScreen {
-	XamarinObject __monoObjectGCHandle;
-}
-	-(void) release
-	{
-		xamarin_release_trampoline (self, _cmd);
-	}
-
-	-(id) retain
-	{
-		return xamarin_retain_trampoline (self, _cmd);
-	}
-
-	-(GCHandle) xamarinGetGCHandle
-	{
-		return __monoObjectGCHandle.gc_handle;
-	}
-
-	-(bool) xamarinSetGCHandle: (GCHandle) gc_handle flags: (enum XamarinGCHandleFlags) flags
-	{
-		if (((flags & XamarinGCHandleFlags_InitialSet) == XamarinGCHandleFlags_InitialSet) && __monoObjectGCHandle.gc_handle != INVALID_GCHANDLE) {
-			return false;
-		}
-		flags = (enum XamarinGCHandleFlags) (flags & ~XamarinGCHandleFlags_InitialSet);
-		__monoObjectGCHandle.gc_handle = gc_handle;
-		__monoObjectGCHandle.flags = flags;
-		__monoObjectGCHandle.native_object = self;
-		return true;
-	}
-
-	-(enum XamarinGCHandleFlags) xamarinGetFlags
-	{
-		return __monoObjectGCHandle.flags;
-	}
-
-	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags
-	{
-		__monoObjectGCHandle.flags = flags;
-	}
-
-
-	-(void) didReceiveMemoryWarning
-	{
-		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_6 (self, _cmd, &managed_method, 0x5400);
-	}
-
-	-(void) viewDidAppear:(BOOL)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_7 (self, _cmd, &managed_method, p0, 0x5500);
-	}
-
-	-(BOOL) conformsToProtocol:(void *)p0
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x10D04);
-	}
-
-	-(id) init
-	{
-		static MonoMethod *managed_method = NULL;
-		bool call_super = false;
-		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x4800);
-		if (call_super && rv) {
-			struct objc_super super = {  rv, [UIViewController class] };
-			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
-		}
-		return rv;
-	}
-@end
-
 @implementation EditJournalScreen {
 	XamarinObject __monoObjectGCHandle;
 }
@@ -1735,6 +1663,78 @@ exception_handling:
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
 		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x3900);
+		if (call_super && rv) {
+			struct objc_super super = {  rv, [UIViewController class] };
+			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
+		}
+		return rv;
+	}
+@end
+
+@implementation ImageScreen {
+	XamarinObject __monoObjectGCHandle;
+}
+	-(void) release
+	{
+		xamarin_release_trampoline (self, _cmd);
+	}
+
+	-(id) retain
+	{
+		return xamarin_retain_trampoline (self, _cmd);
+	}
+
+	-(GCHandle) xamarinGetGCHandle
+	{
+		return __monoObjectGCHandle.gc_handle;
+	}
+
+	-(bool) xamarinSetGCHandle: (GCHandle) gc_handle flags: (enum XamarinGCHandleFlags) flags
+	{
+		if (((flags & XamarinGCHandleFlags_InitialSet) == XamarinGCHandleFlags_InitialSet) && __monoObjectGCHandle.gc_handle != INVALID_GCHANDLE) {
+			return false;
+		}
+		flags = (enum XamarinGCHandleFlags) (flags & ~XamarinGCHandleFlags_InitialSet);
+		__monoObjectGCHandle.gc_handle = gc_handle;
+		__monoObjectGCHandle.flags = flags;
+		__monoObjectGCHandle.native_object = self;
+		return true;
+	}
+
+	-(enum XamarinGCHandleFlags) xamarinGetFlags
+	{
+		return __monoObjectGCHandle.flags;
+	}
+
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags
+	{
+		__monoObjectGCHandle.flags = flags;
+	}
+
+
+	-(void) didReceiveMemoryWarning
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_6 (self, _cmd, &managed_method, 0x5500);
+	}
+
+	-(void) viewDidAppear:(BOOL)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_7 (self, _cmd, &managed_method, p0, 0x5600);
+	}
+
+	-(BOOL) conformsToProtocol:(void *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x10D04);
+	}
+
+	-(id) init
+	{
+		static MonoMethod *managed_method = NULL;
+		bool call_super = false;
+		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x4800);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [UIViewController class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -2596,85 +2596,85 @@ exception_handling:
 	-(void) scrollViewDidEndDecelerating:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38B04);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38C04);
 	}
 
 	-(void) scrollViewWillBeginDecelerating:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38C04);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38D04);
 	}
 
 	-(void) scrollViewDidChangeAdjustedContentInset:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38D04);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38E04);
 	}
 
 	-(void) scrollViewDidZoom:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38E04);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x38F04);
 	}
 
 	-(void) scrollViewDidEndDragging:(UIScrollView *)p0 willDecelerate:(BOOL)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_15 (self, _cmd, &managed_method, p0, p1, 0x38F04);
+		native_to_managed_trampoline_15 (self, _cmd, &managed_method, p0, p1, 0x39004);
 	}
 
 	-(void) scrollViewWillBeginDragging:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39004);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39104);
 	}
 
 	-(void) scrollViewDidEndScrollingAnimation:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39104);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39204);
 	}
 
 	-(void) scrollViewDidScroll:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39204);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39304);
 	}
 
 	-(void) scrollViewDidScrollToTop:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39304);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, p0, 0x39404);
 	}
 
 	-(BOOL) scrollViewShouldScrollToTop:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x39404);
+		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, 0x39504);
 	}
 
 	-(UIView *) viewForZoomingInScrollView:(UIScrollView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_16 (self, _cmd, &managed_method, p0, 0x39504);
+		return native_to_managed_trampoline_16 (self, _cmd, &managed_method, p0, 0x39604);
 	}
 
 	-(void) scrollViewWillEndDragging:(UIScrollView *)p0 withVelocity:(CGPoint)p1 targetContentOffset:(CGPoint*)p2
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, p1, p2, 0x39604);
+		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, p1, p2, 0x39704);
 	}
 
 	-(void) scrollViewDidEndZooming:(UIScrollView *)p0 withView:(UIView *)p1 atScale:(CGFloat)p2
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_18 (self, _cmd, &managed_method, p0, p1, p2, 0x39704);
+		native_to_managed_trampoline_18 (self, _cmd, &managed_method, p0, p1, p2, 0x39804);
 	}
 
 	-(void) scrollViewWillBeginZooming:(UIScrollView *)p0 withView:(UIView *)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, p1, 0x39804);
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, p1, 0x39904);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -2687,7 +2687,7 @@ exception_handling:
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x38A04);
+		id rv = native_to_managed_trampoline_1 (self, _cmd, &managed_method, &call_super, 0x38B04);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [NSObject class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -2801,11 +2801,11 @@ exception_handling:
 		{ NULL, 0x8404 /* #3 'UIResponder' => 'UIKit.UIResponder, Xamarin.iOS' */, (MTTypeFlags) (0) /* None */ },
 		{ NULL, 0x6704 /* #4 'UIViewController' => 'UIKit.UIViewController, Xamarin.iOS' */, (MTTypeFlags) (0) /* None */ },
 		{ NULL, 0x500 /* #5 'HomeScreen' => 'Hello_MultiScreen_iPhone.HomeScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x900 /* #6 'ImageScreen' => 'Hello_MultiScreen_iPhone.ImageScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x400 /* #7 'EditJournalScreen' => 'Hello_MultiScreen_iPhone.EditJournalScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x600 /* #8 'HelloWorldScreen' => 'Hello_MultiScreen_iPhone.HelloWorldScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x700 /* #9 'HelloUniverseScreen' => 'Hello_MultiScreen_iPhone.HelloUniverseScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x800 /* #10 'HomeScreen2' => 'Hello_MultiScreen_iPhone.HomeScreen2, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x400 /* #6 'EditJournalScreen' => 'Hello_MultiScreen_iPhone.EditJournalScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x600 /* #7 'HelloWorldScreen' => 'Hello_MultiScreen_iPhone.HelloWorldScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x700 /* #8 'HelloUniverseScreen' => 'Hello_MultiScreen_iPhone.HelloUniverseScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x800 /* #9 'HomeScreen2' => 'Hello_MultiScreen_iPhone.HomeScreen2, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x900 /* #10 'ImageScreen' => 'Hello_MultiScreen_iPhone.ImageScreen, Hello_MultiScreen_iPhone' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
 		{ NULL, 0xB04 /* #11 'Foundation_NSDispatcher' => 'Foundation.NSDispatcher, Xamarin.iOS' */, (MTTypeFlags) (2) /* UserType */ },
 		{ NULL, 0xC04 /* #12 '__MonoMac_NSSynchronizationContextDispatcher' => 'Foundation.NSSynchronizationContextDispatcher, Xamarin.iOS' */, (MTTypeFlags) (2) /* UserType */ },
 		{ NULL, 0xD04 /* #13 'Foundation_NSAsyncDispatcher' => 'Foundation.NSAsyncDispatcher, Xamarin.iOS' */, (MTTypeFlags) (2) /* UserType */ },
@@ -2906,11 +2906,11 @@ void xamarin_create_classes () {
 	__xamarin_class_map [3].handle = objc_getClass ("UIResponder");
 	__xamarin_class_map [4].handle = objc_getClass ("UIViewController");
 	__xamarin_class_map [5].handle = [HomeScreen class];
-	__xamarin_class_map [6].handle = [ImageScreen class];
-	__xamarin_class_map [7].handle = [EditJournalScreen class];
-	__xamarin_class_map [8].handle = [HelloWorldScreen class];
-	__xamarin_class_map [9].handle = [HelloUniverseScreen class];
-	__xamarin_class_map [10].handle = [HomeScreen2 class];
+	__xamarin_class_map [6].handle = [EditJournalScreen class];
+	__xamarin_class_map [7].handle = [HelloWorldScreen class];
+	__xamarin_class_map [8].handle = [HelloUniverseScreen class];
+	__xamarin_class_map [9].handle = [HomeScreen2 class];
+	__xamarin_class_map [10].handle = [ImageScreen class];
 	__xamarin_class_map [11].handle = objc_getClass ("Foundation_NSDispatcher");
 	__xamarin_class_map [12].handle = objc_getClass ("__MonoMac_NSSynchronizationContextDispatcher");
 	__xamarin_class_map [13].handle = objc_getClass ("Foundation_NSAsyncDispatcher");

@@ -108,6 +108,7 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo.BackgroundColor = UIColor.SystemTeal;
             ShareTodo.SetTitle("Share",UIControlState.Normal);
             editTextDate.BackgroundColor = UIColor.White;
+            editTextDate.TextColor = UIColor.SystemTeal;
             editTextDate.AccessibilityHint = "0 (days)";
             editTextDate.Text = "0";
             //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
@@ -174,8 +175,8 @@ namespace Hello_MultiScreen_iPhone
             //ScrollView
             scrollView = new UIScrollView
             {
-                Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300),
+                Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
                 BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
