@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets.xcassets/AppIcon.appiconset/Contents.json">
     <Files>
-      <File FileName="Screens/HelloUniverseScreen.cs" Line="74" Column="62" IsPinned="True" />
-      <File FileName="Screens/HelloWorldScreen.cs" Line="81" Column="61" />
-      <File FileName="Screens/ImageScreen.cs" Line="112" Column="51" />
-      <File FileName="Screens/EditJournalScreen.cs" Line="114" Column="23" />
-      <File FileName="Screens/HomeScreen.cs" Line="99" Column="61" />
-      <File FileName="Screens/HomeScreen2.cs" Line="135" Column="50" />
-      <File FileName="EmailFileRead.cs" Line="87" Column="54" />
-      <File FileName="AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="Screens/HelloUniverseScreen.cs" Line="185" Column="39" IsPinned="True" />
+      <File FileName="Screens/HelloWorldScreen.cs" />
+      <File FileName="Screens/ImageScreen.cs" />
+      <File FileName="Screens/EditJournalScreen.cs" />
+      <File FileName="Screens/HomeScreen.cs" />
+      <File FileName="Screens/HomeScreen2.cs" />
+      <File FileName="EmailFileRead.cs" />
+      <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
-      <File FileName="Screens/HomeScreen.designer.cs" Line="1" Column="1" />
+      <File FileName="Screens/HomeScreen.designer.cs" />
+      <File FileName="Assets.xcassets/AppIcon.appiconset/Contents.json" Line="390" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,12 +19,16 @@
           <Option id="ShowAllFiles" value="True" />
           <Node name="Hello_MultiScreen_iPhone" expanded="True">
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
+              <Node name="Assets.xcassets" expanded="True">
+                <Node name="AppIcon.appiconset" expanded="True">
+                  <Node name="Contents.json" selected="True" />
+                </Node>
+              </Node>
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
                 <Node name="HomeScreen.cs" expanded="True" />
                 <Node name="HomeScreen2.cs" expanded="True" />
               </Node>
-              <Node name="Info.plist" selected="True" />
             </Node>
           </Node>
         </State>

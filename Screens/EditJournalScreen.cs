@@ -94,7 +94,7 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(20, 60, 100, 30);
+            Button3.Frame = new CGRect(180, 540, 100, 30);
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
