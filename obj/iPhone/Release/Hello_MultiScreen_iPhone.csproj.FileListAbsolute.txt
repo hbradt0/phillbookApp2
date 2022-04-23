@@ -33,3 +33,4 @@
 /Users/psargent/phillbookApp2/bin/iPhone/Release/Tesseract.iOS.dll
 /Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/TestPic.png
+/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache

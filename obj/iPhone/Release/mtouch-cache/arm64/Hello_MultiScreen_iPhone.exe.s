@@ -588,11 +588,11 @@ bl _p_34
 .word 0xf9403740
 .word 0xf900dba0
 .word 0xd280001e
-.word 0xf2a8341e
+.word 0xf2a8669e
 .word 0x9e6703d0
 .word 0x1e22c200
 .word 0xd280001e
-.word 0xf2a84e1e
+.word 0xf2a880fe
 .word 0x9e6703d0
 .word 0x1e22c201
 .word 0xd280001e
@@ -2616,7 +2616,7 @@ bl _p_38
 .word 0xf94127a1
 .word 0xfd412ba1
 .word 0xfd4107a0
-.word 0xd2802580
+.word 0xd2801900
 .word 0x1e620002
 .word 0x1e622800
 .word 0xd2800000
@@ -14749,11 +14749,12 @@ Lme_66:
 	.no_dead_strip EmailReader_EmailFileRead_DeleteLastLine_string
 EmailReader_EmailFileRead_DeleteLastLine_string:
 .loc 1 1 0
-.word 0xa9bc7bfd
+.word 0xa9b97bfd
 .word 0x910003fd
 .word 0xa90167b8
 .word 0xf90013ba
 .word 0xaa0003fa
+.word 0xf90017bf
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -14776,11 +14777,10 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x15, [x16, #2504]
 bl _p_181
 .word 0xaa0003f9
-.word 0xaa1903e0
-.word 0xaa0003e1
-.word 0x3940003e
-.word 0xb9801800
-.word 0x6b1f001f
+.word 0x3940033e
+.word 0xb9801b20
+.word 0xd280003e
+.word 0x6b1e001f
 .word 0x9a9fd7e0
 .word 0x53001c18
 .word 0xaa1803e0
@@ -14817,13 +14817,44 @@ bl _p_65
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_184
+.word 0x3940033e
+.word 0xb9801b20
+.word 0xd280003e
+.word 0x6b1e001f
+.word 0x9a9fa7e0
+.word 0x6b1f001f
+.word 0x9a9f17e0
+.word 0x53001c18
+.word 0xaa1803e0
+.word 0x34000140
+
+adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
+add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
+ldr x15, [x16, #2512]
+.word 0xaa1903e0
+bl _p_182
+.word 0xaa0003e1
+.word 0xaa1903e0
+.word 0x3940033e
+bl _p_183
 .word 0xaa1a03e0
 .word 0xaa1903e1
 bl _p_185
+.word 0x1400000b
+.word 0xf9001ba0
+.word 0xf9401ba0
+.word 0xf90017a0
+bl _p_167
+.word 0xf90033a0
+.word 0xf94033a0
+.word 0xb4000060
+.word 0xf94033a0
+bl _p_168
+.word 0x14000001
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
-.word 0xa8c47bfd
+.word 0xa8c77bfd
 .word 0xd65f03c0
 
 Lme_67:
@@ -15999,8 +16030,9 @@ unwind_info:
 	.byte 26,12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,151,9,68,152,8,153,7,68,154,6,23,12,31,0,68
 	.byte 14,64,157,8,158,7,68,13,29,68,151,6,152,5,68,153,4,154,3,21,12,31,0,68,14,64,157,8,158,7,68,13
 	.byte 29,68,152,6,153,5,68,154,4,22,12,31,0,68,14,144,1,157,18,158,17,68,13,29,68,152,16,153,15,68,154,14
-	.byte 21,12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,151,9,68,153,8,28,12,31,0,68,14,80,157,10,158
-	.byte 9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
+	.byte 21,12,31,0,68,14,96,157,12,158,11,68,13,29,68,150,10,151,9,68,153,8,21,12,31,0,68,14,112,157,14,158
+	.byte 13,68,13,29,68,152,12,153,11,68,154,10,28,12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68
+	.byte 151,6,152,5,68,153,4,154,3
 
 .text
 	.align 4
@@ -16013,7 +16045,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2624]
 br x16
-.word 2511
+.word 2513
 	.no_dead_strip plt_UIKit_UIScreen_get_MainScreen
 plt_UIKit_UIScreen_get_MainScreen:
 _p_2:
@@ -16021,7 +16053,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2632]
 br x16
-.word 2516
+.word 2518
 	.no_dead_strip plt_UIKit_UIScreen_get_Bounds
 plt_UIKit_UIScreen_get_Bounds:
 _p_3:
@@ -16029,7 +16061,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2640]
 br x16
-.word 2521
+.word 2523
 	.no_dead_strip plt__jit_icall_ves_icall_object_new_specific
 plt__jit_icall_ves_icall_object_new_specific:
 _p_4:
@@ -16037,7 +16069,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2648]
 br x16
-.word 2526
+.word 2528
 	.no_dead_strip plt_UIKit_UIWindow__ctor_CoreGraphics_CGRect
 plt_UIKit_UIWindow__ctor_CoreGraphics_CGRect:
 _p_5:
@@ -16045,7 +16077,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2656]
 br x16
-.word 2529
+.word 2531
 	.no_dead_strip plt_UIKit_UINavigationController__ctor
 plt_UIKit_UINavigationController__ctor:
 _p_6:
@@ -16053,7 +16085,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2664]
 br x16
-.word 2534
+.word 2536
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen__ctor
 plt_Hello_MultiScreen_iPhone_HomeScreen__ctor:
 _p_7:
@@ -16061,7 +16093,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2672]
 br x16
-.word 2539
+.word 2541
 	.no_dead_strip plt_UIKit_UINavigationController_PushViewController_UIKit_UIViewController_bool
 plt_UIKit_UINavigationController_PushViewController_UIKit_UIViewController_bool:
 _p_8:
@@ -16069,7 +16101,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2680]
 br x16
-.word 2541
+.word 2543
 	.no_dead_strip plt_UIKit_UIWindow_set_RootViewController_UIKit_UIViewController
 plt_UIKit_UIWindow_set_RootViewController_UIKit_UIViewController:
 _p_9:
@@ -16077,7 +16109,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2688]
 br x16
-.word 2546
+.word 2548
 	.no_dead_strip plt_UIKit_UIWindow_MakeKeyAndVisible
 plt_UIKit_UIWindow_MakeKeyAndVisible:
 _p_10:
@@ -16085,7 +16117,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2696]
 br x16
-.word 2551
+.word 2553
 	.no_dead_strip plt_UIKit_UIApplicationDelegate__ctor
 plt_UIKit_UIApplicationDelegate__ctor:
 _p_11:
@@ -16093,7 +16125,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2704]
 br x16
-.word 2556
+.word 2558
 	.no_dead_strip plt_UIKit_UIViewController__ctor_string_Foundation_NSBundle
 plt_UIKit_UIViewController__ctor_string_Foundation_NSBundle:
 _p_12:
@@ -16101,7 +16133,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2712]
 br x16
-.word 2561
+.word 2563
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_EditJournalScreen_ViewDidLoad1
 plt_Hello_MultiScreen_iPhone_EditJournalScreen_ViewDidLoad1:
 _p_13:
@@ -16109,7 +16141,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2720]
 br x16
-.word 2566
+.word 2568
 	.no_dead_strip plt_UIKit_UIViewController_get_View
 plt_UIKit_UIViewController_get_View:
 _p_14:
@@ -16117,7 +16149,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2728]
 br x16
-.word 2568
+.word 2570
 	.no_dead_strip plt_UIKit_UIColor_FromRGB_int_int_int
 plt_UIKit_UIColor_FromRGB_int_int_int:
 _p_15:
@@ -16125,7 +16157,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2736]
 br x16
-.word 2573
+.word 2575
 	.no_dead_strip plt_UIKit_UIView_set_BackgroundColor_UIKit_UIColor
 plt_UIKit_UIView_set_BackgroundColor_UIKit_UIColor:
 _p_16:
@@ -16133,7 +16165,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2744]
 br x16
-.word 2578
+.word 2580
 	.no_dead_strip plt_UIKit_UIViewController__ctor
 plt_UIKit_UIViewController__ctor:
 _p_17:
@@ -16141,7 +16173,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2752]
 br x16
-.word 2583
+.word 2585
 	.no_dead_strip plt_UIKit_UIButton__ctor_UIKit_UIButtonType
 plt_UIKit_UIButton__ctor_UIKit_UIButtonType:
 _p_18:
@@ -16149,7 +16181,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2760]
 br x16
-.word 2588
+.word 2590
 	.no_dead_strip plt_UIKit_UITextView__ctor
 plt_UIKit_UITextView__ctor:
 _p_19:
@@ -16157,7 +16189,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2768]
 br x16
-.word 2593
+.word 2595
 	.no_dead_strip plt_UIKit_UITextView_set_Editable_bool
 plt_UIKit_UITextView_set_Editable_bool:
 _p_20:
@@ -16165,7 +16197,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2776]
 br x16
-.word 2598
+.word 2600
 	.no_dead_strip plt_CoreGraphics_CGRect__ctor_single_single_single_single
 plt_CoreGraphics_CGRect__ctor_single_single_single_single:
 _p_21:
@@ -16173,7 +16205,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2784]
 br x16
-.word 2603
+.word 2605
 	.no_dead_strip plt_UIKit_UIView_set_Frame_CoreGraphics_CGRect
 plt_UIKit_UIView_set_Frame_CoreGraphics_CGRect:
 _p_22:
@@ -16181,7 +16213,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2792]
 br x16
-.word 2608
+.word 2610
 	.no_dead_strip plt_EmailReader_EmailFileRead_ReadText_string
 plt_EmailReader_EmailFileRead_ReadText_string:
 _p_23:
@@ -16189,7 +16221,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2800]
 br x16
-.word 2613
+.word 2615
 	.no_dead_strip plt_UIKit_UITextView_set_Text_string
 plt_UIKit_UITextView_set_Text_string:
 _p_24:
@@ -16197,7 +16229,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2808]
 br x16
-.word 2615
+.word 2617
 	.no_dead_strip plt_UIKit_UIColor_get_White
 plt_UIKit_UIColor_get_White:
 _p_25:
@@ -16205,7 +16237,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2816]
 br x16
-.word 2620
+.word 2622
 	.no_dead_strip plt_UIKit_UIColor_get_Purple
 plt_UIKit_UIColor_get_Purple:
 _p_26:
@@ -16213,7 +16245,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2824]
 br x16
-.word 2625
+.word 2627
 	.no_dead_strip plt_UIKit_UITextView_set_TextColor_UIKit_UIColor
 plt_UIKit_UITextView_set_TextColor_UIKit_UIColor:
 _p_27:
@@ -16221,7 +16253,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2832]
 br x16
-.word 2630
+.word 2632
 	.no_dead_strip plt_UIKit_UIView_set_UserInteractionEnabled_bool
 plt_UIKit_UIView_set_UserInteractionEnabled_bool:
 _p_28:
@@ -16229,7 +16261,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2840]
 br x16
-.word 2635
+.word 2637
 	.no_dead_strip plt_UIKit_UIScrollView_set_ScrollEnabled_bool
 plt_UIKit_UIScrollView_set_ScrollEnabled_bool:
 _p_29:
@@ -16237,7 +16269,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2848]
 br x16
-.word 2640
+.word 2642
 	.no_dead_strip plt_UIKit_UITextView_set_KeyboardType_UIKit_UIKeyboardType
 plt_UIKit_UITextView_set_KeyboardType_UIKit_UIKeyboardType:
 _p_30:
@@ -16245,7 +16277,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2856]
 br x16
-.word 2645
+.word 2647
 	.no_dead_strip plt_UIKit_UITextView_set_ReturnKeyType_UIKit_UIReturnKeyType
 plt_UIKit_UITextView_set_ReturnKeyType_UIKit_UIReturnKeyType:
 _p_31:
@@ -16253,7 +16285,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2864]
 br x16
-.word 2650
+.word 2652
 	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
 plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
 _p_32:
@@ -16261,7 +16293,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2872]
 br x16
-.word 2655
+.word 2657
 	.no_dead_strip plt_UIKit_UITapGestureRecognizer__ctor_System_Action
 plt_UIKit_UITapGestureRecognizer__ctor_System_Action:
 _p_33:
@@ -16269,7 +16301,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2880]
 br x16
-.word 2663
+.word 2665
 	.no_dead_strip plt_UIKit_UITextView_set_ShouldChangeText_UIKit_UITextViewChange
 plt_UIKit_UITextView_set_ShouldChangeText_UIKit_UITextViewChange:
 _p_34:
@@ -16277,7 +16309,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2888]
 br x16
-.word 2668
+.word 2670
 	.no_dead_strip plt_UIKit_UIButton_SetTitle_string_UIKit_UIControlState
 plt_UIKit_UIButton_SetTitle_string_UIKit_UIControlState:
 _p_35:
@@ -16285,7 +16317,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2896]
 br x16
-.word 2673
+.word 2675
 	.no_dead_strip plt_UIKit_UIControl_AddTarget_System_EventHandler_UIKit_UIControlEvent
 plt_UIKit_UIControl_AddTarget_System_EventHandler_UIKit_UIControlEvent:
 _p_36:
@@ -16293,7 +16325,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2904]
 br x16
-.word 2678
+.word 2680
 	.no_dead_strip plt_UIKit_UIScrollView__ctor
 plt_UIKit_UIScrollView__ctor:
 _p_37:
@@ -16301,7 +16333,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2912]
 br x16
-.word 2683
+.word 2685
 	.no_dead_strip plt_UIKit_UIView_get_Frame
 plt_UIKit_UIView_get_Frame:
 _p_38:
@@ -16309,7 +16341,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2920]
 br x16
-.word 2688
+.word 2690
 	.no_dead_strip plt_CoreGraphics_CGRect__ctor_System_nfloat_System_nfloat_System_nfloat_System_nfloat
 plt_CoreGraphics_CGRect__ctor_System_nfloat_System_nfloat_System_nfloat_System_nfloat:
 _p_39:
@@ -16317,7 +16349,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2928]
 br x16
-.word 2693
+.word 2695
 	.no_dead_strip plt_UIKit_UIScrollView_set_ContentSize_CoreGraphics_CGSize
 plt_UIKit_UIScrollView_set_ContentSize_CoreGraphics_CGSize:
 _p_40:
@@ -16325,7 +16357,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2936]
 br x16
-.word 2698
+.word 2700
 	.no_dead_strip plt_UIKit_UIView_set_AutoresizingMask_UIKit_UIViewAutoresizing
 plt_UIKit_UIView_set_AutoresizingMask_UIKit_UIViewAutoresizing:
 _p_41:
@@ -16333,7 +16365,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2944]
 br x16
-.word 2703
+.word 2705
 	.no_dead_strip plt_UIKit_UIView_Add_UIKit_UIView
 plt_UIKit_UIView_Add_UIKit_UIView:
 _p_42:
@@ -16341,7 +16373,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2952]
 br x16
-.word 2708
+.word 2710
 	.no_dead_strip plt_UIKit_UIView_AddSubview_UIKit_UIView
 plt_UIKit_UIView_AddSubview_UIKit_UIView:
 _p_43:
@@ -16349,7 +16381,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2960]
 br x16
-.word 2713
+.word 2715
 	.no_dead_strip plt_UIKit_UIKeyboard_Notifications_ObserveWillShow_System_EventHandler_1_UIKit_UIKeyboardEventArgs
 plt_UIKit_UIKeyboard_Notifications_ObserveWillShow_System_EventHandler_1_UIKit_UIKeyboardEventArgs:
 _p_44:
@@ -16357,7 +16389,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2968]
 br x16
-.word 2718
+.word 2720
 	.no_dead_strip plt_UIKit_UIKeyboard_Notifications_ObserveWillHide_System_EventHandler_1_UIKit_UIKeyboardEventArgs
 plt_UIKit_UIKeyboard_Notifications_ObserveWillHide_System_EventHandler_1_UIKit_UIKeyboardEventArgs:
 _p_45:
@@ -16365,7 +16397,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2976]
 br x16
-.word 2723
+.word 2725
 	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
 plt__jit_icall_mono_arch_throw_corlib_exception:
 _p_46:
@@ -16373,7 +16405,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2984]
 br x16
-.word 2728
+.word 2730
 	.no_dead_strip plt_UIKit_UIView_get_Focused
 plt_UIKit_UIView_get_Focused:
 _p_47:
@@ -16381,7 +16413,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #2992]
 br x16
-.word 2730
+.word 2732
 	.no_dead_strip plt_UIKit_UIKeyboardEventArgs_get_AnimationDuration
 plt_UIKit_UIKeyboardEventArgs_get_AnimationDuration:
 _p_48:
@@ -16389,7 +16421,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3000]
 br x16
-.word 2735
+.word 2737
 	.no_dead_strip plt_UIKit_UIKeyboardEventArgs_get_AnimationCurve
 plt_UIKit_UIKeyboardEventArgs_get_AnimationCurve:
 _p_49:
@@ -16397,7 +16429,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3008]
 br x16
-.word 2740
+.word 2742
 	.no_dead_strip plt_UIKit_UIKeyboard_FrameBeginFromNotification_Foundation_NSNotification
 plt_UIKit_UIKeyboard_FrameBeginFromNotification_Foundation_NSNotification:
 _p_50:
@@ -16405,7 +16437,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3016]
 br x16
-.word 2745
+.word 2747
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_EditJournalScreen_ScrollTheView_bool
 plt_Hello_MultiScreen_iPhone_EditJournalScreen_ScrollTheView_bool:
 _p_51:
@@ -16413,7 +16445,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3024]
 br x16
-.word 2750
+.word 2752
 	.no_dead_strip plt_UIKit_UIView_BeginAnimations_string_intptr
 plt_UIKit_UIView_BeginAnimations_string_intptr:
 _p_52:
@@ -16421,7 +16453,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3032]
 br x16
-.word 2752
+.word 2754
 	.no_dead_strip plt_UIKit_UIView_SetAnimationDuration_double
 plt_UIKit_UIView_SetAnimationDuration_double:
 _p_53:
@@ -16429,7 +16461,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3040]
 br x16
-.word 2757
+.word 2759
 	.no_dead_strip plt_UIKit_UIView_SetAnimationCurve_UIKit_UIViewAnimationCurve
 plt_UIKit_UIView_SetAnimationCurve_UIKit_UIViewAnimationCurve:
 _p_54:
@@ -16437,7 +16469,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3048]
 br x16
-.word 2762
+.word 2764
 	.no_dead_strip plt_UIKit_UIView_CommitAnimations
 plt_UIKit_UIView_CommitAnimations:
 _p_55:
@@ -16445,7 +16477,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3056]
 br x16
-.word 2767
+.word 2769
 	.no_dead_strip plt_EmailReader_EmailFileRead_FileSizeWarning_string_long
 plt_EmailReader_EmailFileRead_FileSizeWarning_string_long:
 _p_56:
@@ -16453,7 +16485,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3064]
 br x16
-.word 2772
+.word 2774
 	.no_dead_strip plt_wrapper_alloc_object_AllocVector_intptr_intptr
 plt_wrapper_alloc_object_AllocVector_intptr_intptr:
 _p_57:
@@ -16461,7 +16493,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3072]
 br x16
-.word 2774
+.word 2776
 	.no_dead_strip plt_UIKit_UIAlertView__ctor_string_string_UIKit_UIAlertViewDelegate_string_string__
 plt_UIKit_UIAlertView__ctor_string_string_UIKit_UIAlertViewDelegate_string_string__:
 _p_58:
@@ -16469,7 +16501,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3080]
 br x16
-.word 2782
+.word 2784
 	.no_dead_strip plt_UIKit_UIAlertView_Show
 plt_UIKit_UIAlertView_Show:
 _p_59:
@@ -16477,7 +16509,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3088]
 br x16
-.word 2787
+.word 2789
 	.no_dead_strip plt_UIKit_UIAlertView_add_Clicked_System_EventHandler_1_UIKit_UIButtonEventArgs
 plt_UIKit_UIAlertView_add_Clicked_System_EventHandler_1_UIKit_UIButtonEventArgs:
 _p_60:
@@ -16485,7 +16517,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3096]
 br x16
-.word 2792
+.word 2794
 	.no_dead_strip plt_UIKit_UIViewController_DidReceiveMemoryWarning
 plt_UIKit_UIViewController_DidReceiveMemoryWarning:
 _p_61:
@@ -16493,7 +16525,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3104]
 br x16
-.word 2797
+.word 2799
 	.no_dead_strip plt_UIKit_UIView_UITextField_EndEditing_UIKit_UIView_bool
 plt_UIKit_UIView_UITextField_EndEditing_UIKit_UIView_bool:
 _p_62:
@@ -16501,7 +16533,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3112]
 br x16
-.word 2802
+.word 2804
 	.no_dead_strip plt_string_Equals_string
 plt_string_Equals_string:
 _p_63:
@@ -16509,7 +16541,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3120]
 br x16
-.word 2807
+.word 2809
 	.no_dead_strip plt_UIKit_UITextView_get_Text
 plt_UIKit_UITextView_get_Text:
 _p_64:
@@ -16517,7 +16549,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3128]
 br x16
-.word 2812
+.word 2814
 	.no_dead_strip plt_string_op_Equality_string_string
 plt_string_op_Equality_string_string:
 _p_65:
@@ -16525,7 +16557,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3136]
 br x16
-.word 2817
+.word 2819
 	.no_dead_strip plt_EmailReader_EmailFileRead_WriteAllText_string_string
 plt_EmailReader_EmailFileRead_WriteAllText_string_string:
 _p_66:
@@ -16533,7 +16565,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3144]
 br x16
-.word 2822
+.word 2824
 	.no_dead_strip plt_UIKit_UIViewController_ViewDidLoad
 plt_UIKit_UIViewController_ViewDidLoad:
 _p_67:
@@ -16541,7 +16573,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3152]
 br x16
-.word 2824
+.word 2826
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen_ViewDidLoad1
 plt_Hello_MultiScreen_iPhone_HomeScreen_ViewDidLoad1:
 _p_68:
@@ -16549,7 +16581,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3160]
 br x16
-.word 2829
+.word 2831
 	.no_dead_strip plt_UIKit_UIViewController_set_Title_string
 plt_UIKit_UIViewController_set_Title_string:
 _p_69:
@@ -16557,7 +16589,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3168]
 br x16
-.word 2831
+.word 2833
 	.no_dead_strip plt_UIKit_UIControl_add_TouchUpInside_System_EventHandler
 plt_UIKit_UIControl_add_TouchUpInside_System_EventHandler:
 _p_70:
@@ -16565,7 +16597,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3176]
 br x16
-.word 2836
+.word 2838
 	.no_dead_strip plt_UIKit_UIImageView__ctor
 plt_UIKit_UIImageView__ctor:
 _p_71:
@@ -16573,7 +16605,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3184]
 br x16
-.word 2841
+.word 2843
 	.no_dead_strip plt_UIKit_UIImage__ctor
 plt_UIKit_UIImage__ctor:
 _p_72:
@@ -16581,7 +16613,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3192]
 br x16
-.word 2846
+.word 2848
 	.no_dead_strip plt_EmailReader_EmailFileRead_FileExists_string
 plt_EmailReader_EmailFileRead_FileExists_string:
 _p_73:
@@ -16589,7 +16621,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3200]
 br x16
-.word 2851
+.word 2853
 	.no_dead_strip plt_string_op_Inequality_string_string
 plt_string_op_Inequality_string_string:
 _p_74:
@@ -16597,7 +16629,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3208]
 br x16
-.word 2853
+.word 2855
 	.no_dead_strip plt_UIKit_UIImage_FromFile_string
 plt_UIKit_UIImage_FromFile_string:
 _p_75:
@@ -16605,7 +16637,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3216]
 br x16
-.word 2858
+.word 2860
 	.no_dead_strip plt_UIKit_UIImageView_set_Image_UIKit_UIImage
 plt_UIKit_UIImageView_set_Image_UIKit_UIImage:
 _p_76:
@@ -16613,7 +16645,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3224]
 br x16
-.word 2863
+.word 2865
 	.no_dead_strip plt_UIKit_UIButton_SetTitleColor_UIKit_UIColor_UIKit_UIControlState
 plt_UIKit_UIButton_SetTitleColor_UIKit_UIColor_UIKit_UIControlState:
 _p_77:
@@ -16621,7 +16653,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3232]
 br x16
-.word 2868
+.word 2870
 	.no_dead_strip plt_UIKit_UIScrollView_ScrollRectToVisible_CoreGraphics_CGRect_bool
 plt_UIKit_UIScrollView_ScrollRectToVisible_CoreGraphics_CGRect_bool:
 _p_78:
@@ -16629,7 +16661,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3240]
 br x16
-.word 2873
+.word 2875
 	.no_dead_strip plt_string_Concat_string_string
 plt_string_Concat_string_string:
 _p_79:
@@ -16637,7 +16669,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3248]
 br x16
-.word 2878
+.word 2880
 	.no_dead_strip plt_Foundation_NSObject_FromObject_object
 plt_Foundation_NSObject_FromObject_object:
 _p_80:
@@ -16645,7 +16677,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3256]
 br x16
-.word 2883
+.word 2885
 	.no_dead_strip plt_UIKit_UIActivityViewController__ctor_Foundation_NSObject___UIKit_UIActivity__
 plt_UIKit_UIActivityViewController__ctor_Foundation_NSObject___UIKit_UIActivity__:
 _p_81:
@@ -16653,7 +16685,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3264]
 br x16
-.word 2888
+.word 2890
 	.no_dead_strip plt_UIKit_UIViewController_PresentViewController_UIKit_UIViewController_bool_System_Action
 plt_UIKit_UIViewController_PresentViewController_UIKit_UIViewController_bool_System_Action:
 _p_82:
@@ -16661,7 +16693,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3272]
 br x16
-.word 2893
+.word 2895
 	.no_dead_strip plt_UIKit_UIViewController_ViewWillAppear_bool
 plt_UIKit_UIViewController_ViewWillAppear_bool:
 _p_83:
@@ -16669,7 +16701,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3280]
 br x16
-.word 2898
+.word 2900
 	.no_dead_strip plt_UIKit_UIViewController_get_NavigationController
 plt_UIKit_UIViewController_get_NavigationController:
 _p_84:
@@ -16677,7 +16709,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3288]
 br x16
-.word 2903
+.word 2905
 	.no_dead_strip plt_UIKit_UINavigationController_SetNavigationBarHidden_bool_bool
 plt_UIKit_UINavigationController_SetNavigationBarHidden_bool_bool:
 _p_85:
@@ -16685,7 +16717,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3296]
 br x16
-.word 2908
+.word 2910
 	.no_dead_strip plt_UIKit_UIViewController_ViewWillDisappear_bool
 plt_UIKit_UIViewController_ViewWillDisappear_bool:
 _p_86:
@@ -16693,7 +16725,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3304]
 br x16
-.word 2913
+.word 2915
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloWorldScreen__ctor
 plt_Hello_MultiScreen_iPhone_HelloWorldScreen__ctor:
 _p_87:
@@ -16701,7 +16733,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3312]
 br x16
-.word 2918
+.word 2920
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloUniverseScreen__ctor
 plt_Hello_MultiScreen_iPhone_HelloUniverseScreen__ctor:
 _p_88:
@@ -16709,7 +16741,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3320]
 br x16
-.word 2920
+.word 2922
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen2__ctor
 plt_Hello_MultiScreen_iPhone_HomeScreen2__ctor:
 _p_89:
@@ -16717,7 +16749,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3328]
 br x16
-.word 2922
+.word 2924
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_ImageScreen__ctor
 plt_Hello_MultiScreen_iPhone_ImageScreen__ctor:
 _p_90:
@@ -16725,7 +16757,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3336]
 br x16
-.word 2924
+.word 2926
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloWorldScreen_ViewDidLoad1
 plt_Hello_MultiScreen_iPhone_HelloWorldScreen_ViewDidLoad1:
 _p_91:
@@ -16733,7 +16765,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3344]
 br x16
-.word 2926
+.word 2928
 	.no_dead_strip plt_UIKit_UITextField__ctor
 plt_UIKit_UITextField__ctor:
 _p_92:
@@ -16741,7 +16773,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3352]
 br x16
-.word 2928
+.word 2930
 	.no_dead_strip plt_Foundation_NSUserDefaults_get_StandardUserDefaults
 plt_Foundation_NSUserDefaults_get_StandardUserDefaults:
 _p_93:
@@ -16749,7 +16781,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3360]
 br x16
-.word 2933
+.word 2935
 	.no_dead_strip plt_Foundation_NSUserDefaults_IntForKey_string
 plt_Foundation_NSUserDefaults_IntForKey_string:
 _p_94:
@@ -16757,7 +16789,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3368]
 br x16
-.word 2938
+.word 2940
 	.no_dead_strip plt_UIKit_UIColor_get_SystemPurple
 plt_UIKit_UIColor_get_SystemPurple:
 _p_95:
@@ -16765,7 +16797,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3376]
 br x16
-.word 2943
+.word 2945
 	.no_dead_strip plt_UIKit_UIView_set_AccessibilityHint_string
 plt_UIKit_UIView_set_AccessibilityHint_string:
 _p_96:
@@ -16773,7 +16805,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3384]
 br x16
-.word 2948
+.word 2950
 	.no_dead_strip plt_UIKit_UITextField_set_TextColor_UIKit_UIColor
 plt_UIKit_UITextField_set_TextColor_UIKit_UIColor:
 _p_97:
@@ -16781,7 +16813,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3392]
 br x16
-.word 2953
+.word 2955
 	.no_dead_strip plt_UIKit_UITextField_set_ShouldReturn_UIKit_UITextFieldCondition
 plt_UIKit_UITextField_set_ShouldReturn_UIKit_UITextFieldCondition:
 _p_98:
@@ -16789,7 +16821,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3400]
 br x16
-.word 2958
+.word 2960
 	.no_dead_strip plt_UIKit_UIGestureRecognizer_set_CancelsTouchesInView_bool
 plt_UIKit_UIGestureRecognizer_set_CancelsTouchesInView_bool:
 _p_99:
@@ -16797,7 +16829,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3408]
 br x16
-.word 2963
+.word 2965
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloWorldScreen_ScrollTheView_bool
 plt_Hello_MultiScreen_iPhone_HelloWorldScreen_ScrollTheView_bool:
 _p_100:
@@ -16805,7 +16837,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3416]
 br x16
-.word 2968
+.word 2970
 	.no_dead_strip plt_UIKit_UITextField_get_Text
 plt_UIKit_UITextField_get_Text:
 _p_101:
@@ -16813,7 +16845,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3424]
 br x16
-.word 2970
+.word 2972
 	.no_dead_strip plt_Foundation_NSBundle_get_MainBundle
 plt_Foundation_NSBundle_get_MainBundle:
 _p_102:
@@ -16821,7 +16853,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3432]
 br x16
-.word 2975
+.word 2977
 	.no_dead_strip plt_Foundation_NSBundle_PathForResource_string_string
 plt_Foundation_NSBundle_PathForResource_string_string:
 _p_103:
@@ -16829,7 +16861,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3440]
 br x16
-.word 2980
+.word 2982
 	.no_dead_strip plt_string_ToLower
 plt_string_ToLower:
 _p_104:
@@ -16837,7 +16869,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3448]
 br x16
-.word 2985
+.word 2987
 	.no_dead_strip plt_UIKit_UIViewController_ViewDidAppear_bool
 plt_UIKit_UIViewController_ViewDidAppear_bool:
 _p_105:
@@ -16845,7 +16877,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3456]
 br x16
-.word 2990
+.word 2992
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloUniverseScreen_ViewDidLoad1
 plt_Hello_MultiScreen_iPhone_HelloUniverseScreen_ViewDidLoad1:
 _p_106:
@@ -16853,7 +16885,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3464]
 br x16
-.word 2995
+.word 2997
 	.no_dead_strip plt_UIKit_UIDatePicker__ctor_CoreGraphics_CGRect
 plt_UIKit_UIDatePicker__ctor_CoreGraphics_CGRect:
 _p_107:
@@ -16861,7 +16893,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3472]
 br x16
-.word 2997
+.word 2999
 	.no_dead_strip plt_UIKit_UIColor_get_Black
 plt_UIKit_UIColor_get_Black:
 _p_108:
@@ -16869,7 +16901,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3480]
 br x16
-.word 3002
+.word 3004
 	.no_dead_strip plt_Foundation_NSCalendar__ctor_Foundation_NSCalendarType
 plt_Foundation_NSCalendar__ctor_Foundation_NSCalendarType:
 _p_109:
@@ -16877,7 +16909,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3488]
 br x16
-.word 3007
+.word 3009
 	.no_dead_strip plt_Foundation_NSDate_get_Now
 plt_Foundation_NSDate_get_Now:
 _p_110:
@@ -16885,7 +16917,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3496]
 br x16
-.word 3012
+.word 3014
 	.no_dead_strip plt_Foundation_NSDateComponents__ctor
 plt_Foundation_NSDateComponents__ctor:
 _p_111:
@@ -16893,7 +16925,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3504]
 br x16
-.word 3017
+.word 3019
 	.no_dead_strip plt_Foundation_NSDateComponents_set_Year_System_nint
 plt_Foundation_NSDateComponents_set_Year_System_nint:
 _p_112:
@@ -16901,7 +16933,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3512]
 br x16
-.word 3022
+.word 3024
 	.no_dead_strip plt_Foundation_NSCalendar_DateByAddingComponents_Foundation_NSDateComponents_Foundation_NSDate_Foundation_NSCalendarOptions
 plt_Foundation_NSCalendar_DateByAddingComponents_Foundation_NSDateComponents_Foundation_NSDate_Foundation_NSCalendarOptions:
 _p_113:
@@ -16909,7 +16941,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3520]
 br x16
-.word 3027
+.word 3029
 	.no_dead_strip plt_UIKit_UIDatePicker_set_MinimumDate_Foundation_NSDate
 plt_UIKit_UIDatePicker_set_MinimumDate_Foundation_NSDate:
 _p_114:
@@ -16917,7 +16949,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3528]
 br x16
-.word 3032
+.word 3034
 	.no_dead_strip plt_UIKit_UIDatePicker_set_Mode_UIKit_UIDatePickerMode
 plt_UIKit_UIDatePicker_set_Mode_UIKit_UIDatePickerMode:
 _p_115:
@@ -16925,7 +16957,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3536]
 br x16
-.word 3037
+.word 3039
 	.no_dead_strip plt_UIKit_UIDatePicker_set_MaximumDate_Foundation_NSDate
 plt_UIKit_UIDatePicker_set_MaximumDate_Foundation_NSDate:
 _p_116:
@@ -16933,7 +16965,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3544]
 br x16
-.word 3042
+.word 3044
 	.no_dead_strip plt_UIKit_UITextView_ScrollRangeToVisible_Foundation_NSRange
 plt_UIKit_UITextView_ScrollRangeToVisible_Foundation_NSRange:
 _p_117:
@@ -16941,7 +16973,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3552]
 br x16
-.word 3047
+.word 3049
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloUniverseScreen_ScrollTheView_bool
 plt_Hello_MultiScreen_iPhone_HelloUniverseScreen_ScrollTheView_bool:
 _p_118:
@@ -16949,7 +16981,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3560]
 br x16
-.word 3052
+.word 3054
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_EditJournalScreen__ctor
 plt_Hello_MultiScreen_iPhone_EditJournalScreen__ctor:
 _p_119:
@@ -16957,7 +16989,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3568]
 br x16
-.word 3054
+.word 3056
 	.no_dead_strip plt_UIKit_UIDatePicker_get_Date
 plt_UIKit_UIDatePicker_get_Date:
 _p_120:
@@ -16965,7 +16997,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3576]
 br x16
-.word 3056
+.word 3058
 	.no_dead_strip plt_Foundation_NSDate_op_Explicit_Foundation_NSDate
 plt_Foundation_NSDate_op_Explicit_Foundation_NSDate:
 _p_121:
@@ -16973,7 +17005,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3584]
 br x16
-.word 3061
+.word 3063
 	.no_dead_strip plt_System_DateTime_ToLocalTime
 plt_System_DateTime_ToLocalTime:
 _p_122:
@@ -16981,7 +17013,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3592]
 br x16
-.word 3066
+.word 3068
 	.no_dead_strip plt_EmailReader_EmailFileRead_ReadFileFromDateToNextDay_System_DateTime_string
 plt_EmailReader_EmailFileRead_ReadFileFromDateToNextDay_System_DateTime_string:
 _p_123:
@@ -16989,7 +17021,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3600]
 br x16
-.word 3071
+.word 3073
 	.no_dead_strip plt_EmailReader_EmailFileRead_WriteText_string_string_bool
 plt_EmailReader_EmailFileRead_WriteText_string_string_bool:
 _p_124:
@@ -16997,7 +17029,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3608]
 br x16
-.word 3073
+.word 3075
 	.no_dead_strip plt_EmailReader_EmailFileRead_DeleteText_string
 plt_EmailReader_EmailFileRead_DeleteText_string:
 _p_125:
@@ -17005,7 +17037,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3616]
 br x16
-.word 3075
+.word 3077
 	.no_dead_strip plt_EmailReader_EmailFileRead_DeleteLastLine_string
 plt_EmailReader_EmailFileRead_DeleteLastLine_string:
 _p_126:
@@ -17013,7 +17045,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3624]
 br x16
-.word 3077
+.word 3079
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen2_ViewDidLoad1
 plt_Hello_MultiScreen_iPhone_HomeScreen2_ViewDidLoad1:
 _p_127:
@@ -17021,7 +17053,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3632]
 br x16
-.word 3079
+.word 3081
 	.no_dead_strip plt_UIKit_UIColor_get_SystemTeal
 plt_UIKit_UIColor_get_SystemTeal:
 _p_128:
@@ -17029,7 +17061,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3640]
 br x16
-.word 3081
+.word 3083
 	.no_dead_strip plt_UIKit_UITextField_set_Text_string
 plt_UIKit_UITextField_set_Text_string:
 _p_129:
@@ -17037,7 +17069,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3648]
 br x16
-.word 3086
+.word 3088
 	.no_dead_strip plt_UIKit_UITextField_set_KeyboardType_UIKit_UIKeyboardType
 plt_UIKit_UITextField_set_KeyboardType_UIKit_UIKeyboardType:
 _p_130:
@@ -17045,7 +17077,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3656]
 br x16
-.word 3091
+.word 3093
 	.no_dead_strip plt_UIKit_UITextField_set_ReturnKeyType_UIKit_UIReturnKeyType
 plt_UIKit_UITextField_set_ReturnKeyType_UIKit_UIReturnKeyType:
 _p_131:
@@ -17053,7 +17085,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3664]
 br x16
-.word 3096
+.word 3098
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen2_ScrollTheView_bool
 plt_Hello_MultiScreen_iPhone_HomeScreen2_ScrollTheView_bool:
 _p_132:
@@ -17061,7 +17093,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3672]
 br x16
-.word 3101
+.word 3103
 	.no_dead_strip plt_int_TryParse_string_int_
 plt_int_TryParse_string_int_:
 _p_133:
@@ -17069,7 +17101,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3680]
 br x16
-.word 3103
+.word 3105
 	.no_dead_strip plt_EmailReader_EmailFileRead_ReadFileFromDate_string_int
 plt_EmailReader_EmailFileRead_ReadFileFromDate_string_int:
 _p_134:
@@ -17077,7 +17109,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3688]
 br x16
-.word 3108
+.word 3110
 	.no_dead_strip plt_Hello_MultiScreen_iPhone_ImageScreen_ViewDidLoad1
 plt_Hello_MultiScreen_iPhone_ImageScreen_ViewDidLoad1:
 _p_135:
@@ -17085,7 +17117,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3696]
 br x16
-.word 3110
+.word 3112
 	.no_dead_strip plt_System_DateTime_ToString_string
 plt_System_DateTime_ToString_string:
 _p_136:
@@ -17093,7 +17125,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3704]
 br x16
-.word 3112
+.word 3114
 	.no_dead_strip plt_EmailReader_EmailFileRead_GetImageFileName_System_DateTime
 plt_EmailReader_EmailFileRead_GetImageFileName_System_DateTime:
 _p_137:
@@ -17101,7 +17133,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3712]
 br x16
-.word 3117
+.word 3119
 	.no_dead_strip plt_System_Environment_GetFolderPath_System_Environment_SpecialFolder
 plt_System_Environment_GetFolderPath_System_Environment_SpecialFolder:
 _p_138:
@@ -17109,7 +17141,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3720]
 br x16
-.word 3119
+.word 3121
 	.no_dead_strip plt_string_Concat_string_string_string
 plt_string_Concat_string_string_string:
 _p_139:
@@ -17117,7 +17149,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3728]
 br x16
-.word 3124
+.word 3126
 	.no_dead_strip plt_System_IO_Path_Combine_string_string
 plt_System_IO_Path_Combine_string_string:
 _p_140:
@@ -17125,7 +17157,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3736]
 br x16
-.word 3129
+.word 3131
 	.no_dead_strip plt_UIKit_UIImagePickerController__ctor
 plt_UIKit_UIImagePickerController__ctor:
 _p_141:
@@ -17133,7 +17165,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3744]
 br x16
-.word 3134
+.word 3136
 	.no_dead_strip plt_UIKit_UIImagePickerController_set_SourceType_UIKit_UIImagePickerControllerSourceType
 plt_UIKit_UIImagePickerController_set_SourceType_UIKit_UIImagePickerControllerSourceType:
 _p_142:
@@ -17141,7 +17173,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3752]
 br x16
-.word 3139
+.word 3141
 	.no_dead_strip plt_UIKit_UIImagePickerController_AvailableMediaTypes_UIKit_UIImagePickerControllerSourceType
 plt_UIKit_UIImagePickerController_AvailableMediaTypes_UIKit_UIImagePickerControllerSourceType:
 _p_143:
@@ -17149,7 +17181,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3760]
 br x16
-.word 3144
+.word 3146
 	.no_dead_strip plt_UIKit_UIImagePickerController_set_MediaTypes_string__
 plt_UIKit_UIImagePickerController_set_MediaTypes_string__:
 _p_144:
@@ -17157,7 +17189,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3768]
 br x16
-.word 3149
+.word 3151
 	.no_dead_strip plt_UIKit_UIImagePickerController_add_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs
 plt_UIKit_UIImagePickerController_add_FinishedPickingMedia_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs:
 _p_145:
@@ -17165,7 +17197,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3776]
 br x16
-.word 3154
+.word 3156
 	.no_dead_strip plt_UIKit_UIImagePickerController_add_Canceled_System_EventHandler
 plt_UIKit_UIImagePickerController_add_Canceled_System_EventHandler:
 _p_146:
@@ -17173,7 +17205,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3784]
 br x16
-.word 3159
+.word 3161
 	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_EditedImage
 plt_UIKit_UIImagePickerMediaPickedEventArgs_get_EditedImage:
 _p_147:
@@ -17181,7 +17213,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3792]
 br x16
-.word 3164
+.word 3166
 	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_OriginalImage
 plt_UIKit_UIImagePickerMediaPickedEventArgs_get_OriginalImage:
 _p_148:
@@ -17189,7 +17221,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3800]
 br x16
-.word 3169
+.word 3171
 	.no_dead_strip plt_UIKit_UIImagePickerMediaPickedEventArgs_get_ReferenceUrl
 plt_UIKit_UIImagePickerMediaPickedEventArgs_get_ReferenceUrl:
 _p_149:
@@ -17197,7 +17229,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3808]
 br x16
-.word 3174
+.word 3176
 	.no_dead_strip plt_Foundation_NSUrl_get_PathExtension
 plt_Foundation_NSUrl_get_PathExtension:
 _p_150:
@@ -17205,7 +17237,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3816]
 br x16
-.word 3179
+.word 3181
 	.no_dead_strip plt_UIKit_UIImage_AsPNG
 plt_UIKit_UIImage_AsPNG:
 _p_151:
@@ -17213,7 +17245,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3824]
 br x16
-.word 3184
+.word 3186
 	.no_dead_strip plt_UIKit_UIImage_AsJPEG_System_nfloat
 plt_UIKit_UIImage_AsJPEG_System_nfloat:
 _p_152:
@@ -17221,7 +17253,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3832]
 br x16
-.word 3189
+.word 3191
 	.no_dead_strip plt_Foundation_NSData_Save_string_bool_Foundation_NSError_
 plt_Foundation_NSData_Save_string_bool_Foundation_NSError_:
 _p_153:
@@ -17229,7 +17261,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3840]
 br x16
-.word 3194
+.word 3196
 	.no_dead_strip plt_UIKit_UIViewController_DismissModalViewController_bool
 plt_UIKit_UIViewController_DismissModalViewController_bool:
 _p_154:
@@ -17237,7 +17269,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3848]
 br x16
-.word 3199
+.word 3201
 	.no_dead_strip plt_Foundation_NSData_FromFile_string
 plt_Foundation_NSData_FromFile_string:
 _p_155:
@@ -17245,7 +17277,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3856]
 br x16
-.word 3204
+.word 3206
 	.no_dead_strip plt_UIKit_UIImagePickerController_IsSourceTypeAvailable_UIKit_UIImagePickerControllerSourceType
 plt_UIKit_UIImagePickerController_IsSourceTypeAvailable_UIKit_UIImagePickerControllerSourceType:
 _p_156:
@@ -17253,7 +17285,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3864]
 br x16
-.word 3209
+.word 3211
 	.no_dead_strip plt_UIKit_UIView_set_Hidden_bool
 plt_UIKit_UIView_set_Hidden_bool:
 _p_157:
@@ -17261,7 +17293,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3872]
 br x16
-.word 3214
+.word 3216
 	.no_dead_strip plt_UIKit_UIImagePickerController_get_OriginalImage
 plt_UIKit_UIImagePickerController_get_OriginalImage:
 _p_158:
@@ -17269,7 +17301,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3880]
 br x16
-.word 3219
+.word 3221
 	.no_dead_strip plt_Foundation_NSDictionary_get_Item_Foundation_NSString
 plt_Foundation_NSDictionary_get_Item_Foundation_NSString:
 _p_159:
@@ -17277,7 +17309,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3888]
 br x16
-.word 3224
+.word 3226
 	.no_dead_strip plt_UIKit_UIImage_AsJPEG
 plt_UIKit_UIImage_AsJPEG:
 _p_160:
@@ -17285,7 +17317,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3896]
 br x16
-.word 3229
+.word 3231
 	.no_dead_strip plt_EmailReader_EmailFileRead_DeleteAllImages
 plt_EmailReader_EmailFileRead_DeleteAllImages:
 _p_161:
@@ -17293,7 +17325,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3904]
 br x16
-.word 3234
+.word 3236
 	.no_dead_strip plt_EmailReader_EmailFileRead_DeleteImageFileName_System_DateTime
 plt_EmailReader_EmailFileRead_DeleteImageFileName_System_DateTime:
 _p_162:
@@ -17301,7 +17333,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3912]
 br x16
-.word 3236
+.word 3238
 	.no_dead_strip plt_System_IO_File_Exists_string
 plt_System_IO_File_Exists_string:
 _p_163:
@@ -17309,7 +17341,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3920]
 br x16
-.word 3238
+.word 3240
 	.no_dead_strip plt_System_IO_File_ReadAllText_string
 plt_System_IO_File_ReadAllText_string:
 _p_164:
@@ -17317,7 +17349,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3928]
 br x16
-.word 3243
+.word 3245
 	.no_dead_strip plt_System_IO_File_WriteAllText_string_string
 plt_System_IO_File_WriteAllText_string_string:
 _p_165:
@@ -17325,7 +17357,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3936]
 br x16
-.word 3248
+.word 3250
 	.no_dead_strip plt_System_IO_File_Copy_string_string_bool
 plt_System_IO_File_Copy_string_string_bool:
 _p_166:
@@ -17333,7 +17365,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3944]
 br x16
-.word 3253
+.word 3255
 	.no_dead_strip plt__jit_icall_mono_thread_get_undeniable_exception
 plt__jit_icall_mono_thread_get_undeniable_exception:
 _p_167:
@@ -17341,7 +17373,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3952]
 br x16
-.word 3258
+.word 3260
 	.no_dead_strip plt__jit_icall_mono_arch_throw_exception
 plt__jit_icall_mono_arch_throw_exception:
 _p_168:
@@ -17349,7 +17381,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3960]
 br x16
-.word 3261
+.word 3263
 	.no_dead_strip plt_System_IO_DirectoryInfo__ctor_string
 plt_System_IO_DirectoryInfo__ctor_string:
 _p_169:
@@ -17357,7 +17389,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3968]
 br x16
-.word 3263
+.word 3265
 	.no_dead_strip plt_System_IO_DirectoryInfo_GetFiles
 plt_System_IO_DirectoryInfo_GetFiles:
 _p_170:
@@ -17365,7 +17397,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3976]
 br x16
-.word 3268
+.word 3270
 	.no_dead_strip plt_string_Contains_string
 plt_string_Contains_string:
 _p_171:
@@ -17373,7 +17405,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3984]
 br x16
-.word 3273
+.word 3275
 	.no_dead_strip plt_System_IO_File_Delete_string
 plt_System_IO_File_Delete_string:
 _p_172:
@@ -17381,7 +17413,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #3992]
 br x16
-.word 3278
+.word 3280
 	.no_dead_strip plt_System_DateTime_get_Now
 plt_System_DateTime_get_Now:
 _p_173:
@@ -17389,7 +17421,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4000]
 br x16
-.word 3283
+.word 3285
 	.no_dead_strip plt_System_DateTime_AddDays_double
 plt_System_DateTime_AddDays_double:
 _p_174:
@@ -17397,7 +17429,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4008]
 br x16
-.word 3288
+.word 3290
 	.no_dead_strip plt_string_IndexOf_string
 plt_string_IndexOf_string:
 _p_175:
@@ -17405,7 +17437,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4016]
 br x16
-.word 3293
+.word 3295
 	.no_dead_strip plt_string_Substring_int
 plt_string_Substring_int:
 _p_176:
@@ -17413,7 +17445,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4024]
 br x16
-.word 3298
+.word 3300
 	.no_dead_strip plt_string_IndexOf_string_int
 plt_string_IndexOf_string_int:
 _p_177:
@@ -17421,7 +17453,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4032]
 br x16
-.word 3303
+.word 3305
 	.no_dead_strip plt_string_Substring_int_int
 plt_string_Substring_int_int:
 _p_178:
@@ -17429,7 +17461,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4040]
 br x16
-.word 3308
+.word 3310
 	.no_dead_strip plt_System_IO_File_AppendAllText_string_string
 plt_System_IO_File_AppendAllText_string_string:
 _p_179:
@@ -17437,7 +17469,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4048]
 br x16
-.word 3313
+.word 3315
 	.no_dead_strip plt_System_IO_File_ReadAllLines_string
 plt_System_IO_File_ReadAllLines_string:
 _p_180:
@@ -17445,7 +17477,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4056]
 br x16
-.word 3318
+.word 3320
 	.no_dead_strip plt_System_Linq_Enumerable_ToList_string_System_Collections_Generic_IEnumerable_1_string
 plt_System_Linq_Enumerable_ToList_string_System_Collections_Generic_IEnumerable_1_string:
 _p_181:
@@ -17453,7 +17485,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4064]
 br x16
-.word 3323
+.word 3325
 	.no_dead_strip plt_System_Linq_Enumerable_Last_string_System_Collections_Generic_IEnumerable_1_string
 plt_System_Linq_Enumerable_Last_string_System_Collections_Generic_IEnumerable_1_string:
 _p_182:
@@ -17461,7 +17493,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4072]
 br x16
-.word 3335
+.word 3337
 	.no_dead_strip plt_System_Collections_Generic_List_1_string_Remove_string
 plt_System_Collections_Generic_List_1_string_Remove_string:
 _p_183:
@@ -17469,7 +17501,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4080]
 br x16
-.word 3347
+.word 3349
 	.no_dead_strip plt_System_Collections_Generic_List_1_string_RemoveAt_int
 plt_System_Collections_Generic_List_1_string_RemoveAt_int:
 _p_184:
@@ -17477,7 +17509,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #4088]
 br x16
-.word 3358
+.word 3360
 	.no_dead_strip plt_System_IO_File_WriteAllLines_string_System_Collections_Generic_IEnumerable_1_string
 plt_System_IO_File_WriteAllLines_string_System_Collections_Generic_IEnumerable_1_string:
 _p_185:
@@ -17485,7 +17517,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #0]
 br x16
-.word 3369
+.word 3371
 	.no_dead_strip plt_System_IO_FileInfo__ctor_string
 plt_System_IO_FileInfo__ctor_string:
 _p_186:
@@ -17493,7 +17525,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #8]
 br x16
-.word 3374
+.word 3376
 	.no_dead_strip plt_System_IO_FileSystemInfo_get_CreationTime
 plt_System_IO_FileSystemInfo_get_CreationTime:
 _p_187:
@@ -17501,7 +17533,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #16]
 br x16
-.word 3379
+.word 3381
 	.no_dead_strip plt_System_DateTime_AddMonths_int
 plt_System_DateTime_AddMonths_int:
 _p_188:
@@ -17509,7 +17541,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #24]
 br x16
-.word 3384
+.word 3386
 	.no_dead_strip plt_System_IO_FileInfo_get_Length
 plt_System_IO_FileInfo_get_Length:
 _p_189:
@@ -17517,7 +17549,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #32]
 br x16
-.word 3389
+.word 3391
 	.no_dead_strip plt_UIKit_UIResponder_ResignFirstResponder
 plt_UIKit_UIResponder_ResignFirstResponder:
 _p_190:
@@ -17525,7 +17557,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #40]
 br x16
-.word 3394
+.word 3396
 	.no_dead_strip plt__jit_icall_mono_generic_class_init
 plt__jit_icall_mono_generic_class_init:
 _p_191:
@@ -17533,7 +17565,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #48]
 br x16
-.word 3399
+.word 3401
 	.no_dead_strip plt_EmailReader_EmailFileRead_DeleteAllImagesBeforeToday
 plt_EmailReader_EmailFileRead_DeleteAllImagesBeforeToday:
 _p_192:
@@ -17541,7 +17573,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #56]
 br x16
-.word 3402
+.word 3404
 	.no_dead_strip plt__jit_icall_mono_arch_rethrow_exception
 plt__jit_icall_mono_arch_rethrow_exception:
 _p_193:
@@ -17549,7 +17581,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #64]
 br x16
-.word 3404
+.word 3406
 	.no_dead_strip plt__jit_icall_mono_thread_interruption_checkpoint
 plt__jit_icall_mono_thread_interruption_checkpoint:
 _p_194:
@@ -17557,7 +17589,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #72]
 br x16
-.word 3406
+.word 3408
 plt_end:
 .section __DATA, __bss
 	.align 3
@@ -17584,7 +17616,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "883C3BFA-9A21-4ECB-8571-3DF6C88DE793"
+	.asciz "93A7DDA3-B468-4620-94A5-1DB94487240B"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -17672,13 +17704,13 @@ _mono_aot_file_info:
 	.quad unbox_trampoline_addresses
 
 	.long 327,4176,195,132,4,98,387000831,0
-	.long 5174,128,8,8,8,9,8388607,0
-	.long 4,25,6808,0,0,1624,1256,392
+	.long 5188,128,8,8,8,9,8388607,0
+	.long 4,25,6824,0,0,1624,1256,392
 	.long 0,1008,1208,560,0,352,200,1616
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 227,104,183,111,229,243,138,206,43,113,232,52,210,83,251,187
+	.byte 212,14,252,52,35,49,196,21,174,45,215,111,34,226,21,221
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:
@@ -25648,22 +25680,32 @@ LDIFF_SYM1158=LDIE_BOOLEAN - Ldebug_info_start
 
 LDIFF_SYM1159=LDIE_BOOLEAN - Ldebug_info_start
 	.long LDIFF_SYM1159
-	.byte 1,104,0
+	.byte 1,104,11
+	.asciz "V_4"
+
+LDIFF_SYM1160=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1160
+	.byte 1,104,11
+	.asciz "V_5"
+
+LDIFF_SYM1161=LTDIE_53_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1161
+	.byte 2,141,40,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1160=Lfde103_end - Lfde103_start
-	.long LDIFF_SYM1160
+LDIFF_SYM1162=Lfde103_end - Lfde103_start
+	.long LDIFF_SYM1162
 Lfde103_start:
 
 	.long 0
 	.align 3
 	.quad EmailReader_EmailFileRead_DeleteLastLine_string
 
-LDIFF_SYM1161=Lme_67 - EmailReader_EmailFileRead_DeleteLastLine_string
-	.long LDIFF_SYM1161
+LDIFF_SYM1163=Lme_67 - EmailReader_EmailFileRead_DeleteLastLine_string
+	.long LDIFF_SYM1163
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68,154,4
+	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,152,12,153,11,68,154,10
 	.align 3
 Lfde103_end:
 
@@ -25680,27 +25722,27 @@ Lfde103_end:
 	.byte 2,118,16,3
 	.asciz "email"
 
-LDIFF_SYM1162=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1162
+LDIFF_SYM1164=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1164
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1163=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1163
+LDIFF_SYM1165=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1165
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1164=Lfde104_end - Lfde104_start
-	.long LDIFF_SYM1164
+LDIFF_SYM1166=Lfde104_end - Lfde104_start
+	.long LDIFF_SYM1166
 Lfde104_start:
 
 	.long 0
 	.align 3
 	.quad EmailReader_EmailFileRead_ValidateEmail_string
 
-LDIFF_SYM1165=Lme_68 - EmailReader_EmailFileRead_ValidateEmail_string
-	.long LDIFF_SYM1165
+LDIFF_SYM1167=Lme_68 - EmailReader_EmailFileRead_ValidateEmail_string
+	.long LDIFF_SYM1167
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,154,2
 	.align 3
@@ -25719,47 +25761,47 @@ Lfde104_end:
 	.byte 2,118,16,3
 	.asciz "fileName"
 
-LDIFF_SYM1166=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1166
+LDIFF_SYM1168=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1168
 	.byte 1,105,3
 	.asciz "month"
 
-LDIFF_SYM1167=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1167
+LDIFF_SYM1169=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1169
 	.byte 2,141,32,11
 	.asciz "V_0"
 
-LDIFF_SYM1168=LTDIE_60_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1168
+LDIFF_SYM1170=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1170
 	.byte 1,105,11
 	.asciz "V_1"
 
-LDIFF_SYM1169=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1169
+LDIFF_SYM1171=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1171
 	.byte 0,11
 	.asciz "V_2"
 
-LDIFF_SYM1170=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1170
+LDIFF_SYM1172=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1172
 	.byte 1,106,11
 	.asciz "V_3"
 
-LDIFF_SYM1171=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1171
+LDIFF_SYM1173=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1173
 	.byte 3,141,200,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1172=Lfde105_end - Lfde105_start
-	.long LDIFF_SYM1172
+LDIFF_SYM1174=Lfde105_end - Lfde105_start
+	.long LDIFF_SYM1174
 Lfde105_start:
 
 	.long 0
 	.align 3
 	.quad EmailReader_EmailFileRead_DeleteFileAfterMonths_string_int
 
-LDIFF_SYM1173=Lme_69 - EmailReader_EmailFileRead_DeleteFileAfterMonths_string_int
-	.long LDIFF_SYM1173
+LDIFF_SYM1175=Lme_69 - EmailReader_EmailFileRead_DeleteFileAfterMonths_string_int
+	.long LDIFF_SYM1175
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,153,12,154,11
 	.align 3
@@ -25772,28 +25814,28 @@ LTDIE_62:
 	.asciz "System_Int64"
 
 	.byte 24,16
-LDIFF_SYM1174=LTDIE_22 - Ldebug_info_start
-	.long LDIFF_SYM1174
+LDIFF_SYM1176=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM1176
 	.byte 2,35,0,6
 	.asciz "m_value"
 
-LDIFF_SYM1175=LDIE_I8 - Ldebug_info_start
-	.long LDIFF_SYM1175
+LDIFF_SYM1177=LDIE_I8 - Ldebug_info_start
+	.long LDIFF_SYM1177
 	.byte 2,35,16,0,7
 	.asciz "System_Int64"
 
-LDIFF_SYM1176=LTDIE_62 - Ldebug_info_start
-	.long LDIFF_SYM1176
+LDIFF_SYM1178=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM1178
 LTDIE_62_POINTER:
 
 	.byte 13
-LDIFF_SYM1177=LTDIE_62 - Ldebug_info_start
-	.long LDIFF_SYM1177
+LDIFF_SYM1179=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM1179
 LTDIE_62_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1178=LTDIE_62 - Ldebug_info_start
-	.long LDIFF_SYM1178
+LDIFF_SYM1180=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM1180
 	.byte 2
 	.asciz "EmailReader.EmailFileRead:FileSizeWarning"
 	.asciz "EmailReader_EmailFileRead_FileSizeWarning_string_long"
@@ -25805,42 +25847,42 @@ LDIFF_SYM1178=LTDIE_62 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "fileName"
 
-LDIFF_SYM1179=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1179
+LDIFF_SYM1181=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1181
 	.byte 1,105,3
 	.asciz "size"
 
-LDIFF_SYM1180=LDIE_I8 - Ldebug_info_start
-	.long LDIFF_SYM1180
+LDIFF_SYM1182=LDIE_I8 - Ldebug_info_start
+	.long LDIFF_SYM1182
 	.byte 2,141,32,11
 	.asciz "V_0"
 
-LDIFF_SYM1181=LTDIE_60_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1181
+LDIFF_SYM1183=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1183
 	.byte 1,105,11
 	.asciz "V_1"
 
-LDIFF_SYM1182=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1182
+LDIFF_SYM1184=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1184
 	.byte 0,11
 	.asciz "V_2"
 
-LDIFF_SYM1183=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1183
+LDIFF_SYM1185=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1185
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1184=Lfde106_end - Lfde106_start
-	.long LDIFF_SYM1184
+LDIFF_SYM1186=Lfde106_end - Lfde106_start
+	.long LDIFF_SYM1186
 Lfde106_start:
 
 	.long 0
 	.align 3
 	.quad EmailReader_EmailFileRead_FileSizeWarning_string_long
 
-LDIFF_SYM1185=Lme_6a - EmailReader_EmailFileRead_FileSizeWarning_string_long
-	.long LDIFF_SYM1185
+LDIFF_SYM1187=Lme_6a - EmailReader_EmailFileRead_FileSizeWarning_string_long
+	.long LDIFF_SYM1187
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6,154,5
 	.align 3
@@ -25860,16 +25902,16 @@ Lfde106_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1186=Lfde107_end - Lfde107_start
-	.long LDIFF_SYM1186
+LDIFF_SYM1188=Lfde107_end - Lfde107_start
+	.long LDIFF_SYM1188
 Lfde107_start:
 
 	.long 0
 	.align 3
 	.quad EmailReader_EmailFileRead__cctor
 
-LDIFF_SYM1187=Lme_6b - EmailReader_EmailFileRead__cctor
-	.long LDIFF_SYM1187
+LDIFF_SYM1189=Lme_6b - EmailReader_EmailFileRead__cctor
+	.long LDIFF_SYM1189
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
@@ -25889,16 +25931,16 @@ Lfde107_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1188=Lfde108_end - Lfde108_start
-	.long LDIFF_SYM1188
+LDIFF_SYM1190=Lfde108_end - Lfde108_start
+	.long LDIFF_SYM1190
 Lfde108_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_EditJournalScreen__c__cctor
 
-LDIFF_SYM1189=Lme_6c - Hello_MultiScreen_iPhone_EditJournalScreen__c__cctor
-	.long LDIFF_SYM1189
+LDIFF_SYM1191=Lme_6c - Hello_MultiScreen_iPhone_EditJournalScreen__c__cctor
+	.long LDIFF_SYM1191
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -25911,23 +25953,23 @@ LTDIE_63:
 	.asciz "_<>c"
 
 	.byte 16,16
-LDIFF_SYM1190=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1190
+LDIFF_SYM1192=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1192
 	.byte 2,35,0,0,7
 	.asciz "_<>c"
 
-LDIFF_SYM1191=LTDIE_63 - Ldebug_info_start
-	.long LDIFF_SYM1191
+LDIFF_SYM1193=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM1193
 LTDIE_63_POINTER:
 
 	.byte 13
-LDIFF_SYM1192=LTDIE_63 - Ldebug_info_start
-	.long LDIFF_SYM1192
+LDIFF_SYM1194=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM1194
 LTDIE_63_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1193=LTDIE_63 - Ldebug_info_start
-	.long LDIFF_SYM1193
+LDIFF_SYM1195=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM1195
 	.byte 2
 	.asciz "Hello_MultiScreen_iPhone.EditJournalScreen/<>c:.ctor"
 	.asciz "Hello_MultiScreen_iPhone_EditJournalScreen__c__ctor"
@@ -25939,22 +25981,22 @@ LDIFF_SYM1193=LTDIE_63 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1194=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1194
+LDIFF_SYM1196=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1196
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1195=Lfde109_end - Lfde109_start
-	.long LDIFF_SYM1195
+LDIFF_SYM1197=Lfde109_end - Lfde109_start
+	.long LDIFF_SYM1197
 Lfde109_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_EditJournalScreen__c__ctor
 
-LDIFF_SYM1196=Lme_6d - Hello_MultiScreen_iPhone_EditJournalScreen__c__ctor
-	.long LDIFF_SYM1196
+LDIFF_SYM1198=Lme_6d - Hello_MultiScreen_iPhone_EditJournalScreen__c__ctor
+	.long LDIFF_SYM1198
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -25973,37 +26015,37 @@ Lfde109_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1197=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1197
+LDIFF_SYM1199=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1199
 	.byte 0,3
 	.asciz "senders"
 
-LDIFF_SYM1198=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1198
+LDIFF_SYM1200=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1200
 	.byte 0,3
 	.asciz "es"
 
-LDIFF_SYM1199=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1199
+LDIFF_SYM1201=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1201
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1200=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1200
+LDIFF_SYM1202=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1202
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1201=Lfde110_end - Lfde110_start
-	.long LDIFF_SYM1201
+LDIFF_SYM1203=Lfde110_end - Lfde110_start
+	.long LDIFF_SYM1203
 Lfde110_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_EditJournalScreen__c__Button3Clickb__34_0_object_UIKit_UIButtonEventArgs
 
-LDIFF_SYM1202=Lme_6e - Hello_MultiScreen_iPhone_EditJournalScreen__c__Button3Clickb__34_0_object_UIKit_UIButtonEventArgs
-	.long LDIFF_SYM1202
+LDIFF_SYM1204=Lme_6e - Hello_MultiScreen_iPhone_EditJournalScreen__c__Button3Clickb__34_0_object_UIKit_UIButtonEventArgs
+	.long LDIFF_SYM1204
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
@@ -26023,16 +26065,16 @@ Lfde110_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1203=Lfde111_end - Lfde111_start
-	.long LDIFF_SYM1203
+LDIFF_SYM1205=Lfde111_end - Lfde111_start
+	.long LDIFF_SYM1205
 Lfde111_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HelloWorldScreen__c__cctor
 
-LDIFF_SYM1204=Lme_6f - Hello_MultiScreen_iPhone_HelloWorldScreen__c__cctor
-	.long LDIFF_SYM1204
+LDIFF_SYM1206=Lme_6f - Hello_MultiScreen_iPhone_HelloWorldScreen__c__cctor
+	.long LDIFF_SYM1206
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26045,23 +26087,23 @@ LTDIE_64:
 	.asciz "_<>c"
 
 	.byte 16,16
-LDIFF_SYM1205=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1205
+LDIFF_SYM1207=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1207
 	.byte 2,35,0,0,7
 	.asciz "_<>c"
 
-LDIFF_SYM1206=LTDIE_64 - Ldebug_info_start
-	.long LDIFF_SYM1206
+LDIFF_SYM1208=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM1208
 LTDIE_64_POINTER:
 
 	.byte 13
-LDIFF_SYM1207=LTDIE_64 - Ldebug_info_start
-	.long LDIFF_SYM1207
+LDIFF_SYM1209=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM1209
 LTDIE_64_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1208=LTDIE_64 - Ldebug_info_start
-	.long LDIFF_SYM1208
+LDIFF_SYM1210=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM1210
 	.byte 2
 	.asciz "Hello_MultiScreen_iPhone.HelloWorldScreen/<>c:.ctor"
 	.asciz "Hello_MultiScreen_iPhone_HelloWorldScreen__c__ctor"
@@ -26073,22 +26115,22 @@ LDIFF_SYM1208=LTDIE_64 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1209=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1209
+LDIFF_SYM1211=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1211
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1210=Lfde112_end - Lfde112_start
-	.long LDIFF_SYM1210
+LDIFF_SYM1212=Lfde112_end - Lfde112_start
+	.long LDIFF_SYM1212
 Lfde112_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HelloWorldScreen__c__ctor
 
-LDIFF_SYM1211=Lme_70 - Hello_MultiScreen_iPhone_HelloWorldScreen__c__ctor
-	.long LDIFF_SYM1211
+LDIFF_SYM1213=Lme_70 - Hello_MultiScreen_iPhone_HelloWorldScreen__c__ctor
+	.long LDIFF_SYM1213
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26107,32 +26149,32 @@ Lfde112_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1212=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1212
+LDIFF_SYM1214=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1214
 	.byte 0,3
 	.asciz "textField"
 
-LDIFF_SYM1213=LTDIE_17_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1213
+LDIFF_SYM1215=LTDIE_17_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1215
 	.byte 2,141,24,11
 	.asciz "V_0"
 
-LDIFF_SYM1214=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1214
+LDIFF_SYM1216=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1216
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1215=Lfde113_end - Lfde113_start
-	.long LDIFF_SYM1215
+LDIFF_SYM1217=Lfde113_end - Lfde113_start
+	.long LDIFF_SYM1217
 Lfde113_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HelloWorldScreen__c__ViewDidLoad1b__31_0_UIKit_UITextField
 
-LDIFF_SYM1216=Lme_71 - Hello_MultiScreen_iPhone_HelloWorldScreen__c__ViewDidLoad1b__31_0_UIKit_UITextField
-	.long LDIFF_SYM1216
+LDIFF_SYM1218=Lme_71 - Hello_MultiScreen_iPhone_HelloWorldScreen__c__ViewDidLoad1b__31_0_UIKit_UITextField
+	.long LDIFF_SYM1218
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26152,16 +26194,16 @@ Lfde113_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1217=Lfde114_end - Lfde114_start
-	.long LDIFF_SYM1217
+LDIFF_SYM1219=Lfde114_end - Lfde114_start
+	.long LDIFF_SYM1219
 Lfde114_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HelloUniverseScreen__c__cctor
 
-LDIFF_SYM1218=Lme_72 - Hello_MultiScreen_iPhone_HelloUniverseScreen__c__cctor
-	.long LDIFF_SYM1218
+LDIFF_SYM1220=Lme_72 - Hello_MultiScreen_iPhone_HelloUniverseScreen__c__cctor
+	.long LDIFF_SYM1220
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26174,23 +26216,23 @@ LTDIE_65:
 	.asciz "_<>c"
 
 	.byte 16,16
-LDIFF_SYM1219=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1219
+LDIFF_SYM1221=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1221
 	.byte 2,35,0,0,7
 	.asciz "_<>c"
 
-LDIFF_SYM1220=LTDIE_65 - Ldebug_info_start
-	.long LDIFF_SYM1220
+LDIFF_SYM1222=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM1222
 LTDIE_65_POINTER:
 
 	.byte 13
-LDIFF_SYM1221=LTDIE_65 - Ldebug_info_start
-	.long LDIFF_SYM1221
+LDIFF_SYM1223=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM1223
 LTDIE_65_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1222=LTDIE_65 - Ldebug_info_start
-	.long LDIFF_SYM1222
+LDIFF_SYM1224=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM1224
 	.byte 2
 	.asciz "Hello_MultiScreen_iPhone.HelloUniverseScreen/<>c:.ctor"
 	.asciz "Hello_MultiScreen_iPhone_HelloUniverseScreen__c__ctor"
@@ -26202,22 +26244,22 @@ LDIFF_SYM1222=LTDIE_65 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1223=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1223
+LDIFF_SYM1225=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1225
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1224=Lfde115_end - Lfde115_start
-	.long LDIFF_SYM1224
+LDIFF_SYM1226=Lfde115_end - Lfde115_start
+	.long LDIFF_SYM1226
 Lfde115_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HelloUniverseScreen__c__ctor
 
-LDIFF_SYM1225=Lme_73 - Hello_MultiScreen_iPhone_HelloUniverseScreen__c__ctor
-	.long LDIFF_SYM1225
+LDIFF_SYM1227=Lme_73 - Hello_MultiScreen_iPhone_HelloUniverseScreen__c__ctor
+	.long LDIFF_SYM1227
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26236,37 +26278,37 @@ Lfde115_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1226=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1226
+LDIFF_SYM1228=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1228
 	.byte 0,3
 	.asciz "senders"
 
-LDIFF_SYM1227=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1227
+LDIFF_SYM1229=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1229
 	.byte 0,3
 	.asciz "es"
 
-LDIFF_SYM1228=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1228
+LDIFF_SYM1230=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1230
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1229=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1229
+LDIFF_SYM1231=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1231
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1230=Lfde116_end - Lfde116_start
-	.long LDIFF_SYM1230
+LDIFF_SYM1232=Lfde116_end - Lfde116_start
+	.long LDIFF_SYM1232
 Lfde116_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HelloUniverseScreen__c__ButtonyourstoryscreenUploadClickb__39_0_object_UIKit_UIButtonEventArgs
 
-LDIFF_SYM1231=Lme_74 - Hello_MultiScreen_iPhone_HelloUniverseScreen__c__ButtonyourstoryscreenUploadClickb__39_0_object_UIKit_UIButtonEventArgs
-	.long LDIFF_SYM1231
+LDIFF_SYM1233=Lme_74 - Hello_MultiScreen_iPhone_HelloUniverseScreen__c__ButtonyourstoryscreenUploadClickb__39_0_object_UIKit_UIButtonEventArgs
+	.long LDIFF_SYM1233
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
@@ -26286,16 +26328,16 @@ Lfde116_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1232=Lfde117_end - Lfde117_start
-	.long LDIFF_SYM1232
+LDIFF_SYM1234=Lfde117_end - Lfde117_start
+	.long LDIFF_SYM1234
 Lfde117_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HomeScreen2__c__cctor
 
-LDIFF_SYM1233=Lme_75 - Hello_MultiScreen_iPhone_HomeScreen2__c__cctor
-	.long LDIFF_SYM1233
+LDIFF_SYM1235=Lme_75 - Hello_MultiScreen_iPhone_HomeScreen2__c__cctor
+	.long LDIFF_SYM1235
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26308,23 +26350,23 @@ LTDIE_66:
 	.asciz "_<>c"
 
 	.byte 16,16
-LDIFF_SYM1234=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1234
+LDIFF_SYM1236=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1236
 	.byte 2,35,0,0,7
 	.asciz "_<>c"
 
-LDIFF_SYM1235=LTDIE_66 - Ldebug_info_start
-	.long LDIFF_SYM1235
+LDIFF_SYM1237=LTDIE_66 - Ldebug_info_start
+	.long LDIFF_SYM1237
 LTDIE_66_POINTER:
 
 	.byte 13
-LDIFF_SYM1236=LTDIE_66 - Ldebug_info_start
-	.long LDIFF_SYM1236
+LDIFF_SYM1238=LTDIE_66 - Ldebug_info_start
+	.long LDIFF_SYM1238
 LTDIE_66_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1237=LTDIE_66 - Ldebug_info_start
-	.long LDIFF_SYM1237
+LDIFF_SYM1239=LTDIE_66 - Ldebug_info_start
+	.long LDIFF_SYM1239
 	.byte 2
 	.asciz "Hello_MultiScreen_iPhone.HomeScreen2/<>c:.ctor"
 	.asciz "Hello_MultiScreen_iPhone_HomeScreen2__c__ctor"
@@ -26336,22 +26378,22 @@ LDIFF_SYM1237=LTDIE_66 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1238=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1238
+LDIFF_SYM1240=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1240
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1239=Lfde118_end - Lfde118_start
-	.long LDIFF_SYM1239
+LDIFF_SYM1241=Lfde118_end - Lfde118_start
+	.long LDIFF_SYM1241
 Lfde118_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HomeScreen2__c__ctor
 
-LDIFF_SYM1240=Lme_76 - Hello_MultiScreen_iPhone_HomeScreen2__c__ctor
-	.long LDIFF_SYM1240
+LDIFF_SYM1242=Lme_76 - Hello_MultiScreen_iPhone_HomeScreen2__c__ctor
+	.long LDIFF_SYM1242
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26370,32 +26412,32 @@ Lfde118_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1241=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1241
+LDIFF_SYM1243=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1243
 	.byte 0,3
 	.asciz "textField"
 
-LDIFF_SYM1242=LTDIE_17_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1242
+LDIFF_SYM1244=LTDIE_17_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1244
 	.byte 2,141,24,11
 	.asciz "V_0"
 
-LDIFF_SYM1243=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1243
+LDIFF_SYM1245=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1245
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1244=Lfde119_end - Lfde119_start
-	.long LDIFF_SYM1244
+LDIFF_SYM1246=Lfde119_end - Lfde119_start
+	.long LDIFF_SYM1246
 Lfde119_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HomeScreen2__c__ViewDidLoad1b__40_0_UIKit_UITextField
 
-LDIFF_SYM1245=Lme_77 - Hello_MultiScreen_iPhone_HomeScreen2__c__ViewDidLoad1b__40_0_UIKit_UITextField
-	.long LDIFF_SYM1245
+LDIFF_SYM1247=Lme_77 - Hello_MultiScreen_iPhone_HomeScreen2__c__ViewDidLoad1b__40_0_UIKit_UITextField
+	.long LDIFF_SYM1247
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26414,32 +26456,32 @@ Lfde119_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1246=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1246
+LDIFF_SYM1248=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1248
 	.byte 0,3
 	.asciz "textField"
 
-LDIFF_SYM1247=LTDIE_17_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1247
+LDIFF_SYM1249=LTDIE_17_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1249
 	.byte 2,141,24,11
 	.asciz "V_0"
 
-LDIFF_SYM1248=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1248
+LDIFF_SYM1250=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1250
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1249=Lfde120_end - Lfde120_start
-	.long LDIFF_SYM1249
+LDIFF_SYM1251=Lfde120_end - Lfde120_start
+	.long LDIFF_SYM1251
 Lfde120_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HomeScreen2__c__ViewDidLoad1b__40_1_UIKit_UITextField
 
-LDIFF_SYM1250=Lme_78 - Hello_MultiScreen_iPhone_HomeScreen2__c__ViewDidLoad1b__40_1_UIKit_UITextField
-	.long LDIFF_SYM1250
+LDIFF_SYM1252=Lme_78 - Hello_MultiScreen_iPhone_HomeScreen2__c__ViewDidLoad1b__40_1_UIKit_UITextField
+	.long LDIFF_SYM1252
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26458,37 +26500,37 @@ Lfde120_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1251=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1251
+LDIFF_SYM1253=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1253
 	.byte 0,3
 	.asciz "senders"
 
-LDIFF_SYM1252=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1252
+LDIFF_SYM1254=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1254
 	.byte 0,3
 	.asciz "es"
 
-LDIFF_SYM1253=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1253
+LDIFF_SYM1255=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1255
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1254=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1254
+LDIFF_SYM1256=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1256
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1255=Lfde121_end - Lfde121_start
-	.long LDIFF_SYM1255
+LDIFF_SYM1257=Lfde121_end - Lfde121_start
+	.long LDIFF_SYM1257
 Lfde121_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_HomeScreen2__c__ButtonyourstoryscreenUploadClickb__45_0_object_UIKit_UIButtonEventArgs
 
-LDIFF_SYM1256=Lme_79 - Hello_MultiScreen_iPhone_HomeScreen2__c__ButtonyourstoryscreenUploadClickb__45_0_object_UIKit_UIButtonEventArgs
-	.long LDIFF_SYM1256
+LDIFF_SYM1258=Lme_79 - Hello_MultiScreen_iPhone_HomeScreen2__c__ButtonyourstoryscreenUploadClickb__45_0_object_UIKit_UIButtonEventArgs
+	.long LDIFF_SYM1258
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
@@ -26507,22 +26549,22 @@ Lfde121_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1257=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1257
+LDIFF_SYM1259=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1259
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1258=Lfde122_end - Lfde122_start
-	.long LDIFF_SYM1258
+LDIFF_SYM1260=Lfde122_end - Lfde122_start
+	.long LDIFF_SYM1260
 Lfde122_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_ImageScreen__c__DisplayClass15_0__ctor
 
-LDIFF_SYM1259=Lme_7a - Hello_MultiScreen_iPhone_ImageScreen__c__DisplayClass15_0__ctor
-	.long LDIFF_SYM1259
+LDIFF_SYM1261=Lme_7a - Hello_MultiScreen_iPhone_ImageScreen__c__DisplayClass15_0__ctor
+	.long LDIFF_SYM1261
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26541,37 +26583,37 @@ Lfde122_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1260=LTDIE_48_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1260
+LDIFF_SYM1262=LTDIE_48_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1262
 	.byte 2,141,24,3
 	.asciz "senders"
 
-LDIFF_SYM1261=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1261
+LDIFF_SYM1263=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1263
 	.byte 0,3
 	.asciz "es"
 
-LDIFF_SYM1262=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1262
+LDIFF_SYM1264=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1264
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1263=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1263
+LDIFF_SYM1265=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1265
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1264=Lfde123_end - Lfde123_start
-	.long LDIFF_SYM1264
+LDIFF_SYM1266=Lfde123_end - Lfde123_start
+	.long LDIFF_SYM1266
 Lfde123_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_ImageScreen__c__DisplayClass15_0__BackgroundImageShowb__0_object_UIKit_UIButtonEventArgs
 
-LDIFF_SYM1265=Lme_7b - Hello_MultiScreen_iPhone_ImageScreen__c__DisplayClass15_0__BackgroundImageShowb__0_object_UIKit_UIButtonEventArgs
-	.long LDIFF_SYM1265
+LDIFF_SYM1267=Lme_7b - Hello_MultiScreen_iPhone_ImageScreen__c__DisplayClass15_0__BackgroundImageShowb__0_object_UIKit_UIButtonEventArgs
+	.long LDIFF_SYM1267
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,154,6
 	.align 3
@@ -26591,16 +26633,16 @@ Lfde123_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1266=Lfde124_end - Lfde124_start
-	.long LDIFF_SYM1266
+LDIFF_SYM1268=Lfde124_end - Lfde124_start
+	.long LDIFF_SYM1268
 Lfde124_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_ImageScreen__c__cctor
 
-LDIFF_SYM1267=Lme_7c - Hello_MultiScreen_iPhone_ImageScreen__c__cctor
-	.long LDIFF_SYM1267
+LDIFF_SYM1269=Lme_7c - Hello_MultiScreen_iPhone_ImageScreen__c__cctor
+	.long LDIFF_SYM1269
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26613,23 +26655,23 @@ LTDIE_67:
 	.asciz "_<>c"
 
 	.byte 16,16
-LDIFF_SYM1268=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1268
+LDIFF_SYM1270=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1270
 	.byte 2,35,0,0,7
 	.asciz "_<>c"
 
-LDIFF_SYM1269=LTDIE_67 - Ldebug_info_start
-	.long LDIFF_SYM1269
+LDIFF_SYM1271=LTDIE_67 - Ldebug_info_start
+	.long LDIFF_SYM1271
 LTDIE_67_POINTER:
 
 	.byte 13
-LDIFF_SYM1270=LTDIE_67 - Ldebug_info_start
-	.long LDIFF_SYM1270
+LDIFF_SYM1272=LTDIE_67 - Ldebug_info_start
+	.long LDIFF_SYM1272
 LTDIE_67_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1271=LTDIE_67 - Ldebug_info_start
-	.long LDIFF_SYM1271
+LDIFF_SYM1273=LTDIE_67 - Ldebug_info_start
+	.long LDIFF_SYM1273
 	.byte 2
 	.asciz "Hello_MultiScreen_iPhone.ImageScreen/<>c:.ctor"
 	.asciz "Hello_MultiScreen_iPhone_ImageScreen__c__ctor"
@@ -26641,22 +26683,22 @@ LDIFF_SYM1271=LTDIE_67 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1272=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1272
+LDIFF_SYM1274=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1274
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1273=Lfde125_end - Lfde125_start
-	.long LDIFF_SYM1273
+LDIFF_SYM1275=Lfde125_end - Lfde125_start
+	.long LDIFF_SYM1275
 Lfde125_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_ImageScreen__c__ctor
 
-LDIFF_SYM1274=Lme_7d - Hello_MultiScreen_iPhone_ImageScreen__c__ctor
-	.long LDIFF_SYM1274
+LDIFF_SYM1276=Lme_7d - Hello_MultiScreen_iPhone_ImageScreen__c__ctor
+	.long LDIFF_SYM1276
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
@@ -26675,37 +26717,37 @@ Lfde125_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1275=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1275
+LDIFF_SYM1277=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1277
 	.byte 0,3
 	.asciz "senders"
 
-LDIFF_SYM1276=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1276
+LDIFF_SYM1278=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1278
 	.byte 0,3
 	.asciz "es"
 
-LDIFF_SYM1277=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1277
+LDIFF_SYM1279=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1279
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1278=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1278
+LDIFF_SYM1280=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1280
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1279=Lfde126_end - Lfde126_start
-	.long LDIFF_SYM1279
+LDIFF_SYM1281=Lfde126_end - Lfde126_start
+	.long LDIFF_SYM1281
 Lfde126_start:
 
 	.long 0
 	.align 3
 	.quad Hello_MultiScreen_iPhone_ImageScreen__c__DidReceiveMemoryWarningb__26_0_object_UIKit_UIButtonEventArgs
 
-LDIFF_SYM1280=Lme_7e - Hello_MultiScreen_iPhone_ImageScreen__c__DidReceiveMemoryWarningb__26_0_object_UIKit_UIButtonEventArgs
-	.long LDIFF_SYM1280
+LDIFF_SYM1282=Lme_7e - Hello_MultiScreen_iPhone_ImageScreen__c__DidReceiveMemoryWarningb__26_0_object_UIKit_UIButtonEventArgs
+	.long LDIFF_SYM1282
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
@@ -26718,297 +26760,297 @@ LTDIE_73:
 	.asciz "System_Reflection_MemberInfo"
 
 	.byte 16,16
-LDIFF_SYM1281=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1281
+LDIFF_SYM1283=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1283
 	.byte 2,35,0,0,7
 	.asciz "System_Reflection_MemberInfo"
 
-LDIFF_SYM1282=LTDIE_73 - Ldebug_info_start
-	.long LDIFF_SYM1282
+LDIFF_SYM1284=LTDIE_73 - Ldebug_info_start
+	.long LDIFF_SYM1284
 LTDIE_73_POINTER:
 
 	.byte 13
-LDIFF_SYM1283=LTDIE_73 - Ldebug_info_start
-	.long LDIFF_SYM1283
+LDIFF_SYM1285=LTDIE_73 - Ldebug_info_start
+	.long LDIFF_SYM1285
 LTDIE_73_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1284=LTDIE_73 - Ldebug_info_start
-	.long LDIFF_SYM1284
+LDIFF_SYM1286=LTDIE_73 - Ldebug_info_start
+	.long LDIFF_SYM1286
 LTDIE_72:
 
 	.byte 5
 	.asciz "System_Reflection_MethodBase"
 
 	.byte 16,16
-LDIFF_SYM1285=LTDIE_73 - Ldebug_info_start
-	.long LDIFF_SYM1285
+LDIFF_SYM1287=LTDIE_73 - Ldebug_info_start
+	.long LDIFF_SYM1287
 	.byte 2,35,0,0,7
 	.asciz "System_Reflection_MethodBase"
 
-LDIFF_SYM1286=LTDIE_72 - Ldebug_info_start
-	.long LDIFF_SYM1286
+LDIFF_SYM1288=LTDIE_72 - Ldebug_info_start
+	.long LDIFF_SYM1288
 LTDIE_72_POINTER:
 
 	.byte 13
-LDIFF_SYM1287=LTDIE_72 - Ldebug_info_start
-	.long LDIFF_SYM1287
+LDIFF_SYM1289=LTDIE_72 - Ldebug_info_start
+	.long LDIFF_SYM1289
 LTDIE_72_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1288=LTDIE_72 - Ldebug_info_start
-	.long LDIFF_SYM1288
+LDIFF_SYM1290=LTDIE_72 - Ldebug_info_start
+	.long LDIFF_SYM1290
 LTDIE_71:
 
 	.byte 5
 	.asciz "System_Reflection_MethodInfo"
 
 	.byte 16,16
-LDIFF_SYM1289=LTDIE_72 - Ldebug_info_start
-	.long LDIFF_SYM1289
+LDIFF_SYM1291=LTDIE_72 - Ldebug_info_start
+	.long LDIFF_SYM1291
 	.byte 2,35,0,0,7
 	.asciz "System_Reflection_MethodInfo"
 
-LDIFF_SYM1290=LTDIE_71 - Ldebug_info_start
-	.long LDIFF_SYM1290
+LDIFF_SYM1292=LTDIE_71 - Ldebug_info_start
+	.long LDIFF_SYM1292
 LTDIE_71_POINTER:
 
 	.byte 13
-LDIFF_SYM1291=LTDIE_71 - Ldebug_info_start
-	.long LDIFF_SYM1291
+LDIFF_SYM1293=LTDIE_71 - Ldebug_info_start
+	.long LDIFF_SYM1293
 LTDIE_71_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1292=LTDIE_71 - Ldebug_info_start
-	.long LDIFF_SYM1292
+LDIFF_SYM1294=LTDIE_71 - Ldebug_info_start
+	.long LDIFF_SYM1294
 LTDIE_75:
 
 	.byte 5
 	.asciz "System_Type"
 
 	.byte 24,16
-LDIFF_SYM1293=LTDIE_73 - Ldebug_info_start
-	.long LDIFF_SYM1293
+LDIFF_SYM1295=LTDIE_73 - Ldebug_info_start
+	.long LDIFF_SYM1295
 	.byte 2,35,0,6
 	.asciz "_impl"
 
-LDIFF_SYM1294=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1294
+LDIFF_SYM1296=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1296
 	.byte 2,35,16,0,7
 	.asciz "System_Type"
 
-LDIFF_SYM1295=LTDIE_75 - Ldebug_info_start
-	.long LDIFF_SYM1295
+LDIFF_SYM1297=LTDIE_75 - Ldebug_info_start
+	.long LDIFF_SYM1297
 LTDIE_75_POINTER:
 
 	.byte 13
-LDIFF_SYM1296=LTDIE_75 - Ldebug_info_start
-	.long LDIFF_SYM1296
+LDIFF_SYM1298=LTDIE_75 - Ldebug_info_start
+	.long LDIFF_SYM1298
 LTDIE_75_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1297=LTDIE_75 - Ldebug_info_start
-	.long LDIFF_SYM1297
+LDIFF_SYM1299=LTDIE_75 - Ldebug_info_start
+	.long LDIFF_SYM1299
 LTDIE_74:
 
 	.byte 5
 	.asciz "System_DelegateData"
 
 	.byte 40,16
-LDIFF_SYM1298=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1298
+LDIFF_SYM1300=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1300
 	.byte 2,35,0,6
 	.asciz "target_type"
 
-LDIFF_SYM1299=LTDIE_75_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1299
+LDIFF_SYM1301=LTDIE_75_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1301
 	.byte 2,35,16,6
 	.asciz "method_name"
 
-LDIFF_SYM1300=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1300
+LDIFF_SYM1302=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1302
 	.byte 2,35,24,6
 	.asciz "curried_first_arg"
 
-LDIFF_SYM1301=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1301
+LDIFF_SYM1303=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1303
 	.byte 2,35,32,0,7
 	.asciz "System_DelegateData"
 
-LDIFF_SYM1302=LTDIE_74 - Ldebug_info_start
-	.long LDIFF_SYM1302
+LDIFF_SYM1304=LTDIE_74 - Ldebug_info_start
+	.long LDIFF_SYM1304
 LTDIE_74_POINTER:
 
 	.byte 13
-LDIFF_SYM1303=LTDIE_74 - Ldebug_info_start
-	.long LDIFF_SYM1303
+LDIFF_SYM1305=LTDIE_74 - Ldebug_info_start
+	.long LDIFF_SYM1305
 LTDIE_74_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1304=LTDIE_74 - Ldebug_info_start
-	.long LDIFF_SYM1304
+LDIFF_SYM1306=LTDIE_74 - Ldebug_info_start
+	.long LDIFF_SYM1306
 LTDIE_70:
 
 	.byte 5
 	.asciz "System_Delegate"
 
 	.byte 120,16
-LDIFF_SYM1305=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1305
+LDIFF_SYM1307=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1307
 	.byte 2,35,0,6
 	.asciz "method_ptr"
 
-LDIFF_SYM1306=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1306
+LDIFF_SYM1308=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1308
 	.byte 2,35,16,6
 	.asciz "invoke_impl"
 
-LDIFF_SYM1307=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1307
+LDIFF_SYM1309=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1309
 	.byte 2,35,24,6
 	.asciz "m_target"
 
-LDIFF_SYM1308=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1308
+LDIFF_SYM1310=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1310
 	.byte 2,35,32,6
 	.asciz "method"
 
-LDIFF_SYM1309=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1309
+LDIFF_SYM1311=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1311
 	.byte 2,35,40,6
 	.asciz "delegate_trampoline"
 
-LDIFF_SYM1310=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1310
+LDIFF_SYM1312=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1312
 	.byte 2,35,48,6
 	.asciz "extra_arg"
 
-LDIFF_SYM1311=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1311
+LDIFF_SYM1313=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1313
 	.byte 2,35,56,6
 	.asciz "method_code"
 
-LDIFF_SYM1312=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1312
+LDIFF_SYM1314=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1314
 	.byte 2,35,64,6
 	.asciz "interp_method"
 
-LDIFF_SYM1313=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1313
+LDIFF_SYM1315=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1315
 	.byte 2,35,72,6
 	.asciz "interp_invoke_impl"
 
-LDIFF_SYM1314=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM1314
+LDIFF_SYM1316=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM1316
 	.byte 2,35,80,6
 	.asciz "method_info"
 
-LDIFF_SYM1315=LTDIE_71_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1315
+LDIFF_SYM1317=LTDIE_71_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1317
 	.byte 2,35,88,6
 	.asciz "original_method_info"
 
-LDIFF_SYM1316=LTDIE_71_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1316
+LDIFF_SYM1318=LTDIE_71_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1318
 	.byte 2,35,96,6
 	.asciz "data"
 
-LDIFF_SYM1317=LTDIE_74_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1317
+LDIFF_SYM1319=LTDIE_74_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1319
 	.byte 2,35,104,6
 	.asciz "method_is_virtual"
 
-LDIFF_SYM1318=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM1318
+LDIFF_SYM1320=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM1320
 	.byte 2,35,112,0,7
 	.asciz "System_Delegate"
 
-LDIFF_SYM1319=LTDIE_70 - Ldebug_info_start
-	.long LDIFF_SYM1319
+LDIFF_SYM1321=LTDIE_70 - Ldebug_info_start
+	.long LDIFF_SYM1321
 LTDIE_70_POINTER:
 
 	.byte 13
-LDIFF_SYM1320=LTDIE_70 - Ldebug_info_start
-	.long LDIFF_SYM1320
+LDIFF_SYM1322=LTDIE_70 - Ldebug_info_start
+	.long LDIFF_SYM1322
 LTDIE_70_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1321=LTDIE_70 - Ldebug_info_start
-	.long LDIFF_SYM1321
+LDIFF_SYM1323=LTDIE_70 - Ldebug_info_start
+	.long LDIFF_SYM1323
 LTDIE_69:
 
 	.byte 5
 	.asciz "System_MulticastDelegate"
 
 	.byte 128,1,16
-LDIFF_SYM1322=LTDIE_70 - Ldebug_info_start
-	.long LDIFF_SYM1322
+LDIFF_SYM1324=LTDIE_70 - Ldebug_info_start
+	.long LDIFF_SYM1324
 	.byte 2,35,0,6
 	.asciz "delegates"
 
-LDIFF_SYM1323=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM1323
+LDIFF_SYM1325=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM1325
 	.byte 2,35,120,0,7
 	.asciz "System_MulticastDelegate"
 
-LDIFF_SYM1324=LTDIE_69 - Ldebug_info_start
-	.long LDIFF_SYM1324
+LDIFF_SYM1326=LTDIE_69 - Ldebug_info_start
+	.long LDIFF_SYM1326
 LTDIE_69_POINTER:
 
 	.byte 13
-LDIFF_SYM1325=LTDIE_69 - Ldebug_info_start
-	.long LDIFF_SYM1325
+LDIFF_SYM1327=LTDIE_69 - Ldebug_info_start
+	.long LDIFF_SYM1327
 LTDIE_69_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1326=LTDIE_69 - Ldebug_info_start
-	.long LDIFF_SYM1326
+LDIFF_SYM1328=LTDIE_69 - Ldebug_info_start
+	.long LDIFF_SYM1328
 LTDIE_68:
 
 	.byte 5
 	.asciz "System_EventHandler`1"
 
 	.byte 128,1,16
-LDIFF_SYM1327=LTDIE_69 - Ldebug_info_start
-	.long LDIFF_SYM1327
+LDIFF_SYM1329=LTDIE_69 - Ldebug_info_start
+	.long LDIFF_SYM1329
 	.byte 2,35,0,0,7
 	.asciz "System_EventHandler`1"
 
-LDIFF_SYM1328=LTDIE_68 - Ldebug_info_start
-	.long LDIFF_SYM1328
+LDIFF_SYM1330=LTDIE_68 - Ldebug_info_start
+	.long LDIFF_SYM1330
 LTDIE_68_POINTER:
 
 	.byte 13
-LDIFF_SYM1329=LTDIE_68 - Ldebug_info_start
-	.long LDIFF_SYM1329
+LDIFF_SYM1331=LTDIE_68 - Ldebug_info_start
+	.long LDIFF_SYM1331
 LTDIE_68_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1330=LTDIE_68 - Ldebug_info_start
-	.long LDIFF_SYM1330
+LDIFF_SYM1332=LTDIE_68 - Ldebug_info_start
+	.long LDIFF_SYM1332
 LTDIE_76:
 
 	.byte 5
 	.asciz "System_Array"
 
 	.byte 16,16
-LDIFF_SYM1331=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM1331
+LDIFF_SYM1333=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM1333
 	.byte 2,35,0,0,7
 	.asciz "System_Array"
 
-LDIFF_SYM1332=LTDIE_76 - Ldebug_info_start
-	.long LDIFF_SYM1332
+LDIFF_SYM1334=LTDIE_76 - Ldebug_info_start
+	.long LDIFF_SYM1334
 LTDIE_76_POINTER:
 
 	.byte 13
-LDIFF_SYM1333=LTDIE_76 - Ldebug_info_start
-	.long LDIFF_SYM1333
+LDIFF_SYM1335=LTDIE_76 - Ldebug_info_start
+	.long LDIFF_SYM1335
 LTDIE_76_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1334=LTDIE_76 - Ldebug_info_start
-	.long LDIFF_SYM1334
+LDIFF_SYM1336=LTDIE_76 - Ldebug_info_start
+	.long LDIFF_SYM1336
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.EventHandler`1<UIKit.UIKeyboardEventArgs>:invoke_void_object_TEventArgs"
 	.asciz "wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIKeyboardEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIKeyboardEventArgs"
@@ -27020,57 +27062,57 @@ LDIFF_SYM1334=LTDIE_76 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1335=LTDIE_68_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1335
+LDIFF_SYM1337=LTDIE_68_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1337
 	.byte 1,104,3
 	.asciz "param0"
 
-LDIFF_SYM1336=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1336
+LDIFF_SYM1338=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1338
 	.byte 1,105,3
 	.asciz "param1"
 
-LDIFF_SYM1337=LTDIE_37_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1337
+LDIFF_SYM1339=LTDIE_37_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1339
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1338=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1338
+LDIFF_SYM1340=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1340
 	.byte 1,102,11
 	.asciz "V_1"
 
-LDIFF_SYM1339=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1339
+LDIFF_SYM1341=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1341
 	.byte 1,104,11
 	.asciz "V_2"
 
-LDIFF_SYM1340=LTDIE_76_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1340
+LDIFF_SYM1342=LTDIE_76_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1342
 	.byte 1,103,11
 	.asciz "V_3"
 
-LDIFF_SYM1341=LTDIE_69_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1341
+LDIFF_SYM1343=LTDIE_69_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1343
 	.byte 1,101,11
 	.asciz "V_4"
 
-LDIFF_SYM1342=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1342
+LDIFF_SYM1344=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1344
 	.byte 1,103,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1343=Lfde127_end - Lfde127_start
-	.long LDIFF_SYM1343
+LDIFF_SYM1345=Lfde127_end - Lfde127_start
+	.long LDIFF_SYM1345
 Lfde127_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIKeyboardEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIKeyboardEventArgs
 
-LDIFF_SYM1344=Lme_80 - wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIKeyboardEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIKeyboardEventArgs
-	.long LDIFF_SYM1344
+LDIFF_SYM1346=Lme_80 - wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIKeyboardEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIKeyboardEventArgs
+	.long LDIFF_SYM1346
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
 	.align 3
@@ -27083,23 +27125,23 @@ LTDIE_77:
 	.asciz "System_EventHandler`1"
 
 	.byte 128,1,16
-LDIFF_SYM1345=LTDIE_69 - Ldebug_info_start
-	.long LDIFF_SYM1345
+LDIFF_SYM1347=LTDIE_69 - Ldebug_info_start
+	.long LDIFF_SYM1347
 	.byte 2,35,0,0,7
 	.asciz "System_EventHandler`1"
 
-LDIFF_SYM1346=LTDIE_77 - Ldebug_info_start
-	.long LDIFF_SYM1346
+LDIFF_SYM1348=LTDIE_77 - Ldebug_info_start
+	.long LDIFF_SYM1348
 LTDIE_77_POINTER:
 
 	.byte 13
-LDIFF_SYM1347=LTDIE_77 - Ldebug_info_start
-	.long LDIFF_SYM1347
+LDIFF_SYM1349=LTDIE_77 - Ldebug_info_start
+	.long LDIFF_SYM1349
 LTDIE_77_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1348=LTDIE_77 - Ldebug_info_start
-	.long LDIFF_SYM1348
+LDIFF_SYM1350=LTDIE_77 - Ldebug_info_start
+	.long LDIFF_SYM1350
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.EventHandler`1<UIKit.UIButtonEventArgs>:invoke_void_object_TEventArgs"
 	.asciz "wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIButtonEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIButtonEventArgs"
@@ -27111,57 +27153,57 @@ LDIFF_SYM1348=LTDIE_77 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1349=LTDIE_77_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1349
+LDIFF_SYM1351=LTDIE_77_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1351
 	.byte 1,104,3
 	.asciz "param0"
 
-LDIFF_SYM1350=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1350
+LDIFF_SYM1352=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1352
 	.byte 1,105,3
 	.asciz "param1"
 
-LDIFF_SYM1351=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1351
+LDIFF_SYM1353=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1353
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1352=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1352
+LDIFF_SYM1354=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1354
 	.byte 1,102,11
 	.asciz "V_1"
 
-LDIFF_SYM1353=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1353
+LDIFF_SYM1355=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1355
 	.byte 1,104,11
 	.asciz "V_2"
 
-LDIFF_SYM1354=LTDIE_76_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1354
+LDIFF_SYM1356=LTDIE_76_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1356
 	.byte 1,103,11
 	.asciz "V_3"
 
-LDIFF_SYM1355=LTDIE_69_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1355
+LDIFF_SYM1357=LTDIE_69_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1357
 	.byte 1,101,11
 	.asciz "V_4"
 
-LDIFF_SYM1356=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1356
+LDIFF_SYM1358=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1358
 	.byte 1,103,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1357=Lfde128_end - Lfde128_start
-	.long LDIFF_SYM1357
+LDIFF_SYM1359=Lfde128_end - Lfde128_start
+	.long LDIFF_SYM1359
 Lfde128_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIButtonEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIButtonEventArgs
 
-LDIFF_SYM1358=Lme_81 - wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIButtonEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIButtonEventArgs
-	.long LDIFF_SYM1358
+LDIFF_SYM1360=Lme_81 - wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIButtonEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIButtonEventArgs
+	.long LDIFF_SYM1360
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
 	.align 3
@@ -27174,23 +27216,23 @@ LTDIE_78:
 	.asciz "System_EventHandler`1"
 
 	.byte 128,1,16
-LDIFF_SYM1359=LTDIE_69 - Ldebug_info_start
-	.long LDIFF_SYM1359
+LDIFF_SYM1361=LTDIE_69 - Ldebug_info_start
+	.long LDIFF_SYM1361
 	.byte 2,35,0,0,7
 	.asciz "System_EventHandler`1"
 
-LDIFF_SYM1360=LTDIE_78 - Ldebug_info_start
-	.long LDIFF_SYM1360
+LDIFF_SYM1362=LTDIE_78 - Ldebug_info_start
+	.long LDIFF_SYM1362
 LTDIE_78_POINTER:
 
 	.byte 13
-LDIFF_SYM1361=LTDIE_78 - Ldebug_info_start
-	.long LDIFF_SYM1361
+LDIFF_SYM1363=LTDIE_78 - Ldebug_info_start
+	.long LDIFF_SYM1363
 LTDIE_78_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1362=LTDIE_78 - Ldebug_info_start
-	.long LDIFF_SYM1362
+LDIFF_SYM1364=LTDIE_78 - Ldebug_info_start
+	.long LDIFF_SYM1364
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.EventHandler`1<UIKit.UIImagePickerMediaPickedEventArgs>:invoke_void_object_TEventArgs"
 	.asciz "wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIImagePickerMediaPickedEventArgs"
@@ -27202,57 +27244,57 @@ LDIFF_SYM1362=LTDIE_78 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1363=LTDIE_78_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1363
+LDIFF_SYM1365=LTDIE_78_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1365
 	.byte 1,104,3
 	.asciz "param0"
 
-LDIFF_SYM1364=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1364
+LDIFF_SYM1366=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1366
 	.byte 1,105,3
 	.asciz "param1"
 
-LDIFF_SYM1365=LTDIE_49_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1365
+LDIFF_SYM1367=LTDIE_49_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1367
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1366=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1366
+LDIFF_SYM1368=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1368
 	.byte 1,102,11
 	.asciz "V_1"
 
-LDIFF_SYM1367=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1367
+LDIFF_SYM1369=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1369
 	.byte 1,104,11
 	.asciz "V_2"
 
-LDIFF_SYM1368=LTDIE_76_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1368
+LDIFF_SYM1370=LTDIE_76_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1370
 	.byte 1,103,11
 	.asciz "V_3"
 
-LDIFF_SYM1369=LTDIE_69_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1369
+LDIFF_SYM1371=LTDIE_69_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1371
 	.byte 1,101,11
 	.asciz "V_4"
 
-LDIFF_SYM1370=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1370
+LDIFF_SYM1372=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1372
 	.byte 1,103,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1371=Lfde129_end - Lfde129_start
-	.long LDIFF_SYM1371
+LDIFF_SYM1373=Lfde129_end - Lfde129_start
+	.long LDIFF_SYM1373
 Lfde129_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIImagePickerMediaPickedEventArgs
 
-LDIFF_SYM1372=Lme_82 - wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIImagePickerMediaPickedEventArgs
-	.long LDIFF_SYM1372
+LDIFF_SYM1374=Lme_82 - wrapper_delegate_invoke_System_EventHandler_1_UIKit_UIImagePickerMediaPickedEventArgs_invoke_void_object_TEventArgs_object_UIKit_UIImagePickerMediaPickedEventArgs
+	.long LDIFF_SYM1374
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
 	.align 3
@@ -27265,23 +27307,23 @@ LTDIE_79:
 	.asciz "System_Comparison`1"
 
 	.byte 128,1,16
-LDIFF_SYM1373=LTDIE_69 - Ldebug_info_start
-	.long LDIFF_SYM1373
+LDIFF_SYM1375=LTDIE_69 - Ldebug_info_start
+	.long LDIFF_SYM1375
 	.byte 2,35,0,0,7
 	.asciz "System_Comparison`1"
 
-LDIFF_SYM1374=LTDIE_79 - Ldebug_info_start
-	.long LDIFF_SYM1374
+LDIFF_SYM1376=LTDIE_79 - Ldebug_info_start
+	.long LDIFF_SYM1376
 LTDIE_79_POINTER:
 
 	.byte 13
-LDIFF_SYM1375=LTDIE_79 - Ldebug_info_start
-	.long LDIFF_SYM1375
+LDIFF_SYM1377=LTDIE_79 - Ldebug_info_start
+	.long LDIFF_SYM1377
 LTDIE_79_REFERENCE:
 
 	.byte 14
-LDIFF_SYM1376=LTDIE_79 - Ldebug_info_start
-	.long LDIFF_SYM1376
+LDIFF_SYM1378=LTDIE_79 - Ldebug_info_start
+	.long LDIFF_SYM1378
 	.byte 2
 	.asciz "(wrapper_delegate-invoke)_System.Comparison`1<string>:invoke_int_T_T"
 	.asciz "wrapper_delegate_invoke_System_Comparison_1_string_invoke_int_T_T_string_string"
@@ -27293,62 +27335,62 @@ LDIFF_SYM1376=LTDIE_79 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM1377=LTDIE_79_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1377
+LDIFF_SYM1379=LTDIE_79_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1379
 	.byte 1,104,3
 	.asciz "param0"
 
-LDIFF_SYM1378=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1378
+LDIFF_SYM1380=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1380
 	.byte 1,105,3
 	.asciz "param1"
 
-LDIFF_SYM1379=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM1379
+LDIFF_SYM1381=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM1381
 	.byte 1,106,11
 	.asciz "V_0"
 
-LDIFF_SYM1380=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1380
+LDIFF_SYM1382=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1382
 	.byte 1,102,11
 	.asciz "V_1"
 
-LDIFF_SYM1381=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1381
+LDIFF_SYM1383=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1383
 	.byte 1,104,11
 	.asciz "V_2"
 
-LDIFF_SYM1382=LTDIE_76_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1382
+LDIFF_SYM1384=LTDIE_76_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1384
 	.byte 1,103,11
 	.asciz "V_3"
 
-LDIFF_SYM1383=LTDIE_69_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM1383
+LDIFF_SYM1385=LTDIE_69_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM1385
 	.byte 1,101,11
 	.asciz "V_4"
 
-LDIFF_SYM1384=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM1384
+LDIFF_SYM1386=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM1386
 	.byte 1,103,11
 	.asciz "V_5"
 
-LDIFF_SYM1385=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM1385
+LDIFF_SYM1387=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM1387
 	.byte 1,101,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM1386=Lfde130_end - Lfde130_start
-	.long LDIFF_SYM1386
+LDIFF_SYM1388=Lfde130_end - Lfde130_start
+	.long LDIFF_SYM1388
 Lfde130_start:
 
 	.long 0
 	.align 3
 	.quad wrapper_delegate_invoke_System_Comparison_1_string_invoke_int_T_T_string_string
 
-LDIFF_SYM1387=Lme_83 - wrapper_delegate_invoke_System_Comparison_1_string_invoke_int_T_T_string_string
-	.long LDIFF_SYM1387
+LDIFF_SYM1389=Lme_83 - wrapper_delegate_invoke_System_Comparison_1_string_invoke_int_T_T_string_string
+	.long LDIFF_SYM1389
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,149,8,150,7,68,151,6,152,5,68,153,4,154,3
 	.align 3

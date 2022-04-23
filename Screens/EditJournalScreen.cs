@@ -231,7 +231,7 @@ namespace Hello_MultiScreen_iPhone
                     text = "";
                 EmailFileRead.WriteAllText(text);
                 String totalText = EmailFileRead.ReadText();
-		booktextView.Text=totalText;
+		        booktextView.Text=totalText;
  
                         //Do nothing
                     }
@@ -245,5 +245,11 @@ namespace Hello_MultiScreen_iPhone
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
-	}
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            booktextView.Text = EmailFileRead.ReadText();
+        }
+    }
 }
