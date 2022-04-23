@@ -4,10 +4,10 @@
       <File FileName="Screens/HelloUniverseScreen.cs" Line="415" Column="4" IsPinned="True" />
       <File FileName="Screens/HelloWorldScreen.cs" />
       <File FileName="Screens/ImageScreen.cs" />
-      <File FileName="Screens/EditJournalScreen.cs" Line="101" Column="73" />
+      <File FileName="Screens/EditJournalScreen.cs" />
       <File FileName="Screens/HomeScreen.cs" />
       <File FileName="Screens/HomeScreen2.cs" />
-      <File FileName="EmailFileRead.cs" Line="264" Column="39" />
+      <File FileName="EmailFileRead.cs" />
       <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
       <File FileName="Screens/HomeScreen.designer.cs" />

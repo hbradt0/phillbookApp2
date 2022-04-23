@@ -146,7 +146,7 @@ namespace EmailReader //rename
                 fileName = fileName1;
 
             String myString = File.ReadAllText(fileName);
-            string toBeSearched = DateTime.Now.AddDays(-1 * day).ToString("MM/dd/yyyy") + ":\n";
+            string toBeSearched = DateTime.Now.AddDays(-1 * day).ToString("MM/dd/yyyy") + ":";
             int ix = myString.IndexOf(toBeSearched);
 
             if (ix != -1)
@@ -156,7 +156,7 @@ namespace EmailReader //rename
             }
             else
             {
-                toBeSearched = DateTime.Now.ToString("MM/dd/yyyy") + ":\n";
+                toBeSearched = DateTime.Now.ToString("MM/dd/yyyy") + ":";
                 ix = myString.IndexOf(toBeSearched);
 
                 if (ix != -1)
@@ -178,7 +178,7 @@ namespace EmailReader //rename
 
             String myString = File.ReadAllText(fileName);
 
-            string toBeSearched = myDate.ToString("MM/dd/yyyy") + ":\n";
+            string toBeSearched = myDate.ToString("MM/dd/yyyy") + ":";
             string toBeSearched2 = myDate.AddDays(1).ToString("MM/");
 
             int ix = myString.IndexOf(toBeSearched);
@@ -202,7 +202,7 @@ namespace EmailReader //rename
             }
             else
             {
-                toBeSearched = DateTime.Now.ToString("MM/dd/yyyy") + ":\n";
+                toBeSearched = DateTime.Now.ToString("MM/dd/yyyy") + ":";
                 ix = myString.IndexOf(toBeSearched);
                 if (ix != -1)
                 {

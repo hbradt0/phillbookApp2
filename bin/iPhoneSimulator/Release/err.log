@@ -1,8 +1,32 @@
-objc[98241]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/BE6AE2BE-A355-48F8-870C-D99FC72AFEC0/data/Containers/Bundle/Application/B133BA9F-E1BF-4370-A0BD-5496EBA6DA44/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x1101ed438). One of the two will be used. Which one is undefined.
+objc[98712]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/BE6AE2BE-A355-48F8-870C-D99FC72AFEC0/data/Containers/Bundle/Application/16FAD654-6D14-4E18-9095-AB6ED5F83EE7/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x108676438). One of the two will be used. Which one is undefined.
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2022-04-23 13:59:30.953744-0700 Hello_MultiScreen_iPhone[98241:4136114] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98241
-2022-04-23 13:59:30.953997-0700 Hello_MultiScreen_iPhone[98241:4136114] SecTaskCopyDebugDescription: Hello_MultiScree[98241]/0#-1 LF=0
-2022-04-23 13:59:30.960227-0700 Hello_MultiScreen_iPhone[98241:4136114] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98241
-2022-04-23 13:59:30.960540-0700 Hello_MultiScreen_iPhone[98241:4136114] SecTaskCopyDebugDescription: Hello_MultiScree[98241]/0#-1 LF=0
-2022-04-23 13:59:31.044922-0700 Hello_MultiScreen_iPhone[98241:4136114] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98241
-2022-04-23 13:59:31.045345-0700 Hello_MultiScreen_iPhone[98241:4136114] SecTaskCopyDebugDescription: Hello_MultiScree[98241]/0#-1 LF=0
+2022-04-23 14:22:57.131514-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:22:57.131794-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:22:57.137756-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:22:57.138004-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:22:57.241353-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:22:57.241571-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:23:05.530813-0700 Hello_MultiScreen_iPhone[98712:4152279] [unspecified] container_system_group_path_for_identifier: error = ((container_error_t)98) NOT_CODESIGNED
+2022-04-23 14:23:05.530967-0700 Hello_MultiScreen_iPhone[98712:4152279] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 98
+2022-04-23 14:23:05.531269-0700 Hello_MultiScreen_iPhone[98712:4152279] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/psargent/Library/Developer/CoreSimulator/Devices/BE6AE2BE-A355-48F8-870C-D99FC72AFEC0/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2022-04-23 14:23:07.443993-0700 Hello_MultiScreen_iPhone[98712:4152279] [HardwareKeyboard] -[UIApplication getKeyboardDevicePropertiesForSenderID:shouldUpdate:usingSyntheticEvent:], failed to fetch device property for senderID (778835616971358211) use primary keyboard info instead.
+2022-04-23 14:23:07.445159-0700 Hello_MultiScreen_iPhone[98712:4152279] [HardwareKeyboard] -[UIApplication getKeyboardDevicePropertiesForSenderID:shouldUpdate:usingSyntheticEvent:], failed to fetch device property for senderID (778835616971358211) use primary keyboard info instead.
+2022-04-23 14:23:33.198285-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:23:33.198542-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:23:33.200360-0700 Hello_MultiScreen_iPhone[98712:4152279] [Default] Task Hello_MultiScree[98712]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-04-23 14:23:33.222225-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:23:33.222448-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:23:33.222601-0700 Hello_MultiScreen_iPhone[98712:4152279] [Default] Task Hello_MultiScree[98712]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-04-23 14:23:33.225172-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:23:33.225352-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:23:33.248510-0700 Hello_MultiScreen_iPhone[98712:4152279] WARNING: This app's CFBundleDevelopmentRegion is not a string value. This can lead to unexpected results at runtime. Please change CFBundleDevelopmentRegion in your Info.plist to a string value.
+2022-04-23 14:23:33.277890-0700 Hello_MultiScreen_iPhone[98712:4152279] [LayoutConstraints] Changing the translatesAutoresizingMaskIntoConstraints property of a UICollectionReusableView that is managed by a UICollectionView is not supported, and will result in incorrect self-sizing. View: <_UIActivityContentFooterView: 0x7fe01c25de00; baseClass = UICollectionReusableView; frame = (16 232; 288 52); layer = <CALayer: 0x60000153da20>>
+2022-04-23 14:23:37.123029-0700 Hello_MultiScreen_iPhone[98712:4152306] [ShareSheet] connection invalidated
+2022-04-23 14:23:42.354217-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:23:42.354496-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:23:42.354754-0700 Hello_MultiScreen_iPhone[98712:4152279] [Default] Task Hello_MultiScree[98712]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-04-23 14:23:42.369520-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=98712
+2022-04-23 14:23:42.369743-0700 Hello_MultiScreen_iPhone[98712:4152279] SecTaskCopyDebugDescription: Hello_MultiScree[98712]/0#-1 LF=0
+2022-04-23 14:23:42.369962-0700 Hello_MultiScreen_iPhone[98712:4152279] [Default] Task Hello_MultiScree[98712]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-04-23 14:23:42.406193-0700 Hello_MultiScreen_iPhone[98712:4152279] [LayoutConstraints] Changing the translatesAutoresizingMaskIntoConstraints property of a UICollectionReusableView that is managed by a UICollectionView is not supported, and will result in incorrect self-sizing. View: <_UIActivityContentFooterView: 0x7fe01c189b50; baseClass = UICollectionReusableView; frame = (16 232; 288 52); layer = <CALayer: 0x600001507640>>
+2022-04-23 14:23:44.232514-0700 Hello_MultiScreen_iPhone[98712:4152740] [ShareSheet] connection invalidated
