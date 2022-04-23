@@ -98,6 +98,7 @@ namespace Hello_MultiScreen_iPhone
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            Button3.SetTitleColor(UIColor.White, UIControlState.Normal);
 
 
             //ScrollView
