@@ -83,6 +83,7 @@
 	-(enum XamarinGCHandleFlags) xamarinGetFlags;
 	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
 	-(void) didReceiveMemoryWarning;
+	-(void) viewDidAppear:(BOOL)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 @end

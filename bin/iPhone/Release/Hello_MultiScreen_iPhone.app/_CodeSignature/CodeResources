@@ -62,11 +62,11 @@
 		</data>
 		<key>Hello_MultiScreen_iPhone.aotdata.arm64</key>
 		<data>
-		AMqzuDP8maEjAUkJJr245irYwrY=
+		pdlf9kIo5AVAv8TmiWo6mtQ8OWQ=
 		</data>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<data>
-		cdJX8kTYFliDrUCb12BLn5vL5Jg=
+		bwV/ActKnUBR5tg49KXBo4fM1zs=
 		</data>
 		<key>HomeScreen.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YAPv+Fs6wO8TXW7rJsMNjAmwedw=
+		2f911K0ee5gDKJVeM+3UmKp70cw=
 		</data>
 		<key>MainTitlePic.png</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		yA8gacBzWQpBG2/KC/NnihjEGwQ=
+		HQ3bFiFj3RTJXZhOesizG8QOTNU=
 		</data>
 		<key>System.Drawing.Common.aotdata.arm64</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>System.Drawing.Common.dll</key>
 		<data>
-		0VJSakhe0qj4bnUcInrHb9qDLM4=
+		LvC1dt/8NfFORQBX93gWrTCFo3E=
 		</data>
 		<key>System.aotdata.arm64</key>
 		<data>
@@ -122,31 +122,7 @@
 		</data>
 		<key>System.dll</key>
 		<data>
-		0v5/exf/3jPLe9MiTDh0gLuibZ4=
-		</data>
-		<key>Tesseract.Binding.iOS.aotdata.arm64</key>
-		<data>
-		4LbQh1BNwVTSbfrqWcyjltou/S4=
-		</data>
-		<key>Tesseract.Binding.iOS.dll</key>
-		<data>
-		xfiCPcsJ1TnpOgDDWSztu35/2Vg=
-		</data>
-		<key>Tesseract.aotdata.arm64</key>
-		<data>
-		Ma1/it+SvIopTSnuLbdfVy2TKPY=
-		</data>
-		<key>Tesseract.dll</key>
-		<data>
-		GgiM2AnedBCs3ORIg0vYRu+z6Ic=
-		</data>
-		<key>Tesseract.iOS.aotdata.arm64</key>
-		<data>
-		1qMl7Y93hzoELsHVszKLwxmPZnc=
-		</data>
-		<key>Tesseract.iOS.dll</key>
-		<data>
-		agpo/gKaK8LL+r1KSqKbD2F+kIM=
+		kBN/wdzE+ASZYBSBQ2dzoVr0/H4=
 		</data>
 		<key>TestPic.png</key>
 		<data>
@@ -158,7 +134,7 @@
 		</data>
 		<key>Xamarin.iOS.dll</key>
 		<data>
-		ZdAaSGmcll+99v9htPdGAIR9sUM=
+		OQ5CIoHSgNzCmg7LOR56mmuRVTA=
 		</data>
 		<key>alert.jpg</key>
 		<data>
@@ -210,7 +186,7 @@
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		fdjOYljb0hcRXjH5KJGlTco+nK4=
+		wefTfbRmP/2sGNfFQggMgE0md8U=
 		</data>
 		<key>pic5.jpg</key>
 		<data>
@@ -325,14 +301,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Op+JkHUPFBAYbuMACLvbmBXjBTJr5e2ukQVmOhDuUM=
+			Qf78BmaZF2MHO2kn3RDsQnVOr0lWG/x6CsjQqMLdMIk=
 			</data>
 		</dict>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hMG/SdPTmu+uuwjYHznEhcxJhOtcttzLIxYJoelmuhk=
+			apOTsB1ISfQXOu59HZJdft3+Wgk4nnVPZeZyNLUqzQk=
 			</data>
 		</dict>
 		<key>HomeScreen.nib</key>
@@ -388,7 +364,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			91zMfXVrfuiYdTUSO2iWfdL4F+y53CA17HF1DW7K/+o=
+			wc/TV2K1Gv3mpOCUZGEdmp3CB8Zm1dH0aC8YvIfXffU=
 			</data>
 		</dict>
 		<key>System.Drawing.Common.aotdata.arm64</key>
@@ -402,7 +378,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xASoSI3+sZumPdiY5w208B1wbEJVOmkYeyLpeM3pti8=
+			TzF7ptRcHFcutz8Ht6nyzhul70goFcsEswa7BxuNKiE=
 			</data>
 		</dict>
 		<key>System.aotdata.arm64</key>
@@ -416,49 +392,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5MzmcS83E76N0jFyluRPyCVCO/p8paTRpvcoeSIR1Bg=
-			</data>
-		</dict>
-		<key>Tesseract.Binding.iOS.aotdata.arm64</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tgGYuNdZX3uyAxFRJYKeTpOFSYRf9P/LGK50kkmUu9o=
-			</data>
-		</dict>
-		<key>Tesseract.Binding.iOS.dll</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Cyjlyf8sb0YzVWmc1izLZskjLxOKZCAPTFvr9TFVhkg=
-			</data>
-		</dict>
-		<key>Tesseract.aotdata.arm64</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KP3WIzyX6hFmjiz9LEj56qqOjmTgZVmOU3RCi2Psvlc=
-			</data>
-		</dict>
-		<key>Tesseract.dll</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4s0U31RSkcWCVqRtgPWYgr8E1KcCegrmar0i5Vn9ZKM=
-			</data>
-		</dict>
-		<key>Tesseract.iOS.aotdata.arm64</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MQr01WTfrNqD++Pq7bEDDELFvcp6H855FBZLlWgAY6E=
-			</data>
-		</dict>
-		<key>Tesseract.iOS.dll</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ECVkZ5YEoHBqyK1Z7j3sQzs6BtkkQrQACuO5g9a7R9E=
+			27MbOMV1f6BBEpMDkJIJZArwIXkv5Ycr+gACQuT/a68=
 			</data>
 		</dict>
 		<key>TestPic.png</key>
@@ -479,7 +413,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kubu5+YM8GBS+5Wac2jI/W5zH/5ah05py+wm8dpx7gU=
+			LkyqoKXMGfH+wCoPDB+jLU8QoHoAsUUwiHI87tcWRQI=
 			</data>
 		</dict>
 		<key>alert.jpg</key>
@@ -570,7 +504,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cpzRWfW79MpYVyWv8aMiDxz8qhJpuofddmdtBNeWgjw=
+			a6dCMFPFnBW+BF19Hby8XFoHAaM6+PKQdYboI8ZWnYY=
 			</data>
 		</dict>
 		<key>pic5.jpg</key>
