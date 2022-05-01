@@ -216,14 +216,14 @@ namespace Hello_MultiScreen_iPhone
 
 
         }
-
+        
         public void borderFunction()
         {
             List<CALayer> li = new List<CALayer>();
-            for (int index = 0; index < 4; index++)
+            for (int index = 0; index < 1; index++)
                 li.Add(new CALayer());
             nfloat width = 2;
-            for (int index = 0; index < 4; index++)
+            for (int index = 0; index < 1; index++)
             {
                 li[index].BorderColor = UIColor.Purple.CGColor;
                 li[index].BorderWidth = width;
@@ -232,11 +232,11 @@ namespace Hello_MultiScreen_iPhone
             }
             nfloat height = View.Frame.Top + 60;
             scrollView.Layer.MasksToBounds = true;
-            li[0].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Y - width, textViewWrite.Frame.Width, 1);
-            li[1].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Bottom + width, textViewWrite.Frame.Width, 1);
+            //li[0].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Y - width, textViewWrite.Frame.Width, 1);
+            //li[1].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Bottom + width, textViewWrite.Frame.Width, 1);
 
-            li[2].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Y - width, editTextWrite.Frame.Width, 1);
-            li[3].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Bottom + width, editTextWrite.Frame.Width, 1);
+            //li[2].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Y - width, editTextWrite.Frame.Width, 1);
+            li[0].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Bottom + width, editTextWrite.Frame.Width, 1);
         }
 
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
@@ -355,6 +355,11 @@ namespace Hello_MultiScreen_iPhone
                 textViewWrite.Text = totalText;
                 //editTextWrite.Frame = new CGRect(25, 25, 300, 150);
                 editTextWrite.Text = String.Empty;
+                if (this.textViewWrite.Text.Length > 0)
+                {
+                    NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                    this.textViewWrite.ScrollRangeToVisible(range);
+                }
                 //scrollView.ScrollRectToVisible(new CGRect(ResponsiveWidthLeft, 60, ResponsiveSizeX, 330), true);
             }
         }
