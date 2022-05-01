@@ -190,6 +190,7 @@ namespace Hello_MultiScreen_iPhone
             //View.AddSubview(Buttonyourstoryscreen);           
         }
 
+
         void ShareButtonClick(object sender, EventArgs eventArgs)
         {
             String txt2 = "\n Your story: \n" + EmailFileRead.ReadText();

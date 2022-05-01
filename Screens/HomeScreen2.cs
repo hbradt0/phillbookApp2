@@ -5,6 +5,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using EmailReader;
+using CoreAnimation;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -185,6 +186,7 @@ namespace Hello_MultiScreen_iPhone
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 
+            borderFunction();
             //On click Events
             //ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
 
@@ -213,6 +215,28 @@ namespace Hello_MultiScreen_iPhone
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
 
 
+        }
+
+        public void borderFunction()
+        {
+            List<CALayer> li = new List<CALayer>();
+            for (int index = 0; index < 4; index++)
+                li.Add(new CALayer());
+            nfloat width = 2;
+            for (int index = 0; index < 4; index++)
+            {
+                li[index].BorderColor = UIColor.Purple.CGColor;
+                li[index].BorderWidth = width;
+                scrollView.Layer.AddSublayer(li[index]);
+                li[index].CornerRadius = 0.8f;
+            }
+            nfloat height = View.Frame.Top + 60;
+            scrollView.Layer.MasksToBounds = true;
+            li[0].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Y - width, textViewWrite.Frame.Width, 1);
+            li[1].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Bottom + width, textViewWrite.Frame.Width, 1);
+
+            li[2].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Y - width, editTextWrite.Frame.Width, 1);
+            li[3].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Bottom + width, editTextWrite.Frame.Width, 1);
         }
 
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
