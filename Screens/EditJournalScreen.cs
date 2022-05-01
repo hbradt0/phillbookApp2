@@ -37,7 +37,8 @@ namespace Hello_MultiScreen_iPhone
         public UITextView readInfo;
 
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
-
+        public nfloat ResponsiveWidthLeft = 300;
+        public nfloat ResponsiveSizeX = 300;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -56,6 +57,8 @@ namespace Hello_MultiScreen_iPhone
         //Read your journal page
         public void ViewDidLoad1()
         {
+            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveSizeX = View.Frame.Width - 40;
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178,178,227);
             var user = new UIViewController();
@@ -68,7 +71,7 @@ namespace Hello_MultiScreen_iPhone
                 Editable = true
             };
 
-            booktextView.Frame = new CGRect(20, 90, 280, 440); 
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, 90, ResponsiveSizeX, 440); 
             booktextView.Text = EmailFileRead.ReadText();
             booktextView.BackgroundColor = UIColor.White;
             booktextView.TextColor = UIColor.Purple;

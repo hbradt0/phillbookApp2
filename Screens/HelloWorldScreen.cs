@@ -37,7 +37,8 @@ namespace Hello_MultiScreen_iPhone
         public UITextView readInfo;
 
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
-
+        public nfloat ResponsiveWidthLeft = 300;
+        public nfloat ResponsiveSizeX = 300;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -63,6 +64,9 @@ namespace Hello_MultiScreen_iPhone
         //Read your journal page
         public void ViewDidLoad1()
         {
+            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveSizeX = View.Frame.Width - 40;
+
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
             var user = new UIViewController();
@@ -78,7 +82,7 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton = new UIButton(UIButtonType.System);
             hiddenbuttoncode = new UITextField();
 
-            booktextView.Frame = new CGRect(20, 100, 280, 410);
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 410);
             //scrollView.BackgroundColor = UIColor.SystemPink;
 
             var plist = NSUserDefaults.StandardUserDefaults;
@@ -90,7 +94,7 @@ namespace Hello_MultiScreen_iPhone
 
             //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
-            booktextView.BackgroundColor = UIColor.White;
+            booktextView.BackgroundColor = UIColor.FromRGB(230, 230, 250);
             booktextView.TextColor = UIColor.SystemPurple;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
@@ -100,12 +104,15 @@ namespace Hello_MultiScreen_iPhone
             //Button3.Frame = new CGRect(175, 25, 150, 150);
             //Button3.SetTitle("Back", UIControlState.Normal);
 
-            hiddenbutton.Frame = new CGRect(20, 540, 100, 30);
-            hiddenbutton.SetTitle("Code", UIControlState.Normal);
+            hiddenbutton.Frame = new CGRect(200, 490, 100, 50);
+            hiddenbutton.SetTitle("Submit", UIControlState.Normal);
+            hiddenbutton.BackgroundColor = UIColor.Blue;
+            hiddenbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
             hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            hiddenbuttoncode.Frame = new CGRect(20, 590, 280, 50);
-            hiddenbuttoncode.AccessibilityHint = "type 'hint'";
+            hiddenbuttoncode.Frame = new CGRect(20, 490, 170, 50);
+            hiddenbuttoncode.AccessibilityHint = "type 'help'";
+            hiddenbuttoncode.Text = "help";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
             hiddenbuttoncode.TextColor = UIColor.SystemPurple;
 
@@ -239,7 +246,7 @@ namespace Hello_MultiScreen_iPhone
                 booktextView.Text = text1;
                 //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
             }
-            else if (str.ToLower() == "hint")
+            else if (str.ToLower() == "help")
             {
                 booktextView.Text = "Enter your email to begin your story!";
                 var v = NSBundle.MainBundle.PathForResource("Reflections2", "txt");

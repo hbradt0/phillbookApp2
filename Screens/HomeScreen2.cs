@@ -55,6 +55,8 @@ namespace Hello_MultiScreen_iPhone
         private UIViewAnimationCurve animCurve;
         private bool keyboardShowing;
         private bool keyboardOpen = false;
+        public nfloat ResponsiveWidthLeft = 300;
+        public nfloat ResponsiveSizeX = 300;
 
 
         //loads the HomeScreen.xib file and connects it to this object
@@ -74,6 +76,8 @@ namespace Hello_MultiScreen_iPhone
         //Create your journal page
         public void ViewDidLoad1()
         {
+            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveSizeX = View.Frame.Width - 40;
             //View issue
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.Purple;
@@ -85,7 +89,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonyourstoryscreenUpload = new UIButton(UIButtonType.System);
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
-            UIScrollView scrollView = new UIScrollView();
+            scrollView = new UIScrollView();
             editTextDate = new UITextField();
             ShareTodo = new UIButton(UIButtonType.System);
 
@@ -94,7 +98,7 @@ namespace Hello_MultiScreen_iPhone
 
             //Buttons and edit properties
             textViewWrite.TextColor = UIColor.Purple;
-            textViewWrite.BackgroundColor = UIColor.White;
+            textViewWrite.BackgroundColor = UIColor.FromRGB(230, 230, 250);
             textViewWrite.Editable = false;
             editTextWrite.TextColor = UIColor.Black;
             //ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
@@ -119,21 +123,21 @@ namespace Hello_MultiScreen_iPhone
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
-            editTextDate.Frame = new CGRect(150, 560, 50, 30);
+            editTextDate.Frame = new CGRect(150, 500, 50, 30);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            ShareTodo.Frame = new CGRect(200, 560, 100, 30);
+            ShareTodo.Frame = new CGRect(200, 500, 100, 30);
 
             Buttonbackyourstory.Frame = new CGRect(150, 25, 70, 50);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 470, 100, 30);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 450, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(20, 560, 100, 30);
+            ButtonDelete.Frame = new CGRect(20, 500, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(150, 470, 150, 30);
+            ButtonDelete1Line.Frame = new CGRect(150, 450, 150, 30);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -141,7 +145,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
             
-            editTextWrite.Frame = new CGRect(20, 400, 280, 40);
+            editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 400, ResponsiveSizeX, 40);
 
             //dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -155,7 +159,7 @@ namespace Hello_MultiScreen_iPhone
             //ButtonDateClick.Frame = new CGRect(25, 50, 100, 50);
             //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 60, 280, 330);
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 330);
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -327,6 +331,7 @@ namespace Hello_MultiScreen_iPhone
                 textViewWrite.Text = totalText;
                 //editTextWrite.Frame = new CGRect(25, 25, 300, 150);
                 editTextWrite.Text = String.Empty;
+                //scrollView.ScrollRectToVisible(new CGRect(ResponsiveWidthLeft, 60, ResponsiveSizeX, 330), true);
             }
         }
 

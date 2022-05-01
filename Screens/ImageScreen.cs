@@ -28,7 +28,9 @@ namespace Hello_MultiScreen_iPhone
 
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
-   
+
+        public nfloat ResponsiveWidthLeft = 300;
+        public nfloat ResponsiveSizeX = 300;
 
         //loads the HelloUniverseScreen.xib file and connects it to this object
         public ImageScreen() : base("ImageScreen", null)
@@ -40,7 +42,8 @@ namespace Hello_MultiScreen_iPhone
         //Create your journal page
         public void ViewDidLoad1()
         {
-
+            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveSizeX = View.Frame.Width - 40;
             //View issue
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
@@ -58,7 +61,7 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText = new UIDatePicker(new CGRect(10, 520, 100, 30
 
              ));
-            dateTimeText.Frame = new CGRect(20, 540, 100, 30
+            dateTimeText.Frame = new CGRect(20, 440, 100, 30
              );
             ButtonDateClick = new UIButton(UIButtonType.System);
 
@@ -88,16 +91,16 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
-            ButtonDelete.Frame = new CGRect(20, 600, 100, 30);
-            ButtonDelete1Line.Frame = new CGRect(160, 600, 150, 30);
+            ButtonDelete.Frame = new CGRect(20, 500, 100, 30);
+            ButtonDelete1Line.Frame = new CGRect(160, 500, 150, 30);
             ButtonDelete1Line.SetTitle("Delete by Date", UIControlState.Normal);
 
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDateClick.Frame = new CGRect(200, 540, 100, 30);
+            ButtonDateClick.Frame = new CGRect(200, 440, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 100, 300, 300);
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 350);
             UIImage img2 = new UIImage();
 
             DateTime myDate = (DateTime)dateTimeText.Date;
@@ -107,16 +110,16 @@ namespace Hello_MultiScreen_iPhone
 
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
-            textViewWrite.Frame = new CGRect(20, 100, 280, 240);
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 350);
 
             CameraButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             CameraButton.BackgroundColor = UIColor.SystemTeal;
-            CameraButton.Frame = new CGRect(20, 660, 100, 30);
+            CameraButton.Frame = new CGRect(20, 560, 100, 30);
             CameraButton.SetTitle("Camera", UIControlState.Normal);
 
             BackgroundImage.SetTitleColor(UIColor.White, UIControlState.Normal);
             BackgroundImage.BackgroundColor = UIColor.SystemTeal;
-            BackgroundImage.Frame = new CGRect(150, 660, 100, 30);
+            BackgroundImage.Frame = new CGRect(150, 560, 100, 30);
             BackgroundImage.SetTitle("Home Image", UIControlState.Normal);
 
             //ScrollView
