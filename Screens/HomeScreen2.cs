@@ -362,6 +362,7 @@ namespace Hello_MultiScreen_iPhone
                 }
                 UIApplication.SharedApplication.KeyWindow.EndEditing(true);
                 keyboardOpen = false;
+                scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
                 //scrollView.ScrollRectToVisible(new CGRect(ResponsiveWidthLeft, 60, ResponsiveSizeX, 330), true);
             }
         }
@@ -421,6 +422,8 @@ namespace Hello_MultiScreen_iPhone
             base.ViewDidAppear(animated);
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
+            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
+
         }
 
         public override void DidReceiveMemoryWarning()

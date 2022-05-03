@@ -62,11 +62,11 @@
 		</data>
 		<key>Hello_MultiScreen_iPhone.aotdata.arm64</key>
 		<data>
-		9n5AOgdNY+VigtwYdWayXR3NkKY=
+		c6Ls+yS405wuR5F8A+HfnfYb7tI=
 		</data>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<data>
-		09HOyVZxDuDUXXk9RGhb+eqTF5U=
+		CFU1vwYKhl5mdiHdWqwCZVTL+qs=
 		</data>
 		<key>HomeScreen.nib</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WwhQPkoLWdyovU29J7LxvXosomI=
+		B5WJRxhAatFjW/rKCsn0qq+h3Y8=
 		</data>
 		<key>MainTitlePic.png</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>Xamarin.iOS.aotdata.arm64</key>
 		<data>
-		dmuOwsMWp9cNiegp/k0ZV5rEzRI=
+		tKK58j7vNgMzNgOlSkGHjq4DGY4=
 		</data>
 		<key>Xamarin.iOS.dll</key>
 		<data>
-		RUPW1bQgk/en5TTs7WLzIa6k068=
+		dv/bNHBv5SFUzideHXp6ct2PU+4=
 		</data>
 		<key>alert.jpg</key>
 		<data>
@@ -301,14 +301,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3l+rcvB7DhsUiyAYxb0A4xEeNgJoWIqKO2SRSf7tCxo=
+			9IS+J2al+zOYwRLu6iHsMIGEMDunj1hVTWf6e/X2udg=
 			</data>
 		</dict>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJgUDY/yaHORno4GmqHRQI3gFSeIL++Jzrp8PwDz2lM=
+			tInG7qFmji7zYXHbyIYQFnQlhx1Ak6Dpdjj0oSHHLn4=
 			</data>
 		</dict>
 		<key>HomeScreen.nib</key>
@@ -406,14 +406,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iWbTxuazSY2geoaLUtI9XhTBKKvakEYDFrOE5THIp8M=
+			yUj13Yr3x3lvInW2rYxF+8U6OTedh8RSNtrsqFv29H4=
 			</data>
 		</dict>
 		<key>Xamarin.iOS.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/FRfGQNBMBiKuQ1DTjhN7sn7CorfuENpy+WMfxYiIis=
+			X0YDYcRGHVk4J9HF1w9oX9McMZkffap7fxlA5l+zH80=
 			</data>
 		</dict>
 		<key>alert.jpg</key>

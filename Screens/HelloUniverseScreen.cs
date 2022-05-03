@@ -188,7 +188,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width+ 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width+ 200, View.Frame.Height + 350),
+                ContentSize = new CGSize(View.Frame.Width+ 200, View.Frame.Height + 370),
                 BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
@@ -344,6 +344,17 @@ namespace Hello_MultiScreen_iPhone
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
 
             this.PresentViewController(activityController, true, null);
+            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
+            UIView.SetAnimationDuration(animDuration);
+            UIView.SetAnimationCurve(animCurve);
+
+            var frame = View.Frame;
+
+            if (frame.Y >= 0)
+                frame.Y = 0;
+          
+            View.Frame = frame;
+            UIView.CommitAnimations();
         }
 
         //Submit your journal button
@@ -370,6 +381,7 @@ namespace Hello_MultiScreen_iPhone
             }
             else
             {
+                scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
                 String text = editTextWrite.Text;
                 if (editTextWrite.Text == String.Empty)
                     text = "";
@@ -384,8 +396,8 @@ namespace Hello_MultiScreen_iPhone
                 }
                 //editTextWrite.Frame = new CGRect(25, 25, 300, 150);
                 editTextWrite.Text = String.Empty;
-                UIApplication.SharedApplication.KeyWindow.EndEditing(true);
-                keyboardOpen = false;
+                //UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+                //keyboardOpen = false;
                 //scrollView.ScrollRectToVisible(new CGRect(ResponsiveWidthLeft, 100, ResponsiveSizeX, 310),true);
             }
         }
@@ -440,7 +452,7 @@ namespace Hello_MultiScreen_iPhone
                     textViewWrite.Text = EmailFileRead.ReadText();
                 }
                 textViewWrite.Text = EmailFileRead.ReadText();
-        
+
             };
         }
         
@@ -464,6 +476,7 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
+            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
         }
     }
 }

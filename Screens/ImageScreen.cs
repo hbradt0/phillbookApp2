@@ -233,7 +233,7 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
                 data.Save(fileName, false, out err);
 
-                textViewWrite.Frame = new CGRect(20, 60, 300, 300);
+                textViewWrite.Frame = new CGRect(20, 60, image.Size.Height, image.Size.Width);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
@@ -331,8 +331,7 @@ namespace Hello_MultiScreen_iPhone
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
 
             this.PresentViewController(activityController, true, null);
-
-            }
+        }
 
         private void openCamera(object sender, EventArgs eventArgs)
         {
@@ -378,7 +377,7 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
 
                 data.Save(fileName, false, out err);
-                textViewWrite.Frame = new CGRect(20, 60, 300, 300);
+                textViewWrite.Frame = new CGRect(20, 60, image.Size.Height, image.Size.Width);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
@@ -423,6 +422,7 @@ namespace Hello_MultiScreen_iPhone
 
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
+
         }
 
     }

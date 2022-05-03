@@ -289,6 +289,7 @@ namespace Hello_MultiScreen_iPhone
             booktextView.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
+            scrollView.ScrollRectToVisible(booktextView.Frame, true);
         }
     }
 }
