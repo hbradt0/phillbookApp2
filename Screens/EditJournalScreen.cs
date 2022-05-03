@@ -185,16 +185,19 @@ namespace Hello_MultiScreen_iPhone
             if (scale)
             {
                 //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
-                frame.Y -= scrollAmout;
+                if (frame.Y - scrollAmout <= 0)
+                    frame.Y -= scrollAmout;
             }
             else
             {
-                frame.Y += scrollAmout;
+                if (frame.Y + scrollAmout <= 0)
+                    frame.Y += scrollAmout;
             }
 
             View.Frame = frame;
             UIView.CommitAnimations();
         }
+
 
         //Submit total edit
         private void Button3Click(object sender, EventArgs eventArgs)
@@ -236,7 +239,8 @@ namespace Hello_MultiScreen_iPhone
                 EmailFileRead.WriteAllText(text);
                 String totalText = EmailFileRead.ReadText();
 		        booktextView.Text=totalText;
- 
+                UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+                keyboardOpen = false;
                         //Do nothing
                     }
                 };
@@ -254,6 +258,8 @@ namespace Hello_MultiScreen_iPhone
         {
             base.ViewDidAppear(animated);
             booktextView.Text = EmailFileRead.ReadText();
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
         }
     }
 }

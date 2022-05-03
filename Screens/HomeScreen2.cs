@@ -360,6 +360,8 @@ namespace Hello_MultiScreen_iPhone
                     NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
                     this.textViewWrite.ScrollRangeToVisible(range);
                 }
+                UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+                keyboardOpen = false;
                 //scrollView.ScrollRectToVisible(new CGRect(ResponsiveWidthLeft, 60, ResponsiveSizeX, 330), true);
             }
         }
@@ -403,15 +405,22 @@ namespace Hello_MultiScreen_iPhone
             //editTextWrite = new UITextField();
             //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
             //editTextWrite.Frame = new CGRect(25, 25, 300, 150);
+            if (this.textViewWrite.Text.Length > 0)
+            {
+                NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                this.textViewWrite.ScrollRangeToVisible(range);
+            }
             EmailFileRead.DeleteLastLine(EmailFileRead.fileName2);
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
+
         }
 
 
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
         }
 
         public override void DidReceiveMemoryWarning()

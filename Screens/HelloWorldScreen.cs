@@ -214,16 +214,19 @@ namespace Hello_MultiScreen_iPhone
             if (scale)
             {
                 //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
-                frame.Y -= scrollAmout;
+                if (frame.Y - scrollAmout <= 0)
+                    frame.Y -= scrollAmout;
             }
             else
             {
-                frame.Y += scrollAmout;
+                if (frame.Y + scrollAmout <= 0)
+                    frame.Y += scrollAmout;
             }
 
             View.Frame = frame;
             UIView.CommitAnimations();
         }
+
 
         //Back to home view
         void Button3Click(object sender, EventArgs eventArgs)
@@ -236,7 +239,8 @@ namespace Hello_MultiScreen_iPhone
         //Hint
         public void HiddenClick(object sender, EventArgs eventArgs)
         {
-
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
             String str = hiddenbuttoncode.Text;
             if (str == "secret_code")
             {
@@ -283,6 +287,8 @@ namespace Hello_MultiScreen_iPhone
         {
             base.ViewDidAppear(animated);
             booktextView.Text = EmailFileRead.ReadText();
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
         }
     }
 }

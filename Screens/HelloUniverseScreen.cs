@@ -188,7 +188,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width+ 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width+ 200, View.Frame.Height + 300),
+                ContentSize = new CGSize(View.Frame.Width+ 200, View.Frame.Height + 350),
                 BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
@@ -288,9 +288,11 @@ namespace Hello_MultiScreen_iPhone
                 }
                 else
                 {
-                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(false);
-                    keyboardOpen = false;
+
+                        scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
+                        ScrollTheView(false);
+                        keyboardOpen = false;
+                    
                 }
             }
             
@@ -307,11 +309,13 @@ namespace Hello_MultiScreen_iPhone
             if (scale)
                 {
                 //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
-                frame.Y -= scrollAmout;
+                if (frame.Y - scrollAmout <= 0) 
+                    frame.Y -= scrollAmout;
             }
             else
             {
-                frame.Y += scrollAmout;
+                if (frame.Y + scrollAmout <= 0)
+                    frame.Y += scrollAmout;
             }
                 
             View.Frame = frame;
@@ -380,6 +384,8 @@ namespace Hello_MultiScreen_iPhone
                 }
                 //editTextWrite.Frame = new CGRect(25, 25, 300, 150);
                 editTextWrite.Text = String.Empty;
+                UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+                keyboardOpen = false;
                 //scrollView.ScrollRectToVisible(new CGRect(ResponsiveWidthLeft, 100, ResponsiveSizeX, 310),true);
             }
         }
@@ -425,10 +431,16 @@ namespace Hello_MultiScreen_iPhone
                 }
                 else
                 {
+                    if (this.textViewWrite.Text.Length > 0)
+                    {
+                        NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                        this.textViewWrite.ScrollRangeToVisible(range);
+                    }
                     EmailFileRead.DeleteLastLine();
                     textViewWrite.Text = EmailFileRead.ReadText();
                 }
                 textViewWrite.Text = EmailFileRead.ReadText();
+        
             };
         }
         
@@ -450,6 +462,8 @@ namespace Hello_MultiScreen_iPhone
         {
             base.ViewDidAppear(animated);
             textViewWrite.Text = EmailFileRead.ReadText();
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
         }
     }
 }
