@@ -312,6 +312,8 @@ namespace Hello_MultiScreen_iPhone
         //Share past # of days
         private void ButtonShareClick(object sender, EventArgs eventArgs)
         {
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
             int i = 0;
             Int32.TryParse(editTextDate.Text, out i);
             String txt2 = EmailReader.EmailFileRead.ReadFileFromDate(EmailFileRead.fileName2, i);

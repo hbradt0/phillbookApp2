@@ -333,6 +333,8 @@ namespace Hello_MultiScreen_iPhone
         //Share at click upon date
         private void ButtonDateClickEvent(object sender, EventArgs eventArgs)
         {
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
             DateTime myDate = (DateTime)dateTimeText.Date;
             myDate = myDate.ToLocalTime();
             String txt2 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
