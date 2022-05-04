@@ -233,7 +233,16 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
                 data.Save(fileName, false, out err);
 
-                textViewWrite.Frame = new CGRect(20, 60, image.Size.Height, image.Size.Width);
+                var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) *1.9 * View.Frame.Width-40;
+                var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) *1.9 * View.Frame.Width-40;
+
+                if (newWidth >= View.Frame.Width - 40)
+                    newWidth = View.Frame.Width - 40;
+                    
+                if (newHeight >= 350)
+                    newHeight = 350;
+
+                textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, newHeight,newWidth);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
@@ -377,7 +386,16 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
 
                 data.Save(fileName, false, out err);
-                textViewWrite.Frame = new CGRect(20, 60, image.Size.Height, image.Size.Width);
+                var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) * 1.9 * View.Frame.Width-40;
+                var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) * 1.9 * View.Frame.Width-40;
+
+                if (newWidth >= View.Frame.Width - 40)
+                    newWidth = View.Frame.Width - 40;
+
+                if (newHeight >= 350)
+                    newHeight = 350;
+
+                textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, newHeight, newWidth);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;

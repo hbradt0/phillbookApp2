@@ -1,8 +1,85 @@
-objc[31964]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/F5F3DB81-FE21-4720-A4E7-03C421A4A9DE/data/Containers/Bundle/Application/3B2E9CCE-7ECA-4114-AA7C-108326766D3E/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x10ac2f438). One of the two will be used. Which one is undefined.
+objc[37396]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/F5F3DB81-FE21-4720-A4E7-03C421A4A9DE/data/Containers/Bundle/Application/2F944152-8DA6-4D83-B5C4-8273CED48671/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x1021ad438). One of the two will be used. Which one is undefined.
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2022-05-03 09:12:54.162103-0700 Hello_MultiScreen_iPhone[31964:5688069] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=31964
-2022-05-03 09:12:54.162296-0700 Hello_MultiScreen_iPhone[31964:5688069] SecTaskCopyDebugDescription: Hello_MultiScree[31964]/0#-1 LF=0
-2022-05-03 09:12:54.170554-0700 Hello_MultiScreen_iPhone[31964:5688069] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=31964
-2022-05-03 09:12:54.170786-0700 Hello_MultiScreen_iPhone[31964:5688069] SecTaskCopyDebugDescription: Hello_MultiScree[31964]/0#-1 LF=0
-2022-05-03 09:12:54.267945-0700 Hello_MultiScreen_iPhone[31964:5688069] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=31964
-2022-05-03 09:12:54.270914-0700 Hello_MultiScreen_iPhone[31964:5688069] SecTaskCopyDebugDescription: Hello_MultiScree[31964]/0#-1 LF=0
+2022-05-03 18:29:56.625032-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:29:56.625289-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:29:56.632633-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:29:56.632997-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:29:56.764170-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:29:56.764412-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:05.527824-0700 Hello_MultiScreen_iPhone[37396:5849604] WARNING: This app's CFBundleDevelopmentRegion is not a string value. This can lead to unexpected results at runtime. Please change CFBundleDevelopmentRegion in your Info.plist to a string value.
+2022-05-03 18:30:11.130541-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:30:11.130872-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:11.131697-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:30:11.205666-0700 Hello_MultiScreen_iPhone[37396:5849604] [unspecified] container_system_group_path_for_identifier: error = ((container_error_t)98) NOT_CODESIGNED
+2022-05-03 18:30:11.205796-0700 Hello_MultiScreen_iPhone[37396:5849604] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 98
+2022-05-03 18:30:11.206114-0700 Hello_MultiScreen_iPhone[37396:5849604] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/psargent/Library/Developer/CoreSimulator/Devices/F5F3DB81-FE21-4720-A4E7-03C421A4A9DE/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2022-05-03 18:30:11.208064-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:30:11.208336-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:11.208632-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:30:11.212064-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:30:11.212385-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:11.332597-0700 Hello_MultiScreen_iPhone[37396:5849604] [LayoutConstraints] Changing the translatesAutoresizingMaskIntoConstraints property of a UICollectionReusableView that is managed by a UICollectionView is not supported, and will result in incorrect self-sizing. View: <_UIActivityContentFooterView: 0x7f7fe927cdc0; baseClass = UICollectionReusableView; frame = (16 242; 343 52); layer = <CALayer: 0x600002d308e0>>
+2022-05-03 18:30:14.297102-0700 Hello_MultiScreen_iPhone[37396:5849604] [NSExtension] Extension request contains input items but the extension point does not specify a set of allowed payload classes. The extension point's NSExtensionContext subclass must implement `+_allowedItemPayloadClasses`. This must return the set of allowed NSExtensionItem payload classes. In future, this request will fail with an error. Extension: <EXConcreteExtension: 0x6000019f79c0> {id = com.apple.DocumentManagerUICore.SaveToFiles} Items: (
+    "<NSExtensionItem: 0x600002eff590> - userInfo: {\n    NSExtensionItemAttachmentsKey =     (\n        \"<NSItemProvider: 0x6000007e9500> {types = (\\n    \\\"public.plain-text\\\"\\n)}\"\n    );\n    \"com.apple.UIKit.NSExtensionItemUserInfoIsContentManagedKey\" = 0;\n}"
+)
+2022-05-03 18:30:17.255458-0700 Hello_MultiScreen_iPhone[37396:5849604] [ShareSheet] cancelled request - error: The operation was cancelled.
+2022-05-03 18:30:18.976654-0700 Hello_MultiScreen_iPhone[37396:5849604] [LayoutConstraints] Unable to simultaneously satisfy constraints.
+	Probably at least one of the constraints in the following list is one you don't want. 
+	Try this: 
+		(1) look at each constraint and try to figure out which you don't expect; 
+		(2) find the code that added the unwanted constraint or constraints and fix it. 
+(
+    "<NSLayoutConstraint:0x600000f979d0 V:|-(15)-[UILabel:0x7f7fe92a2f20]   (active, names: '|':UITableViewCellContentView:0x7f7fe92a36c0 )>",
+    "<NSLayoutConstraint:0x600000f97a20 V:[UILabel:0x7f7fe92a2f20]-(15)-|   (active, names: '|':UITableViewCellContentView:0x7f7fe92a36c0 )>",
+    "<NSLayoutConstraint:0x600000f968a0 UILabel:0x7f7fe92a2f20.height >= 22   (active)>",
+    "<NSLayoutConstraint:0x600000f93610 'UIView-Encapsulated-Layout-Height' UITableViewCellContentView:0x7f7fe92a36c0.height == 44   (active)>"
+)
+
+Will attempt to recover by breaking constraint 
+<NSLayoutConstraint:0x600000f968a0 UILabel:0x7f7fe92a2f20.height >= 22   (active)>
+
+Make a symbolic breakpoint at UIViewAlertForUnsatisfiableConstraints to catch this in the debugger.
+The methods in the UIConstraintBasedLayoutDebugging category on UIView listed in <UIKitCore/UIView.h> may also be helpful.
+2022-05-03 18:30:23.421370-0700 Hello_MultiScreen_iPhone[37396:5849604] [NSExtension] Extension request contains input items but the extension point does not specify a set of allowed payload classes. The extension point's NSExtensionContext subclass must implement `+_allowedItemPayloadClasses`. This must return the set of allowed NSExtensionItem payload classes. In future, this request will fail with an error. Extension: <EXConcreteExtension: 0x6000019e76c0> {id = com.apple.reminders.sharingextension} Items: (
+    "<NSExtensionItem: 0x600002eb0040> - userInfo: {\n    NSExtensionItemAttachmentsKey =     (\n        \"<NSItemProvider: 0x6000007b31e0> {types = (\\n    \\\"public.plain-text\\\"\\n)}\"\n    );\n    NSExtensionItemAttributedContentTextKey = {length = 425, bytes = 0x7b5c7274 66315c61 6e73695c 616e7369 ... 73757265 205c0a7d };\n    \"com.apple.UIKit.NSExtensionItemUserInfoIsContentManagedKey\" = 0;\n}"
+)
+2022-05-03 18:30:26.987838-0700 Hello_MultiScreen_iPhone[37396:5849604] [core] SLRemoteComposeViewController: (this may be harmless) viewServiceDidTerminateWithError: Error Domain=_UIViewServiceErrorDomain Code=1 "(null)" UserInfo={Terminated=disconnect method}
+2022-05-03 18:30:28.763102-0700 Hello_MultiScreen_iPhone[37396:5849671] [ShareSheet] connection invalidated
+2022-05-03 18:30:33.989039-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:30:33.989348-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:33.989547-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:30:34.007620-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:30:34.007895-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:34.008107-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:30:34.049677-0700 Hello_MultiScreen_iPhone[37396:5849604] [LayoutConstraints] Changing the translatesAutoresizingMaskIntoConstraints property of a UICollectionReusableView that is managed by a UICollectionView is not supported, and will result in incorrect self-sizing. View: <_UIActivityContentFooterView: 0x7f7fe94355d0; baseClass = UICollectionReusableView; frame = (16 242; 343 52); layer = <CALayer: 0x600002d110c0>>
+2022-05-03 18:30:36.236661-0700 Hello_MultiScreen_iPhone[37396:5850226] [ShareSheet] connection invalidated
+2022-05-03 18:30:41.356128-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:30:41.356466-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:41.356739-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:30:41.371430-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:30:41.371679-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:30:41.371888-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:30:41.411806-0700 Hello_MultiScreen_iPhone[37396:5849604] [LayoutConstraints] Changing the translatesAutoresizingMaskIntoConstraints property of a UICollectionReusableView that is managed by a UICollectionView is not supported, and will result in incorrect self-sizing. View: <_UIActivityContentFooterView: 0x7f7fe90f0b40; baseClass = UICollectionReusableView; frame = (16 242; 343 52); layer = <CALayer: 0x600002af4140>>
+2022-05-03 18:30:43.682351-0700 Hello_MultiScreen_iPhone[37396:5849604] [NSExtension] Extension request contains input items but the extension point does not specify a set of allowed payload classes. The extension point's NSExtensionContext subclass must implement `+_allowedItemPayloadClasses`. This must return the set of allowed NSExtensionItem payload classes. In future, this request will fail with an error.
+2022-05-03 18:30:46.756126-0700 Hello_MultiScreen_iPhone[37396:5849604] [core] SLRemoteComposeViewController: (this may be harmless) viewServiceDidTerminateWithError: Error Domain=_UIViewServiceErrorDomain Code=1 "(null)" UserInfo={Terminated=disconnect method}
+2022-05-03 18:30:48.371965-0700 Hello_MultiScreen_iPhone[37396:5850228] [ShareSheet] connection invalidated
+2022-05-03 18:31:07.213496-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:31:07.213843-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:31:07.214120-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:31:07.228785-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:31:07.229041-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:31:07.229215-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:31:07.269694-0700 Hello_MultiScreen_iPhone[37396:5849604] [LayoutConstraints] Changing the translatesAutoresizingMaskIntoConstraints property of a UICollectionReusableView that is managed by a UICollectionView is not supported, and will result in incorrect self-sizing. View: <_UIActivityContentFooterView: 0x7f7fe90e3f60; baseClass = UICollectionReusableView; frame = (16 242; 343 52); layer = <CALayer: 0x600002af6de0>>
+2022-05-03 18:31:09.097803-0700 Hello_MultiScreen_iPhone[37396:5849604] [NSExtension] Extension request contains input items but the extension point does not specify a set of allowed payload classes. The extension point's NSExtensionContext subclass must implement `+_allowedItemPayloadClasses`. This must return the set of allowed NSExtensionItem payload classes. In future, this request will fail with an error.
+2022-05-03 18:31:11.987152-0700 Hello_MultiScreen_iPhone[37396:5849604] [core] SLRemoteComposeViewController: (this may be harmless) viewServiceDidTerminateWithError: Error Domain=_UIViewServiceErrorDomain Code=1 "(null)" UserInfo={Terminated=disconnect method}
+2022-05-03 18:31:14.863164-0700 Hello_MultiScreen_iPhone[37396:5850940] [ShareSheet] connection invalidated
+2022-05-03 18:31:18.572864-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:31:18.573213-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:31:18.573465-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:31:18.588321-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=37396
+2022-05-03 18:31:18.588592-0700 Hello_MultiScreen_iPhone[37396:5849604] SecTaskCopyDebugDescription: Hello_MultiScree[37396]/0#-1 LF=0
+2022-05-03 18:31:18.588805-0700 Hello_MultiScreen_iPhone[37396:5849604] [Default] Task Hello_MultiScree[37396]/1#-1 LF=22 couldn't find entitlement CopresenceCore.Entitlement.publicAPI error nil
+2022-05-03 18:31:18.632606-0700 Hello_MultiScreen_iPhone[37396:5849604] [LayoutConstraints] Changing the translatesAutoresizingMaskIntoConstraints property of a UICollectionReusableView that is managed by a UICollectionView is not supported, and will result in incorrect self-sizing. View: <_UIActivityContentFooterView: 0x7f7fd8704bd0; baseClass = UICollectionReusableView; frame = (16 242; 343 52); layer = <CALayer: 0x600002d050c0>>
+2022-05-03 18:31:19.802388-0700 Hello_MultiScreen_iPhone[37396:5849604] [NSExtension] Extension request contains input items but the extension point does not specify a set of allowed payload classes. The extension point's NSExtensionContext subclass must implement `+_allowedItemPayloadClasses`. This must return the set of allowed NSExtensionItem payload classes. In future, this request will fail with an error.
+2022-05-03 18:31:23.035362-0700 Hello_MultiScreen_iPhone[37396:5849604] [core] SLRemoteComposeViewController: (this may be harmless) viewServiceDidTerminateWithError: Error Domain=_UIViewServiceErrorDomain Code=1 "(null)" UserInfo={Terminated=disconnect method}
+2022-05-03 18:31:24.700098-0700 Hello_MultiScreen_iPhone[37396:5850981] [ShareSheet] connection invalidated
