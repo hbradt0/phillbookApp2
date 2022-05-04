@@ -7610,6 +7610,14 @@ Hello_MultiScreen_iPhone_HelloUniverseScreen_ButtonDateClickEvent_object_System_
 .word 0xf9002fa0
 .word 0xf90033a0
 .word 0xf90037a0
+bl _p_64
+.word 0xaa0003e1
+.word 0xaa0103e0
+.word 0x3940003e
+bl _p_65
+.word 0xd2800021
+bl _p_66
+.word 0x3904675f
 .word 0xf9401741
 .word 0xaa0103e0
 .word 0x3940003e
@@ -10898,6 +10906,14 @@ Hello_MultiScreen_iPhone_HomeScreen2_ButtonShareClick_object_System_EventArgs:
 .word 0xf9000fa1
 .word 0xf90013a2
 .word 0xb9002bbf
+bl _p_64
+.word 0xaa0003e1
+.word 0xaa0103e0
+.word 0x3940003e
+bl _p_65
+.word 0xd2800021
+bl _p_66
+.word 0x3904e75f
 .word 0xb9002bbf
 .word 0xf9408341
 .word 0xaa0103e0
@@ -19488,7 +19504,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "7B3654E7-CCA4-4292-B529-12AB35D1C6D5"
+	.asciz "18D3EA0D-2E48-4B14-B31B-A0A479C05E30"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -19582,7 +19598,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 72,188,152,11,190,210,102,165,115,126,79,123,194,64,97,87
+	.byte 105,215,34,207,255,7,217,248,36,126,45,94,46,242,64,124
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:
