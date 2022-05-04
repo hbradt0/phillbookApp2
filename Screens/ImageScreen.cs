@@ -233,11 +233,11 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
                 data.Save(fileName, false, out err);
 
-                var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) *1.9 * View.Frame.Width-40;
-                var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) *1.9 * View.Frame.Width-40;
+                var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) *2.1 * View.Frame.Width-20;
+                var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) *2.1 * View.Frame.Width-20;
 
-                if (newWidth >= View.Frame.Width - 40)
-                    newWidth = View.Frame.Width - 40;
+                if (newWidth >= View.Frame.Width - 20)
+                    newWidth = View.Frame.Width - 20;
                     
                 if (newHeight >= 350)
                     newHeight = 350;
@@ -386,11 +386,11 @@ namespace Hello_MultiScreen_iPhone
                 NSError err = null;
 
                 data.Save(fileName, false, out err);
-                var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) * 1.9 * View.Frame.Width-40;
-                var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) * 1.9 * View.Frame.Width-40;
+                var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) * 2.1 * View.Frame.Width-20;
+                var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) * 2.1 * View.Frame.Width-20;
 
-                if (newWidth >= View.Frame.Width - 40)
-                    newWidth = View.Frame.Width - 40;
+                if (newWidth >= View.Frame.Width - 20)
+                    newWidth = View.Frame.Width - 20;
 
                 if (newHeight >= 350)
                     newHeight = 350;

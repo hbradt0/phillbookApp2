@@ -13766,10 +13766,10 @@ bl _p_171
 .word 0xfd405ba2
 .word 0x1e622821
 .word 0x1e611800
-.word 0xd28cccde
-.word 0xf2acccde
-.word 0xf2ccccde
-.word 0xf2e7ffde
+.word 0xd29999be
+.word 0xf2b9999e
+.word 0xf2d9999e
+.word 0xf2e8001e
 .word 0x9e6703c1
 .word 0x1e610800
 .word 0xfd0083a0
@@ -13791,7 +13791,7 @@ bl _p_15
 .word 0xfd404fa1
 .word 0x1e610800
 .word 0xd280001e
-.word 0xf2e8089e
+.word 0xf2e8069e
 .word 0x9e6703c1
 .word 0x1e613800
 .word 0xfd006ba0
@@ -13828,10 +13828,10 @@ bl _p_171
 .word 0xfd405ba2
 .word 0x1e622821
 .word 0x1e611800
-.word 0xd28cccde
-.word 0xf2acccde
-.word 0xf2ccccde
-.word 0xf2e7ffde
+.word 0xd29999be
+.word 0xf2b9999e
+.word 0xf2d9999e
+.word 0xf2e8001e
 .word 0x9e6703c1
 .word 0x1e610800
 .word 0xfd0077a0
@@ -13853,7 +13853,7 @@ bl _p_15
 .word 0xfd404fa1
 .word 0x1e610800
 .word 0xd280001e
-.word 0xf2e8089e
+.word 0xf2e8069e
 .word 0x9e6703c1
 .word 0x1e613800
 .word 0xfd006fa0
@@ -13875,7 +13875,7 @@ bl _p_15
 .word 0xfd000fc3
 .word 0xfd4073a0
 .word 0xfd404fa1
-.word 0xd2800500
+.word 0xd2800280
 .word 0x1e620002
 .word 0x1e623821
 .word 0x1e612000
@@ -13900,7 +13900,7 @@ bl _p_15
 .word 0xfd000bc2
 .word 0xfd000fc3
 .word 0xfd404fa0
-.word 0xd2800500
+.word 0xd2800280
 .word 0x1e620001
 .word 0x1e613800
 .word 0xfd006fa0
@@ -14666,10 +14666,10 @@ bl _p_171
 .word 0xfd4057a2
 .word 0x1e622821
 .word 0x1e611800
-.word 0xd28cccde
-.word 0xf2acccde
-.word 0xf2ccccde
-.word 0xf2e7ffde
+.word 0xd29999be
+.word 0xf2b9999e
+.word 0xf2d9999e
+.word 0xf2e8001e
 .word 0x9e6703c1
 .word 0x1e610800
 .word 0xfd0087a0
@@ -14691,7 +14691,7 @@ bl _p_15
 .word 0xfd404ba1
 .word 0x1e610800
 .word 0xd280001e
-.word 0xf2e8089e
+.word 0xf2e8069e
 .word 0x9e6703c1
 .word 0x1e613800
 .word 0xfd0067a0
@@ -14728,10 +14728,10 @@ bl _p_171
 .word 0xfd4057a2
 .word 0x1e622821
 .word 0x1e611800
-.word 0xd28cccde
-.word 0xf2acccde
-.word 0xf2ccccde
-.word 0xf2e7ffde
+.word 0xd29999be
+.word 0xf2b9999e
+.word 0xf2d9999e
+.word 0xf2e8001e
 .word 0x9e6703c1
 .word 0x1e610800
 .word 0xfd007ba0
@@ -14753,7 +14753,7 @@ bl _p_15
 .word 0xfd404ba1
 .word 0x1e610800
 .word 0xd280001e
-.word 0xf2e8089e
+.word 0xf2e8069e
 .word 0x9e6703c1
 .word 0x1e613800
 .word 0xfd006ba0
@@ -14775,7 +14775,7 @@ bl _p_15
 .word 0xfd000fc3
 .word 0xfd4077a0
 .word 0xfd404ba1
-.word 0xd2800500
+.word 0xd2800280
 .word 0x1e620002
 .word 0x1e623821
 .word 0x1e612000
@@ -14800,7 +14800,7 @@ bl _p_15
 .word 0xfd000bc2
 .word 0xfd000fc3
 .word 0xfd404ba0
-.word 0xd2800500
+.word 0xd2800280
 .word 0x1e620001
 .word 0x1e613800
 .word 0xfd006ba0
@@ -19504,7 +19504,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "18D3EA0D-2E48-4B14-B31B-A0A479C05E30"
+	.asciz "3431581A-935E-4CFD-82D6-08FF56C80073"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -19598,7 +19598,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 105,215,34,207,255,7,217,248,36,126,45,94,46,242,64,124
+	.byte 63,129,167,106,184,52,180,219,178,16,247,88,221,129,199,86
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:
