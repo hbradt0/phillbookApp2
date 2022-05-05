@@ -10982,6 +10982,28 @@ Hello_MultiScreen_iPhone_HomeScreen2_ButtonyourstoryscreenUploadClick_object_Sys
 .word 0xd2800000
 .word 0xf90033a0
 .word 0xf90037a0
+.word 0xf9405b40
+.word 0xf90043a0
+.word 0xf9402741
+.word 0x910103a0
+.word 0xf9003ba0
+.word 0xaa0103e0
+.word 0x3940003e
+bl _p_15
+.word 0xf9403bbe
+.word 0xfd0003c0
+.word 0xfd0007c1
+.word 0xfd000bc2
+.word 0xfd000fc3
+.word 0xf94043a2
+.word 0xaa0203e0
+.word 0xfd4023a0
+.word 0xfd4027a1
+.word 0xfd402ba2
+.word 0xfd402fa3
+.word 0xd2800021
+.word 0x3940005e
+bl _p_81
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -11061,7 +11083,7 @@ ldr x0, [x16, #1640]
 .word 0xf9004ba0
 .word 0xeb1f001f
 .word 0x10000011
-.word 0x540014c0
+.word 0x54001100
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -11072,7 +11094,7 @@ bl _p_33
 .word 0xf9404ba1
 .word 0xeb1f003f
 .word 0x10000011
-.word 0x54001320
+.word 0x54000f60
 .word 0xd5033bbf
 .word 0xf94047a0
 .word 0xf9001001
@@ -11120,7 +11142,7 @@ ldr x1, [x16, #1888]
 .word 0xaa1a03e1
 .word 0x3940033e
 bl _p_61
-.word 0x1400006a
+.word 0x1400004c
 .word 0xf9402341
 .word 0xaa0103e0
 .word 0x3940003e
@@ -11138,7 +11160,7 @@ ldr x1, [x16, #448]
 bl _p_69
 .word 0x53001c01
 .word 0x53001c20
-.word 0x3901c3a1
+.word 0x3901e3a1
 .word 0x34000080
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -11193,44 +11215,14 @@ bl _p_68
 .word 0xf90037a0
 .word 0xf9402743
 .word 0xf94033a0
-.word 0xf9002ba0
+.word 0xf9001ba0
 .word 0xf94037a0
-.word 0xf9002fa0
+.word 0xf9001fa0
 .word 0xaa0303e0
-.word 0xf9402ba1
-.word 0xf9402fa2
+.word 0xf9401ba1
+.word 0xf9401fa2
 .word 0x3940007e
 bl _p_121
-bl _p_64
-.word 0xaa0003e1
-.word 0xaa0103e0
-.word 0x3940003e
-bl _p_65
-.word 0xd2800021
-bl _p_66
-.word 0x3904e75f
-.word 0xf9405b40
-.word 0xf90043a0
-.word 0xf9402741
-.word 0x9100c3a0
-.word 0xf9003fa0
-.word 0xaa0103e0
-.word 0x3940003e
-bl _p_15
-.word 0xf9403fbe
-.word 0xfd0003c0
-.word 0xfd0007c1
-.word 0xfd000bc2
-.word 0xfd000fc3
-.word 0xf94043a2
-.word 0xaa0203e0
-.word 0xfd401ba0
-.word 0xfd401fa1
-.word 0xfd4023a2
-.word 0xfd4027a3
-.word 0xd2800021
-.word 0x3940005e
-bl _p_81
 .word 0xa9416bb9
 .word 0x910003bf
 .word 0xa8cb7bfd
@@ -19504,7 +19496,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "3431581A-935E-4CFD-82D6-08FF56C80073"
+	.asciz "04D34C95-F09D-4F91-A145-FD344429DFAB"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -19598,7 +19590,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 63,129,167,106,184,52,180,219,178,16,247,88,221,129,199,86
+	.byte 113,51,218,78,71,131,188,236,173,62,108,196,212,8,35,87
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:
@@ -25217,7 +25209,7 @@ LDIFF_SYM836=LDIE_STRING - Ldebug_info_start
 
 LDIFF_SYM837=LDIE_BOOLEAN - Ldebug_info_start
 	.long LDIFF_SYM837
-	.byte 3,141,240,0,11
+	.byte 3,141,248,0,11
 	.asciz "V_5"
 
 LDIFF_SYM838=LDIE_BOOLEAN - Ldebug_info_start

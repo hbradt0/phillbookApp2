@@ -329,6 +329,7 @@ namespace Hello_MultiScreen_iPhone
         {
             //textViewWrite = new UITextView();
             //editTextWrite = new UITextField();
+            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
             if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName2))
             {
                 var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
@@ -362,9 +363,8 @@ namespace Hello_MultiScreen_iPhone
                     NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
                     this.textViewWrite.ScrollRangeToVisible(range);
                 }
-                UIApplication.SharedApplication.KeyWindow.EndEditing(true);
-                keyboardOpen = false;
-                scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
+                //UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+               // keyboardOpen = false;
                 //scrollView.ScrollRectToVisible(new CGRect(ResponsiveWidthLeft, 60, ResponsiveSizeX, 330), true);
             }
         }
