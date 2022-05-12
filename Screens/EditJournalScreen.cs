@@ -39,6 +39,7 @@ namespace Hello_MultiScreen_iPhone
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
+        public nfloat ResponsiveWidthRight = 300;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -57,8 +58,10 @@ namespace Hello_MultiScreen_iPhone
         //Read your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveWidthLeft = View.Frame.Width / 8;
             ResponsiveSizeX = View.Frame.Width - 40;
+            ResponsiveWidthRight = View.Frame.Width - 100;
+
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178,178,227);
             var user = new UIViewController();
@@ -97,7 +100,7 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(180, 540, 100, 30);
+            Button3.Frame = new CGRect(ResponsiveWidthRight, 540, 100, 30);
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
@@ -108,7 +111,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 380),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 400),
                 BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };

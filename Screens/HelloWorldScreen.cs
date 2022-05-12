@@ -39,6 +39,7 @@ namespace Hello_MultiScreen_iPhone
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
+        public nfloat ResponsiveWidthRight = 300;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -64,8 +65,9 @@ namespace Hello_MultiScreen_iPhone
         //Read your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveWidthLeft = View.Frame.Width / 8;
             ResponsiveSizeX = View.Frame.Width - 40;
+            ResponsiveWidthRight = View.Frame.Width - 100;
 
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
@@ -104,13 +106,13 @@ namespace Hello_MultiScreen_iPhone
             //Button3.Frame = new CGRect(175, 25, 150, 150);
             //Button3.SetTitle("Back", UIControlState.Normal);
 
-            hiddenbutton.Frame = new CGRect(200, 490, 100, 50);
+            hiddenbutton.Frame = new CGRect(ResponsiveWidthRight, 490, 100, 50);
             hiddenbutton.SetTitle("Submit", UIControlState.Normal);
             hiddenbutton.BackgroundColor = UIColor.Blue;
             hiddenbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
             hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            hiddenbuttoncode.Frame = new CGRect(20, 490, 170, 50);
+            hiddenbuttoncode.Frame = new CGRect(ResponsiveWidthLeft, 490, 170, 50);
             hiddenbuttoncode.AccessibilityHint = "type 'help'";
             hiddenbuttoncode.Text = "help";
             hiddenbuttoncode.BackgroundColor = UIColor.White;

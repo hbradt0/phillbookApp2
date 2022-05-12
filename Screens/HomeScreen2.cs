@@ -58,7 +58,7 @@ namespace Hello_MultiScreen_iPhone
         private bool keyboardOpen = false;
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
-
+        public nfloat ResponsiveWidthRight= 150;
 
         //loads the HomeScreen.xib file and connects it to this object
         public HomeScreen2 () : base ("HomeScreen2", null)
@@ -77,8 +77,10 @@ namespace Hello_MultiScreen_iPhone
         //Create your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveWidthLeft = View.Frame.Width / 8;
             ResponsiveSizeX = View.Frame.Width - 40;
+            ResponsiveWidthRight= View.Frame.Width - 150;
+                     
             //View issue
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.Purple;
@@ -124,21 +126,21 @@ namespace Hello_MultiScreen_iPhone
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
-            editTextDate.Frame = new CGRect(150, 500, 50, 30);
+            editTextDate.Frame = new CGRect(ResponsiveWidthRight, 500, 50, 30);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             ShareTodo.Frame = new CGRect(200, 500, 100, 30);
 
-            Buttonbackyourstory.Frame = new CGRect(150, 25, 70, 50);
+            Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25, 70, 50);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
-            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 450, 100, 30);
+            ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthLeft, 450, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(20, 500, 100, 30);
+            ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, 500, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(150, 450, 150, 30);
+            ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthRight, 450, 150, 30);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -256,7 +258,7 @@ namespace Hello_MultiScreen_iPhone
                 }
                 else
                 {
-                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 5;
                     ScrollTheView(true);
                     keyboardOpen = true;
                 }
@@ -279,7 +281,7 @@ namespace Hello_MultiScreen_iPhone
                 }
                 else
                 {
-                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 5;
                     ScrollTheView(false);
                     keyboardOpen = false;
                 }
@@ -329,7 +331,7 @@ namespace Hello_MultiScreen_iPhone
         {
             //textViewWrite = new UITextView();
             //editTextWrite = new UITextField();
-            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
+            //scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
             if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName2))
             {
                 var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
