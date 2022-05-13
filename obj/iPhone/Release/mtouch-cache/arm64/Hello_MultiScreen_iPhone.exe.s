@@ -7952,7 +7952,7 @@ bl _p_49
 .word 0x6b1f001f
 .word 0x9a9f17e0
 .word 0x53001c00
-.word 0x34000a00
+.word 0x34000a60
 .word 0xd280003e
 .word 0x3904633e
 .word 0xaa1a03e0
@@ -7996,7 +7996,7 @@ bl _p_15
 .word 0x9a9f17e0
 .word 0x53001c1a
 .word 0xaa1a03e0
-.word 0x35000480
+.word 0x350004e0
 .word 0x92800000
 .word 0xf2bfffe0
 .word 0x1e620000
@@ -8026,6 +8026,9 @@ bl _p_15
 .word 0x1e620002
 .word 0x1e621821
 .word 0x1e612800
+.word 0xd2800140
+.word 0x1e620001
+.word 0x1e613800
 .word 0xfd008320
 .word 0xaa1903e0
 .word 0xd2800021
@@ -8061,7 +8064,7 @@ Hello_MultiScreen_iPhone_HelloUniverseScreen_KeyboardWillHide_object_UIKit_UIKey
 .word 0xf90023a0
 .word 0x39446720
 .word 0x53001c00
-.word 0x340009c0
+.word 0x34000a20
 .word 0x3904633f
 .word 0xaa1a03e0
 .word 0x3940035e
@@ -8104,7 +8107,7 @@ bl _p_15
 .word 0x9a9f17e0
 .word 0x53001c1a
 .word 0xaa1a03e0
-.word 0x35000460
+.word 0x350004c0
 .word 0x92800000
 .word 0xf2bfffe0
 .word 0x1e620000
@@ -8134,6 +8137,9 @@ bl _p_15
 .word 0x1e620002
 .word 0x1e621821
 .word 0x1e612800
+.word 0xd2800140
+.word 0x1e620001
+.word 0x1e613800
 .word 0xfd008320
 .word 0xaa1903e0
 .word 0xd2800001
@@ -19896,7 +19902,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "25E5F2E3-E0AD-4E15-8D0A-A04C6E2279A8"
+	.asciz "08129E18-B7CE-452F-A7C1-1A674F743247"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -19990,7 +19996,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 5,33,236,126,242,218,189,135,174,240,145,172,50,28,90,89
+	.byte 199,183,52,26,68,112,36,19,96,49,116,108,29,216,252,222
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:

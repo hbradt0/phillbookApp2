@@ -275,7 +275,7 @@ namespace Hello_MultiScreen_iPhone
                 }
                 else
                 {
-                    scrollAmout = -1*(r.Top-editTextWrite.Frame.Bottom) + r.Height/4;
+                    scrollAmout = -1*(r.Top-editTextWrite.Frame.Bottom) + r.Height/4-10;
                     ScrollTheView(true);
                     keyboardOpen = true;
                 }
@@ -299,7 +299,7 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
 
-                        scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
+                        scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4-10;
                         ScrollTheView(false);
                         keyboardOpen = false;
                     
