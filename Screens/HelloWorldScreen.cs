@@ -92,7 +92,19 @@ namespace Hello_MultiScreen_iPhone
 
             // ViewController view1 = new ViewController();
             //if (null != p)
-            //    booktextView.y.Y = p;  
+            //    booktextView.y.Y = p;
+            var ButtonShare = new UIButton(UIButtonType.RoundedRect)
+            {
+
+                //Frame = UIScreen.MainScreen.Bounds,
+                BackgroundColor = UIColor.FromRGB(100, 149, 240)
+            };
+
+
+
+            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, 580, ResponsiveSizeX, 35);
+            ButtonShare.SetTitle("Share Journal", UIControlState.Normal);
+            ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
 
             //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
@@ -133,18 +145,22 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                //BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
-
+            ButtonShare.Layer.CornerRadius = 10;
+            curveRadius();
             //Add targets
             hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
+            ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
 
             //Add to view
             //scrollView.AddSubview(booktextView);
             scrollView.AddSubview(booktextView);
             scrollView.Add(hiddenbutton);
+            scrollView.Add(ButtonShare);
             scrollView.Add(hiddenbuttoncode);
             scrollView.Add(Button3);
             View.AddSubview(scrollView);//ps
@@ -155,6 +171,23 @@ namespace Hello_MultiScreen_iPhone
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
 
 
+        }
+
+        public void curveRadius()
+        {
+            hiddenbutton.Layer.CornerRadius = 10;
+            Button3.Layer.CornerRadius = 10;
+        }
+
+
+        void ShareButtonClick(object sender, EventArgs eventArgs)
+        {
+            String txt2 = "\n Your story: \n" + EmailFileRead.ReadText();
+            var item = NSObject.FromObject(txt2);
+            var activityItems = new NSObject[] { item };
+            UIActivity[] applicationActivities = null;
+            var activityController = new UIActivityViewController(activityItems, applicationActivities);
+            PresentViewController(activityController, true, null);
         }
 
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)

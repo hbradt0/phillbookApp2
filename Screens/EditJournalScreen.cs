@@ -105,14 +105,14 @@ namespace Hello_MultiScreen_iPhone
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             Button3.SetTitleColor(UIColor.White, UIControlState.Normal);
-
+            Button3.Layer.CornerRadius = 10;
 
             //ScrollView
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 400),
-                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                BackgroundColor = UIColor.FromRGB(204, 204, 255),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 

@@ -188,11 +188,12 @@ namespace Hello_MultiScreen_iPhone
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height/2+300),
-                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height/3+300),
+                BackgroundColor = UIColor.FromRGB(204, 204, 255),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
             scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
+            curveRadius();
             borderFunction();
             //On click Events
 
@@ -223,6 +224,16 @@ namespace Hello_MultiScreen_iPhone
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
 
 
+        }
+
+        public void curveRadius()
+        {
+            ButtonDateClick.Layer.CornerRadius = 10;
+            ButtonyourstoryscreenUpload.Layer.CornerRadius = 10;
+            Buttonbackyourstory.Layer.CornerRadius = 10;
+            ButtonDelete.Layer.CornerRadius = 10;
+            ButtonDelete1Line.Layer.CornerRadius = 10;
+            EditJournalButton.Layer.CornerRadius = 10;
         }
 
         public void borderFunction()

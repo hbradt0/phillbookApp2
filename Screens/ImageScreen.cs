@@ -129,10 +129,10 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                BackgroundColor = UIColor.FromRGB(204, 204, 255),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
-
+            curveRadius();
             //Button clicks
             ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
@@ -155,8 +155,15 @@ namespace Hello_MultiScreen_iPhone
             View.AddSubview(scrollView);//ps
 
         }
-
-
+        public void curveRadius()
+        {
+            ImagePickerButton.Layer.CornerRadius = 10;
+            ButtonDateClick.Layer.CornerRadius = 10;
+            CameraButton.Layer.CornerRadius = 10;
+            BackgroundImage.Layer.CornerRadius = 10;
+            ButtonDelete1Line.Layer.CornerRadius = 10;
+            ButtonDelete.Layer.CornerRadius = 10;
+        }
 
         public void BackgroundImageShow(object sender, EventArgs eventArgs)
         {

@@ -184,11 +184,12 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                BackgroundColor = UIColor.FromRGB(204, 204, 255),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 
             borderFunction();
+            curveRadius();
             //On click Events
             //ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
 
@@ -218,7 +219,15 @@ namespace Hello_MultiScreen_iPhone
 
 
         }
-        
+
+        public void curveRadius()
+        {
+            ButtonyourstoryscreenUpload.Layer.CornerRadius = 10;
+            Buttonbackyourstory.Layer.CornerRadius = 10;
+            ButtonDelete.Layer.CornerRadius = 10;
+            ButtonDelete1Line.Layer.CornerRadius = 10;
+        }
+
         public void borderFunction()
         {
             List<CALayer> li = new List<CALayer>();

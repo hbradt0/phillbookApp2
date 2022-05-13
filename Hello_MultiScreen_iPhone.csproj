@@ -158,6 +158,7 @@
     <BundleResource Include="Resources\alert.jpg" />
     <BundleResource Include="Resources\MainTitlePic.png" />
     <BundleResource Include="Resources\TestPic.png" />
+    <BundleResource Include="Resources\pinkflower.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\iTunesArtwork.png" />
