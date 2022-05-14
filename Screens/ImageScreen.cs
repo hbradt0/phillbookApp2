@@ -25,6 +25,10 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonDelete1Line;
         public UIImagePickerController pickerView;
         public UIButton CameraButton;
+        public UIButton BackgroundImage2;
+        public UIButton BackgroundImage3;
+        public UIButton BackgroundImage4;
+        public int i = 0;
 
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
@@ -57,7 +61,9 @@ namespace Hello_MultiScreen_iPhone
             ImagePickerButton = new UIButton(UIButtonType.System);
             CameraButton = new UIButton(UIButtonType.System);
             BackgroundImage = new UIButton(UIButtonType.System);
-
+            BackgroundImage2 = new UIButton(UIButtonType.System);
+            BackgroundImage3 = new UIButton(UIButtonType.System);
+            BackgroundImage4 = new UIButton(UIButtonType.System);
 
             UIScrollView scrollView = new UIScrollView();
             dateTimeText = new UIDatePicker(new CGRect(ResponsiveWidthRight, 80, 100, 30
@@ -72,10 +78,9 @@ namespace Hello_MultiScreen_iPhone
 
             ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ImagePickerButton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ImagePickerButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
-
-            ImagePickerButton.Frame = new CGRect(ResponsiveWidthLeft, 500, 100, 30);
-            ImagePickerButton.SetTitle("Upload", UIControlState.Normal);
+            ImagePickerButton.SetBackgroundImage(UIImage.FromBundle("gallery.png"), UIControlState.Normal);
+            ImagePickerButton.Frame = new CGRect(ResponsiveWidthLeft+60, 420, 50, 50);
+            //ImagePickerButton.SetTitle("Upload", UIControlState.Normal);
 
 
             dateTimeText.AccessibilityHint = "Today's date";
@@ -93,13 +98,13 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
-            ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, 550, 100, 30);
-            ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
+            ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
+            ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, 500, 100, 30);
             ButtonDelete1Line.SetTitle("Delete", UIControlState.Normal);
 
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight, 440, 100, 30);
+            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight, 420, 100, 30); 
             ButtonDateClick.SetTitle("Share", UIControlState.Normal);
 
             UIImage img2 = new UIImage();
@@ -115,14 +120,31 @@ namespace Hello_MultiScreen_iPhone
             //textViewWrite.Frame = ;//new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, (float)View.Frame.Width - 20, (float)View.Frame.Width - 20);
 
             CameraButton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            CameraButton.BackgroundColor = UIColor.SystemTeal;
-            CameraButton.Frame = new CGRect(ResponsiveWidthLeft, 440, 100, 30);
-            CameraButton.SetTitle("Camera", UIControlState.Normal);
+            CameraButton.SetBackgroundImage(UIImage.FromBundle("camera.png"), UIControlState.Normal);
+            CameraButton.Frame = new CGRect(ResponsiveWidthLeft, 420, 50, 50);
+            //CameraButton.SetTitle("Camera", UIControlState.Normal);
 
             BackgroundImage.SetTitleColor(UIColor.White, UIControlState.Normal);
             BackgroundImage.BackgroundColor = UIColor.SystemTeal;
-            BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
+            BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, 620, 100, 30);
             BackgroundImage.SetTitle("Home Image", UIControlState.Normal);
+
+            BackgroundImage3.SetTitleColor(UIColor.White, UIControlState.Normal);
+            BackgroundImage3.BackgroundColor = UIColor.SystemTeal;
+            BackgroundImage3.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
+            BackgroundImage3.SetTitle("Flower Image", UIControlState.Normal);
+
+            BackgroundImage4.SetTitleColor(UIColor.White, UIControlState.Normal);
+            BackgroundImage4.BackgroundColor = UIColor.SystemTeal;
+            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 620, 100, 30);
+            BackgroundImage4.SetTitle("Toggle Title", UIControlState.Normal);
+
+            UIImage img4 = new UIImage();
+            img4 = UIImage.FromBundle("pinkflower.png");
+            BackgroundImage2.SetBackgroundImage(img4, UIControlState.Normal);
+            BackgroundImage2.SetTitle("Home", UIControlState.Normal);
+            BackgroundImage2.SetTitleColor(UIColor.White, UIControlState.Normal);
+            BackgroundImage2.Frame =  new CGRect(ResponsiveWidthLeft, 550, 60, 60);
 
             //ScrollView
             scrollView = new UIScrollView
@@ -141,6 +163,13 @@ namespace Hello_MultiScreen_iPhone
             ImagePickerButton.AddTarget(ButtonPickImageClick, UIControlEvent.TouchUpInside);
             CameraButton.AddTarget(openCamera, UIControlEvent.TouchUpInside);
             BackgroundImage.AddTarget(BackgroundImageShow, UIControlEvent.TouchUpInside);
+            BackgroundImage2.AddTarget(ShowBGOptions, UIControlEvent.TouchUpInside);
+            BackgroundImage3.AddTarget(BackgroundImageShow3, UIControlEvent.TouchUpInside);
+            BackgroundImage4.AddTarget(BackgroundImageShow4, UIControlEvent.TouchUpInside);
+
+            BackgroundImage.Hidden = true;
+            BackgroundImage3.Hidden = true;
+            BackgroundImage4.Hidden = true;
             //disable this doesn't crash
 
             //Add to View
@@ -152,6 +181,9 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(dateTimeText);
             scrollView.Add(CameraButton);
             scrollView.Add(BackgroundImage);
+            scrollView.Add(BackgroundImage2);
+            scrollView.Add(BackgroundImage3);
+            scrollView.Add(BackgroundImage4);
             View.AddSubview(scrollView);//ps
 
         }
@@ -161,8 +193,53 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick.Layer.CornerRadius = 10;
             CameraButton.Layer.CornerRadius = 10;
             BackgroundImage.Layer.CornerRadius = 10;
+            BackgroundImage3.Layer.CornerRadius = 10;
+            BackgroundImage4.Layer.CornerRadius = 10;
             ButtonDelete1Line.Layer.CornerRadius = 10;
             ButtonDelete.Layer.CornerRadius = 10;
+        }
+
+        public void ShowBGOptions(object sender, EventArgs eventArgs)
+        {
+            if (BackgroundImage.Hidden && BackgroundImage3.Hidden && BackgroundImage4.Hidden)
+            {
+                BackgroundImage.Hidden = false;
+                BackgroundImage3.Hidden = false;
+                BackgroundImage4.Hidden = false;
+            }
+            else
+            {
+                BackgroundImage.Hidden = true;
+                BackgroundImage3.Hidden = true;
+                BackgroundImage4.Hidden = true;
+            }
+        }
+
+        public void BackgroundImageShow4(object sender, EventArgs eventArgs)
+        {
+            var Confirm = new UIAlertView("Confirmation", "Change title on main page", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    if (i == 1)
+                    {
+                        EmailFileRead.fileNameImage1 = "MainTitlePic1.png";
+                        i = 0;
+                    }
+                    else
+                    {
+                        EmailFileRead.fileNameImage1 = "MainTitlePic.png";
+                         i = 1;
+                    }
+                }
+            };
+                
         }
 
         public void BackgroundImageShow(object sender, EventArgs eventArgs)
@@ -182,10 +259,28 @@ namespace Hello_MultiScreen_iPhone
                     myDate = myDate.ToLocalTime();
                     String file = myDate.ToString("MMddyyyy");
                     String fileName = EmailFileRead.GetImageFileName(myDate);
-                    EmailFileRead.FileCopyToImageFile(fileName,EmailFileRead.fileNameImage);
+                    EmailFileRead.FileCopyToImageFile(fileName, EmailFileRead.fileNameImage);
                 }
             };
-                
+
+        }
+
+        public void BackgroundImageShow3(object sender, EventArgs eventArgs)
+        {
+            var Confirm = new UIAlertView("Confirmation", "Reset flower image main page", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    EmailFileRead.DeleteFile(EmailFileRead.fileNameImage);
+                }
+            };
+
         }
 
         public void ButtonDateClickEnd(object sender, EventArgs eventArgs)
@@ -480,6 +575,9 @@ namespace Hello_MultiScreen_iPhone
 
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
+            BackgroundImage.Hidden = true;
+            BackgroundImage3.Hidden = true;
+            BackgroundImage4.Hidden = true;
 
         }
 

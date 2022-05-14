@@ -27,7 +27,7 @@ namespace EmailReader //rename
         public static string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo.txt");
         public static string srcFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public static string fileNameImage = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "background.jpg");
-
+        public static string fileNameImage1 = "MainTitlePic1.png";
 
 
         public static String ReadText(String fileName = "")
@@ -67,6 +67,14 @@ namespace EmailReader //rename
             {
                 return false;
             }
+        }
+
+        public static void DeleteFile(String fileName = "")
+        {
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }            
         }
 
         public static void FileCopyToImageName(String fileName = "")
