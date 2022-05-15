@@ -136,7 +136,7 @@ namespace Hello_MultiScreen_iPhone
             };
             imageViewTitle = new UIImageView();
       
-            imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft, 60 - 30, ResponsiveSizeX, 70);
+            imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft, 60 - 35, ResponsiveSizeX, 75);
 
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);

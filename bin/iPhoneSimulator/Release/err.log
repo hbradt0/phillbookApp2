@@ -1,8 +1,8 @@
-objc[77490]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/7D4D89BA-B089-4A8F-B787-169AAF041603/data/Containers/Bundle/Application/5A81A6B1-326D-47B5-A8E9-FDB91C835C68/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x106917438). One of the two will be used. Which one is undefined.
+objc[80798]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/51885B3D-69C0-497E-8045-F972DC02D177/data/Containers/Bundle/Application/B02DD39D-8A6D-425B-B216-A55D8684EB67/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x1057b6438). One of the two will be used. Which one is undefined.
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2022-05-15 10:53:17.052344-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=77490
-2022-05-15 10:53:17.052686-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskCopyDebugDescription: Hello_MultiScree[77490]/0#-1 LF=0
-2022-05-15 10:53:17.059171-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=77490
-2022-05-15 10:53:17.059479-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskCopyDebugDescription: Hello_MultiScree[77490]/0#-1 LF=0
-2022-05-15 10:53:17.151058-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=77490
-2022-05-15 10:53:17.151316-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskCopyDebugDescription: Hello_MultiScree[77490]/0#-1 LF=0
+2022-05-15 15:12:53.572148-0700 Hello_MultiScreen_iPhone[80798:9560847] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=80798
+2022-05-15 15:12:53.572521-0700 Hello_MultiScreen_iPhone[80798:9560847] SecTaskCopyDebugDescription: Hello_MultiScree[80798]/0#-1 LF=0
+2022-05-15 15:12:53.580606-0700 Hello_MultiScreen_iPhone[80798:9560847] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=80798
+2022-05-15 15:12:53.581113-0700 Hello_MultiScreen_iPhone[80798:9560847] SecTaskCopyDebugDescription: Hello_MultiScree[80798]/0#-1 LF=0
+2022-05-15 15:12:53.703736-0700 Hello_MultiScreen_iPhone[80798:9560847] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=80798
+2022-05-15 15:12:53.704076-0700 Hello_MultiScreen_iPhone[80798:9560847] SecTaskCopyDebugDescription: Hello_MultiScree[80798]/0#-1 LF=0
