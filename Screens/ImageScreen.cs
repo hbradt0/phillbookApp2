@@ -131,13 +131,16 @@ namespace Hello_MultiScreen_iPhone
 
             BackgroundImage3.SetTitleColor(UIColor.White, UIControlState.Normal);
             BackgroundImage3.BackgroundColor = UIColor.SystemTeal;
-            BackgroundImage3.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
-            BackgroundImage3.SetTitle("Flower Image", UIControlState.Normal);
+            BackgroundImage3.Frame = new CGRect(ResponsiveWidthRight, 550, 60, 60);
+            BackgroundImage3.SetBackgroundImage(UIImage.FromBundle("TestPic.png"), UIControlState.Normal);
+            //BackgroundImage3.SetTitle("Flower Image", UIControlState.Normal);
 
             BackgroundImage4.SetTitleColor(UIColor.White, UIControlState.Normal);
-            BackgroundImage4.BackgroundColor = UIColor.SystemTeal;
+            UIImage imgtitle = new UIImage();
+            imgtitle = UIImage.FromFile(EmailFileRead.fileNameImage1);
+            BackgroundImage4.SetBackgroundImage(imgtitle, UIControlState.Normal);
             BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 620, 100, 30);
-            BackgroundImage4.SetTitle("Toggle Title", UIControlState.Normal);
+            //BackgroundImage4.SetTitle("Toggle Title", UIControlState.Normal);
 
             UIImage img4 = new UIImage();
             img4 = UIImage.FromBundle("pinkflower.png");
@@ -217,29 +220,22 @@ namespace Hello_MultiScreen_iPhone
 
         public void BackgroundImageShow4(object sender, EventArgs eventArgs)
         {
-            var Confirm = new UIAlertView("Confirmation", "Change title on main page", null, "Cancel", "Yes");
-            Confirm.Show();
-            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+  
+            if (i == 1)
             {
-                if (es.ButtonIndex == 0)
-                {
-                    //Do nothing
-                }
-                else
-                {
-                    if (i == 1)
-                    {
-                        EmailFileRead.fileNameImage1 = "MainTitlePic1.png";
-                        i = 0;
-                    }
-                    else
-                    {
-                        EmailFileRead.fileNameImage1 = "MainTitlePic.png";
-                         i = 1;
-                    }
-                }
-            };
-                
+                EmailFileRead.fileNameImage1 = "MainTitlePic1.png";
+                i = 0;
+            }
+            else
+            {
+                EmailFileRead.fileNameImage1 = "MainTitlePic.png";
+                    i = 1;
+            }
+            BackgroundImage4.SetTitleColor(UIColor.White, UIControlState.Normal);
+            UIImage imgtitle = new UIImage();
+            imgtitle = UIImage.FromFile(EmailFileRead.fileNameImage1);
+            BackgroundImage4.SetBackgroundImage(imgtitle, UIControlState.Normal);
+            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 620, 100, 30);  
         }
 
         public void BackgroundImageShow(object sender, EventArgs eventArgs)

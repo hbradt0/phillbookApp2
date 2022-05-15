@@ -1,11 +1,8 @@
-objc[70776]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/7D4D89BA-B089-4A8F-B787-169AAF041603/data/Containers/Bundle/Application/9BF1C084-5F4A-4865-9B9E-4C616734BB84/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x10d816438). One of the two will be used. Which one is undefined.
+objc[77490]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/7D4D89BA-B089-4A8F-B787-169AAF041603/data/Containers/Bundle/Application/5A81A6B1-326D-47B5-A8E9-FDB91C835C68/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x106917438). One of the two will be used. Which one is undefined.
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2022-05-14 16:22:48.046159-0700 Hello_MultiScreen_iPhone[70776:9102876] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=70776
-2022-05-14 16:22:48.046410-0700 Hello_MultiScreen_iPhone[70776:9102876] SecTaskCopyDebugDescription: Hello_MultiScree[70776]/0#-1 LF=0
-2022-05-14 16:22:48.052160-0700 Hello_MultiScreen_iPhone[70776:9102876] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=70776
-2022-05-14 16:22:48.052411-0700 Hello_MultiScreen_iPhone[70776:9102876] SecTaskCopyDebugDescription: Hello_MultiScree[70776]/0#-1 LF=0
-2022-05-14 16:22:48.146499-0700 Hello_MultiScreen_iPhone[70776:9102876] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=70776
-2022-05-14 16:22:48.146777-0700 Hello_MultiScreen_iPhone[70776:9102876] SecTaskCopyDebugDescription: Hello_MultiScree[70776]/0#-1 LF=0
-2022-05-14 16:23:11.718003-0700 Hello_MultiScreen_iPhone[70776:9102876] [unspecified] container_system_group_path_for_identifier: error = ((container_error_t)98) NOT_CODESIGNED
-2022-05-14 16:23:11.718187-0700 Hello_MultiScreen_iPhone[70776:9102876] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 98
-2022-05-14 16:23:11.718518-0700 Hello_MultiScreen_iPhone[70776:9102876] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/psargent/Library/Developer/CoreSimulator/Devices/7D4D89BA-B089-4A8F-B787-169AAF041603/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2022-05-15 10:53:17.052344-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=77490
+2022-05-15 10:53:17.052686-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskCopyDebugDescription: Hello_MultiScree[77490]/0#-1 LF=0
+2022-05-15 10:53:17.059171-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=77490
+2022-05-15 10:53:17.059479-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskCopyDebugDescription: Hello_MultiScree[77490]/0#-1 LF=0
+2022-05-15 10:53:17.151058-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=77490
+2022-05-15 10:53:17.151316-0700 Hello_MultiScreen_iPhone[77490:9426874] SecTaskCopyDebugDescription: Hello_MultiScree[77490]/0#-1 LF=0

@@ -35,3 +35,6 @@
 /Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe
 /Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/pinkflower.png
+/Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/gallery.png
+/Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/MainTitlePic1.png
+/Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/camera.png
