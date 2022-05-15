@@ -9,6 +9,10 @@
       <Optimize>false</Optimize>
       <LogicalName>HelloWorldScreen.nib</LogicalName>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhone/Release/ibtool/LaunchScreen.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>LaunchScreen.nib</LogicalName>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhone/Release/ibtool/EditJournalScreen.nib">
       <Optimize>false</Optimize>
       <LogicalName>EditJournalScreen.nib</LogicalName>

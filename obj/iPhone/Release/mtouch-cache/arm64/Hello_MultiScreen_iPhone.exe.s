@@ -2788,10 +2788,10 @@ ldr x2, [x16, #16]
 .word 0xf9406f40
 .word 0xf9012fa0
 .word 0xfd408740
-.word 0xd28003c0
+.word 0xd2800320
 .word 0x1e620001
 .word 0xfd408b42
-.word 0xd28008c0
+.word 0xd2800960
 .word 0x1e620003
 .word 0xd2800000
 .word 0xf900b3a0
@@ -20575,7 +20575,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "E746BEBE-F820-45DB-B697-7C3B3E588EAA"
+	.asciz "52AB0A58-21A3-48B4-8F19-5B9DC75070E1"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -20669,7 +20669,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 120,177,231,120,33,226,222,33,127,40,96,127,172,63,250,96
+	.byte 175,225,173,22,157,66,215,214,25,240,35,116,22,242,27,194
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:
