@@ -76,7 +76,7 @@ namespace Hello_MultiScreen_iPhone
             //Buttons and edit properties
             textViewWrite.BackgroundColor = UIColor.White;
 
-            ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ImagePickerButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             ImagePickerButton.SetBackgroundImage(UIImage.FromBundle("gallery.png"), UIControlState.Normal);
             ImagePickerButton.Frame = new CGRect(ResponsiveWidthLeft+60, 420, 50, 50);
@@ -104,8 +104,8 @@ namespace Hello_MultiScreen_iPhone
 
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight, 420, 100, 30); 
-            ButtonDateClick.SetTitle("Share", UIControlState.Normal);
+            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight+20, 420, 50, 50); 
+            ButtonDateClick.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             UIImage img2 = new UIImage();
 

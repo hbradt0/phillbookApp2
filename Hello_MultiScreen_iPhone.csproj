@@ -216,6 +216,7 @@
     <BundleResource Include="Resources\Reflections2.txt" />
     <BundleResource Include="Resources\TestPic.png" />
     <BundleResource Include="Resources\Untitled.png" />
+    <BundleResource Include="Resources\mailicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

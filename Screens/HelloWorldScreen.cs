@@ -40,6 +40,8 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveWidthRight = 300;
+        public UIButton ShareTodo;
+        public UITextField editTextDate;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -84,7 +86,7 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton = new UIButton(UIButtonType.System);
             hiddenbuttoncode = new UITextField();
 
-            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 410);
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 100, ResponsiveSizeX, 410);
             //scrollView.BackgroundColor = UIColor.SystemPink;
 
             var plist = NSUserDefaults.StandardUserDefaults;
@@ -97,14 +99,42 @@ namespace Hello_MultiScreen_iPhone
             {
 
                 //Frame = UIScreen.MainScreen.Bounds,
-                BackgroundColor = UIColor.FromRGB(100, 149, 240)
+                BackgroundColor = UIColor.FromRGB(204, 204, 255)
             };
 
+            editTextDate = new UITextField();
+            ShareTodo = new UIButton(UIButtonType.System);
+
+            ShareTodo.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ShareTodo.BackgroundColor = UIColor.SystemTeal;
+            //ShareTodo.SetTitle("Share", UIControlState.Normal);
+            ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
+
+            editTextDate.BackgroundColor = UIColor.White;
+            editTextDate.TextColor = UIColor.Purple;
+            editTextDate.AccessibilityHint = "0 (days)";
+            editTextDate.Text = "0";
+            //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
+
+            //exit keyboard
+            editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
+            editTextDate.Frame = new CGRect(ResponsiveWidthRight-60, 580, 35, 35);
+            //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+
+            var sta = new UITextView();
+            sta.Editable = false;
+            sta.TextColor = UIColor.Purple;
+            sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, 35);
+            sta.Text = "Days Prior";
+            sta.BackgroundColor = UIColor.White;
+
+            ShareTodo.Frame = new CGRect(sta.Frame.Right+5, 580, 35, 35);
 
 
-            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, 580, ResponsiveSizeX, 35);
-            ButtonShare.SetTitle("Share Journal", UIControlState.Normal);
+            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, 580, 35, 35);
+            //ButtonShare.SetTitle("Share Journal", UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonShare.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
@@ -118,13 +148,13 @@ namespace Hello_MultiScreen_iPhone
             //Button3.Frame = new CGRect(175, 25, 150, 150);
             //Button3.SetTitle("Back", UIControlState.Normal);
 
-            hiddenbutton.Frame = new CGRect(ResponsiveWidthRight, 490, 100, 50);
+            hiddenbutton.Frame = new CGRect(ResponsiveWidthRight, 520, 100, 30);
             hiddenbutton.SetTitle("Submit", UIControlState.Normal);
             hiddenbutton.BackgroundColor = UIColor.Blue;
             hiddenbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 240);
 
-            hiddenbuttoncode.Frame = new CGRect(ResponsiveWidthLeft, 490, 170, 50);
+            hiddenbuttoncode.Frame = new CGRect(ResponsiveWidthLeft, 520, 170, 30);
             hiddenbuttoncode.AccessibilityHint = "type 'help'";
             hiddenbuttoncode.Text = "help";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
@@ -155,7 +185,12 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
+            ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
 
+
+            scrollView.Add(ShareTodo);
+            scrollView.Add(editTextDate);
+            scrollView.Add(sta);
             //Add to view
             //scrollView.AddSubview(booktextView);
             scrollView.AddSubview(booktextView);
@@ -171,6 +206,20 @@ namespace Hello_MultiScreen_iPhone
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
 
 
+        }
+
+        private void ButtonShareClick(object sender, EventArgs eventArgs)
+        {
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
+            int i = 0;
+            Int32.TryParse(editTextDate.Text, out i);
+            String txt2 = EmailReader.EmailFileRead.ReadFileFromDate(EmailFileRead.fileName1, i);
+            var item = NSObject.FromObject(txt2);
+            var activityItems = new NSObject[] { item };
+            UIActivity[] applicationActivities = null;
+            var activityController = new UIActivityViewController(activityItems, applicationActivities);
+            PresentViewController(activityController, true, null);
         }
 
         public void curveRadius()

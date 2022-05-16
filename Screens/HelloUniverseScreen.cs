@@ -80,10 +80,10 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             scrollView = new UIScrollView();
-            dateTimeText = new UIDatePicker(new CGRect(ResponsiveWidthLeft-10, 538, 100, 30
+            dateTimeText = new UIDatePicker(new CGRect(ResponsiveWidthLeft-15, 538, 100, 30
 
              ));
-            dateTimeText.Frame = new CGRect(ResponsiveWidthLeft-10, 538, 100, 30
+            dateTimeText.Frame = new CGRect(ResponsiveWidthLeft-15, 538, 100, 30
              );
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
@@ -92,7 +92,7 @@ namespace Hello_MultiScreen_iPhone
             EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             EditJournalButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            EditJournalButton.Frame = new CGRect(ResponsiveWidthRight, 588, 100, 30);
+            EditJournalButton.Frame = new CGRect(ResponsiveWidthRight, 538, 100, 30);
             EditJournalButton.SetTitle("Edit Journal", UIControlState.Normal);
 
             //var textTitle = new UITextView();
@@ -115,7 +115,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete.BackgroundColor = UIColor.FromRGB(240, 137, 171);
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
-            ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             //exit keyboard
             var gestureToCloseKeyboard = new UITapGestureRecognizer(() => View.EndEditing(true));
@@ -151,8 +151,8 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, 588, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthRight-50, 488, 150, 30);
-            ButtonDelete1Line.SetTitle("Delete Previous Line", UIControlState.Normal);
+            ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthRight, 488, 100, 30);
+            ButtonDelete1Line.SetTitle("Delete Line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
             editTextWrite.BackgroundColor = UIColor.White;
@@ -171,8 +171,9 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.MaximumDate = currentDate;
             
 
-            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight, 538, 100, 30);
-            ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
+            ButtonDateClick.Frame = new CGRect(dateTimeText.Frame.Right, 538, 30, 30);
+            //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
+            ButtonDateClick.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top+100, ResponsiveSizeX, 310);
 

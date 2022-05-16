@@ -51,3 +51,4 @@
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/ic80.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/ic87.png
 /Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/Untitled.png
+/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Release/optimized/mailicon.png

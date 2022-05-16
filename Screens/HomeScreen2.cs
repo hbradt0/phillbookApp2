@@ -112,10 +112,11 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
             ShareTodo.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ShareTodo.BackgroundColor = UIColor.SystemTeal;
-            ShareTodo.SetTitle("Share",UIControlState.Normal);
+            //ShareTodo.BackgroundColor = UIColor.SystemTeal;
+            //ShareTodo.SetTitle("Share",UIControlState.Normal);
+            ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
             editTextDate.BackgroundColor = UIColor.White;
-            editTextDate.TextColor = UIColor.SystemTeal;
+            editTextDate.TextColor = UIColor.Purple;
             editTextDate.AccessibilityHint = "0 (days)";
             editTextDate.Text = "0";
             //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
@@ -126,12 +127,11 @@ namespace Hello_MultiScreen_iPhone
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
-            editTextDate.Frame = new CGRect(ResponsiveWidthRight, 500, 50, 30);
+            editTextDate.Frame = new CGRect(ResponsiveWidthRight+10, 500, 30, 30);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
-            ShareTodo.Frame = new CGRect(200, 500, 100, 30);
 
-            Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25, 70, 50);
+            Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25, 70, 30);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
 
             ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthLeft, 450, 100, 30);
@@ -192,6 +192,14 @@ namespace Hello_MultiScreen_iPhone
             curveRadius();
             //On click Events
             //ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
+            var sta = new UITextView();
+            sta.Editable = false;
+            sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
+            sta.Text = "Days Prior";
+            sta.TextColor = UIColor.Purple;
+            sta.BackgroundColor = UIColor.White;
+
+            ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
 
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
@@ -203,6 +211,7 @@ namespace Hello_MultiScreen_iPhone
             //View.Add(ButtonDateClick);
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(ButtonyourstoryscreenUpload);
+            scrollView.Add(sta);
             scrollView.Add(ButtonDelete1Line);
             scrollView.Add(ButtonDelete);
             scrollView.Add(editTextDate);
