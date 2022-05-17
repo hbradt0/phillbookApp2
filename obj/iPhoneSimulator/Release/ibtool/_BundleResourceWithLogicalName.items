@@ -5,9 +5,17 @@
       <Optimize>false</Optimize>
       <LogicalName>ImageScreen.nib</LogicalName>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool/StoryScreen.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>StoryScreen.nib</LogicalName>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool/HelloWorldScreen.nib">
       <Optimize>false</Optimize>
       <LogicalName>HelloWorldScreen.nib</LogicalName>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool/LaunchScreen.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>LaunchScreen.nib</LogicalName>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Release/ibtool/EditJournalScreen.nib">
       <Optimize>false</Optimize>

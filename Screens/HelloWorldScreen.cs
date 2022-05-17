@@ -24,6 +24,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton Buttonyourstoryscreen;
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
+        public UITextView codes;
 
         public UIImage imageView;
         public UIView View1;
@@ -50,6 +51,8 @@ namespace Hello_MultiScreen_iPhone
         private UIViewAnimationCurve animCurve;
         private bool keyboardShowing;
         private bool keyboardOpen = false;
+
+        public StoryScreen storyScreen;
 
         //loads the HelloWorldScreen.xib file and connects it to this object
         public HelloWorldScreen() : base("HelloWorldScreen", null)
@@ -106,7 +109,7 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo = new UIButton(UIButtonType.System);
 
             ShareTodo.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ShareTodo.BackgroundColor = UIColor.SystemTeal;
+            //ShareTodo.BackgroundColor = UIColor.SystemTeal;
             //ShareTodo.SetTitle("Share", UIControlState.Normal);
             ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
@@ -127,6 +130,13 @@ namespace Hello_MultiScreen_iPhone
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, 35);
             sta.Text = "Days Prior";
             sta.BackgroundColor = UIColor.White;
+
+            codes = new UITextView();
+            codes.Editable = false;
+            codes.TextColor = UIColor.Blue;
+            codes.Frame = new CGRect(ResponsiveWidthLeft, 625, 100, 50);
+            codes.Text = "Unlocked Code!!";
+            codes.BackgroundColor = UIColor.White;
 
             ShareTodo.Frame = new CGRect(sta.Frame.Right+5, 580, 35, 35);
 
@@ -174,7 +184,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height / 3 + 300),
                 BackgroundColor = UIColor.FromRGB(204, 204, 255),
                 //BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
@@ -187,7 +197,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
 
-
+            scrollView.Add(codes);
             scrollView.Add(ShareTodo);
             scrollView.Add(editTextDate);
             scrollView.Add(sta);
@@ -326,22 +336,15 @@ namespace Hello_MultiScreen_iPhone
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
             String str = hiddenbuttoncode.Text;
-            if (str == "secret_code")
+           
+            if (str.ToLower() == "strcode1" || str.ToLower() == "strcodex50" ||
+                str.ToLower() == "strcodexx10" || str.ToLower().Contains("stockhelm")
+                || str.ToLower() == "strcodea100" || str.ToLower() == "help" || str.ToLower() == "secret_code")
             {
-                booktextView.Text = "Enter your email to begin your story!";
-                var v = NSBundle.MainBundle.PathForResource("Halbook", "txt");
-                var text1 = EmailFileRead.ReadText(v);
-                booktextView.Text = text1;
-                //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
-            }
-            else if (str.ToLower() == "help")
-            {
-                booktextView.Text = "Enter your email to begin your story!";
-                var v = NSBundle.MainBundle.PathForResource("Reflections2", "txt");
-                var text1 = EmailFileRead.ReadText(v);
-
-                booktextView.Text = text1;
-                // HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
+                EmailFileRead.code = str.ToLower();
+                //back to home screen
+                if (this.storyScreen == null) { this.storyScreen = new StoryScreen(); }
+                this.NavigationController.PushViewController(this.storyScreen, true);
             }
             else
             {
@@ -349,17 +352,6 @@ namespace Hello_MultiScreen_iPhone
             }
 
         }
-
-        /*
-        private void Button3Click(object sender, EventArgs eventArgs)
-        {
-            SecondController secondController = this.Storyboard.InstantiateViewController("SecondController ") as SecondController;
-            if (secondController != null)
-            {
-                this.PushViewController(secondController, true);
-            }
-        }
-        */
 
         public override void DidReceiveMemoryWarning()
         {
@@ -374,6 +366,25 @@ namespace Hello_MultiScreen_iPhone
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
             scrollView.ScrollRectToVisible(booktextView.Frame, true);
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 1) && !codes.Text.Contains("strcode1"))
+            {
+                //edit
+                codes.Text = codes.Text + "\nstrcode1";
+            }
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 10) && !codes.Text.Contains("strcodexx10"))
+            {
+                //edit
+                codes.Text = codes.Text + "\nstrcodexx10";
+            }
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 25) && !codes.Text.Contains("strcodex50"))
+            {
+                //edit
+                codes.Text = codes.Text + "\nstrcodex50";
+            }
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 40) && !codes.Text.Contains("strcodea100"))
+            {
+                codes.Text = codes.Text + "\nstrcodea100";
+            }
         }
     }
 }

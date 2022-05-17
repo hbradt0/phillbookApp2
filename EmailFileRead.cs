@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 //using MailKit.Net.Smtp;
@@ -28,6 +29,8 @@ namespace EmailReader //rename
         public static string srcFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public static string fileNameImage = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "background.jpg");
         public static string fileNameImage1 = "MainTitlePic1.png";
+        public static string fileNameImage2 = "MainTitlePic1.png";
+        public static string code = "";
 
 
         public static String ReadText(String fileName = "")
@@ -358,6 +361,15 @@ namespace EmailReader //rename
 
             var fi = new FileInfo(fileName);
             return fi.Length > size;
+        }
+
+        public static bool FileCountDays(String fileName = "", int countdesired = 25)
+        {
+            if (fileName == "")
+                fileName = fileName1;
+            String a = File.ReadAllText(fileName);
+            var count = Regex.Matches(a, DateTime.Now.ToLocalTime().ToString("yyyy")+":").Count;
+            return count >= countdesired;
         }
         /*
         public static void EmailDev(String e, String devemail = "", int seconds = 20)

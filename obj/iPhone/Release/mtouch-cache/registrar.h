@@ -14,6 +14,7 @@
 @class UIApplicationDelegate;
 @class AppDelegate;
 @class HomeScreen;
+@class StoryScreen;
 @class EditJournalScreen;
 @class HelloWorldScreen;
 @class HelloUniverseScreen;
@@ -71,6 +72,20 @@
 	-(void) viewDidLoad;
 	-(void) viewWillAppear:(BOOL)p0;
 	-(void) viewWillDisappear:(BOOL)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface StoryScreen : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) viewDidLoad;
+	-(void) viewDidAppear:(BOOL)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 @end

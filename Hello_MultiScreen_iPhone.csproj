@@ -92,6 +92,7 @@
     <InterfaceDefinition Include="Screens\ImageScreen.xib" />
     <None Include="packages.config" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Screens\StoryScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -119,6 +120,8 @@
     </Compile>
     <Compile Include="Screens\ImageScreen.cs" />
     <Compile Include="Screens\ImageScreen.designer.cs" />
+    <Compile Include="Screens\StoryScreen.cs" />
+    <Compile Include="Screens\StoryScreen.designer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -217,6 +220,15 @@
     <BundleResource Include="Resources\TestPic.png" />
     <BundleResource Include="Resources\Untitled.png" />
     <BundleResource Include="Resources\mailicon.png" />
+    <BundleResource Include="Resources\Story1.txt" />
+    <BundleResource Include="Resources\Story10.txt" />
+    <BundleResource Include="Resources\Story25.txt" />
+    <BundleResource Include="Resources\Story50.txt" />
+    <BundleResource Include="Resources\WinText.txt" />
+    <BundleResource Include="Resources\chapter1.png" />
+    <BundleResource Include="Resources\chapter2.png" />
+    <BundleResource Include="Resources\chapter3.png" />
+    <BundleResource Include="Resources\chapter4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
