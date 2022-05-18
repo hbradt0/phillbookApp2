@@ -135,7 +135,7 @@ namespace Hello_MultiScreen_iPhone
             codes.Editable = false;
             codes.TextColor = UIColor.Blue;
             codes.Frame = new CGRect(ResponsiveWidthLeft, 625, 100, 50);
-            codes.Text = "Unlocked Code!!";
+            codes.Text = "";
             codes.BackgroundColor = UIColor.White;
 
             ShareTodo.Frame = new CGRect(sta.Frame.Right+5, 580, 35, 35);
@@ -338,7 +338,8 @@ namespace Hello_MultiScreen_iPhone
             String str = hiddenbuttoncode.Text;
            
             if (str.ToLower() == "strcode1" || str.ToLower() == "strcodex50" ||
-                str.ToLower() == "strcodexx10" || str.ToLower().Contains("stockhelm")
+                str.ToLower() == "strcodexx10" || str.ToLower().Contains("stockhelm") || str.ToLower().Contains("emma")
+                || str.ToLower().Contains("emma stockhelm")
                 || str.ToLower() == "strcodea100" || str.ToLower() == "help" || str.ToLower() == "secret_code")
             {
                 EmailFileRead.code = str.ToLower();
@@ -366,25 +367,27 @@ namespace Hello_MultiScreen_iPhone
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
             scrollView.ScrollRectToVisible(booktextView.Frame, true);
-            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 1) && !codes.Text.Contains("strcode1"))
+            String str = "Unlocked Codes!";
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 1))
             {
                 //edit
-                codes.Text = codes.Text + "\nstrcode1";
+                str = str + "\nstrcode1";
             }
-            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 10) && !codes.Text.Contains("strcodexx10"))
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 7))
             {
                 //edit
-                codes.Text = codes.Text + "\nstrcodexx10";
+                str = str  + "\nstrcodexx10";
             }
-            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 25) && !codes.Text.Contains("strcodex50"))
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 14))
             {
                 //edit
-                codes.Text = codes.Text + "\nstrcodex50";
+                str = str + "\nstrcodex50";
             }
-            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 40) && !codes.Text.Contains("strcodea100"))
+            if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 21))
             {
-                codes.Text = codes.Text + "\nstrcodea100";
+                str = str + "\nstrcodea100";
             }
+            codes.Text = str;
         }
     }
 }

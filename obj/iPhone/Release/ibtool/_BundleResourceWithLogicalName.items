@@ -5,6 +5,10 @@
       <Optimize>false</Optimize>
       <LogicalName>ImageScreen.nib</LogicalName>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhone/Release/ibtool/StoryScreen.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>StoryScreen.nib</LogicalName>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhone/Release/ibtool/HelloWorldScreen.nib">
       <Optimize>false</Optimize>
       <LogicalName>HelloWorldScreen.nib</LogicalName>

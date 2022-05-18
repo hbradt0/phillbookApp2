@@ -87,7 +87,7 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton = new UIButton(UIButtonType.System);
             hiddenbuttoncode = new UITextField();
 
-            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 100, ResponsiveSizeX, 410);
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 260, ResponsiveSizeX, 410);
             //scrollView.BackgroundColor = UIColor.SystemPink;
 
             var plist = NSUserDefaults.StandardUserDefaults;
@@ -105,10 +105,10 @@ namespace Hello_MultiScreen_iPhone
 
             imageView3 = new UIImageView();
             imageView3.Image = UIImage.FromBundle("pinkflower.png");
-            imageView3.Frame = new CGRect(ResponsiveWidthLeft, ButtonShare.Frame.Top-20, 100, 100);
+            imageView3.Frame = new CGRect(ResponsiveWidthLeft+50, ButtonShare.Frame.Top+50, 175, 175);
 
 
-            ButtonShare.Frame = new CGRect(ResponsiveWidthRight, View.Frame.Top+50, 35, 35);
+            ButtonShare.Frame = new CGRect(ResponsiveWidthRight, View.Frame.Top+675, 35, 35);
 
             //ButtonShare.SetTitle("Share Journal", UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
@@ -214,7 +214,8 @@ namespace Hello_MultiScreen_iPhone
                 booktextView.Text = text1;
                 imageView3.Image = UIImage.FromBundle("chapter2.png");
             }
-            else if (EmailFileRead.code.ToLower().Contains("stockhelm"))
+            else if (EmailFileRead.code.ToLower().Contains("stockhelm") || EmailFileRead.code.ToLower().Contains("emma")
+                || EmailFileRead.code.ToLower().Contains("emma stockhelm"))
             {
                 booktextView.Text = "Enter your email to begin your story!";
                 var v = NSBundle.MainBundle.PathForResource("WinText", "txt");

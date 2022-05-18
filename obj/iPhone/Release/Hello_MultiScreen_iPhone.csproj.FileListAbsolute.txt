@@ -47,11 +47,12 @@
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/TestPic.png
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/Untitled.png
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/mailicon.png
-/Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/
-/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
-/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
-/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/chapter1.png
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/chapter2.png
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/chapter3.png
 /Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/chapter4.png
+/Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/
+/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
+/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
+/Users/psargent/phillbookApp2/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookApp2/obj/iPhone/Release/optimized/chapter5.png
