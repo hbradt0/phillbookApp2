@@ -337,10 +337,7 @@ namespace Hello_MultiScreen_iPhone
             keyboardOpen = false;
             String str = hiddenbuttoncode.Text;
            
-            if (str.ToLower() == "strcode1" || str.ToLower() == "strcodex50" ||
-                str.ToLower() == "strcodexx10" || str.ToLower().Contains("stockhelm") || str.ToLower().Contains("emma")
-                || str.ToLower().Contains("emma stockhelm")
-                || str.ToLower() == "strcodea100" || str.ToLower() == "help" || str.ToLower() == "secret_code")
+            if (EmailFileRead.CodeList.Contains(str.ToLower()) || str.ToLower() == "help" || str.ToLower() == "secret_code")
             {
                 EmailFileRead.code = str.ToLower();
                 //back to home screen
@@ -371,21 +368,21 @@ namespace Hello_MultiScreen_iPhone
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 1))
             {
                 //edit
-                str = str + "\nstrcode1";
+                str = str + "\n"+EmailFileRead.CodeList[0];
             }
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 7))
             {
                 //edit
-                str = str  + "\nstrcodexx10";
+                str = str  + "\n" + EmailFileRead.CodeList[1];
             }
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 14))
             {
                 //edit
-                str = str + "\nstrcodex50";
+                str = str + "\n"+EmailFileRead.CodeList[2];
             }
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 21))
             {
-                str = str + "\nstrcodea100";
+                str = str + "\n"+ EmailFileRead.CodeList[3];
             }
             codes.Text = str;
         }

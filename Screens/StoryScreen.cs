@@ -169,7 +169,7 @@ namespace Hello_MultiScreen_iPhone
             base.ViewDidAppear(animated);
             booktextView.Text = EmailFileRead.ReadText();
             booktextView.TextColor = UIColor.Purple;
-            if (EmailFileRead.code.ToLower() == "strcode1")
+            if (EmailFileRead.code.ToLower() == EmailFileRead.CodeList[0])
             {
                 booktextView.Text = "Enter your email to begin your story!";
                 var v = NSBundle.MainBundle.PathForResource("Story1", "txt");
@@ -185,7 +185,7 @@ namespace Hello_MultiScreen_iPhone
                 var text1 = EmailFileRead.ReadText(v);
 
                 booktextView.Text = text1;
-                imageView3.Image = UIImage.FromBundle("pinkflower.png");
+                imageView3.Image = UIImage.FromBundle("TestPic.png");
             }
              else if (EmailFileRead.code.ToLower() == "secret_code")
             {
@@ -196,7 +196,7 @@ namespace Hello_MultiScreen_iPhone
                 booktextView.Text = text1;
                 imageView3.Image = UIImage.FromBundle("pinkflower.png");
             }
-             else if (EmailFileRead.code.ToLower() == "strcodex50")
+             else if (EmailFileRead.code.ToLower() == EmailFileRead.CodeList[2])
             {
                 booktextView.Text = "Enter your email to begin your story!";
                 var v = NSBundle.MainBundle.PathForResource("Story25", "txt");
@@ -205,7 +205,7 @@ namespace Hello_MultiScreen_iPhone
                 booktextView.Text = text1;
                 imageView3.Image = UIImage.FromBundle("chapter3.png");
             }
-            else if (EmailFileRead.code.ToLower() == "strcodexx10")
+            else if (EmailFileRead.code.ToLower() == EmailFileRead.CodeList[1])
             {
                 booktextView.Text = "Enter your email to begin your story!";
                 var v = NSBundle.MainBundle.PathForResource("Story10", "txt");
@@ -214,8 +214,9 @@ namespace Hello_MultiScreen_iPhone
                 booktextView.Text = text1;
                 imageView3.Image = UIImage.FromBundle("chapter2.png");
             }
-            else if (EmailFileRead.code.ToLower().Contains("stockhelm") || EmailFileRead.code.ToLower().Contains("emma")
-                || EmailFileRead.code.ToLower().Contains("emma stockhelm"))
+            else if (EmailFileRead.code.ToLower() == EmailFileRead.CodeList[4] ||
+                EmailFileRead.code.ToLower() == EmailFileRead.CodeList[5]
+                || EmailFileRead.code.ToLower() == EmailFileRead.CodeList[6])
             {
                 booktextView.Text = "Enter your email to begin your story!";
                 var v = NSBundle.MainBundle.PathForResource("WinText", "txt");
@@ -224,7 +225,7 @@ namespace Hello_MultiScreen_iPhone
                 booktextView.Text = text1;
                 imageView3.Image = UIImage.FromBundle("chapter5.png");
             }
-            else if (EmailFileRead.code.ToLower() == "strcodea100")
+            else if (EmailFileRead.code.ToLower() == EmailFileRead.CodeList[3])
             {
                 booktextView.Text = "Enter your email to begin your story!";
                 var v = NSBundle.MainBundle.PathForResource("Story50", "txt");

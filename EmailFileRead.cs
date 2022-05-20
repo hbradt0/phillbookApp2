@@ -31,7 +31,7 @@ namespace EmailReader //rename
         public static string fileNameImage1 = "MainTitlePic1.png";
         public static string fileNameImage2 = "MainTitlePic1.png";
         public static string code = "";
-
+        public static List<String> CodeList = new List<String> { "strcode1", "strcodexx10", "strcodex50", "strcodea100", "stockhelm", "emma", "emma stockhelm" };
 
         public static String ReadText(String fileName = "")
         {
