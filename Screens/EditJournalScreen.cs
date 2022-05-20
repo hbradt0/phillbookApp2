@@ -59,8 +59,11 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             ResponsiveWidthLeft = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - 40;
-            ResponsiveWidthRight = View.Frame.Width - 100;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
+            ResponsiveWidthRight = View.Frame.Width - 90;
 
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178,178,227);

@@ -69,8 +69,11 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             ResponsiveWidthLeft = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - 40;
-            ResponsiveWidthRight = View.Frame.Width - 100;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
+            ResponsiveWidthRight = View.Frame.Width - 90;
 
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
@@ -108,7 +111,7 @@ namespace Hello_MultiScreen_iPhone
             imageView3.Frame = new CGRect(ResponsiveWidthLeft+50, ButtonShare.Frame.Top+50, 175, 175);
 
 
-            ButtonShare.Frame = new CGRect(ResponsiveWidthRight, View.Frame.Top+675, 35, 35);
+            ButtonShare.Frame = new CGRect(View.Frame.Right-30, View.Frame.Top+675, 35, 35);
 
             //ButtonShare.SetTitle("Share Journal", UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);

@@ -78,8 +78,11 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             ResponsiveWidthLeft = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - 40;
-            ResponsiveWidthRight= View.Frame.Width - 150;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
+            ResponsiveWidthRight = View.Frame.Width - 140;
                      
             //View issue
             var user = new UIViewController();
@@ -148,7 +151,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
             
-            editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 400, ResponsiveSizeX, 40);
+            editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 380, ResponsiveSizeX, 50);
 
             //dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -162,7 +165,7 @@ namespace Hello_MultiScreen_iPhone
             //ButtonDateClick.Frame = new CGRect(25, 50, 100, 50);
             //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 330);
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340);
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;

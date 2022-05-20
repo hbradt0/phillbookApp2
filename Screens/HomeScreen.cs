@@ -57,8 +57,11 @@ namespace Hello_MultiScreen_iPhone
 		{
 			base.ViewDidLoad ();
 			ViewDidLoad1();
-            ResponsiveWidthLeft = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - 30;
+            ResponsiveWidthLeft = View.Frame.Width/8;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
 
             //---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create Your Journal", UIControlState.Normal);
@@ -99,8 +102,11 @@ namespace Hello_MultiScreen_iPhone
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(255,153,255);
             //View.LargeContentImage = imageView;
-            ResponsiveWidthLeft = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - 30;
+            ResponsiveWidthLeft = View.Frame.Width/8;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
 
             imageViewPic = new UIImageView();
             UIImage img3 = new UIImage();
@@ -136,7 +142,7 @@ namespace Hello_MultiScreen_iPhone
             };
             imageViewTitle = new UIImageView();
       
-            imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft-20, 20, ResponsiveSizeX+60, 90);
+            imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft-20, 20, ResponsiveSizeX+60, 80);
 
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);

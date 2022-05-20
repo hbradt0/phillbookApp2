@@ -48,8 +48,11 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             ResponsiveWidthLeft = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - 40;
-            ResponsiveWidthRight = View.Frame.Width - 100;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
+            ResponsiveWidthRight = View.Frame.Width - 90;
             //View issue
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
@@ -104,7 +107,7 @@ namespace Hello_MultiScreen_iPhone
 
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight+20, 420, 50, 50); 
+            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight+50, 420, 50, 50); 
             ButtonDateClick.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             UIImage img2 = new UIImage();
@@ -126,12 +129,12 @@ namespace Hello_MultiScreen_iPhone
 
             BackgroundImage.SetTitleColor(UIColor.White, UIControlState.Normal);
             BackgroundImage.BackgroundColor = UIColor.SystemTeal;
-            BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, 620, 100, 30);
+            BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, 630, 100, 30);
             BackgroundImage.SetTitle("Home Image", UIControlState.Normal);
 
             BackgroundImage3.SetTitleColor(UIColor.White, UIControlState.Normal);
             BackgroundImage3.BackgroundColor = UIColor.SystemTeal;
-            BackgroundImage3.Frame = new CGRect(ResponsiveWidthRight, 550, 60, 60);
+            BackgroundImage3.Frame = new CGRect(ResponsiveWidthRight+50, 550, 50, 50);
             BackgroundImage3.SetBackgroundImage(UIImage.FromBundle("TestPic.png"), UIControlState.Normal);
             //BackgroundImage3.SetTitle("Flower Image", UIControlState.Normal);
 
@@ -139,7 +142,7 @@ namespace Hello_MultiScreen_iPhone
             UIImage imgtitle = new UIImage();
             imgtitle = UIImage.FromFile(EmailFileRead.fileNameImage1);
             BackgroundImage4.SetBackgroundImage(imgtitle, UIControlState.Normal);
-            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 620, 100, 30);
+            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 630, 100, 30);
             //BackgroundImage4.SetTitle("Toggle Title", UIControlState.Normal);
 
             UIImage img4 = new UIImage();
@@ -235,7 +238,7 @@ namespace Hello_MultiScreen_iPhone
             UIImage imgtitle = new UIImage();
             imgtitle = UIImage.FromFile(EmailFileRead.fileNameImage1);
             BackgroundImage4.SetBackgroundImage(imgtitle, UIControlState.Normal);
-            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 620, 100, 30);  
+            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 630, 100, 30);  
         }
 
         public void BackgroundImageShow(object sender, EventArgs eventArgs)
@@ -311,7 +314,7 @@ namespace Hello_MultiScreen_iPhone
         // resize the image to be contained within a maximum width and height, keeping aspect ratio
         UIImage MaxResizeImage(UIImage sourceImage, float maxWidth, float maxHeight, UIImageView view)
         {
-            view.Frame = new CGRect(ResponsiveWidthLeft, 130, ResponsiveSizeX, 280);
+            view.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top+130, ResponsiveSizeX, 280);
             /*
             var sourceSize = sourceImage.Size;
             var maxResizeFactor = Math.Min(maxWidth / sourceSize.Width, maxHeight / sourceSize.Height);

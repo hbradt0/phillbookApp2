@@ -68,8 +68,11 @@ namespace Hello_MultiScreen_iPhone
             user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
 
             ResponsiveWidthLeft = View.Frame.Width/8;
-            ResponsiveSizeX = View.Frame.Width - 40;
-            ResponsiveWidthRight = View.Frame.Width - 100;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
+            ResponsiveWidthRight = View.Frame.Width - 90;
 
             //Initialize Fields
             textViewWrite = new UITextView();
@@ -137,13 +140,12 @@ namespace Hello_MultiScreen_iPhone
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
             */
-
             //Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
             //Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
             //ResponsiveWidthLeft = 0 + 20;
             //ResponsiveSizeX = View.Frame.Width - 40;
 
-            editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 420, ResponsiveSizeX, 60);
+            editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 380, ResponsiveSizeX, 90);
 
             ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthLeft, 488, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
@@ -175,7 +177,7 @@ namespace Hello_MultiScreen_iPhone
             //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
             ButtonDateClick.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top+100, ResponsiveSizeX, 310);
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top+30, ResponsiveSizeX, 340);
 
             textViewWrite.Text = EmailFileRead.ReadText();
             textViewWrite.UserInteractionEnabled = true;
@@ -489,8 +491,7 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
-            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
-           
+            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);           
         }
     }
 }
