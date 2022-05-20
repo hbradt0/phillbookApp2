@@ -66,12 +66,12 @@ namespace Hello_MultiScreen_iPhone
             //---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create Your Journal", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Click To Read", UIControlState.Normal);
-            this.btnHelloWorld.Frame = new CGRect(ResponsiveWidthLeft, 540+20, ResponsiveSizeX, 35);
+            this.btnHelloWorld.Frame = new CGRect(ResponsiveWidthLeft, 540+10, ResponsiveSizeX, 35);
             this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.Title = "Home";
 
-            this.btnHelloUniverse.Frame = new CGRect(ResponsiveWidthLeft, 125+10, ResponsiveSizeX, 35);
+            this.btnHelloUniverse.Frame = new CGRect(ResponsiveWidthLeft, 125, ResponsiveSizeX, 35);
             this.btnHelloWorld.Layer.CornerRadius = 10;
             this.btnHelloUniverse.Layer.CornerRadius = 10;
 
@@ -126,7 +126,7 @@ namespace Hello_MultiScreen_iPhone
   
             UIButton ButtonImageClick = new UIButton(UIButtonType.System);
             //ButtonImageClick.SetBackgroundImage(viewer,UIControlState.Normal);
-            ButtonImageClick.Frame = new CGRect(ResponsiveWidthLeft, 595+25, ResponsiveSizeX, 35);
+            ButtonImageClick.Frame = new CGRect(ResponsiveWidthLeft, 595+15, ResponsiveSizeX, 35);
             ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonImageClick.SetTitle("Image Calendar", UIControlState.Normal);
             ButtonImageClick.BackgroundColor = UIColor.FromRGB(100, 149, 240);
@@ -146,13 +146,13 @@ namespace Hello_MultiScreen_iPhone
 
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
-            ButtonTodoList.Frame = new CGRect(ResponsiveWidthLeft, 180+15, ResponsiveSizeX, 35);
+            ButtonTodoList.Frame = new CGRect(ResponsiveWidthLeft, 180+5, ResponsiveSizeX, 35);
             ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             ButtonTodoList.SetTitle("Create To Do List", UIControlState.Normal);
             ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
             ButtonTodoList.Layer.CornerRadius = 10;
             var imageView3 = new UIImageView();
-            imageView3.Frame= new CGRect(imageViewTitle.Frame.Left-20, imageViewTitle.Frame.Top-30
+            imageView3.Frame= new CGRect(imageViewTitle.Frame.Left-20, imageViewTitle.Frame.Top-20
                 +20, 70, 70);
             //ButtonTodoList.SetImage(img4, UIControlState.Normal);
 
@@ -220,7 +220,7 @@ namespace Hello_MultiScreen_iPhone
             else
                 img3 = UIImage.FromFile("TestPic.png");
             imageViewPic.Image = img3;
-            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235+20, ResponsiveSizeX, 280);
+            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235+10, ResponsiveSizeX, 280);
             UIImage img2 = new UIImage();
             img2 = UIImage.FromFile(EmailFileRead.fileNameImage1);
             imageViewTitle.Image = img2;
