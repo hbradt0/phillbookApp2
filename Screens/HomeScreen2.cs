@@ -447,8 +447,8 @@ namespace Hello_MultiScreen_iPhone
             base.ViewDidAppear(animated);
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
-            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
-
+            var cgFrame = new CGRect(ResponsiveWidthLeft, View.Frame.Top, ResponsiveSizeX, 340);
+            scrollView.ScrollRectToVisible(cgFrame, true);
         }
 
         public override void DidReceiveMemoryWarning()

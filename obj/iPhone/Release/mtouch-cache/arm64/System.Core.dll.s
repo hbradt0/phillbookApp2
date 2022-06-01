@@ -2019,7 +2019,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 71,132,73,74,43,20,121,82,198,144,119,185,69,28,132,4
+	.byte 14,10,223,71,141,189,174,242,161,178,114,128,52,250,67,190
 	.globl _mono_aot_module_System_Core_info
 	.align 3
 _mono_aot_module_System_Core_info:

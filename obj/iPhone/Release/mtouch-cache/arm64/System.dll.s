@@ -62950,7 +62950,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 23,225,238,151,225,99,23,241,197,8,88,131,206,95,73,187
+	.byte 117,3,233,60,74,65,179,160,94,1,239,223,181,139,210,10
 	.globl _mono_aot_module_System_info
 	.align 3
 _mono_aot_module_System_info:

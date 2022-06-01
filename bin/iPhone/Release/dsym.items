@@ -5,7 +5,7 @@
       <NativeExecutable>Hello_MultiScreen_iPhone</NativeExecutable>
       <NoDSymUtil>false</NoDSymUtil>
       <NoSymbolStrip>false</NoSymbolStrip>
-      <SymbolsList>/Users/psargent/phillbookApp2/obj/iPhone/Release/mtouch-symbols.list</SymbolsList>
+      <SymbolsList>/Users/psargent/phillbookAppV1/obj/iPhone/Release/mtouch-symbols.list</SymbolsList>
     </_AppExtensionDebugSymbolProperties>
   </ItemGroup>
 </Project>

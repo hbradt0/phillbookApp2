@@ -1,4 +1,4 @@
-/Users/psargent/phillbookApp2/bin/iPhone/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppV1/bin/iPhone/Release/Hello_MultiScreen_iPhone.exe
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.8.0.3/lib/mono/Xamarin.iOS/mscorlib.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.8.0.3/lib/mono/Xamarin.iOS/../../64bits/iOS/Xamarin.iOS.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.8.0.3/lib/mono/Xamarin.iOS/System.dll
