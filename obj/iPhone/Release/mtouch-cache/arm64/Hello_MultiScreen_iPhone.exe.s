@@ -1875,7 +1875,7 @@ bl _p_38
 .word 0xfd000bc2
 .word 0xfd000fc3
 .word 0xfd407ba0
-.word 0xd2800140
+.word 0xd2800180
 .word 0x1e620001
 .word 0x1e611800
 .word 0xfd007b20
@@ -1920,7 +1920,7 @@ bl _p_38
 .word 0x1e620002
 .word 0x1e620821
 .word 0x1e613800
-.word 0xd2800780
+.word 0xd2800820
 .word 0x1e620001
 .word 0x1e613800
 .word 0xfd008320
@@ -3552,7 +3552,7 @@ bl _p_38
 .word 0xfd000bc2
 .word 0xfd000fc3
 .word 0xfd411fa0
-.word 0xd2800100
+.word 0xd2800120
 .word 0x1e620001
 .word 0x1e611800
 .word 0xfd008f20
@@ -9824,7 +9824,7 @@ bl _p_38
 .word 0xfd000bc2
 .word 0xfd000fc3
 .word 0xfd410ba0
-.word 0xd2800140
+.word 0xd2800180
 .word 0x1e620001
 .word 0x1e611800
 .word 0xfd008f20
@@ -13037,7 +13037,7 @@ bl _p_38
 .word 0xfd000bc2
 .word 0xfd000fc3
 .word 0xfd414ba0
-.word 0xd2800140
+.word 0xd2800180
 .word 0x1e620001
 .word 0x1e611800
 .word 0xfd00a720
@@ -24309,7 +24309,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "8854329B-ACF2-4406-8374-0815D5FF27A9"
+	.asciz "4A011E14-68F7-4C8D-B920-91F89A0A6541"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -24403,7 +24403,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 175,186,35,69,194,226,49,3,173,202,2,239,75,77,130,251
+	.byte 216,62,235,47,137,197,214,80,254,124,165,49,124,121,158,132
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:
