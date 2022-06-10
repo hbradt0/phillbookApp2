@@ -33,10 +33,11 @@ namespace Hello_MultiScreen_iPhone
 
         public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
+        public UIButton EditJournalButton;
 
         public UITextView readInfo;
 
-        HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
+        HelloUniverseScreen hellouniversescreen; //MAY NEED TO BE COMMENTED OUT
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveWidthRight = 300;
@@ -58,12 +59,6 @@ namespace Hello_MultiScreen_iPhone
         //Read your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = View.Frame.Width / 8;
-            nfloat size = 30;
-            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
-                size = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - size;
-            ResponsiveWidthRight = View.Frame.Width - 90;
 
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178,178,227);
@@ -77,7 +72,14 @@ namespace Hello_MultiScreen_iPhone
                 Editable = true
             };
 
-            booktextView.Frame = new CGRect(ResponsiveWidthLeft, 90, ResponsiveSizeX, 440); 
+            ButtonDelete = new UIButton(UIButtonType.System);
+            ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
+
+            ButtonDelete.BackgroundColor = UIColor.FromRGB(240, 137, 171);
+            ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
+            ButtonDelete.Layer.CornerRadius = 10;
+
+
             booktextView.Text = EmailFileRead.ReadText();
             booktextView.BackgroundColor = UIColor.White;
             booktextView.TextColor = UIColor.Purple;
@@ -102,10 +104,8 @@ namespace Hello_MultiScreen_iPhone
             };
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
-
-            Button3.Frame = new CGRect(ResponsiveWidthRight, 540, 100, 30);
+  
             Button3.SetTitle("Save", UIControlState.Normal);
-            Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             Button3.SetTitleColor(UIColor.White, UIControlState.Normal);
             Button3.Layer.CornerRadius = 10;
@@ -119,16 +119,44 @@ namespace Hello_MultiScreen_iPhone
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 
+            Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
+            ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
+
+
             //Add to view
             scrollView.Add(Button3);
+            scrollView.Add(ButtonDelete);
             scrollView.Add(booktextView);
-            View.AddSubview(scrollView);//ps
+            View.AddSubview(scrollView);
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
 
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
 
 
+        }
+
+        //Delete everything your story
+        private void ButtonDeleteClick(object sender, EventArgs eventArgs)
+        {
+
+            var Confirm = new UIAlertView("Confirmation", "This will delete everything in the journal, are you sure? This will return to the journal when complete!", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    EmailFileRead.DeleteText();
+                    booktextView.Text = String.Empty;
+                    booktextView.Text = EmailFileRead.ReadText();
+                    if (this.hellouniversescreen == null) { this.hellouniversescreen = new HelloUniverseScreen(); }
+                    this.NavigationController.PushViewController(this.hellouniversescreen, true);
+                }
+            };
         }
 
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
@@ -266,6 +294,14 @@ namespace Hello_MultiScreen_iPhone
             booktextView.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
+
+            ResponsiveWidthLeft = View.Frame.Width / 10;
+            ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
+            ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2-60;
+
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 50, ResponsiveSizeX, 440);
+            ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom+20, 100, 30);
+            Button3.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom+20, 100, 30);
         }
     }
 }

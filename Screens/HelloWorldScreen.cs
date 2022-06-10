@@ -13,18 +13,20 @@ namespace Hello_MultiScreen_iPhone
         public UITextField editText;
         public UITextView textView;
         public UITextView booktextView;
+        public UITextView sta;
+        public UITextView codes;
+
         public UITextView textView2;
         public UITextField editTextWrite;
         public UITextView textViewWrite;
 
         public UIButton Button1;
-        public UIButton Button2;
         public UIButton Button3;
+        public UIButton ButtonShare;
         public UIButton Buttonbackyourstory;
         public UIButton Buttonyourstoryscreen;
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
-        public UITextView codes;
 
         public UIImage imageView;
         public UIView View1;
@@ -42,6 +44,7 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveWidthRight = 300;
         public UIButton ShareTodo;
+        public UIButton CloudLoginButton;
         public UITextField editTextDate;
 
         private NSObject keyBoardWillShow;
@@ -70,13 +73,6 @@ namespace Hello_MultiScreen_iPhone
         //Read your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = View.Frame.Width / 8;
-            nfloat size = 30;
-            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
-                size = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - size;
-            ResponsiveWidthRight = View.Frame.Width - 90;
-
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
             var user = new UIViewController();
@@ -84,7 +80,7 @@ namespace Hello_MultiScreen_iPhone
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
-            //UIScrollView scrollView = new UIScrollView();
+            CloudLoginButton = new UIButton(UIButtonType.System);
             booktextView = new UITextView()
             {
                 Editable = false
@@ -92,19 +88,12 @@ namespace Hello_MultiScreen_iPhone
             hiddenbutton = new UIButton(UIButtonType.System);
             hiddenbuttoncode = new UITextField();
 
-            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
-            //scrollView.BackgroundColor = UIColor.SystemPink;
-
             var plist = NSUserDefaults.StandardUserDefaults;
             var p = plist.IntForKey("viewScroll1Y");
 
-            // ViewController view1 = new ViewController();
-            //if (null != p)
-            //    booktextView.y.Y = p;
-            var ButtonShare = new UIButton(UIButtonType.RoundedRect)
+            ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
 
-                //Frame = UIScreen.MainScreen.Bounds,
                 BackgroundColor = UIColor.FromRGB(204, 204, 255)
             };
 
@@ -112,53 +101,39 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo = new UIButton(UIButtonType.System);
 
             ShareTodo.SetTitleColor(UIColor.White, UIControlState.Normal);
-            //ShareTodo.BackgroundColor = UIColor.SystemTeal;
-            //ShareTodo.SetTitle("Share", UIControlState.Normal);
             ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             editTextDate.BackgroundColor = UIColor.White;
             editTextDate.TextColor = UIColor.Purple;
             editTextDate.AccessibilityHint = "0 (days)";
             editTextDate.Text = "0";
-            //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
 
             codes = new UITextView();
             codes.Editable = false;
-            codes.TextColor = UIColor.Blue;
+            codes.TextColor = UIColor.Black;
             codes.Text = "";
-            codes.BackgroundColor = UIColor.White;
-            //exit keyboard
+            codes.BackgroundColor = UIColor.FromRGB(230, 230, 250);
             editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
 
 
-            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 10, 35, 35);
-            //ButtonShare.SetTitle("Share Journal", UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonShare.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
-            //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
             booktextView.BackgroundColor = UIColor.FromRGB(230, 230, 250);
-            booktextView.TextColor = UIColor.SystemPurple;
+            booktextView.TextColor = UIColor.Purple;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
-            //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
-            //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            //Button3.Frame = new CGRect(175, 25, 150, 150);
-            //Button3.SetTitle("Back", UIControlState.Normal);
-
-            hiddenbutton.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
             hiddenbutton.SetTitle("Submit", UIControlState.Normal);
             hiddenbutton.BackgroundColor = UIColor.Blue;
             hiddenbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
             hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 240);
 
-            hiddenbuttoncode.Frame = new CGRect(ResponsiveWidthLeft, 500, 170, 30);
             hiddenbuttoncode.AccessibilityHint = "type 'help'";
             hiddenbuttoncode.Text = "help";
             hiddenbuttoncode.BackgroundColor = UIColor.White;
-            hiddenbuttoncode.TextColor = UIColor.SystemPurple;
+            hiddenbuttoncode.TextColor = UIColor.Black;
 
             //exit keyboard 
             hiddenbuttoncode.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
@@ -167,20 +142,15 @@ namespace Hello_MultiScreen_iPhone
 
             var text1 = EmailFileRead.ReadText();
             booktextView.Text = text1;
-            //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
-            codes.Frame = new CGRect(ResponsiveWidthLeft, hiddenbuttoncode.Frame.Bottom + 20, 100, 50);
 
-            editTextDate.Frame = new CGRect(ResponsiveWidthRight - 60, hiddenbuttoncode.Frame.Bottom + 20, 35, 35);
-            //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
-            var sta = new UITextView();
+            sta = new UITextView();
             sta.Editable = false;
-            sta.TextColor = UIColor.Purple;
-            sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, 35);
+            sta.TextColor = UIColor.Black;
             sta.Text = "Days Prior";
-            sta.BackgroundColor = UIColor.White;
+            sta.BackgroundColor = UIColor.FromRGB(230, 230, 250);
 
-            ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, hiddenbuttoncode.Frame.Bottom + 20, 35, 35);
             //ScrollView
+
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
@@ -191,7 +161,6 @@ namespace Hello_MultiScreen_iPhone
             };
             ButtonShare.Layer.CornerRadius = 10;
             curveRadius();
-            //Add targets
             hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
@@ -201,15 +170,12 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(ShareTodo);
             scrollView.Add(editTextDate);
             scrollView.Add(sta);
-            //Add to view
-            //scrollView.AddSubview(booktextView);
             scrollView.AddSubview(booktextView);
             scrollView.Add(hiddenbutton);
             scrollView.Add(ButtonShare);
             scrollView.Add(hiddenbuttoncode);
             scrollView.Add(Button3);
             View.AddSubview(scrollView);//ps
-            //View.AddSubview(booktextView);
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
 
@@ -236,6 +202,7 @@ namespace Hello_MultiScreen_iPhone
         {
             hiddenbutton.Layer.CornerRadius = 10;
             Button3.Layer.CornerRadius = 10;
+            CloudLoginButton.Layer.CornerRadius = 10;
         }
 
 
@@ -283,7 +250,7 @@ namespace Hello_MultiScreen_iPhone
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
                 //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
-                if(r.Top>=hiddenbuttoncode.Frame.Bottom)
+                if (r.Top >= hiddenbuttoncode.Frame.Bottom)
                 {
 
                 }
@@ -336,7 +303,7 @@ namespace Hello_MultiScreen_iPhone
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
             String str = hiddenbuttoncode.Text;
-           
+
             if (EmailFileRead.CodeList.Contains(str.ToLower()) || str.ToLower() == "help" || str.ToLower() == "secret_code")
             {
                 EmailFileRead.code = str.ToLower();
@@ -351,6 +318,7 @@ namespace Hello_MultiScreen_iPhone
 
         }
 
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -359,31 +327,52 @@ namespace Hello_MultiScreen_iPhone
 
         public override void ViewDidAppear(bool animated)
         {
+
             base.ViewDidAppear(animated);
+
+            ResponsiveWidthLeft = View.Frame.Width / 10;
+            ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
+            ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
+
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
             booktextView.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
+
+
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
+
+            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 10, 35, 35);
+            hiddenbutton.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
+            hiddenbuttoncode.Frame = new CGRect(ResponsiveWidthLeft, 500, 170, 30);
+            codes.Frame = new CGRect(ResponsiveWidthLeft, hiddenbuttoncode.Frame.Bottom + 20, 100, 50);
+
+            editTextDate.Frame = new CGRect(ResponsiveWidthRight - 60, hiddenbuttoncode.Frame.Bottom + 20, 35, 35);
+            sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, 35);
+
+            ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, hiddenbuttoncode.Frame.Bottom + 20, 35, 35);
+
             var cgFrame = new CGRect(ResponsiveWidthLeft, View.Frame.Top, ResponsiveSizeX, 340);
             scrollView.ScrollRectToVisible(cgFrame, true);
             String str = "Unlocked Codes!";
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 1))
             {
                 //edit
-                str = str + "\n"+EmailFileRead.CodeList[0];
+                str = str + "\n" + EmailFileRead.CodeList[0];
             }
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 7))
             {
                 //edit
-                str = str  + "\n" + EmailFileRead.CodeList[1];
+                str = str + "\n" + EmailFileRead.CodeList[1];
             }
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 14))
             {
                 //edit
-                str = str + "\n"+EmailFileRead.CodeList[2];
+                str = str + "\n" + EmailFileRead.CodeList[2];
             }
             if (EmailFileRead.FileCountDays(EmailFileRead.fileName1, 21))
             {
-                str = str + "\n"+ EmailFileRead.CodeList[3];
+                str = str + "\n" + EmailFileRead.CodeList[3];
             }
             codes.Text = str;
         }
