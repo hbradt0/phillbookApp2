@@ -114,7 +114,7 @@ namespace Hello_MultiScreen_iPhone
             };
 
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
-           
+
             ButtonDelete1Line.SetTitle("Delete Line", UIControlState.Normal);
 
             editTextWrite.AccessibilityHint = "Write Here";
@@ -136,7 +136,7 @@ namespace Hello_MultiScreen_iPhone
 
             //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
             ButtonDateClick.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
- 
+
             textViewWrite.Text = EmailFileRead.ReadText();
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -212,6 +212,8 @@ namespace Hello_MultiScreen_iPhone
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
         {
             keyboardShowing = editTextWrite.Focused;
+            var cgFrame = new CGRect(ResponsiveWidthLeft, View.Frame.Bottom, 400, 400);
+            scrollView.ScrollRectToVisible(ButtonyourstoryscreenUpload.Frame, true);
             if (!keyboardOpen)
             {
                 keyboardShowing = true;
@@ -420,6 +422,10 @@ namespace Hello_MultiScreen_iPhone
             ResponsiveWidthLeft = View.Frame.Width / 12;
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
+
+            scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 6); //small
+            if (View.Frame.Height >= 670)
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 400); //big
 
             dateTimeText.Hidden = false;
             dateTimeText.Frame = new CGRect(ResponsiveWidthRight - 25, 543, 100, 30);

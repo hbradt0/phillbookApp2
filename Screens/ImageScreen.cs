@@ -553,18 +553,17 @@ namespace Hello_MultiScreen_iPhone
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
 
-
-            ImagePickerButton.Frame = new CGRect(ResponsiveWidthLeft + 60, 465, 50, 50);
-            BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, 650, 100, 30);
-            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 650, 100, 30);
-            CameraButton.Frame = new CGRect(ResponsiveWidthLeft, 465, 50, 50);
-
             img2 = UIImage.FromFile(fileName);
             var e = MaxResizeImage(img2, (float)View.Frame.Width - 20, (float)View.Frame.Width - 20, textViewWrite);
             textViewWrite.Image = e;
             dateTimeText.Frame = new CGRect(ResponsiveWidthRight, View.Frame.Top + 80, 100, 30);
 
-            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight + 50, 465, 50, 50);
+            ImagePickerButton.Frame = new CGRect(ResponsiveWidthLeft + 60, textViewWrite.Frame.Bottom + 15, 50, 50);
+            BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, 650, 100, 30);
+            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, 650, 100, 30);
+            CameraButton.Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Bottom+15, 50, 50);
+
+            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight + 50, textViewWrite.Frame.Bottom+15, 50, 50);
             ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, CameraButton.Frame.Bottom + 20, 100, 30);
             ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, CameraButton.Frame.Bottom + 20, 100, 30);
             BackgroundImage2.Frame = new CGRect(ResponsiveWidthLeft, ButtonDelete1Line.Frame.Bottom + 20, 60, 60);
