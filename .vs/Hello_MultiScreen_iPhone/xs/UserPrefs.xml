@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Screens/ImageScreen.cs" Line="566" Column="104" />
       <File FileName="Screens/EditJournalScreen.cs" />
-      <File FileName="Screens/HomeScreen.cs" Line="210" Column="4" />
+      <File FileName="Screens/HomeScreen.cs" />
       <File FileName="Screens/HomeScreen2.cs" />
       <File FileName="EmailFileRead.cs" />
       <File FileName="Info.plist" />
@@ -14,10 +14,10 @@
       <File FileName="Resources/WinText.txt" />
       <File FileName="Screens/StoryScreen.cs" />
       <File FileName="Screens/StoryScreen.designer.cs" />
-      <File FileName="Screens/HelloUniverseScreen.designer.cs" Line="12" Column="35" />
-      <File FileName="Screens/HelloWorldScreen.designer.cs" Line="17" Column="1" />
-      <File FileName="Screens/HelloWorldScreen.cs" Line="380" Column="2" />
-      <File FileName="Screens/HelloUniverseScreen.cs" Line="405" Column="13" />
+      <File FileName="Screens/HelloUniverseScreen.designer.cs" />
+      <File FileName="Screens/HelloWorldScreen.designer.cs" />
+      <File FileName="Screens/HelloWorldScreen.cs" />
+      <File FileName="Screens/HelloUniverseScreen.cs" Line="429" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,9 +27,8 @@
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
-                <Node name="HelloUniverseScreen.cs" expanded="True" />
+                <Node name="HelloUniverseScreen.cs" expanded="True" selected="True" />
                 <Node name="HelloWorldScreen.cs" expanded="True" />
-                <Node name="HomeScreen.cs" selected="True" />
               </Node>
             </Node>
           </Node>

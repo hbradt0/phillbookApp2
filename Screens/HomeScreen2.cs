@@ -390,9 +390,11 @@ namespace Hello_MultiScreen_iPhone
         {
             base.ViewDidAppear(animated);
 
-            scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 6); //small
+            scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 7.5); //small
             if (View.Frame.Height >= 670)
                 scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 400); //big
+            if (View.Frame.Height == 812)
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 26); //small
 
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
