@@ -17,7 +17,7 @@
       <File FileName="Screens/HelloUniverseScreen.designer.cs" />
       <File FileName="Screens/HelloWorldScreen.designer.cs" />
       <File FileName="Screens/HelloWorldScreen.cs" />
-      <File FileName="Screens/HelloUniverseScreen.cs" Line="429" Column="2" />
+      <File FileName="Screens/HelloUniverseScreen.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,9 +27,10 @@
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
-                <Node name="HelloUniverseScreen.cs" expanded="True" selected="True" />
+                <Node name="HelloUniverseScreen.cs" expanded="True" />
                 <Node name="HelloWorldScreen.cs" expanded="True" />
               </Node>
+              <Node name="Info.plist" selected="True" />
             </Node>
           </Node>
         </State>
