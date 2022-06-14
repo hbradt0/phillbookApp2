@@ -217,6 +217,7 @@ namespace Hello_MultiScreen_iPhone
             li[0].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Bottom + width, editTextWrite.Frame.Width, 1);
         }
 
+
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
         {
             keyboardShowing = editTextWrite.Focused;
@@ -225,6 +226,15 @@ namespace Hello_MultiScreen_iPhone
                 keyboardShowing = true;
                 animDuration = args.AnimationDuration;
                 animCurve = args.AnimationCurve;
+                int i = 200;
+                if (View.Frame.Height >= 670)
+                    i = 25;
+                if (View.Frame.Height == 812)
+                    i = 50;
+                if (View.Frame.Height >= 845)
+                    i = 30;
+                var cGFrame = new CGRect(View.Frame.Left, View.Frame.Bottom - 30, 100, i);
+                scrollView.ScrollRectToVisible(cGFrame, true);
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
                 //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
@@ -235,7 +245,7 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
                     scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 5;
-                    ScrollTheView(true);
+                    //ScrollTheView(true);
                     keyboardOpen = true;
                 }
             }
@@ -243,6 +253,8 @@ namespace Hello_MultiScreen_iPhone
 
         void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
         {
+            var cGFrame = new CGRect(View.Frame.Left, View.Frame.Top, 100, 200);
+            scrollView.ScrollRectToVisible(cGFrame, true);
             if (keyboardOpen)
             {
                 keyboardShowing = false;
@@ -258,12 +270,13 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
                     scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 5;
-                    ScrollTheView(false);
+                    //ScrollTheView(false);
                     keyboardOpen = false;
                 }
             }
 
         }
+
 
         private void ScrollTheView(bool scale)
         {

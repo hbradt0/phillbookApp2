@@ -114,7 +114,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 400),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 250),
                 BackgroundColor = UIColor.FromRGB(204, 204, 255),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
@@ -167,6 +167,13 @@ namespace Hello_MultiScreen_iPhone
                 keyboardShowing = true;
                 animDuration = args.AnimationDuration;
                 animCurve = args.AnimationCurve;
+                int i = 200;
+                if (View.Frame.Height >= 670)
+                    i = 30;
+                if (View.Frame.Height == 812)
+                    i = 100;
+                var cGFrame = new CGRect(View.Frame.Left, View.Frame.Bottom - 30, 100, i);
+                scrollView.ScrollRectToVisible(cGFrame, true);
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
                 //if (r.Left >= booktextView.Frame.Right || r.Top >= booktextView.Frame.Bottom || r.Right <= booktextView.Frame.Left || r.Bottom <= booktextView.Frame.Top)
@@ -178,7 +185,7 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
                     scrollAmout = -1 * (r.Top - booktextView.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(true);
+                    //ScrollTheView(true);
                     keyboardOpen = true;
                 }
             }
@@ -186,6 +193,8 @@ namespace Hello_MultiScreen_iPhone
 
         void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
         {
+            var cGFrame = new CGRect(View.Frame.Left, View.Frame.Top, 100, 200);
+            scrollView.ScrollRectToVisible(cGFrame, true);
             if (keyboardOpen)
             {
                 keyboardShowing = false;
@@ -201,12 +210,13 @@ namespace Hello_MultiScreen_iPhone
                 {
                     scrollAmout = -1 * (r.Top - booktextView.Frame.Bottom) + r.Height / 4;
 
-                    ScrollTheView(false);
+                    //ScrollTheView(false);
                     keyboardOpen = false;
                 }
             }
 
         }
+
 
         private void ScrollTheView(bool scale)
         {
@@ -298,6 +308,12 @@ namespace Hello_MultiScreen_iPhone
             ResponsiveWidthLeft = View.Frame.Width / 12;
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
+
+            scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 4.5); //small
+            if (View.Frame.Height >= 670)
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 500); //big
+            if (View.Frame.Height == 812)
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 26); //small
 
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 50, ResponsiveSizeX, 440);
             ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom+20, 100, 30);

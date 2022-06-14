@@ -224,6 +224,13 @@ namespace Hello_MultiScreen_iPhone
                 keyboardShowing = true;
                 animDuration = args.AnimationDuration;
                 animCurve = args.AnimationCurve;
+                int i = 215;
+                if (View.Frame.Height >= 670)
+                    i = 70;
+                if (View.Frame.Height == 812)
+                    i = 110;
+                var cGFrame = new CGRect(View.Frame.Left, View.Frame.Bottom - 30, 100, i);
+                scrollView.ScrollRectToVisible(cGFrame, true);
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
                 //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
@@ -234,7 +241,7 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
                     scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(true);
+                    //ScrollTheView(true);
                     keyboardOpen = true;
                 }
             }
@@ -242,6 +249,8 @@ namespace Hello_MultiScreen_iPhone
 
         void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
         {
+            var cGFrame = new CGRect(View.Frame.Left, View.Frame.Top, 100, 200);
+            scrollView.ScrollRectToVisible(cGFrame, true);
             if (keyboardOpen)
             {
                 keyboardShowing = false;
@@ -257,13 +266,12 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
                     scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(false);
+                    //ScrollTheView(false);
                     keyboardOpen = false;
                 }
             }
 
         }
-
         private void ScrollTheView(bool scale)
         {
             UIView.BeginAnimations(string.Empty, IntPtr.Zero);

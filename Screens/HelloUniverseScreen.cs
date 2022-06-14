@@ -212,13 +212,21 @@ namespace Hello_MultiScreen_iPhone
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
         {
             keyboardShowing = editTextWrite.Focused;
-            var cgFrame = new CGRect(ResponsiveWidthLeft, View.Frame.Bottom, 400, 400);
-            scrollView.ScrollRectToVisible(ButtonyourstoryscreenUpload.Frame, true);
             if (!keyboardOpen)
             {
                 keyboardShowing = true;
                 animDuration = args.AnimationDuration;
                 animCurve = args.AnimationCurve;
+
+                int i = 200;
+                if (View.Frame.Height >= 670)
+                    i = 16;
+                if (View.Frame.Height == 812)
+                    i = 50;
+                if (View.Frame.Height >= 845)
+                    i = 30;
+                var cGFrame = new CGRect(View.Frame.Left, View.Frame.Bottom - 30, 100, i);
+                scrollView.ScrollRectToVisible(cGFrame, true);
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
                 //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
@@ -228,8 +236,8 @@ namespace Hello_MultiScreen_iPhone
                 }
                 else
                 {
-                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4 - 10;
-                    ScrollTheView(true);
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 6 - 10;
+                    //ScrollTheView(true);
                     keyboardOpen = true;
                 }
             }
@@ -237,6 +245,8 @@ namespace Hello_MultiScreen_iPhone
 
         void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
         {
+            var cGFrame = new CGRect(View.Frame.Left, View.Frame.Top, 100, 200);
+            scrollView.ScrollRectToVisible(cGFrame, true);
             if (keyboardOpen)
             {
                 keyboardShowing = false;
@@ -252,14 +262,15 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
 
-                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4 - 10;
-                    ScrollTheView(false);
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 6 - 10;
+                    //ScrollTheView(false);
                     keyboardOpen = false;
 
                 }
             }
 
         }
+
 
         private void ScrollTheView(bool scale)
         {
