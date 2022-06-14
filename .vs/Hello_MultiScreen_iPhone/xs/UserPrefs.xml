@@ -1,11 +1,7 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Screens/ImageScreen.cs" Line="566" Column="104" />
-      <File FileName="Screens/EditJournalScreen.cs" Line="313" Column="1" />
-      <File FileName="Screens/HomeScreen.cs" />
-      <File FileName="Screens/HomeScreen2.cs" />
-      <File FileName="EmailFileRead.cs" />
+      <File FileName="EmailFileRead.cs" Line="306" Column="10" />
       <File FileName="Info.plist" />
       <File FileName="Resources/Story1.txt" />
       <File FileName="Resources/Story10.txt" />
@@ -27,10 +23,10 @@
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
-                <Node name="EditJournalScreen.cs" selected="True" />
                 <Node name="HelloUniverseScreen.cs" expanded="True" />
                 <Node name="HelloWorldScreen.cs" expanded="True" />
               </Node>
+              <Node name="Info.plist" selected="True" />
             </Node>
           </Node>
         </State>
