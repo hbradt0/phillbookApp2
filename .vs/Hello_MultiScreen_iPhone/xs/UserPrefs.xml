@@ -12,7 +12,7 @@
       <File FileName="Screens/StoryScreen.designer.cs" />
       <File FileName="Screens/HelloUniverseScreen.designer.cs" />
       <File FileName="Screens/HelloWorldScreen.designer.cs" />
-      <File FileName="Screens/HelloWorldScreen.cs" Line="360" Column="1" />
+      <File FileName="Screens/HelloWorldScreen.cs" />
       <File FileName="Screens/HelloUniverseScreen.cs" />
       <File FileName="Screens/HomeScreen.cs" />
       <File FileName="AppDelegate.cs" />
@@ -32,7 +32,7 @@
                 <Node name="HelloUniverseScreen.cs" expanded="True" />
                 <Node name="HelloWorldScreen.cs" expanded="True" />
               </Node>
-              <Node name="Info.plist" selected="True" />
+              <Node name="EmailFileRead.cs" selected="True" />
             </Node>
           </Node>
         </State>
