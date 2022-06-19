@@ -172,6 +172,8 @@ namespace Hello_MultiScreen_iPhone
                     i = 30;
                 if (View.Frame.Height == 812)
                     i = 100;
+                if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+                    i = 0;
                 var cGFrame = new CGRect(View.Frame.Left, View.Frame.Bottom - 30, 100, i);
                 scrollView.ScrollRectToVisible(cGFrame, true);
 
@@ -301,6 +303,13 @@ namespace Hello_MultiScreen_iPhone
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
+                scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
+                scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+                scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
+            }
             booktextView.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;

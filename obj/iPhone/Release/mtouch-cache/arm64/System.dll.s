@@ -22,7 +22,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 6.12.0 (2020-02/adf1bc4335d Tue Mar 22 14:10:44 EDT 2022)"
+	.asciz "Mono AOT Compiler 6.12.0 (2020-02/dffa5ab9224 Mon May 16 11:03:48 EDT 2022)"
 	.asciz "System.dll"
 	.asciz ""
 
@@ -62856,7 +62856,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "BD491553-9BD2-4D04-AFDF-1E3D15E508E9"
+	.asciz "9346215E-3717-414F-B21D-F612B5DD4279"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -62950,7 +62950,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 117,3,233,60,74,65,179,160,94,1,239,223,181,139,210,10
+	.byte 238,29,146,60,40,41,251,161,217,119,188,200,19,234,12,219
 	.globl _mono_aot_module_System_info
 	.align 3
 _mono_aot_module_System_info:
