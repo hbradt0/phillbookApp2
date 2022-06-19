@@ -33,5 +33,9 @@
 	<string>92</string>
 	<key>CFBundleVersion</key>
 	<string>92</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict/>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 </dict>
 </plist>
