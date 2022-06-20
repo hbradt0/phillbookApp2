@@ -1,25 +1,12 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/HomeScreen.cs">
     <Files>
-      <File FileName="EmailFileRead.cs" Line="306" Column="10" />
-      <File FileName="Info.plist" />
-      <File FileName="Resources/Story1.txt" />
-      <File FileName="Resources/Story10.txt" />
-      <File FileName="Resources/Story25.txt" />
-      <File FileName="Resources/Story50.txt" />
-      <File FileName="Resources/WinText.txt" />
-      <File FileName="Screens/StoryScreen.cs" />
-      <File FileName="Screens/StoryScreen.designer.cs" />
-      <File FileName="Screens/HelloUniverseScreen.designer.cs" />
-      <File FileName="Screens/HelloWorldScreen.designer.cs" />
-      <File FileName="Screens/HelloWorldScreen.cs" />
-      <File FileName="Screens/HelloUniverseScreen.cs" />
-      <File FileName="Screens/HomeScreen.cs" />
-      <File FileName="AppDelegate.cs" />
-      <File FileName="Main.cs" />
-      <File FileName="Screens/ImageScreen.cs" />
+      <File FileName="Screens/ImageScreen.cs" Line="134" Column="14" />
       <File FileName="Screens/HomeScreen2.cs" />
       <File FileName="Screens/EditJournalScreen.cs" />
+      <File FileName="Info.plist" />
+      <File FileName="Screens/StoryScreen.cs" Line="75" Column="46" />
+      <File FileName="Screens/HomeScreen.cs" Line="289" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,8 +18,8 @@
               <Node name="Screens" expanded="True">
                 <Node name="HelloUniverseScreen.cs" expanded="True" />
                 <Node name="HelloWorldScreen.cs" expanded="True" />
+                <Node name="HomeScreen.cs" selected="True" />
               </Node>
-              <Node name="README.md" selected="True" />
             </Node>
           </Node>
         </State>

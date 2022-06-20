@@ -8,11 +8,11 @@ using EmailReader;
 
 namespace Hello_MultiScreen_iPhone
 {
-	public partial class HomeScreen : UIViewController
-	{
+    public partial class HomeScreen : UIViewController
+    {
         //Screens
-		HelloWorldScreen helloWorldScreen;
-		HelloUniverseScreen helloUniverseScreen;
+        HelloWorldScreen helloWorldScreen;
+        HelloUniverseScreen helloUniverseScreen;
         HomeScreen2 TodoScreen;
         ImageScreen imageScreen;
 
@@ -52,22 +52,22 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveSizeY = 35;
 
         //loads the HomeScreen.xib file and connects it to this object
-        public HomeScreen () : base ("HomeScreen", null)
-		{
-		}
+        public HomeScreen() : base("HomeScreen", null)
+        {
+        }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
-			ViewDidLoad1();
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            ViewDidLoad1();
             View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
 
-            ResponsiveWidthLeft = View.Frame.Width/8;
+            ResponsiveWidthLeft = View.Frame.Width / 8;
             nfloat size = 30;
             if (View.Frame.Width / 8 >= View.Frame.Width - 30)
                 size = View.Frame.Width / 8;
             ResponsiveSizeX = View.Frame.Width - size;
-     
+
 
             //---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create Your Journal", UIControlState.Normal);
@@ -81,23 +81,23 @@ namespace Hello_MultiScreen_iPhone
 
 
             this.btnHelloWorld.TouchUpInside += (sender, e) => {
-				//---- instantiate a new hello world screen, if it's null (it may not be null if they've navigated
-				// backwards from it
-				if(this.helloWorldScreen == null) { this.helloWorldScreen = new HelloWorldScreen(); }
-				//---- push our hello world screen onto the navigation controller and pass a true so it navigates
-				this.NavigationController.PushViewController(this.helloWorldScreen, true);
-			};
+                //---- instantiate a new hello world screen, if it's null (it may not be null if they've navigated
+                // backwards from it
+                if (this.helloWorldScreen == null) { this.helloWorldScreen = new HelloWorldScreen(); }
+                //---- push our hello world screen onto the navigation controller and pass a true so it navigates
+                this.NavigationController.PushViewController(this.helloWorldScreen, true);
+            };
 
-			//---- same thing, but for the hello universe screen
-			this.btnHelloUniverse.TouchUpInside += (sender, e) => {
-				if(this.helloUniverseScreen == null) { this.helloUniverseScreen = new HelloUniverseScreen(); }
-				this.NavigationController.PushViewController(this.helloUniverseScreen, true);
-			};
+            //---- same thing, but for the hello universe screen
+            this.btnHelloUniverse.TouchUpInside += (sender, e) => {
+                if (this.helloUniverseScreen == null) { this.helloUniverseScreen = new HelloUniverseScreen(); }
+                this.NavigationController.PushViewController(this.helloUniverseScreen, true);
+            };
 
 
 
         }
-		
+
         public void ViewDidLoad1()
         {
 
@@ -106,7 +106,7 @@ namespace Hello_MultiScreen_iPhone
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
             //View.LargeContentImage = imageView;
-            ResponsiveWidthLeft = View.Frame.Width/8;
+            ResponsiveWidthLeft = View.Frame.Width / 8;
             nfloat size = 30;
             if (View.Frame.Width / 8 >= View.Frame.Width - 30)
                 size = View.Frame.Width / 8;
@@ -114,7 +114,7 @@ namespace Hello_MultiScreen_iPhone
 
             imageViewPic = new UIImageView();
             UIImage img3 = new UIImage();
-            if (EmailFileRead.FileExists(EmailFileRead.fileNameImage) && EmailFileRead.fileNameImage!="")
+            if (EmailFileRead.FileExists(EmailFileRead.fileNameImage) && EmailFileRead.fileNameImage != "")
             {
                 img3 = UIImage.FromFile(EmailFileRead.fileNameImage);
             }
@@ -126,7 +126,7 @@ namespace Hello_MultiScreen_iPhone
             UIImage viewer = new UIImage();
             viewer = UIImage.FromFile("pic5.jpg");
             textView = new UITextView();
-  
+
             ButtonImageClick = new UIButton(UIButtonType.System);
             //ButtonImageClick.SetBackgroundImage(viewer,UIControlState.Normal);
             ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
@@ -142,6 +142,10 @@ namespace Hello_MultiScreen_iPhone
                 BackgroundColor = UIColor.FromRGB(204, 204, 255),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                scrollView = new UIScrollView();
+            }
             imageViewTitle = new UIImageView();
 
 
@@ -149,7 +153,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonTodoList = new UIButton(UIButtonType.System);
             ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             ButtonTodoList.SetTitle("Create To Do List", UIControlState.Normal);
-            ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
+            ButtonTodoList.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonTodoList.Layer.CornerRadius = 10;
             imageView3 = new UIImageView();
 
@@ -169,7 +173,7 @@ namespace Hello_MultiScreen_iPhone
                 this.NavigationController.PushViewController(this.imageScreen, true);
             };
 
-            scrollView.ScrollRectToVisible(imageViewTitle.Frame,true);
+            scrollView.ScrollRectToVisible(imageViewTitle.Frame, true);
 
             scrollView.Add(ButtonTodoList);
             scrollView.Add(imageView3);
@@ -183,14 +187,14 @@ namespace Hello_MultiScreen_iPhone
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           
         }
-       
-		/// <summary>
-		/// Is called when the view is about to appear on the screen. We use this method to hide the
-		/// navigation bar.
-		/// </summary>
-		public override void ViewWillAppear (bool animated)
-		{
-			base.ViewWillAppear (animated);
+
+        /// <summary>
+        /// Is called when the view is about to appear on the screen. We use this method to hide the
+        /// navigation bar.
+        /// </summary>
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
             {
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
@@ -219,7 +223,7 @@ namespace Hello_MultiScreen_iPhone
             else
                 img3 = UIImage.FromFile("TestPic.png");
             imageViewPic.Image = img3;
-            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235+10, ResponsiveSizeX, 280);
+            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235 + 10, ResponsiveSizeX, 280);
             UIImage img2 = new UIImage();
             img2 = UIImage.FromFile(EmailFileRead.fileNameImage1);
             imageViewTitle.Image = img2;
@@ -235,18 +239,20 @@ namespace Hello_MultiScreen_iPhone
 
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
             {
-                int expandipad = 10;
+                int expandipad = 1;
+                if (View.Frame.Height > 1024)
+                    expandipad = 5;
                 imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft - 20, View.Frame.Top + 10, ResponsiveSizeX + 40, 80 + 30 + expandipad);
                 btnHelloUniverse.Frame = new CGRect(ResponsiveWidthLeft, imageViewTitle.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
                 ButtonTodoList.Frame = new CGRect(ResponsiveWidthLeft, btnHelloUniverse.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
                 imageView3.Frame = new CGRect(imageViewTitle.Frame.Left - 20, imageViewTitle.Frame.Top - 20
                 + 20, 70, 70);
-                imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, ButtonTodoList.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeX-50);
+                imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, ButtonTodoList.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeX - 50);
                 btnHelloWorld.Frame = new CGRect(ResponsiveWidthLeft, imageViewPic.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
                 ButtonImageClick.Frame = new CGRect(ResponsiveWidthLeft, btnHelloWorld.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
 
             }
-            
+
         }
 
 
@@ -257,7 +263,7 @@ namespace Hello_MultiScreen_iPhone
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
                 scrollView.ContentSize = new CGSize(View.Frame.Width + 400, View.Frame.Height + 400);
                 scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
-                scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleDimensions;
+                scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
             else
             {
@@ -273,10 +279,10 @@ namespace Hello_MultiScreen_iPhone
         /// Is called when the another view will appear and this one will be hidden. We use this method
         /// to show the navigation bar again.
         /// </summary>
-        public override void ViewWillDisappear (bool animated)
-		{
-			base.ViewWillDisappear (animated);
-			this.NavigationController.SetNavigationBarHidden (false, animated);
-		}
-	}
+        public override void ViewWillDisappear(bool animated)
+        {
+            base.ViewWillDisappear(animated);
+            this.NavigationController.SetNavigationBarHidden(false, animated);
+        }
+    }
 }

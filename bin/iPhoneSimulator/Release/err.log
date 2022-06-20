@@ -1,0 +1,20 @@
+objc[43424]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/F1A4F654-0C7F-416A-AC9D-0BC8EDDF718C/data/Containers/Bundle/Application/29DF967C-4910-4B7F-B657-8B017660C442/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x103a63438). One of the two will be used. Which one is undefined.
+MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
+2022-06-20 15:21:52.899186-0700 Hello_MultiScreen_iPhone[43424:4825330] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=43424
+2022-06-20 15:21:52.899983-0700 Hello_MultiScreen_iPhone[43424:4825330] SecTaskCopyDebugDescription: Hello_MultiScree[43424]/0#-1 LF=0
+2022-06-20 15:21:52.926974-0700 Hello_MultiScreen_iPhone[43424:4825330] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=43424
+2022-06-20 15:21:52.927944-0700 Hello_MultiScreen_iPhone[43424:4825330] SecTaskCopyDebugDescription: Hello_MultiScree[43424]/0#-1 LF=0
+2022-06-20 15:21:53.221884-0700 Hello_MultiScreen_iPhone[43424:4825330] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=43424
+2022-06-20 15:21:53.222120-0700 Hello_MultiScreen_iPhone[43424:4825330] SecTaskCopyDebugDescription: Hello_MultiScree[43424]/0#-1 LF=0
+2022-06-20 15:21:53.458040-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x600002e905a0: previouslyFocusedItem=(null), nextFocusedItem=(null), focusHeading=None>. No additional info available.
+2022-06-20 15:21:57.601343-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Deferring focus update to item <UITextView: 0x7fca69071c00>. No additional info available.
+2022-06-20 15:21:57.601572-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x600002e905a0: previouslyFocusedItem=(null), nextFocusedItem=(null), focusHeading=None>. No additional info available.
+2022-06-20 15:21:58.453121-0700 Hello_MultiScreen_iPhone[43424:4825330] [unspecified] container_system_group_path_for_identifier: error = ((container_error_t)98) NOT_CODESIGNED
+2022-06-20 15:21:58.453241-0700 Hello_MultiScreen_iPhone[43424:4825330] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 98
+2022-06-20 15:21:58.453496-0700 Hello_MultiScreen_iPhone[43424:4825330] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/psargent/Library/Developer/CoreSimulator/Devices/F1A4F654-0C7F-416A-AC9D-0BC8EDDF718C/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2022-06-20 15:21:59.947726-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Deferring focus update to item <UITextView: 0x7fca69071c00>. No additional info available.
+2022-06-20 15:21:59.947992-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x600002e940a0: previouslyFocusedItem=(null), nextFocusedItem=(null), focusHeading=None>. No additional info available.
+2022-06-20 15:22:02.518258-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Deferring focus update to item <UITextField: 0x7fca6b8f5200>. No additional info available.
+2022-06-20 15:22:02.518504-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x600002eb7480: previouslyFocusedItem=(null), nextFocusedItem=(null), focusHeading=None>. No additional info available.
+2022-06-20 15:22:04.347956-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Deferring focus update to item <UITextField: 0x7fca6b8f5200>. No additional info available.
+2022-06-20 15:22:04.348138-0700 Hello_MultiScreen_iPhone[43424:4825330] [UIFocus] Failed to update focus with context <UIFocusUpdateContext: 0x60
