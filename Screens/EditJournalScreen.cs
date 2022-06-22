@@ -65,6 +65,7 @@ namespace Hello_MultiScreen_iPhone
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
             this.View.LargeContentTitle = "";
+
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
             booktextView = new UITextView()
@@ -111,6 +112,7 @@ namespace Hello_MultiScreen_iPhone
             Button3.Layer.CornerRadius = 10;
 
             //ScrollView
+ 
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
@@ -122,6 +124,8 @@ namespace Hello_MultiScreen_iPhone
             {
                 scrollView = new UIScrollView();
             }
+          
+
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
 
@@ -313,6 +317,9 @@ namespace Hello_MultiScreen_iPhone
                 scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)
+                booktextView.Font = UIFont.SystemFontOfSize(14);
+
             booktextView.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
@@ -329,7 +336,7 @@ namespace Hello_MultiScreen_iPhone
 
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 50, ResponsiveSizeX, 440);
             ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom+20, 100, 30);
-            Button3.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom+20, 100, 30);
+            Button3.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom + 20, 100, 30);
         }
     }
 }

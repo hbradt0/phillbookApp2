@@ -38,7 +38,6 @@ namespace Hello_MultiScreen_iPhone
         public UIButton hiddenbutton;
 
         public UITextView readInfo;
-
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
@@ -148,6 +147,11 @@ namespace Hello_MultiScreen_iPhone
             sta.TextColor = UIColor.Black;
             sta.Text = "Days Prior";
             sta.BackgroundColor = UIColor.FromRGB(230, 230, 250);
+            CloudLoginButton = new UIButton(UIButtonType.System);
+
+            CloudLoginButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            CloudLoginButton.BackgroundColor = UIColor.SystemTeal;
+            CloudLoginButton.SetTitle("Login Cloud", UIControlState.Normal);
 
             //ScrollView
 
@@ -296,6 +300,7 @@ namespace Hello_MultiScreen_iPhone
             }
 
         }
+
         private void ScrollTheView(bool scale)
         {
             UIView.BeginAnimations(string.Empty, IntPtr.Zero);
@@ -368,7 +373,6 @@ namespace Hello_MultiScreen_iPhone
                 scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
-
             ResponsiveWidthLeft = View.Frame.Width / 10;
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
@@ -377,7 +381,6 @@ namespace Hello_MultiScreen_iPhone
             booktextView.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
-
 
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
 
@@ -390,6 +393,9 @@ namespace Hello_MultiScreen_iPhone
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, 35);
 
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, hiddenbuttoncode.Frame.Bottom + 20, 35, 35);
+
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)
+                booktextView.Font = UIFont.SystemFontOfSize(14);
 
             var cgFrame = new CGRect(ResponsiveWidthLeft, View.Frame.Top, ResponsiveSizeX, 340);
             scrollView.ScrollRectToVisible(cgFrame, true);
@@ -417,3 +423,6 @@ namespace Hello_MultiScreen_iPhone
         }
     }
 }
+
+   
+
