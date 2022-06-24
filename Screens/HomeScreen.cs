@@ -5,14 +5,16 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using EmailReader;
+using Google.MobileAds;
+//using Google.MobileAds;
 
 namespace Hello_MultiScreen_iPhone
 {
-	public partial class HomeScreen : UIViewController
-	{
+    public partial class HomeScreen : UIViewController//, IBannerViewDelegate
+    {
         //Screens
-		HelloWorldScreen helloWorldScreen;
-		HelloUniverseScreen helloUniverseScreen;
+        HelloWorldScreen helloWorldScreen;
+        HelloUniverseScreen helloUniverseScreen;
         HomeScreen2 TodoScreen;
         ImageScreen imageScreen;
 
@@ -50,16 +52,49 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveSizeY = 35;
+        public BannerView bannerView;
 
         //loads the HomeScreen.xib file and connects it to this object
-        public HomeScreen () : base ("HomeScreen", null)
-		{
-		}
-
-		public override void ViewDidLoad ()
+        public HomeScreen() : base("HomeScreen", null)
+        {
+        }
+        
+        public void LoadBanner()
+        {
+            bannerView = new BannerView(AdSizeCons.Banner);
+            bannerView.TranslatesAutoresizingMaskIntoConstraints = false;
+            scrollView.AddSubview(bannerView);
+            bannerView.AdUnitId = "ca-app-pub-3940256099942544/2934735716";
+            bannerView.RootViewController = this;
+            bannerView.LoadRequest(Request.GetDefaultRequest());
+            //this.bannerView.Delegate = this;
+            this.bannerView.AdReceived += (sender, args) =>
+            {
+                scrollView.AddSubview(bannerView);
+            };
+            this.bannerView.ReceiveAdFailed += (sender, args) =>
+            {
+                var Confirm = new UIAlertView("Confirmation", "Ad didn't work", null, "Cancel", "Yes");
+                Confirm.Show();
+                Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                {
+                    if (es.ButtonIndex == 0)
+                    {
+                        //Do nothing
+                    }
+                    else
+                    {
+                        //Do nothing
+                    }
+                };
+            };
+          
+        }
+        
+        public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			ViewDidLoad1();
+            ViewDidLoad1();
             View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
 
             ResponsiveWidthLeft = View.Frame.Width/8;
@@ -67,7 +102,9 @@ namespace Hello_MultiScreen_iPhone
             if (View.Frame.Width / 8 >= View.Frame.Width - 30)
                 size = View.Frame.Width / 8;
             ResponsiveSizeX = View.Frame.Width - size;
-     
+            
+            LoadBanner();
+
 
             //---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create Your Journal", UIControlState.Normal);
@@ -183,16 +220,17 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(btnHelloUniverse);
             scrollView.Add(btnHelloWorld);
             View.AddSubview(scrollView);
+            //LoadBanner();
 
             //View.AddSubview(Button1);
             //View.AddSubview(Buttonyourstoryscreen);           
         }
-       
-		/// <summary>
-		/// Is called when the view is about to appear on the screen. We use this method to hide the
-		/// navigation bar.
-		/// </summary>
-		public override void ViewWillAppear (bool animated)
+
+        /// <summary>
+        /// Is called when the view is about to appear on the screen. We use this method to hide the
+        /// navigation bar.
+        /// </summary>
+        public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
@@ -258,7 +296,7 @@ namespace Hello_MultiScreen_iPhone
                 imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft - 20, View.Frame.Top + 10, ResponsiveSizeX + 40, 80 + 30 + 10);
 
             }
-
+            
         }
 
 

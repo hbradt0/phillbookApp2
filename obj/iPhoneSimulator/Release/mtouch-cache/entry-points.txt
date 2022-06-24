@@ -985,6 +985,114 @@ Function=NetSecurityNative_Unwrap
 	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.dll
 Function=SystemNative_GetDomainSocketSizes
 	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Core.dll
+Field=GADCustomNativeAdMediaViewKey
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADSimulatorID
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADPortraitInlineAdaptiveBannerAdSizeWithWidth
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADLandscapeInlineAdaptiveBannerAdSizeWithWidth
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADCurrentOrientationInlineAdaptiveBannerAdSizeWithWidth
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADInlineAdaptiveBannerAdSizeWithWidthAndMaxHeight
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADLandscapeAnchoredAdaptiveBannerAdSizeWithWidth
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADAdSizeFromCGSize
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADAdSizeFullWidthPortraitWithHeight
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADAdSizeFullWidthLandscapeWithHeight
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADAdSizeEqualToSize
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=CGSizeFromGADAdSize
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=IsGADAdSizeValid
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADAdSizeIsFluid
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=NSStringFromGADAdSize
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=NSValueFromGADAdSize
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=GADAdSizeFromNSValue
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeBanner
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeFluid
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeFullBanner
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeInvalid
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeLargeBanner
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeLeaderboard
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeMediumRectangle
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdSizeSkyscraper
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=kGADAdSizeSmartBannerLandscape
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=kGADAdSizeSmartBannerPortrait
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdLoaderAdTypeCustomNative
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdLoaderAdTypeGAMBanner
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADAdLoaderAdTypeNative
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADMaxAdContentRatingGeneral
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADMaxAdContentRatingMatureAudience
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADMaxAdContentRatingParentalGuidance
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADMaxAdContentRatingTeen
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeAdChoicesViewAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeAdvertiserAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeBodyAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeCallToActionAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeHeadlineAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeIconAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeImageAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeMediaViewAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativePriceAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeStarRatingAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADNativeStoreAsset
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADCustomEventAdNetworkClassName
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADErrorUserInfoKeyResponseInfo
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Field=GADGoogleAdNetworkClassName
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+Function=FIRFirebaseVersion
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Firebase.Core.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRApp
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Firebase.Core.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRConfiguration
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Firebase.Core.dll
+ObjectiveCClass=OBJC_CLASS_$_FIROptions
+	/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Firebase.Core.dll
 Function=xamarin_dyn_objc_msgSend
 Function=xamarin_dyn_objc_msgSendSuper
 Function=xamarin_dyn_objc_msgSend_stret

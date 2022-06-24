@@ -9,3 +9,5 @@ RemoveDynamicRegistrar:false
 /Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Core.dll
 /Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Net.Http.dll
 /Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Drawing.Common.dll
+/Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
+/Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Firebase.Core.dll

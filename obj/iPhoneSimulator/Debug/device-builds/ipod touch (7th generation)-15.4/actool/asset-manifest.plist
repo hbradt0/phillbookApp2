@@ -6,10 +6,10 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/bundle/AppIcon60x60@2x.png</string>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/bundle/AppIcon76x76@2x~ipad.png</string>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/bundle/Assets.car</string>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/partial-info.plist</string>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/bundle/AppIcon60x60@2x.png</string>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/bundle/AppIcon76x76@2x~ipad.png</string>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/bundle/Assets.car</string>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/partial-info.plist</string>
 		</array>
 	</dict>
 	<key>com.apple.actool.document.notices</key>
@@ -20,7 +20,7 @@
 				<string>./AppIcon.appiconset/[][iphone][57x57][][][1x][][][]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
 			<string>57x57 app icons only apply to iPhone apps targeting releases of iOS prior to 7.0</string>
 			<key>type</key>
@@ -32,9 +32,69 @@
 				<string>./AppIcon.appiconset/[][iphone][57x57][][][2x][][][]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/psargent/phillbookApp2/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
 			<string>57x57@2x app icons only apply to iPhone apps targeting releases of iOS prior to 7.0</string>
+			<key>type</key>
+			<string>Inapplicable Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][50x50][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>50x50 iPad spotlight icons only apply to iPad apps targeting releases of iOS prior to 7.0</string>
+			<key>type</key>
+			<string>Inapplicable Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][50x50][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>50x50 iPad spotlight icons only apply to iPad apps targeting releases of iOS prior to 7.0</string>
+			<key>type</key>
+			<string>Inapplicable Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][72x72][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>72x72 app icons only apply to iPad apps targeting releases of iOS prior to 7.0</string>
+			<key>type</key>
+			<string>Inapplicable Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][72x72][][][2x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>72x72@2x app icons only apply to iPad apps targeting releases of iOS prior to 7.0</string>
+			<key>type</key>
+			<string>Inapplicable Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ipad][76x76][][][1x][][][]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>76x76@1x app icons only apply to iPad apps targeting releases of iOS prior to 10.0.</string>
 			<key>type</key>
 			<string>Inapplicable Content</string>
 		</dict>
@@ -43,19 +103,19 @@
 	<array>
 		<dict>
 			<key>description</key>
-			<string>Failed to read file attributes for "/Users/psargent/phillbookApp2/(7th"</string>
+			<string>Failed to read file attributes for "/Users/psargent/phillbookAppV1/(7th"</string>
 			<key>failure-reason</key>
 			<string>No such file or directory</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>Failed to read file attributes for "/Users/psargent/phillbookApp2/generation)"</string>
+			<string>Failed to read file attributes for "/Users/psargent/phillbookAppV1/generation)"</string>
 			<key>failure-reason</key>
 			<string>No such file or directory</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>Failed to read file attributes for "/Users/psargent/phillbookApp2/touch"</string>
+			<string>Failed to read file attributes for "/Users/psargent/phillbookAppV1/touch"</string>
 			<key>failure-reason</key>
 			<string>No such file or directory</string>
 		</dict>

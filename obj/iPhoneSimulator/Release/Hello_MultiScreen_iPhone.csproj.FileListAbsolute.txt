@@ -1,4 +1,6 @@
 /Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Firebase.Core.dll
+/Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Google.MobileAds.dll
 /Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Tesseract.Binding.iOS.dll
 /Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Tesseract.dll
 /Users/psargent/phillbookAppV1/bin/iPhoneSimulator/Release/Tesseract.iOS.dll
@@ -52,8 +54,9 @@
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/optimized/chapter3.png
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/optimized/chapter4.png
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/optimized/chapter5.png
+/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/optimized/GoogleService-Info.plist
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/optimized/
-/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache

@@ -28,7 +28,10 @@ namespace Hello_MultiScreen_iPhone
 			this.window.RootViewController = rootNavigationController;
 
 			this.window.MakeKeyAndVisible ();
-
+			// Use Firebase library to configure APIs.
+			Firebase.Core.App.Configure();
+			// Initialize the Google Mobile Ads SDK.
+			Google.MobileAds.MobileAds.SharedInstance.Start(null);
 			return true;
 		}
 	}
