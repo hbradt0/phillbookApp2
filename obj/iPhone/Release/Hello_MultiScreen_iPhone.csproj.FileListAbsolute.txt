@@ -1,4 +1,6 @@
 /Users/psargent/phillbookAppV1/bin/iPhone/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppV1/bin/iPhone/Release/Firebase.Core.dll
+/Users/psargent/phillbookAppV1/bin/iPhone/Release/Google.MobileAds.dll
 /Users/psargent/phillbookAppV1/bin/iPhone/Release/Tesseract.Binding.iOS.dll
 /Users/psargent/phillbookAppV1/bin/iPhone/Release/Tesseract.dll
 /Users/psargent/phillbookAppV1/bin/iPhone/Release/Tesseract.iOS.dll
@@ -52,6 +54,7 @@
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/chapter3.png
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/chapter4.png
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/chapter5.png
+/Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/GoogleService-Info.plist
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
