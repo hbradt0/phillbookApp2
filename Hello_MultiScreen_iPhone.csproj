@@ -104,6 +104,7 @@
     <None Include="packages.config" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="Screens\StoryScreen.xib" />
+    <InterfaceDefinition Include="Screens\EditImportant.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -133,6 +134,8 @@
     <Compile Include="Screens\ImageScreen.designer.cs" />
     <Compile Include="Screens\StoryScreen.cs" />
     <Compile Include="Screens\StoryScreen.designer.cs" />
+    <Compile Include="Screens\EditImportant.cs" />
+    <Compile Include="Screens\EditImportant.designer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

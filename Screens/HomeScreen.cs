@@ -82,7 +82,7 @@ namespace Hello_MultiScreen_iPhone
                 };
                 this.bannerView.ClickRecorded += (sender, args) =>
                 {
-                    bannerView.Hidden = true;
+                    //bannerView.Hidden = true;
                 };
                 this.bannerView.ReceiveAdFailed += (sender, args) =>
                 {
