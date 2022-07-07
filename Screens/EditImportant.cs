@@ -63,7 +63,7 @@ namespace Hello_MultiScreen_iPhone
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
                 bannerView = new BannerView(AdSizeCons.Banner, new CGPoint(0, View.Frame.Height + 550));
             else
-                bannerView = new BannerView(AdSizeCons.Banner, new CGPoint(0, View.Frame.Height + 0));
+                bannerView = new BannerView(AdSizeCons.Banner, new CGPoint(0, 0));
             bannerView.TranslatesAutoresizingMaskIntoConstraints = true;
             scrollView.AddSubview(bannerView);
             bannerView.AdUnitId = "ca-app-pub-6939141027430284/4499186391";
@@ -149,7 +149,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 250),
-                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                BackgroundColor = HomeScreen.color,
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
@@ -159,7 +159,7 @@ namespace Hello_MultiScreen_iPhone
           
 
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
-            //ButtonDelete.AddTarget(ButtonSpaceClick, UIControlEvent.TouchUpInside);
+            ButtonDelete.AddTarget(ButtonSpaceClick, UIControlEvent.TouchUpInside);
 
 
             //Add to view
@@ -175,7 +175,13 @@ namespace Hello_MultiScreen_iPhone
 
         }
 
-
+        //Delete everything your story
+        private void ButtonSpaceClick(object sender, EventArgs eventArgs)
+        {
+           // EmailFileRead.AppendAllText("\n",EmailFileRead.fileName3);
+            booktextView.Text = String.Empty;
+            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
+        }
 
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
         {
@@ -301,11 +307,10 @@ namespace Hello_MultiScreen_iPhone
                 if (booktextView.Text == String.Empty)
                     text = "";
                 String txt = "";
-                String total = text;
-                if (total.Last() != '\n')
+               String total = text;
+               if (total.Last() != '\n')
                     txt = "\n";
-                EmailFileRead.WriteAllText(text+txt, EmailFileRead.fileName3);
-                String totalText = EmailFileRead.ReadText(EmailFileRead.fileName3);
+                EmailFileRead.WriteAllText(text + txt, EmailFileRead.fileName3); String totalText = EmailFileRead.ReadText(EmailFileRead.fileName3);
 		        booktextView.Text=totalText;
                 UIApplication.SharedApplication.KeyWindow.EndEditing(true);
                 keyboardOpen = false;
@@ -329,7 +334,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
                 scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
-                scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+                scrollView.BackgroundColor = HomeScreen.color;
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)

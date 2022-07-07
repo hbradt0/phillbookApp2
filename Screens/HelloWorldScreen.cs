@@ -73,9 +73,9 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             //View Issue
-            View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
+            View.BackgroundColor = HomeScreen.color;
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
+            user.View.BackgroundColor = HomeScreen.color;
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -159,7 +159,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height / 3 + 300),
-                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                BackgroundColor = HomeScreen.color,
                 //BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
@@ -370,7 +370,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
                 scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
-                scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+                scrollView.BackgroundColor = HomeScreen.color;
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
             ResponsiveWidthLeft = View.Frame.Width / 10;

@@ -156,7 +156,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                BackgroundColor = HomeScreen.color,
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
@@ -436,7 +436,7 @@ namespace Hello_MultiScreen_iPhone
             base.ViewDidAppear(animated);
             scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
                 scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
-            scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+                scrollView.BackgroundColor = HomeScreen.color;
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
 
             scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 7.5); //small

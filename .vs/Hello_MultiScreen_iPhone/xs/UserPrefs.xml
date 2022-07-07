@@ -12,7 +12,7 @@
       <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
       <File FileName="EmailFileRead.cs" />
-      <File FileName="Screens/EditImportant.cs" Line="307" Column="17" />
+      <File FileName="Screens/EditImportant.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

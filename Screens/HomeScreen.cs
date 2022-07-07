@@ -54,6 +54,8 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveSizeY = 35;
         public BannerView bannerView;
 
+        public static UIColor color = UIColor.FromRGB(204, 204, 255);
+
         //loads the HomeScreen.xib file and connects it to this object
         public HomeScreen() : base("HomeScreen", null)
         {
@@ -143,7 +145,7 @@ namespace Hello_MultiScreen_iPhone
             //View Issue
             Title = "My Custom View Controller";
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+            user.View.BackgroundColor = HomeScreen.color;
             //View.LargeContentImage = imageView;
             ResponsiveWidthLeft = View.Frame.Width/8;
             nfloat size = 30;
@@ -178,7 +180,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height / 3 + 300),
-                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                BackgroundColor = HomeScreen.color,
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
