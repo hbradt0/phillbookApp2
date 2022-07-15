@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
@@ -73,9 +73,9 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             //View Issue
-            View.BackgroundColor = HomeScreen.color;
+            View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
             var user = new UIViewController();
-            user.View.BackgroundColor = HomeScreen.color;
+            user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -93,7 +93,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
 
-                BackgroundColor = UIColor.FromRGB(204, 204, 255)
+                BackgroundColor = HomeScreen.color
             };
 
             editTextDate = new UITextField();
@@ -103,7 +103,7 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             editTextDate.BackgroundColor = UIColor.White;
-            editTextDate.TextColor = UIColor.Purple;
+            editTextDate.TextColor = UIColor.Black;
             editTextDate.AccessibilityHint = "0 (days)";
             editTextDate.Text = "0";
 
@@ -111,7 +111,7 @@ namespace Hello_MultiScreen_iPhone
             codes.Editable = false;
             codes.TextColor = UIColor.Black;
             codes.Text = "";
-            codes.BackgroundColor = UIColor.FromRGB(230, 230, 250);
+            codes.BackgroundColor = UIColor.FromRGB(252, 251, 244);
             editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
 
 
@@ -119,7 +119,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             booktextView.Text = "Enter your email to begin your story!";
-            booktextView.BackgroundColor = UIColor.FromRGB(230, 230, 250);
+            booktextView.BackgroundColor = UIColor.FromRGB(252, 251, 244);
             booktextView.TextColor = UIColor.Purple;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
@@ -146,12 +146,13 @@ namespace Hello_MultiScreen_iPhone
             sta.Editable = false;
             sta.TextColor = UIColor.Black;
             sta.Text = "Days Prior";
-            sta.BackgroundColor = UIColor.FromRGB(230, 230, 250);
+            sta.BackgroundColor = UIColor.FromRGB(252, 251, 244);
             CloudLoginButton = new UIButton(UIButtonType.System);
 
             CloudLoginButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             CloudLoginButton.BackgroundColor = UIColor.SystemTeal;
             CloudLoginButton.SetTitle("Login Cloud", UIControlState.Normal);
+
 
             //ScrollView
 
@@ -174,6 +175,8 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
 
+            //scrollView.Add(CloudLoginButton);
+
             scrollView.Add(codes);
             scrollView.Add(ShareTodo);
             scrollView.Add(editTextDate);
@@ -191,6 +194,7 @@ namespace Hello_MultiScreen_iPhone
 
 
         }
+
 
         private void ButtonShareClick(object sender, EventArgs eventArgs)
         {
@@ -382,6 +386,8 @@ namespace Hello_MultiScreen_iPhone
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
 
+            CloudLoginButton.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom + 10, 100, 30);
+
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
 
             ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 10, 35, 35);
@@ -420,6 +426,8 @@ namespace Hello_MultiScreen_iPhone
                 str = str + "\n" + EmailFileRead.CodeList[3];
             }
             codes.Text = str;
+            this.NavigationController.NavigationBar.BarTintColor = UIColor.White;
+            this.NavigationController.NavigationBar.TintColor = UIColor.Black;
         }
     }
 }

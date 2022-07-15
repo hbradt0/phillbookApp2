@@ -17,6 +17,9 @@ namespace Hello_MultiScreen_iPhone
         HelloUniverseScreen helloUniverseScreen;
         HomeScreen2 TodoScreen;
         ImageScreen imageScreen;
+        public static UIColor color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpg"));
+        //public static UIColor color2 = UIColor.FromRGB(100, 100, 255);
+        //public static UIColor color3 = UIColor.FromRGB(204, 204, 255);
 
         //Variables
         public UITextView textView;
@@ -54,67 +57,65 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveSizeY = 35;
         public BannerView bannerView;
 
-        public static UIColor color = UIColor.FromRGB(204, 204, 255);
-
         //loads the HomeScreen.xib file and connects it to this object
         public HomeScreen() : base("HomeScreen", null)
         {
         }
-        
-   
-            public void LoadBanner()
+
+        public void LoadBanner()
+        {
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+                bannerView = new BannerView(AdSizeCons.Banner, new CGPoint(0, View.Frame.Height + 550));
+            else
+                bannerView = new BannerView(AdSizeCons.Banner, new CGPoint(0, View.Frame.Height + 0));
+            bannerView.TranslatesAutoresizingMaskIntoConstraints = true;
+            scrollView.AddSubview(bannerView);
+            bannerView.AdUnitId = "ca-app-pub-6939141027430284/5604426063";
+            bannerView.RootViewController = this;
+            bannerView.LoadRequest(Request.GetDefaultRequest());
+            //this.bannerView.Delegate = this;
+            this.bannerView.AdReceived += (sender, args) =>
             {
-                if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-                    bannerView = new BannerView(AdSizeCons.Banner, new CGPoint(0, View.Frame.Height + 550));
-                else
-                    bannerView = new BannerView(AdSizeCons.Banner, new CGPoint(0, View.Frame.Height + 0));
-                bannerView.TranslatesAutoresizingMaskIntoConstraints = true;
                 scrollView.AddSubview(bannerView);
-                bannerView.AdUnitId = "ca-app-pub-6939141027430284/4170779681";
-                bannerView.RootViewController = this;
-                bannerView.LoadRequest(Request.GetDefaultRequest());
-                //this.bannerView.Delegate = this;
-                this.bannerView.AdReceived += (sender, args) =>
-                {
-                    scrollView.AddSubview(bannerView);
-                };
-                this.bannerView.ScreenDismissed += (sender, args) =>
-                {
+            };
+            this.bannerView.ScreenDismissed += (sender, args) =>
+            {
 
-                };
-                this.bannerView.ClickRecorded += (sender, args) =>
-                {
-                    //bannerView.Hidden = true;
-                };
-                this.bannerView.ReceiveAdFailed += (sender, args) =>
-                {
+            };
+            this.bannerView.ClickRecorded += (sender, args) =>
+            {
+                //bannerView.Hidden = true;
+            };
+            this.bannerView.ReceiveAdFailed += (sender, args) =>
+            {
 
+            };
 
-                };
+        }
 
-            }
+        public override void ViewDidLoad()
+        {
 
+            base.ViewDidLoad();
+            color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpg"));
 
-        public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
             ViewDidLoad1();
-            View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+            View.BackgroundColor = HomeScreen.color;
 
-            ResponsiveWidthLeft = View.Frame.Width/8;
+            ResponsiveWidthLeft = View.Frame.Width / 8;
             nfloat size = 30;
             if (View.Frame.Width / 8 >= View.Frame.Width - 30)
                 size = View.Frame.Width / 8;
             ResponsiveSizeX = View.Frame.Width - size;
-            
+
             LoadBanner();
 
 
             //---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Create Your Journal", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Click To Read", UIControlState.Normal);
-            this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 240);
-            this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 240);
+            this.btnHelloUniverse.BackgroundColor = UIColor.SystemIndigo;
+            this.btnHelloWorld.BackgroundColor = UIColor.SystemIndigo;
             this.Title = "Home";
 
             this.btnHelloWorld.Layer.CornerRadius = 10;
@@ -122,32 +123,32 @@ namespace Hello_MultiScreen_iPhone
 
 
             this.btnHelloWorld.TouchUpInside += (sender, e) => {
-				//---- instantiate a new hello world screen, if it's null (it may not be null if they've navigated
-				// backwards from it
-				if(this.helloWorldScreen == null) { this.helloWorldScreen = new HelloWorldScreen(); }
-				//---- push our hello world screen onto the navigation controller and pass a true so it navigates
-				this.NavigationController.PushViewController(this.helloWorldScreen, true);
-			};
+                //---- instantiate a new hello world screen, if it's null (it may not be null if they've navigated
+                // backwards from it
+                if (this.helloWorldScreen == null) { this.helloWorldScreen = new HelloWorldScreen(); }
+                //---- push our hello world screen onto the navigation controller and pass a true so it navigates
+                this.NavigationController.PushViewController(this.helloWorldScreen, true);
+            };
 
-			//---- same thing, but for the hello universe screen
-			this.btnHelloUniverse.TouchUpInside += (sender, e) => {
-				if(this.helloUniverseScreen == null) { this.helloUniverseScreen = new HelloUniverseScreen(); }
-				this.NavigationController.PushViewController(this.helloUniverseScreen, true);
-			};
+            //---- same thing, but for the hello universe screen
+            this.btnHelloUniverse.TouchUpInside += (sender, e) => {
+                if (this.helloUniverseScreen == null) { this.helloUniverseScreen = new HelloUniverseScreen(); }
+                this.NavigationController.PushViewController(this.helloUniverseScreen, true);
+            };
 
 
 
         }
-		
+
         public void ViewDidLoad1()
         {
 
             //View Issue
             Title = "My Custom View Controller";
             var user = new UIViewController();
-            user.View.BackgroundColor = HomeScreen.color;
+            //user.View.BackgroundColor = HomeScreen.color;
             //View.LargeContentImage = imageView;
-            ResponsiveWidthLeft = View.Frame.Width/8;
+            ResponsiveWidthLeft = View.Frame.Width / 8;
             nfloat size = 30;
             if (View.Frame.Width / 8 >= View.Frame.Width - 30)
                 size = View.Frame.Width / 8;
@@ -155,7 +156,7 @@ namespace Hello_MultiScreen_iPhone
 
             imageViewPic = new UIImageView();
             UIImage img3 = new UIImage();
-            if (EmailFileRead.FileExists(EmailFileRead.fileNameImage) && EmailFileRead.fileNameImage!="")
+            if (EmailFileRead.FileExists(EmailFileRead.fileNameImage) && EmailFileRead.fileNameImage != "")
             {
                 img3 = UIImage.FromFile(EmailFileRead.fileNameImage);
             }
@@ -167,12 +168,12 @@ namespace Hello_MultiScreen_iPhone
             UIImage viewer = new UIImage();
             viewer = UIImage.FromFile("pic5.jpg");
             textView = new UITextView();
-  
+
             ButtonImageClick = new UIButton(UIButtonType.System);
             //ButtonImageClick.SetBackgroundImage(viewer,UIControlState.Normal);
             ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonImageClick.SetTitle("Image Calendar", UIControlState.Normal);
-            ButtonImageClick.BackgroundColor = UIColor.FromRGB(100, 149, 240);
+            ButtonImageClick.BackgroundColor = UIColor.SystemIndigo;
             ButtonImageClick.Layer.CornerRadius = 10;
 
 
@@ -192,9 +193,9 @@ namespace Hello_MultiScreen_iPhone
 
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             ButtonTodoList = new UIButton(UIButtonType.System);
-            ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 240);
+            ButtonTodoList.BackgroundColor = UIColor.SystemIndigo;
             ButtonTodoList.SetTitle("Create To Do List", UIControlState.Normal);
-            ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
+            ButtonTodoList.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonTodoList.Layer.CornerRadius = 10;
             imageView3 = new UIImageView();
 
@@ -214,7 +215,7 @@ namespace Hello_MultiScreen_iPhone
                 this.NavigationController.PushViewController(this.imageScreen, true);
             };
 
-            scrollView.ScrollRectToVisible(imageViewTitle.Frame,true);
+            scrollView.ScrollRectToVisible(imageViewTitle.Frame, true);
 
             scrollView.Add(ButtonTodoList);
             scrollView.Add(imageView3);
@@ -234,14 +235,16 @@ namespace Hello_MultiScreen_iPhone
         /// Is called when the view is about to appear on the screen. We use this method to hide the
         /// navigation bar.
         /// </summary>
-        public override void ViewWillAppear (bool animated)
-		{
-			base.ViewWillAppear (animated);
+        public override void ViewWillAppear(bool animated)
+        {
+            
+            base.ViewWillAppear(animated);
+            //scrollView.BackgroundColor = HomeScreen.color;
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
             {
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
                 scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 200);
-                scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+                //scrollView.BackgroundColor = HomeScreen.color;
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
             Foundation.NSNotificationCenter.DefaultCenter.AddObserver(new NSString("UIDeviceOrientationDidChangeNotification"), DeviceRotated);
@@ -255,7 +258,6 @@ namespace Hello_MultiScreen_iPhone
             if (View.Frame.Height == 812)
                 expander = 28;
 
-
             //this.NavigationController.SetNavigationBarHidden (true, animated);
             UIImage img3 = new UIImage();
             if (EmailFileRead.FileExists(EmailFileRead.fileNameImage) && EmailFileRead.fileNameImage != "")
@@ -265,7 +267,7 @@ namespace Hello_MultiScreen_iPhone
             else
                 img3 = UIImage.FromFile("TestPic.png");
             imageViewPic.Image = img3;
-            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235+10, ResponsiveSizeX, 280);
+            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235 + 10, ResponsiveSizeX, 280);
             UIImage img2 = new UIImage();
             img2 = UIImage.FromFile(EmailFileRead.fileNameImage1);
             imageViewTitle.Image = img2;
@@ -282,14 +284,14 @@ namespace Hello_MultiScreen_iPhone
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
             {
                 int expandipad = 1;
-                if(View.Frame.Height > 1080)
+                if (View.Frame.Height > 1080)
                     expandipad = 5;
                 imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft - 20, View.Frame.Top + 10, ResponsiveSizeX + 40, 80 + 30 + expandipad);
                 btnHelloUniverse.Frame = new CGRect(ResponsiveWidthLeft, imageViewTitle.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
                 ButtonTodoList.Frame = new CGRect(ResponsiveWidthLeft, btnHelloUniverse.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
                 imageView3.Frame = new CGRect(imageViewTitle.Frame.Left - 20, imageViewTitle.Frame.Top - 20
                 + 20, 70, 70);
-                imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, ButtonTodoList.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeX-50);
+                imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, ButtonTodoList.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeX - 50);
                 btnHelloWorld.Frame = new CGRect(ResponsiveWidthLeft, imageViewPic.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
                 ButtonImageClick.Frame = new CGRect(ResponsiveWidthLeft, btnHelloWorld.Frame.Bottom + expander + expandipad, ResponsiveSizeX, ResponsiveSizeY + expandipad);
 
@@ -300,7 +302,9 @@ namespace Hello_MultiScreen_iPhone
                 imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft - 20, View.Frame.Top + 10, ResponsiveSizeX + 40, 80 + 30 + 10);
 
             }
-            
+            this.NavigationController.NavigationBar.BarTintColor = UIColor.White;
+            this.NavigationController.NavigationBar.TintColor = UIColor.Black;
+
         }
 
 
@@ -310,14 +314,14 @@ namespace Hello_MultiScreen_iPhone
             {
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
                 scrollView.ContentSize = new CGSize(View.Frame.Width + 400, View.Frame.Height + 400);
-                scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+                scrollView.BackgroundColor = HomeScreen.color;
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
             else
             {
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height);
                 scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 200);
-                scrollView.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+                scrollView.BackgroundColor = HomeScreen.color;
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
 
@@ -327,10 +331,10 @@ namespace Hello_MultiScreen_iPhone
         /// Is called when the another view will appear and this one will be hidden. We use this method
         /// to show the navigation bar again.
         /// </summary>
-        public override void ViewWillDisappear (bool animated)
-		{
-			base.ViewWillDisappear (animated);
-			this.NavigationController.SetNavigationBarHidden (false, animated);
-		}
-	}
+        public override void ViewWillDisappear(bool animated)
+        {
+            base.ViewWillDisappear(animated);
+            this.NavigationController.SetNavigationBarHidden(false, animated);
+        }
+    }
 }

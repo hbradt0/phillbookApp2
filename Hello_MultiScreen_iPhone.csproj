@@ -245,6 +245,7 @@
     <BundleResource Include="Resources\chapter4.png" />
     <BundleResource Include="Resources\chapter5.png" />
     <BundleResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="Resources\bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="packages\Xamarin.Build.Download.0.11.0\build\Xamarin.Build.Download.targets" Condition="Exists('packages\Xamarin.Build.Download.0.11.0\build\Xamarin.Build.Download.targets')" />

@@ -73,6 +73,11 @@ namespace EmailReader //rename
             }
         }
 
+        public static void AppendAllText(String text = "\n", String fileName = "")
+        {
+            File.AppendAllText(fileName, text);
+        }
+
         public static void DeleteFile(String fileName = "")
         {
             if (File.Exists(fileName))

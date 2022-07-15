@@ -13872,7 +13872,7 @@ Google_MobileAds_BannerView_EnsureBannerViewDelegate:
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf940e830
+.word 0xf940ec30
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xaa1903e0
@@ -13904,7 +13904,7 @@ bl _p_168
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xf9400342
-.word 0xf940e450
+.word 0xf940e850
 .word 0xd63f0200
 .word 0xb4000179
 .word 0xf9400320
@@ -13941,7 +13941,7 @@ Google_MobileAds_BannerView_EnsureAdSizeDelegate:
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9410030
+.word 0xf9410430
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xaa1903e0
@@ -13973,7 +13973,7 @@ bl _p_169
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xf9400342
-.word 0xf940fc50
+.word 0xf9410050
 .word 0xd63f0200
 .word 0xb4000179
 .word 0xf9400320
@@ -45033,7 +45033,7 @@ bl _p_282
 .word 0xaa1803e2
 .word 0xf9401ba3
 .word 0xf9400063
-.word 0xf9413c70
+.word 0xf9414070
 .word 0xd63f0200
 .word 0xaa1803e0
 bl _p_283
@@ -46340,7 +46340,7 @@ Google_MobileAds_DoubleClick_BannerView_EnsureAdSizeDelegate:
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9413830
+.word 0xf9413c30
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xaa1903e0
@@ -46372,7 +46372,7 @@ bl _p_289
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xf9400342
-.word 0xf9413450
+.word 0xf9413850
 .word 0xd63f0200
 .word 0xb4000179
 .word 0xf9400320
@@ -68079,13 +68079,13 @@ _mono_aot_file_info:
 	.quad unbox_trampoline_addresses
 
 	.long 580,8208,446,1612,141,98,387000831,0
-	.long 39138,128,8,8,8,9,8388607,0
-	.long 4,25,53768,0,0,14624,14184,8680
+	.long 39166,128,8,8,8,9,8388607,0
+	.long 4,25,53800,0,0,14624,14184,8680
 	.long 0,11152,13760,10376,0,7224,2256,14616
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 209,99,73,220,215,234,215,250,73,224,208,134,44,107,226,172
+	.byte 127,125,54,208,45,71,92,150,167,148,136,232,30,227,149,221
 	.globl _mono_aot_module_Google_MobileAds_info
 	.align 3
 _mono_aot_module_Google_MobileAds_info:

@@ -20,6 +20,7 @@
 @class HelloUniverseScreen;
 @class HomeScreen2;
 @class ImageScreen;
+@class EditImportant;
 @class Foundation_NSDispatcher;
 @class __MonoMac_NSSynchronizationContextDispatcher;
 @class Foundation_NSAsyncDispatcher;
@@ -266,6 +267,20 @@ struct trampoline_struct_ddi {
 @end
 
 @interface ImageScreen : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) didReceiveMemoryWarning;
+	-(void) viewDidAppear:(BOOL)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface EditImportant : UIViewController {
 }
 	-(void) release;
 	-(id) retain;
