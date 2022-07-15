@@ -2762,12 +2762,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf9010ba0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf9410ba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -2776,12 +2776,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf900eba0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf940eba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa9416bb9
 .word 0x910003bf
 .word 0xa9407bfd
@@ -2830,7 +2830,7 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #664]
 .word 0xaa1a03e0
 .word 0x3940035e
-bl _p_80
+bl _p_81
 .word 0x53001c00
 .word 0x53001c00
 .word 0x34000100
@@ -2871,7 +2871,7 @@ Hello_MultiScreen_iPhone_EditJournalScreen__ButtonDeleteClickb__35_0_object_UIKi
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #248]
-bl _p_81
+bl _p_82
 .word 0xf9401f22
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -2905,7 +2905,7 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #672]
 bl _p_4
 .word 0xf9001ba0
-bl _p_82
+bl _p_83
 .word 0x91036321
 .word 0xd5033bbf
 .word 0xf9401ba0
@@ -2956,18 +2956,18 @@ Hello_MultiScreen_iPhone_EditJournalScreen__Button3Clickb__39_1_object_UIKit_UIB
 .word 0xf9401f21
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xaa0003fa
 .word 0xf9401f21
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #568]
 .word 0xf9400021
-bl _p_84
+bl _p_85
 .word 0x53001c01
 .word 0x53001c20
 .word 0x3900a3a1
@@ -2981,7 +2981,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1a03e0
-bl _p_85
+bl _p_86
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -3166,7 +3166,7 @@ bl _p_47
 .word 0x53001c00
 .word 0x34000800
 .word 0x910243a8
-bl _p_86
+bl _p_87
 .word 0xd2800000
 .word 0x1e620000
 .word 0xfd007fa0
@@ -3213,7 +3213,7 @@ bl _p_4
 .word 0xf9003fa2
 .word 0xfd4043a0
 .word 0xfd4047a1
-bl _p_87
+bl _p_88
 .word 0x91046341
 .word 0xd5033bbf
 .word 0xf9407ba0
@@ -3231,7 +3231,7 @@ ldr x2, [x16, #16]
 .word 0x3900003e
 .word 0x1400003f
 .word 0x910143a8
-bl _p_86
+bl _p_87
 .word 0xd2800000
 .word 0x1e620000
 .word 0xfd007fa0
@@ -3278,7 +3278,7 @@ bl _p_4
 .word 0xf9001fa2
 .word 0xfd4023a0
 .word 0xfd4027a1
-bl _p_87
+bl _p_88
 .word 0x91046341
 .word 0xd5033bbf
 .word 0xf9407ba0
@@ -3298,7 +3298,7 @@ ldr x2, [x16, #16]
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0x3940005e
-bl _p_88
+bl _p_89
 .word 0xf9408742
 .word 0xf9408f41
 .word 0xaa0203e0
@@ -3321,7 +3321,7 @@ ldr x1, [x16, #696]
 .word 0xd63f0200
 .word 0xf9408f40
 .word 0xf90083a0
-bl _p_89
+bl _p_90
 .word 0xaa0003e1
 .word 0xf94083a2
 .word 0xaa0203e0
@@ -3379,7 +3379,7 @@ ldr x0, [x16, #720]
 .word 0x3901c03f
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_90
+bl _p_91
 .word 0xf9408f42
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -3456,7 +3456,7 @@ ldr x1, [x16, #728]
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0x3940033e
-bl _p_91
+bl _p_92
 .word 0xf9408f42
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -3533,7 +3533,7 @@ ldr x1, [x16, #768]
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0x3940033e
-bl _p_92
+bl _p_93
 .word 0xf9408f42
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -3610,7 +3610,7 @@ ldr x1, [x16, #800]
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0x3940033e
-bl _p_93
+bl _p_94
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
@@ -3639,13 +3639,13 @@ Hello_MultiScreen_iPhone_HomeScreen_ViewDidLoad:
 .word 0xf90017a0
 .word 0xf9001ba0
 .word 0xaa1a03e0
-bl _p_94
+bl _p_95
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #840]
-bl _p_95
 bl _p_96
+bl _p_97
 .word 0xaa0003e1
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -3656,7 +3656,7 @@ ldr x0, [x16, #368]
 .word 0xf9402fa0
 .word 0xf9000001
 .word 0xaa1a03e0
-bl _p_97
+bl _p_98
 .word 0xaa1a03e0
 .word 0x3940035e
 bl _p_16
@@ -3773,7 +3773,7 @@ bl _p_41
 .word 0x1e613800
 .word 0xfd009740
 .word 0xaa1a03e0
-bl _p_98
+bl _p_99
 .word 0xf9401b43
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -3794,7 +3794,7 @@ ldr x1, [x16, #856]
 bl _p_26
 .word 0xf9401b40
 .word 0xf9003ba0
-bl _p_99
+bl _p_78
 .word 0xaa0003e1
 .word 0xf9403ba2
 .word 0xaa0203e0
@@ -3802,7 +3802,7 @@ bl _p_99
 bl _p_18
 .word 0xf9401740
 .word 0xf90037a0
-bl _p_99
+bl _p_78
 .word 0xaa0003e1
 .word 0xf94037a2
 .word 0xaa0203e0
@@ -4141,14 +4141,14 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #944]
 .word 0xf9400000
-bl _p_95
+bl _p_96
 .word 0xaa0003f9
 .word 0x14000006
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #952]
-bl _p_95
+bl _p_96
 .word 0xaa0003f9
 .word 0xf9406f42
 .word 0xaa0203e0
@@ -4165,7 +4165,7 @@ bl _p_103
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #960]
-bl _p_95
+bl _p_96
 .word 0xaa0003f9
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -4232,7 +4232,7 @@ ldr x1, [x16, #968]
 bl _p_26
 .word 0xf9406b40
 .word 0xf900a7a0
-bl _p_99
+bl _p_78
 .word 0xaa0003e1
 .word 0xf940a7a2
 .word 0xaa0203e0
@@ -4514,7 +4514,7 @@ ldr x2, [x16, #16]
 .word 0x3900003e
 .word 0xf9404b40
 .word 0xf900bba0
-bl _p_99
+bl _p_78
 .word 0xaa0003e1
 .word 0xf940bba2
 .word 0xaa0203e0
@@ -4581,7 +4581,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #984]
 .word 0xf9400000
-bl _p_95
+bl _p_96
 .word 0xaa0003f9
 .word 0xf9407742
 .word 0xaa0203e0
@@ -5123,14 +5123,14 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #944]
 .word 0xf9400000
-bl _p_95
+bl _p_96
 .word 0xaa0003f7
 .word 0x14000006
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #952]
-bl _p_95
+bl _p_96
 .word 0xaa0003f7
 .word 0xf9406f22
 .word 0xaa0203e0
@@ -5179,7 +5179,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #984]
 .word 0xf9400000
-bl _p_95
+bl _p_96
 .word 0xaa0003f7
 .word 0xf9407722
 .word 0xaa0203e0
@@ -6047,12 +6047,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf9027ba0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf9427ba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -6061,12 +6061,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf90263a0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf94263a2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa94163b7
 .word 0xa9426bb9
 .word 0x910003bf
@@ -6434,8 +6434,8 @@ Hello_MultiScreen_iPhone_HomeScreen__cctor:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #840]
-bl _p_95
 bl _p_96
+bl _p_97
 .word 0xaa0003e1
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -6565,7 +6565,7 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #672]
 bl _p_4
 .word 0xf9001ba0
-bl _p_82
+bl _p_83
 .word 0x91010341
 .word 0xd5033bbf
 .word 0xf9401ba0
@@ -6756,7 +6756,7 @@ Hello_MultiScreen_iPhone_HelloWorldScreen_ViewDidLoad:
 .word 0xf9000bba
 .word 0xaa0003fa
 .word 0xaa1a03e0
-bl _p_94
+bl _p_95
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -9235,7 +9235,7 @@ bl _p_141
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #1248]
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x35000140
 .word 0xaa1903e0
@@ -9245,7 +9245,7 @@ bl _p_141
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #1520]
-bl _p_84
+bl _p_85
 .word 0x53001c18
 .word 0x14000002
 .word 0xd2800038
@@ -10295,12 +10295,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf9020fa0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf9420fa2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -10309,12 +10309,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf901bba0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf941bba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
@@ -10615,7 +10615,7 @@ bl _p_24
 .word 0xf940d3a2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -11049,7 +11049,7 @@ bl _p_34
 .word 0xf9402f41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x6b1f001f
 .word 0x9a9fd7e0
@@ -11058,7 +11058,7 @@ bl _p_83
 .word 0xf9402f41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x93407c00
 .word 0xf90057bf
@@ -13108,18 +13108,18 @@ bl _p_57
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xaa0003f9
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #568]
 .word 0xf9400021
-bl _p_84
+bl _p_85
 .word 0x53001c01
 .word 0x53001c20
 .word 0x390143a1
@@ -13149,7 +13149,7 @@ bl _p_30
 .word 0xf9402f41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x6b1f001f
 .word 0x9a9fd7e0
@@ -13159,7 +13159,7 @@ bl _p_83
 .word 0xf9402f41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x93407c00
 .word 0xf90023bf
@@ -15286,12 +15286,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf90447a0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf94447a2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -15300,12 +15300,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf9041ba0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf9441ba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
@@ -15355,7 +15355,7 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #664]
 .word 0xaa1a03e0
 .word 0x3940035e
-bl _p_80
+bl _p_81
 .word 0x53001c00
 .word 0x53001c00
 .word 0x34000100
@@ -15398,7 +15398,7 @@ Hello_MultiScreen_iPhone_HelloUniverseScreen__ButtonDelete1LineClickb__44_0_obje
 .word 0xf9402f21
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x6b1f001f
 .word 0x9a9fd7e0
@@ -15408,7 +15408,7 @@ bl _p_83
 .word 0xf9402f21
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x93407c00
 .word 0xf9001fbf
@@ -15512,7 +15512,7 @@ Hello_MultiScreen_iPhone_HomeScreen2_ViewDidLoad:
 .word 0xf9000bba
 .word 0xaa0003fa
 .word 0xaa1a03e0
-bl _p_94
+bl _p_95
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -16287,7 +16287,7 @@ bl _p_34
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x6b1f001f
 .word 0x9a9fd7e0
@@ -16297,7 +16297,7 @@ bl _p_83
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x93407c00
 .word 0xf90063bf
@@ -18243,7 +18243,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #568]
 .word 0xf9400021
-bl _p_84
+bl _p_85
 .word 0x53001c01
 .word 0x53001c20
 .word 0x390143a1
@@ -18284,7 +18284,7 @@ bl _p_125
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x6b1f001f
 .word 0x9a9fd7e0
@@ -18294,7 +18294,7 @@ bl _p_83
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x93407c00
 .word 0xf90023bf
@@ -18515,7 +18515,7 @@ Hello_MultiScreen_iPhone_HomeScreen2_ButtonDelete1LineClick_object_System_EventA
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x6b1f001f
 .word 0x9a9fd7e0
@@ -18524,7 +18524,7 @@ bl _p_83
 .word 0xf9402b41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xb9801000
 .word 0x93407c00
 .word 0xf9001fbf
@@ -21037,12 +21037,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf905b7a0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf945b7a2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -21051,12 +21051,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf90593a0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf94593a2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
@@ -21124,7 +21124,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #2064]
 .word 0xf9400000
-bl _p_81
+bl _p_82
 .word 0xf9402b22
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -21814,7 +21814,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #984]
 .word 0xf9400000
-bl _p_95
+bl _p_96
 .word 0xaa0003e1
 .word 0xf9404b43
 .word 0xaa0303e0
@@ -22942,7 +22942,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x0, [x16, #984]
 .word 0xf9400000
-bl _p_95
+bl _p_96
 .word 0xf90017a0
 .word 0xf9404b43
 .word 0xaa0303e0
@@ -23274,7 +23274,7 @@ bl _p_185
 .word 0xf90017a0
 .word 0xf94017a0
 bl _p_186
-bl _p_95
+bl _p_96
 .word 0xaa0003e1
 .word 0xf9401b42
 .word 0xaa0203e0
@@ -23597,7 +23597,7 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #2768]
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_80
+bl _p_81
 .word 0x53001c00
 .word 0x35000220
 .word 0xaa1a03e0
@@ -23614,7 +23614,7 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #2776]
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_80
+bl _p_81
 .word 0x53001c18
 .word 0x14000002
 .word 0xd2800038
@@ -24945,7 +24945,7 @@ bl _p_185
 bl _p_186
 .word 0xaa0003fa
 .word 0xaa1a03e0
-bl _p_95
+bl _p_96
 .word 0xaa0003f8
 .word 0xf9401b22
 .word 0xaa0203e0
@@ -25090,7 +25090,7 @@ bl _p_41
 .word 0x1e613800
 .word 0xfd006320
 .word 0xaa1a03e0
-bl _p_95
+bl _p_96
 .word 0xaa0003f8
 .word 0xaa1903e0
 .word 0x3940033e
@@ -25654,12 +25654,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf901c3a0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf941c3a2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -25668,12 +25668,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf901aba0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf941aba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
@@ -25885,7 +25885,7 @@ Hello_MultiScreen_iPhone_StoryScreen_ViewDidLoad:
 .word 0xf9000bba
 .word 0xaa0003fa
 .word 0xaa1a03e0
-bl _p_94
+bl _p_95
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -26523,7 +26523,7 @@ Hello_MultiScreen_iPhone_StoryScreen_ShareButtonClick_object_System_EventArgs:
 .word 0xf9401f41
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 bl _p_135
 .word 0xf9005fa0
 
@@ -27459,7 +27459,7 @@ bl _p_29
 bl _p_30
 .word 0xf9401f20
 .word 0xf90147a0
-bl _p_99
+bl _p_78
 .word 0xaa0003e1
 .word 0xf94147a2
 .word 0xaa0203e0
@@ -27485,7 +27485,7 @@ ldr x0, [x16, #1512]
 bl _p_145
 .word 0xaa0003e1
 .word 0xf9412ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c1a
 .word 0xaa1a03e0
@@ -27545,7 +27545,7 @@ bl _p_141
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #1248]
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c1a
 .word 0xaa1a03e0
@@ -27605,7 +27605,7 @@ bl _p_141
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #1520]
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c1a
 .word 0xaa1a03e0
@@ -27673,7 +27673,7 @@ ldr x0, [x16, #1512]
 bl _p_145
 .word 0xaa0003e1
 .word 0xf9412ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c1a
 .word 0xaa1a03e0
@@ -27741,7 +27741,7 @@ ldr x0, [x16, #1512]
 bl _p_145
 .word 0xaa0003e1
 .word 0xf9412ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c1a
 .word 0xaa1a03e0
@@ -27809,7 +27809,7 @@ ldr x0, [x16, #1512]
 bl _p_145
 .word 0xaa0003e1
 .word 0xf9412ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x35000560
 
@@ -27832,7 +27832,7 @@ ldr x0, [x16, #1512]
 bl _p_145
 .word 0xaa0003e1
 .word 0xf9412ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x350002c0
 
@@ -27855,7 +27855,7 @@ ldr x0, [x16, #1512]
 bl _p_145
 .word 0xaa0003e1
 .word 0xf9412ba0
-bl _p_84
+bl _p_85
 .word 0x53001c1a
 .word 0x14000002
 .word 0xd280003a
@@ -27925,7 +27925,7 @@ ldr x0, [x16, #1512]
 bl _p_145
 .word 0xaa0003e1
 .word 0xf9412ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c1a
 .word 0xaa1a03e0
@@ -28046,12 +28046,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf90147a0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf94147a2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -28060,12 +28060,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf9012ba0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf9412ba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
@@ -28151,7 +28151,7 @@ bl _p_47
 .word 0x53001c00
 .word 0x34000800
 .word 0x910243a8
-bl _p_86
+bl _p_87
 .word 0xd2800000
 .word 0x1e620000
 .word 0xfd007fa0
@@ -28198,7 +28198,7 @@ bl _p_4
 .word 0xf9003fa2
 .word 0xfd4043a0
 .word 0xfd4047a1
-bl _p_87
+bl _p_88
 .word 0x9103c341
 .word 0xd5033bbf
 .word 0xf9407ba0
@@ -28216,7 +28216,7 @@ ldr x2, [x16, #16]
 .word 0x3900003e
 .word 0x14000031
 .word 0x910143a8
-bl _p_86
+bl _p_87
 .word 0xd280001e
 .word 0x9e6703d0
 .word 0x1e22c200
@@ -28249,7 +28249,7 @@ bl _p_4
 .word 0xf9001fa2
 .word 0xfd4023a0
 .word 0xfd4027a1
-bl _p_87
+bl _p_88
 .word 0x9103c341
 .word 0xd5033bbf
 .word 0xf9407ba0
@@ -28269,7 +28269,7 @@ ldr x2, [x16, #16]
 .word 0xaa0203e0
 .word 0xd2800021
 .word 0x3940005e
-bl _p_88
+bl _p_89
 .word 0xf9405b42
 .word 0xf9407b41
 .word 0xaa0203e0
@@ -28292,7 +28292,7 @@ ldr x1, [x16, #3104]
 .word 0xd63f0200
 .word 0xf9407b40
 .word 0xf90083a0
-bl _p_89
+bl _p_90
 .word 0xaa0003e1
 .word 0xf94083a2
 .word 0xaa0203e0
@@ -28350,7 +28350,7 @@ ldr x0, [x16, #3128]
 .word 0x3901c03f
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_90
+bl _p_91
 .word 0xf9407b42
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -28427,7 +28427,7 @@ ldr x1, [x16, #3136]
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0x3940033e
-bl _p_91
+bl _p_92
 .word 0xf9407b42
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -28504,7 +28504,7 @@ ldr x1, [x16, #3176]
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0x3940033e
-bl _p_92
+bl _p_93
 .word 0xf9407b42
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
@@ -28581,7 +28581,7 @@ ldr x1, [x16, #3208]
 .word 0xaa1903e0
 .word 0xaa1803e1
 .word 0x3940033e
-bl _p_93
+bl _p_94
 .word 0xa94167b8
 .word 0xf94013ba
 .word 0x910003bf
@@ -30970,12 +30970,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf9010ba0
-bl _p_24
+bl _p_78
 .word 0xaa0003e1
 .word 0xf9410ba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_78
+bl _p_79
 .word 0xaa1903e0
 .word 0x3940033e
 bl _p_76
@@ -30984,12 +30984,12 @@ bl _p_76
 .word 0x3940003e
 bl _p_77
 .word 0xf900eba0
-bl _p_31
+bl _p_24
 .word 0xaa0003e1
 .word 0xf940eba2
 .word 0xaa0203e0
 .word 0x3940005e
-bl _p_79
+bl _p_80
 .word 0xa9416bb9
 .word 0x910003bf
 .word 0xa9407bfd
@@ -31060,7 +31060,7 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #664]
 .word 0xaa1a03e0
 .word 0x3940035e
-bl _p_80
+bl _p_81
 .word 0x53001c00
 .word 0x53001c00
 .word 0x34000100
@@ -31101,18 +31101,18 @@ Hello_MultiScreen_iPhone_EditImportant__Button3Clickb__41_1_object_UIKit_UIButto
 .word 0xf9401f21
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 .word 0xaa0003fa
 .word 0xf9401f21
 .word 0xaa0103e0
 .word 0x3940003e
-bl _p_83
+bl _p_84
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #568]
 .word 0xf9400021
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c18
 .word 0xaa1803e0
@@ -31153,7 +31153,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #3248]
 .word 0xf9400021
-bl _p_85
+bl _p_86
 
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
@@ -31208,7 +31208,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1a03e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -31258,7 +31258,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1a03e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -31401,7 +31401,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xf9400ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000c0
@@ -31965,7 +31965,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1903e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -32095,7 +32095,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1a03e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -32315,7 +32315,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1903e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -32439,7 +32439,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xf9400fa0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000c0
@@ -32488,7 +32488,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xf9400ba0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000c0
@@ -32525,7 +32525,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1a03e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -32567,7 +32567,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #568]
 .word 0xf9400021
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c18
 .word 0xaa1803e0
@@ -32675,7 +32675,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1903e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -32763,7 +32763,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1903e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -32814,7 +32814,7 @@ adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+0
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x1, [x16, #248]
 .word 0xaa1903e0
-bl _p_84
+bl _p_85
 .word 0x53001c00
 .word 0x53001c00
 .word 0x340000a0
@@ -35825,182 +35825,182 @@ add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #312]
 br x16
 .word 4645
-	.no_dead_strip plt_UIKit_UINavigationBar_set_BarTintColor_UIKit_UIColor
-plt_UIKit_UINavigationBar_set_BarTintColor_UIKit_UIColor:
+	.no_dead_strip plt_UIKit_UIColor_get_SystemIndigo
+plt_UIKit_UIColor_get_SystemIndigo:
 _p_78:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #320]
 br x16
 .word 4650
-	.no_dead_strip plt_UIKit_UIView_set_TintColor_UIKit_UIColor
-plt_UIKit_UIView_set_TintColor_UIKit_UIColor:
+	.no_dead_strip plt_UIKit_UINavigationBar_set_BarTintColor_UIKit_UIColor
+plt_UIKit_UINavigationBar_set_BarTintColor_UIKit_UIColor:
 _p_79:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #328]
 br x16
 .word 4655
-	.no_dead_strip plt_string_Equals_string
-plt_string_Equals_string:
+	.no_dead_strip plt_UIKit_UIView_set_TintColor_UIKit_UIColor
+plt_UIKit_UIView_set_TintColor_UIKit_UIColor:
 _p_80:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #336]
 br x16
 .word 4660
-	.no_dead_strip plt_EmailReader_EmailFileRead_DeleteText_string
-plt_EmailReader_EmailFileRead_DeleteText_string:
+	.no_dead_strip plt_string_Equals_string
+plt_string_Equals_string:
 _p_81:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #344]
 br x16
 .word 4665
-	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloUniverseScreen__ctor
-plt_Hello_MultiScreen_iPhone_HelloUniverseScreen__ctor:
+	.no_dead_strip plt_EmailReader_EmailFileRead_DeleteText_string
+plt_EmailReader_EmailFileRead_DeleteText_string:
 _p_82:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #352]
 br x16
-.word 4668
-	.no_dead_strip plt_UIKit_UITextView_get_Text
-plt_UIKit_UITextView_get_Text:
+.word 4670
+	.no_dead_strip plt_Hello_MultiScreen_iPhone_HelloUniverseScreen__ctor
+plt_Hello_MultiScreen_iPhone_HelloUniverseScreen__ctor:
 _p_83:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #360]
 br x16
-.word 4670
-	.no_dead_strip plt_string_op_Equality_string_string
-plt_string_op_Equality_string_string:
+.word 4673
+	.no_dead_strip plt_UIKit_UITextView_get_Text
+plt_UIKit_UITextView_get_Text:
 _p_84:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #368]
 br x16
 .word 4675
-	.no_dead_strip plt_EmailReader_EmailFileRead_WriteAllText_string_string
-plt_EmailReader_EmailFileRead_WriteAllText_string_string:
+	.no_dead_strip plt_string_op_Equality_string_string
+plt_string_op_Equality_string_string:
 _p_85:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #376]
 br x16
 .word 4680
-	.no_dead_strip plt_Google_MobileAds_AdSizeCons_get_Banner
-plt_Google_MobileAds_AdSizeCons_get_Banner:
+	.no_dead_strip plt_EmailReader_EmailFileRead_WriteAllText_string_string
+plt_EmailReader_EmailFileRead_WriteAllText_string_string:
 _p_86:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #384]
 br x16
-.word 4683
-	.no_dead_strip plt_Google_MobileAds_BannerView__ctor_Google_MobileAds_AdSize_CoreGraphics_CGPoint
-plt_Google_MobileAds_BannerView__ctor_Google_MobileAds_AdSize_CoreGraphics_CGPoint:
+.word 4685
+	.no_dead_strip plt_Google_MobileAds_AdSizeCons_get_Banner
+plt_Google_MobileAds_AdSizeCons_get_Banner:
 _p_87:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #392]
 br x16
 .word 4688
-	.no_dead_strip plt_UIKit_UIView_set_TranslatesAutoresizingMaskIntoConstraints_bool
-plt_UIKit_UIView_set_TranslatesAutoresizingMaskIntoConstraints_bool:
+	.no_dead_strip plt_Google_MobileAds_BannerView__ctor_Google_MobileAds_AdSize_CoreGraphics_CGPoint
+plt_Google_MobileAds_BannerView__ctor_Google_MobileAds_AdSize_CoreGraphics_CGPoint:
 _p_88:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #400]
 br x16
 .word 4693
-	.no_dead_strip plt_Google_MobileAds_Request_GetDefaultRequest
-plt_Google_MobileAds_Request_GetDefaultRequest:
+	.no_dead_strip plt_UIKit_UIView_set_TranslatesAutoresizingMaskIntoConstraints_bool
+plt_UIKit_UIView_set_TranslatesAutoresizingMaskIntoConstraints_bool:
 _p_89:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #408]
 br x16
 .word 4698
-	.no_dead_strip plt_Google_MobileAds_BannerView_add_AdReceived_System_EventHandler
-plt_Google_MobileAds_BannerView_add_AdReceived_System_EventHandler:
+	.no_dead_strip plt_Google_MobileAds_Request_GetDefaultRequest
+plt_Google_MobileAds_Request_GetDefaultRequest:
 _p_90:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #416]
 br x16
 .word 4703
-	.no_dead_strip plt_Google_MobileAds_BannerView_add_ScreenDismissed_System_EventHandler
-plt_Google_MobileAds_BannerView_add_ScreenDismissed_System_EventHandler:
+	.no_dead_strip plt_Google_MobileAds_BannerView_add_AdReceived_System_EventHandler
+plt_Google_MobileAds_BannerView_add_AdReceived_System_EventHandler:
 _p_91:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #424]
 br x16
 .word 4708
-	.no_dead_strip plt_Google_MobileAds_BannerView_add_ClickRecorded_System_EventHandler
-plt_Google_MobileAds_BannerView_add_ClickRecorded_System_EventHandler:
+	.no_dead_strip plt_Google_MobileAds_BannerView_add_ScreenDismissed_System_EventHandler
+plt_Google_MobileAds_BannerView_add_ScreenDismissed_System_EventHandler:
 _p_92:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #432]
 br x16
 .word 4713
-	.no_dead_strip plt_Google_MobileAds_BannerView_add_ReceiveAdFailed_System_EventHandler_1_Google_MobileAds_BannerViewErrorEventArgs
-plt_Google_MobileAds_BannerView_add_ReceiveAdFailed_System_EventHandler_1_Google_MobileAds_BannerViewErrorEventArgs:
+	.no_dead_strip plt_Google_MobileAds_BannerView_add_ClickRecorded_System_EventHandler
+plt_Google_MobileAds_BannerView_add_ClickRecorded_System_EventHandler:
 _p_93:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #440]
 br x16
 .word 4718
-	.no_dead_strip plt_UIKit_UIViewController_ViewDidLoad
-plt_UIKit_UIViewController_ViewDidLoad:
+	.no_dead_strip plt_Google_MobileAds_BannerView_add_ReceiveAdFailed_System_EventHandler_1_Google_MobileAds_BannerViewErrorEventArgs
+plt_Google_MobileAds_BannerView_add_ReceiveAdFailed_System_EventHandler_1_Google_MobileAds_BannerViewErrorEventArgs:
 _p_94:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #448]
 br x16
 .word 4723
-	.no_dead_strip plt_UIKit_UIImage_FromFile_string
-plt_UIKit_UIImage_FromFile_string:
+	.no_dead_strip plt_UIKit_UIViewController_ViewDidLoad
+plt_UIKit_UIViewController_ViewDidLoad:
 _p_95:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #456]
 br x16
 .word 4728
-	.no_dead_strip plt_UIKit_UIColor_FromPatternImage_UIKit_UIImage
-plt_UIKit_UIColor_FromPatternImage_UIKit_UIImage:
+	.no_dead_strip plt_UIKit_UIImage_FromFile_string
+plt_UIKit_UIImage_FromFile_string:
 _p_96:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #464]
 br x16
 .word 4733
-	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen_ViewDidLoad1
-plt_Hello_MultiScreen_iPhone_HomeScreen_ViewDidLoad1:
+	.no_dead_strip plt_UIKit_UIColor_FromPatternImage_UIKit_UIImage
+plt_UIKit_UIColor_FromPatternImage_UIKit_UIImage:
 _p_97:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #472]
 br x16
 .word 4738
-	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen_LoadBanner
-plt_Hello_MultiScreen_iPhone_HomeScreen_LoadBanner:
+	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen_ViewDidLoad1
+plt_Hello_MultiScreen_iPhone_HomeScreen_ViewDidLoad1:
 _p_98:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #480]
 br x16
-.word 4740
-	.no_dead_strip plt_UIKit_UIColor_get_SystemIndigo
-plt_UIKit_UIColor_get_SystemIndigo:
+.word 4743
+	.no_dead_strip plt_Hello_MultiScreen_iPhone_HomeScreen_LoadBanner
+plt_Hello_MultiScreen_iPhone_HomeScreen_LoadBanner:
 _p_99:
 adrp x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGE+4096
 add x16, x16, mono_aot_Hello_MultiScreen_iPhone_got@PAGEOFF
 ldr x16, [x16, #488]
 br x16
-.word 4742
+.word 4745
 	.no_dead_strip plt_UIKit_UIViewController_set_Title_string
 plt_UIKit_UIViewController_set_Title_string:
 _p_100:
@@ -37483,7 +37483,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "A4FE04C6-64CA-437A-AC94-EDCC1E2088D7"
+	.asciz "BD2CB06C-B7F9-41CE-ACB0-0CA86A325D47"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -37577,7 +37577,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 41,22,121,238,78,98,110,108,172,158,187,213,245,22,90,78
+	.byte 63,139,84,181,217,184,127,183,216,125,238,170,95,224,176,155
 	.globl _mono_aot_module_Hello_MultiScreen_iPhone_info
 	.align 3
 _mono_aot_module_Hello_MultiScreen_iPhone_info:

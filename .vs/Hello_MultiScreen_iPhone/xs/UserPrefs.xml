@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/EditJournalScreen.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Screens/EditJournalScreen.cs" Line="322" Column="1" />
-      <File FileName="Screens/StoryScreen.cs" />
-      <File FileName="Screens/HomeScreen.cs" />
-      <File FileName="Screens/HelloWorldScreen.cs" />
-      <File FileName="Screens/HelloWorldScreen.designer.cs" />
-      <File FileName="Screens/HelloUniverseScreen.cs" />
-      <File FileName="Screens/HomeScreen2.cs" />
-      <File FileName="Screens/ImageScreen.cs" />
-      <File FileName="AppDelegate.cs" />
+      <File FileName="Screens/EditJournalScreen.cs" Line="341" Column="79" />
+      <File FileName="Screens/StoryScreen.cs" Line="276" Column="79" />
+      <File FileName="Screens/HomeScreen.cs" Line="306" Column="79" />
+      <File FileName="Screens/HelloWorldScreen.cs" Line="430" Column="79" />
+      <File FileName="Screens/HelloWorldScreen.designer.cs" Line="1" Column="1" />
+      <File FileName="Screens/HelloUniverseScreen.cs" Line="525" Column="79" />
+      <File FileName="Screens/HomeScreen2.cs" Line="527" Column="1" />
+      <File FileName="Screens/ImageScreen.cs" Line="532" Column="79" />
+      <File FileName="AppDelegate.cs" Line="1" Column="1" />
       <File FileName="Info.plist" />
-      <File FileName="Screens/EditImportant.cs" />
+      <File FileName="Screens/EditImportant.cs" Line="361" Column="79" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +21,8 @@
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
-                <Node name="EditJournalScreen.cs" selected="True" />
+                <Node name="HelloWorldScreen.cs" expanded="True" />
+                <Node name="StoryScreen.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -30,10 +31,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8EB279F7-546E-41A6-ACD1-8FC8F265E84A" />
+  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
 </Properties>
