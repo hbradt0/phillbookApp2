@@ -59,3 +59,4 @@
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppV1/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache

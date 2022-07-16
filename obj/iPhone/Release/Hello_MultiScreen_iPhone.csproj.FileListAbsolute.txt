@@ -56,6 +56,7 @@
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/chapter5.png
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/GoogleService-Info.plist
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/optimized/
+/Users/psargent/phillbookAppV1/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppV1/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe

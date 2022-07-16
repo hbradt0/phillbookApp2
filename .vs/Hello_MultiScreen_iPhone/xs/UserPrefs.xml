@@ -2,16 +2,16 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Screens/EditJournalScreen.cs" Line="341" Column="79" />
-      <File FileName="Screens/StoryScreen.cs" Line="276" Column="79" />
-      <File FileName="Screens/HomeScreen.cs" Line="306" Column="79" />
-      <File FileName="Screens/HelloWorldScreen.cs" Line="430" Column="79" />
-      <File FileName="Screens/HelloWorldScreen.designer.cs" Line="1" Column="1" />
-      <File FileName="Screens/HelloUniverseScreen.cs" Line="525" Column="79" />
-      <File FileName="Screens/HomeScreen2.cs" Line="527" Column="1" />
-      <File FileName="Screens/ImageScreen.cs" Line="532" Column="79" />
-      <File FileName="AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="Screens/StoryScreen.cs" />
+      <File FileName="Screens/HomeScreen.cs" />
+      <File FileName="Screens/HelloWorldScreen.cs" />
+      <File FileName="Screens/HelloWorldScreen.designer.cs" />
+      <File FileName="Screens/HelloUniverseScreen.cs" />
+      <File FileName="Screens/HomeScreen2.cs" Line="501" Column="98" />
+      <File FileName="Screens/ImageScreen.cs" />
+      <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
-      <File FileName="Screens/EditImportant.cs" Line="361" Column="79" />
+      <File FileName="Screens/EditImportant.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,7 +22,7 @@
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
                 <Node name="HelloWorldScreen.cs" expanded="True" />
-                <Node name="StoryScreen.cs" selected="True" />
+                <Node name="HomeScreen2.cs" selected="True" />
               </Node>
             </Node>
           </Node>
